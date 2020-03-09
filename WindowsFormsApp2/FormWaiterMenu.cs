@@ -36,5 +36,10 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void FormWaiterMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
