@@ -45,11 +45,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormOrdersHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrdersHistory.Designer.cs">
+      <DependentUpon>FormOrdersHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSignIn.Designer.cs">
+      <DependentUpon>FormSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddIngredient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddIngredient.Designer.cs">
+      <DependentUpon>FormAddIngredient.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormIngredients.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormIngredients.Designer.cs">
       <DependentUpon>FormIngredients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSignUp.Designer.cs">
+      <DependentUpon>FormSignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="FormWaiterMenu.cs">
       <SubType>Form</SubType>
@@ -65,6 +89,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormOrdersHistory.resx">
+      <DependentUpon>FormOrdersHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSignIn.resx">
+      <DependentUpon>FormSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddIngredient.resx">
+      <DependentUpon>FormAddIngredient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSignUp.resx">
+      <DependentUpon>FormSignUp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormWaiterMenu.resx">
       <DependentUpon>FormWaiterMenu.cs</DependentUpon>
     </EmbeddedResource>
