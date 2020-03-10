@@ -21,5 +21,31 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void gérerPlatsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gérerPlatsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "FormIngredients")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if(IsOpen == false)
+            {
+                FormIngredients f2 = new FormIngredients();
+                f2.MdiParent = this;
+                f2.Show();
+            }
+        }
     }
 }
