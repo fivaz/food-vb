@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class FormWaiterMenu : Form
+    public partial class FormWaiterHome : Form
     {
-        public FormWaiterMenu()
+        public FormWaiterHome()
         {
             InitializeComponent();
         }
