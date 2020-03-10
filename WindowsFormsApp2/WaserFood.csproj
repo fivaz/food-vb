@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAddDish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddDish.Designer.cs">
+      <DependentUpon>FormAddDish.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDishes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddDish.resx">
+      <DependentUpon>FormAddDish.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDishes.resx">
       <DependentUpon>FormDishes.cs</DependentUpon>
     </EmbeddedResource>
