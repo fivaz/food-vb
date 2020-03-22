@@ -10,7 +10,7 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
-        private void FormIngredients_Load(object sender, EventArgs e)
+        private void FormMenus_Load(object sender, EventArgs e)
         {
 
         }
