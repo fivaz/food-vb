@@ -105,6 +105,7 @@
             this.gérerToolStripMenuItem1.Name = "gérerToolStripMenuItem1";
             this.gérerToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.gérerToolStripMenuItem1.Text = "Gérer Catégories";
+            this.gérerToolStripMenuItem1.Click += new System.EventHandler(this.gérerToolStripMenuItem1_Click);
             // 
             // msiStats
             // 
