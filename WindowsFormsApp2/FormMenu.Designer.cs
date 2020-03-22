@@ -50,7 +50,7 @@
             this.btnMenAdd.Name = "btnMenAdd";
             this.btnMenAdd.Size = new System.Drawing.Size(129, 30);
             this.btnMenAdd.TabIndex = 32;
-            this.btnMenAdd.Text = "&nouvel menu";
+            this.btnMenAdd.Text = "&nouveau menu";
             this.btnMenAdd.UseVisualStyleBackColor = true;
             this.btnMenAdd.Click += new System.EventHandler(this.button2_Click);
             // 

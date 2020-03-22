@@ -92,6 +92,7 @@
             this.gérerTablesToolStripMenuItem.Name = "gérerTablesToolStripMenuItem";
             this.gérerTablesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.gérerTablesToolStripMenuItem.Text = "Gérer Tables";
+            this.gérerTablesToolStripMenuItem.Click += new System.EventHandler(this.gérerTablesToolStripMenuItem_Click);
             // 
             // gérerToolStripMenuItem
             // 

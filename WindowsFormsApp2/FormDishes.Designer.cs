@@ -58,7 +58,7 @@
             this.btnDisAdd.Name = "btnDisAdd";
             this.btnDisAdd.Size = new System.Drawing.Size(129, 30);
             this.btnDisAdd.TabIndex = 32;
-            this.btnDisAdd.Text = "&nouvel ingredient";
+            this.btnDisAdd.Text = "&nouveau plat";
             this.btnDisAdd.UseVisualStyleBackColor = true;
             this.btnDisAdd.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -241,7 +241,7 @@
             this.Controls.Add(this.btnDisDelAll);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDishes";
-            this.Text = "Dishes";
+            this.Text = "Plats";
             this.Load += new System.EventHandler(this.FormDishes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDis)).EndInit();
             this.ResumeLayout(false);
