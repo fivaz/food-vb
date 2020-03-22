@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp2
 {
-    partial class tbxIngSearchPriceTo
+    partial class frmIngredients
     {
         /// <summary>
         /// Required designer variable.
@@ -221,7 +221,7 @@
             this.btnIngDelAll.Text = "&supprimer";
             this.btnIngDelAll.UseVisualStyleBackColor = true;
             // 
-            // tbxIngSearchPriceTo
+            // frmIngredients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -241,7 +241,7 @@
             this.Controls.Add(this.btnIngDelAll);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "tbxIngSearchPriceTo";
+            this.Name = "frmIngredients";
             this.Text = "Ingredients";
             this.Load += new System.EventHandler(this.FormIngredients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvIng)).EndInit();

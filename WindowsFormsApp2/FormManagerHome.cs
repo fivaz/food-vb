@@ -42,7 +42,7 @@ namespace WindowsFormsApp2
 
             if(IsOpen == false)
             {
-                tbxIngSearchPriceTo f2 = new tbxIngSearchPriceTo();
+                frmIngredients f2 = new frmIngredients();
                 f2.MdiParent = this;
                 f2.Show();
             }
