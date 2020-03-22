@@ -63,6 +63,12 @@
     <Compile Include="FormDishes.Designer.cs">
       <DependentUpon>FormDishes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAccounts.Designer.cs">
+      <DependentUpon>FormAccounts.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,11 +105,11 @@
     <Compile Include="FormIngredients.Designer.cs">
       <DependentUpon>FormIngredients.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSignUp.cs">
+    <Compile Include="FormAddAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSignUp.Designer.cs">
-      <DependentUpon>FormSignUp.cs</DependentUpon>
+    <Compile Include="FormAddAccount.Designer.cs">
+      <DependentUpon>FormAddAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="FormStats.cs">
       <SubType>Form</SubType>
@@ -128,6 +134,9 @@
     <EmbeddedResource Include="FormDishes.resx">
       <DependentUpon>FormDishes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAccounts.resx">
+      <DependentUpon>FormAccounts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,8 +152,8 @@
     <EmbeddedResource Include="FormAddIngredient.resx">
       <DependentUpon>FormAddIngredient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSignUp.resx">
-      <DependentUpon>FormSignUp.cs</DependentUpon>
+    <EmbeddedResource Include="FormAddAccount.resx">
+      <DependentUpon>FormAddAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormStats.resx">
       <DependentUpon>FormStats.cs</DependentUpon>

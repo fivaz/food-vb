@@ -90,19 +90,20 @@
             // gérerTablesToolStripMenuItem
             // 
             this.gérerTablesToolStripMenuItem.Name = "gérerTablesToolStripMenuItem";
-            this.gérerTablesToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
+            this.gérerTablesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.gérerTablesToolStripMenuItem.Text = "Gérer Tables";
             // 
             // gérerToolStripMenuItem
             // 
             this.gérerToolStripMenuItem.Name = "gérerToolStripMenuItem";
-            this.gérerToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
+            this.gérerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.gérerToolStripMenuItem.Text = "Gérer Comptes";
+            this.gérerToolStripMenuItem.Click += new System.EventHandler(this.gérerToolStripMenuItem_Click);
             // 
             // gérerToolStripMenuItem1
             // 
             this.gérerToolStripMenuItem1.Name = "gérerToolStripMenuItem1";
-            this.gérerToolStripMenuItem1.Size = new System.Drawing.Size(203, 26);
+            this.gérerToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.gérerToolStripMenuItem1.Text = "Gérer Catégories";
             // 
             // msiStats
