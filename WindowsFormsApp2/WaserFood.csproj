@@ -51,6 +51,12 @@
     <Compile Include="FormAddDish.Designer.cs">
       <DependentUpon>FormAddDish.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddMenu.Designer.cs">
+      <DependentUpon>FormAddMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDishes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,16 +111,19 @@
     <Compile Include="FormWaiterHome.Designer.cs">
       <DependentUpon>FormWaiterHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMenuList.cs">
+    <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMenuList.Designer.cs">
-      <DependentUpon>FormMenuList.cs</DependentUpon>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAddDish.resx">
       <DependentUpon>FormAddDish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddMenu.resx">
+      <DependentUpon>FormAddMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDishes.resx">
       <DependentUpon>FormDishes.cs</DependentUpon>
@@ -140,8 +149,8 @@
     <EmbeddedResource Include="FormWaiterHome.resx">
       <DependentUpon>FormWaiterHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenuList.resx">
-      <DependentUpon>FormMenuList.cs</DependentUpon>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormIngredients.resx">
       <DependentUpon>FormIngredients.cs</DependentUpon>

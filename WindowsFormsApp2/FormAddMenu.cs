@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class FormMenuList : Form
+    public partial class FormAddMenu : Form
     {
-        public FormMenuList()
+        public FormAddMenu()
         {
             InitializeComponent();
         }
 
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
