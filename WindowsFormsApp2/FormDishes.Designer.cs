@@ -191,8 +191,8 @@
             // 
             // dgvDis
             // 
-            this.dgvDis.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvDis.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDis.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -239,7 +239,6 @@
             this.Controls.Add(this.tbxDisSearchName);
             this.Controls.Add(this.dgvDis);
             this.Controls.Add(this.btnDisDelAll);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDishes";
             this.Text = "Dishes";

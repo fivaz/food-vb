@@ -75,6 +75,7 @@
             this.msiMenus.Name = "msiMenus";
             this.msiMenus.Size = new System.Drawing.Size(100, 24);
             this.msiMenus.Text = "Gérer Menu";
+            this.msiMenus.Click += new System.EventHandler(this.msiMenus_Click);
             // 
             // msiOthers
             // 

@@ -24,6 +24,12 @@ namespace WindowsFormsApp2
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-                    }
+        
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

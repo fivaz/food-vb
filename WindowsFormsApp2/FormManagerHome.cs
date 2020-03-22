@@ -51,5 +51,26 @@ namespace WindowsFormsApp2
                 f2.Show();
             }
         }
+
+        private void msiMenus_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "FormDishes")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmMenus f2 = new frmMenus();
+                f2.MdiParent = this;
+                f2.Show();
+            }
+        }
     }
 }

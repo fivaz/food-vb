@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAddDishName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -56,15 +56,15 @@
             this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 0;
             // 
-            // label1
+            // lblAddDishName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 24);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nom";
+            this.lblAddDishName.AutoSize = true;
+            this.lblAddDishName.Location = new System.Drawing.Point(21, 24);
+            this.lblAddDishName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAddDishName.Name = "lblAddDishName";
+            this.lblAddDishName.Size = new System.Drawing.Size(37, 17);
+            this.lblAddDishName.TabIndex = 1;
+            this.lblAddDishName.Text = "Nom";
             // 
             // label2
             // 
@@ -218,7 +218,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAddDishName);
             this.Controls.Add(this.textBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAddDish";
@@ -236,7 +236,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAddDishName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;

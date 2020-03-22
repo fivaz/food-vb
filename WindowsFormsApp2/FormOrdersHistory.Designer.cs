@@ -30,14 +30,14 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.clnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnObservation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,10 +50,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 47);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(36, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(68, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Table: 32";
             // 
@@ -67,21 +66,48 @@
             this.clnName,
             this.clnPrice,
             this.clnObservation});
-            this.dataGridView1.Location = new System.Drawing.Point(29, 79);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(39, 97);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(526, 122);
+            this.dataGridView1.Size = new System.Drawing.Size(756, 150);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // clnQuantity
+            // 
+            this.clnQuantity.HeaderText = "Quantité";
+            this.clnQuantity.MinimumWidth = 6;
+            this.clnQuantity.Name = "clnQuantity";
+            this.clnQuantity.Width = 125;
+            // 
+            // clnName
+            // 
+            this.clnName.HeaderText = "Nom";
+            this.clnName.MinimumWidth = 6;
+            this.clnName.Name = "clnName";
+            this.clnName.Width = 125;
+            // 
+            // clnPrice
+            // 
+            this.clnPrice.HeaderText = "Prix";
+            this.clnPrice.MinimumWidth = 6;
+            this.clnPrice.Name = "clnPrice";
+            this.clnPrice.Width = 125;
+            // 
+            // clnObservation
+            // 
+            this.clnObservation.HeaderText = "Observation";
+            this.clnObservation.MinimumWidth = 6;
+            this.clnObservation.Name = "clnObservation";
+            this.clnObservation.Width = 125;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 220);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(37, 271);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(68, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Table: 33";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -90,10 +116,9 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(431, 47);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(630, 58);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 13);
+            this.label4.Size = new System.Drawing.Size(166, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Commande faite à: 18:45";
             // 
@@ -101,42 +126,24 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(431, 220);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(630, 271);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 13);
+            this.label5.Size = new System.Drawing.Size(166, 17);
             this.label5.TabIndex = 7;
             this.label5.Text = "Commande faite à: 18:45";
             // 
             // linkLabel1
             // 
+            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(430, 19);
+            this.linkLabel1.Location = new System.Drawing.Point(629, 23);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(125, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(166, 17);
             this.linkLabel1.TabIndex = 8;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "création des commandes";
-            // 
-            // clnQuantity
-            // 
-            this.clnQuantity.HeaderText = "Quantité";
-            this.clnQuantity.Name = "clnQuantity";
-            // 
-            // clnName
-            // 
-            this.clnName.HeaderText = "Nom";
-            this.clnName.Name = "clnName";
-            // 
-            // clnPrice
-            // 
-            this.clnPrice.HeaderText = "Prix";
-            this.clnPrice.Name = "clnPrice";
-            // 
-            // clnObservation
-            // 
-            this.clnObservation.HeaderText = "Observation";
-            this.clnObservation.Name = "clnObservation";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // dataGridView2
             // 
@@ -148,39 +155,47 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            this.dataGridView2.Location = new System.Drawing.Point(31, 255);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView2.Location = new System.Drawing.Point(41, 314);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(526, 122);
+            this.dataGridView2.Size = new System.Drawing.Size(756, 150);
             this.dataGridView2.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Quantité";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "Nom";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.HeaderText = "Prix";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.HeaderText = "Observation";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // FormOrdersHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 402);
+            this.ClientSize = new System.Drawing.Size(836, 495);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label5);
@@ -188,7 +203,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormOrdersHistory";
             this.Text = "Historique des commandes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

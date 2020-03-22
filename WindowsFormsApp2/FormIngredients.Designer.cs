@@ -239,7 +239,6 @@
             this.Controls.Add(this.tbxIngSearchName);
             this.Controls.Add(this.dgvIng);
             this.Controls.Add(this.btnIngDelAll);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmIngredients";
             this.Text = "Ingredients";
