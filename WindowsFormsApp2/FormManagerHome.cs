@@ -17,17 +17,7 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
-        private void test3ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gérerPlatsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gérerPlatsToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void msiIngredients_Click(object sender, EventArgs e)
         {
             bool IsOpen = false;
             foreach (Form f in Application.OpenForms)
@@ -40,9 +30,30 @@ namespace WindowsFormsApp2
                 }
             }
 
-            if(IsOpen == false)
+            if (IsOpen == false)
             {
                 frmIngredients f2 = new frmIngredients();
+                f2.MdiParent = this;
+                f2.Show();
+            }
+        }
+
+        private void msiDishes_Click(object sender, EventArgs e)
+        {
+            bool IsOpen = false;
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Text == "FormDishes")
+                {
+                    IsOpen = true;
+                    f.Focus();
+                    break;
+                }
+            }
+
+            if (IsOpen == false)
+            {
+                frmDishes f2 = new frmDishes();
                 f2.MdiParent = this;
                 f2.Show();
             }
