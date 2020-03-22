@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp2
 {
-    partial class FormIngredients
+    partial class tbxIngSearchPriceTo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,73 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnIngAdd = new System.Windows.Forms.Button();
+            this.tbxIngSearchName = new System.Windows.Forms.TextBox();
+            this.lblIngSearchName = new System.Windows.Forms.Label();
+            this.tbxIngSearchPriceFrom = new System.Windows.Forms.TextBox();
+            this.lblIngSearchPrice = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblIngSearchPriceAnd = new System.Windows.Forms.Label();
+            this.lblIngSearchQuantity = new System.Windows.Forms.Label();
+            this.tbxIngSearchQuantityFrom = new System.Windows.Forms.TextBox();
+            this.tbxIngSearchQuantityTo = new System.Windows.Forms.TextBox();
+            this.lblIngSearchQuantityAnd = new System.Windows.Forms.Label();
             this.Delete = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prix = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvIng = new System.Windows.Forms.DataGridView();
+            this.btnIngDelAll = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIng)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btnIngAdd
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(667, 38);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 30);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "&nouvel ingredient";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnIngAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIngAdd.Location = new System.Drawing.Point(667, 38);
+            this.btnIngAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnIngAdd.Name = "btnIngAdd";
+            this.btnIngAdd.Size = new System.Drawing.Size(129, 30);
+            this.btnIngAdd.TabIndex = 32;
+            this.btnIngAdd.Text = "&nouvel ingredient";
+            this.btnIngAdd.UseVisualStyleBackColor = true;
+            this.btnIngAdd.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // tbxIngSearchName
             // 
-            this.textBox1.Location = new System.Drawing.Point(36, 46);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 22);
-            this.textBox1.TabIndex = 2;
+            this.tbxIngSearchName.Location = new System.Drawing.Point(36, 46);
+            this.tbxIngSearchName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxIngSearchName.Name = "tbxIngSearchName";
+            this.tbxIngSearchName.Size = new System.Drawing.Size(227, 22);
+            this.tbxIngSearchName.TabIndex = 2;
             // 
-            // label2
+            // lblIngSearchName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Rechercher";
+            this.lblIngSearchName.AutoSize = true;
+            this.lblIngSearchName.Location = new System.Drawing.Point(34, 22);
+            this.lblIngSearchName.Name = "lblIngSearchName";
+            this.lblIngSearchName.Size = new System.Drawing.Size(82, 17);
+            this.lblIngSearchName.TabIndex = 1;
+            this.lblIngSearchName.Text = "Rechercher";
             // 
-            // textBox2
+            // tbxIngSearchPriceFrom
             // 
-            this.textBox2.Location = new System.Drawing.Point(291, 46);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(65, 22);
-            this.textBox2.TabIndex = 4;
+            this.tbxIngSearchPriceFrom.Location = new System.Drawing.Point(291, 46);
+            this.tbxIngSearchPriceFrom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxIngSearchPriceFrom.Name = "tbxIngSearchPriceFrom";
+            this.tbxIngSearchPriceFrom.Size = new System.Drawing.Size(65, 22);
+            this.tbxIngSearchPriceFrom.TabIndex = 4;
             // 
-            // label3
+            // lblIngSearchPrice
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(287, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Prix entre";
+            this.lblIngSearchPrice.AutoSize = true;
+            this.lblIngSearchPrice.Location = new System.Drawing.Point(287, 22);
+            this.lblIngSearchPrice.Name = "lblIngSearchPrice";
+            this.lblIngSearchPrice.Size = new System.Drawing.Size(68, 17);
+            this.lblIngSearchPrice.TabIndex = 3;
+            this.lblIngSearchPrice.Text = "Prix entre";
             // 
             // textBox3
             // 
@@ -104,49 +104,48 @@
             this.textBox3.Size = new System.Drawing.Size(65, 22);
             this.textBox3.TabIndex = 6;
             // 
-            // label4
+            // lblIngSearchPriceAnd
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(361, 51);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 17);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "et";
+            this.lblIngSearchPriceAnd.AutoSize = true;
+            this.lblIngSearchPriceAnd.Location = new System.Drawing.Point(361, 51);
+            this.lblIngSearchPriceAnd.Name = "lblIngSearchPriceAnd";
+            this.lblIngSearchPriceAnd.Size = new System.Drawing.Size(20, 17);
+            this.lblIngSearchPriceAnd.TabIndex = 5;
+            this.lblIngSearchPriceAnd.Text = "et";
             // 
-            // label5
+            // lblIngSearchQuantity
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(481, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 17);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Quantité entre";
+            this.lblIngSearchQuantity.AutoSize = true;
+            this.lblIngSearchQuantity.Location = new System.Drawing.Point(481, 22);
+            this.lblIngSearchQuantity.Name = "lblIngSearchQuantity";
+            this.lblIngSearchQuantity.Size = new System.Drawing.Size(99, 17);
+            this.lblIngSearchQuantity.TabIndex = 7;
+            this.lblIngSearchQuantity.Text = "Quantité entre";
             // 
-            // textBox5
+            // tbxIngSearchQuantityFrom
             // 
-            this.textBox5.Location = new System.Drawing.Point(484, 46);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(65, 22);
-            this.textBox5.TabIndex = 8;
+            this.tbxIngSearchQuantityFrom.Location = new System.Drawing.Point(484, 46);
+            this.tbxIngSearchQuantityFrom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxIngSearchQuantityFrom.Name = "tbxIngSearchQuantityFrom";
+            this.tbxIngSearchQuantityFrom.Size = new System.Drawing.Size(65, 22);
+            this.tbxIngSearchQuantityFrom.TabIndex = 8;
             // 
-            // textBox4
+            // tbxIngSearchQuantityTo
             // 
-            this.textBox4.Location = new System.Drawing.Point(580, 46);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(65, 22);
-            this.textBox4.TabIndex = 30;
+            this.tbxIngSearchQuantityTo.Location = new System.Drawing.Point(580, 46);
+            this.tbxIngSearchQuantityTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxIngSearchQuantityTo.Name = "tbxIngSearchQuantityTo";
+            this.tbxIngSearchQuantityTo.Size = new System.Drawing.Size(65, 22);
+            this.tbxIngSearchQuantityTo.TabIndex = 30;
             // 
-            // label6
+            // lblIngSearchQuantityAnd
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(555, 51);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(20, 17);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "et";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.lblIngSearchQuantityAnd.AutoSize = true;
+            this.lblIngSearchQuantityAnd.Location = new System.Drawing.Point(555, 51);
+            this.lblIngSearchQuantityAnd.Name = "lblIngSearchQuantityAnd";
+            this.lblIngSearchQuantityAnd.Size = new System.Drawing.Size(20, 17);
+            this.lblIngSearchQuantityAnd.TabIndex = 31;
+            this.lblIngSearchQuantityAnd.Text = "et";
             // 
             // Delete
             // 
@@ -190,64 +189,62 @@
             this.clnName.Name = "clnName";
             this.clnName.Width = 125;
             // 
-            // dataGridView1
+            // dgvIng
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvIng.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvIng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIng.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clnName,
             this.Unit,
             this.Quantity,
             this.Prix,
             this.Edit,
             this.Delete});
-            this.dataGridView1.Location = new System.Drawing.Point(36, 92);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(892, 368);
-            this.dataGridView1.TabIndex = 12;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvIng.Location = new System.Drawing.Point(36, 92);
+            this.dgvIng.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvIng.Name = "dgvIng";
+            this.dgvIng.RowHeadersWidth = 51;
+            this.dgvIng.RowTemplate.Height = 24;
+            this.dgvIng.Size = new System.Drawing.Size(892, 368);
+            this.dgvIng.TabIndex = 12;
             // 
-            // button1
+            // btnIngDelAll
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(821, 38);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 30);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "&supprimer";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnIngDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIngDelAll.Location = new System.Drawing.Point(821, 38);
+            this.btnIngDelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnIngDelAll.Name = "btnIngDelAll";
+            this.btnIngDelAll.Size = new System.Drawing.Size(107, 30);
+            this.btnIngDelAll.TabIndex = 11;
+            this.btnIngDelAll.Text = "&supprimer";
+            this.btnIngDelAll.UseVisualStyleBackColor = true;
             // 
-            // FormIngredients
+            // tbxIngSearchPriceTo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 483);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnIngAdd);
+            this.Controls.Add(this.lblIngSearchQuantityAnd);
+            this.Controls.Add(this.tbxIngSearchQuantityTo);
+            this.Controls.Add(this.tbxIngSearchQuantityFrom);
+            this.Controls.Add(this.lblIngSearchQuantity);
+            this.Controls.Add(this.lblIngSearchPriceAnd);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblIngSearchPrice);
+            this.Controls.Add(this.tbxIngSearchPriceFrom);
+            this.Controls.Add(this.lblIngSearchName);
+            this.Controls.Add(this.tbxIngSearchName);
+            this.Controls.Add(this.dgvIng);
+            this.Controls.Add(this.btnIngDelAll);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FormIngredients";
+            this.Name = "tbxIngSearchPriceTo";
             this.Text = "Ingredients";
             this.Load += new System.EventHandler(this.FormIngredients_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIng)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,24 +252,24 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnIngAdd;
+        private System.Windows.Forms.TextBox tbxIngSearchName;
+        private System.Windows.Forms.Label lblIngSearchName;
+        private System.Windows.Forms.TextBox tbxIngSearchPriceFrom;
+        private System.Windows.Forms.Label lblIngSearchPrice;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblIngSearchPriceAnd;
+        private System.Windows.Forms.Label lblIngSearchQuantity;
+        private System.Windows.Forms.TextBox tbxIngSearchQuantityFrom;
+        private System.Windows.Forms.TextBox tbxIngSearchQuantityTo;
+        private System.Windows.Forms.Label lblIngSearchQuantityAnd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Delete;
         private System.Windows.Forms.DataGridViewTextBoxColumn Edit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prix;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnName;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvIng;
+        private System.Windows.Forms.Button btnIngDelAll;
     }
 }
