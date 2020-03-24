@@ -72,7 +72,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(756, 150);
-            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.TabIndex = 4;
             // 
             // clnQuantity
             // 
@@ -108,7 +108,7 @@
             this.label3.Location = new System.Drawing.Point(37, 271);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 17);
-            this.label3.TabIndex = 4;
+            this.label3.TabIndex = 5;
             this.label3.Text = "Table: 33";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -119,7 +119,7 @@
             this.label4.Location = new System.Drawing.Point(630, 58);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 17);
-            this.label4.TabIndex = 6;
+            this.label4.TabIndex = 3;
             this.label4.Text = "Commande faite à: 18:45";
             // 
             // label5
@@ -129,7 +129,7 @@
             this.label5.Location = new System.Drawing.Point(630, 271);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 17);
-            this.label5.TabIndex = 7;
+            this.label5.TabIndex = 6;
             this.label5.Text = "Commande faite à: 18:45";
             // 
             // linkLabel1
@@ -140,7 +140,7 @@
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(166, 17);
-            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabIndex = 1;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "création des commandes";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
@@ -161,7 +161,7 @@
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(756, 150);
-            this.dataGridView2.TabIndex = 9;
+            this.dataGridView2.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn1
             // 

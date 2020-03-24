@@ -57,7 +57,7 @@
             this.btnIngAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIngAdd.Name = "btnIngAdd";
             this.btnIngAdd.Size = new System.Drawing.Size(129, 30);
-            this.btnIngAdd.TabIndex = 32;
+            this.btnIngAdd.TabIndex = 11;
             this.btnIngAdd.Text = "&nouvel ingredient";
             this.btnIngAdd.UseVisualStyleBackColor = true;
             this.btnIngAdd.Click += new System.EventHandler(this.button2_Click);
@@ -136,7 +136,7 @@
             this.tbxIngSearchQuantityTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxIngSearchQuantityTo.Name = "tbxIngSearchQuantityTo";
             this.tbxIngSearchQuantityTo.Size = new System.Drawing.Size(65, 22);
-            this.tbxIngSearchQuantityTo.TabIndex = 30;
+            this.tbxIngSearchQuantityTo.TabIndex = 10;
             // 
             // lblIngSearchQuantityAnd
             // 
@@ -144,7 +144,7 @@
             this.lblIngSearchQuantityAnd.Location = new System.Drawing.Point(555, 51);
             this.lblIngSearchQuantityAnd.Name = "lblIngSearchQuantityAnd";
             this.lblIngSearchQuantityAnd.Size = new System.Drawing.Size(20, 17);
-            this.lblIngSearchQuantityAnd.TabIndex = 31;
+            this.lblIngSearchQuantityAnd.TabIndex = 9;
             this.lblIngSearchQuantityAnd.Text = "et";
             // 
             // Delete
@@ -207,8 +207,8 @@
             this.dgvIng.Name = "dgvIng";
             this.dgvIng.RowHeadersWidth = 51;
             this.dgvIng.RowTemplate.Height = 24;
-            this.dgvIng.Size = new System.Drawing.Size(892, 368);
-            this.dgvIng.TabIndex = 12;
+            this.dgvIng.Size = new System.Drawing.Size(892, 359);
+            this.dgvIng.TabIndex = 13;
             // 
             // btnIngDelAll
             // 
@@ -217,7 +217,7 @@
             this.btnIngDelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIngDelAll.Name = "btnIngDelAll";
             this.btnIngDelAll.Size = new System.Drawing.Size(107, 30);
-            this.btnIngDelAll.TabIndex = 11;
+            this.btnIngDelAll.TabIndex = 12;
             this.btnIngDelAll.Text = "&supprimer";
             this.btnIngDelAll.UseVisualStyleBackColor = true;
             // 

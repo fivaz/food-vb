@@ -39,12 +39,6 @@
             this.tbxDisSearchQuantityFrom = new System.Windows.Forms.TextBox();
             this.tbxDisSearchQuantityTo = new System.Windows.Forms.TextBox();
             this.lblDisSearchQuantityAnd = new System.Windows.Forms.Label();
-            this.Delete = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Prix = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDis = new System.Windows.Forms.DataGridView();
             this.btnDisDelAll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDis)).BeginInit();
@@ -57,7 +51,7 @@
             this.btnDisAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDisAdd.Name = "btnDisAdd";
             this.btnDisAdd.Size = new System.Drawing.Size(129, 30);
-            this.btnDisAdd.TabIndex = 32;
+            this.btnDisAdd.TabIndex = 11;
             this.btnDisAdd.Text = "&nouveau plat";
             this.btnDisAdd.UseVisualStyleBackColor = true;
             this.btnDisAdd.Click += new System.EventHandler(this.button2_Click);
@@ -136,7 +130,7 @@
             this.tbxDisSearchQuantityTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxDisSearchQuantityTo.Name = "tbxDisSearchQuantityTo";
             this.tbxDisSearchQuantityTo.Size = new System.Drawing.Size(65, 22);
-            this.tbxDisSearchQuantityTo.TabIndex = 30;
+            this.tbxDisSearchQuantityTo.TabIndex = 10;
             // 
             // lblDisSearchQuantityAnd
             // 
@@ -144,50 +138,8 @@
             this.lblDisSearchQuantityAnd.Location = new System.Drawing.Point(555, 51);
             this.lblDisSearchQuantityAnd.Name = "lblDisSearchQuantityAnd";
             this.lblDisSearchQuantityAnd.Size = new System.Drawing.Size(20, 17);
-            this.lblDisSearchQuantityAnd.TabIndex = 31;
+            this.lblDisSearchQuantityAnd.TabIndex = 9;
             this.lblDisSearchQuantityAnd.Text = "et";
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Supprimer";
-            this.Delete.MinimumWidth = 6;
-            this.Delete.Name = "Delete";
-            this.Delete.Width = 125;
-            // 
-            // Edit
-            // 
-            this.Edit.HeaderText = "Modifier";
-            this.Edit.MinimumWidth = 6;
-            this.Edit.Name = "Edit";
-            this.Edit.Width = 125;
-            // 
-            // Prix
-            // 
-            this.Prix.HeaderText = "Price";
-            this.Prix.MinimumWidth = 6;
-            this.Prix.Name = "Prix";
-            this.Prix.Width = 125;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantite";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            this.Quantity.Width = 125;
-            // 
-            // Unit
-            // 
-            this.Unit.HeaderText = "Unité";
-            this.Unit.MinimumWidth = 6;
-            this.Unit.Name = "Unit";
-            this.Unit.Width = 125;
-            // 
-            // clnName
-            // 
-            this.clnName.HeaderText = "Nom";
-            this.clnName.MinimumWidth = 6;
-            this.clnName.Name = "clnName";
-            this.clnName.Width = 125;
             // 
             // dgvDis
             // 
@@ -195,20 +147,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDis.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clnName,
-            this.Unit,
-            this.Quantity,
-            this.Prix,
-            this.Edit,
-            this.Delete});
             this.dgvDis.Location = new System.Drawing.Point(36, 92);
             this.dgvDis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDis.Name = "dgvDis";
             this.dgvDis.RowHeadersWidth = 51;
             this.dgvDis.RowTemplate.Height = 24;
             this.dgvDis.Size = new System.Drawing.Size(892, 368);
-            this.dgvDis.TabIndex = 12;
+            this.dgvDis.TabIndex = 13;
             // 
             // btnDisDelAll
             // 
@@ -217,7 +162,7 @@
             this.btnDisDelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDisDelAll.Name = "btnDisDelAll";
             this.btnDisDelAll.Size = new System.Drawing.Size(107, 30);
-            this.btnDisDelAll.TabIndex = 11;
+            this.btnDisDelAll.TabIndex = 12;
             this.btnDisDelAll.Text = "&supprimer";
             this.btnDisDelAll.UseVisualStyleBackColor = true;
             // 
@@ -262,12 +207,6 @@
         private System.Windows.Forms.TextBox tbxDisSearchQuantityFrom;
         private System.Windows.Forms.TextBox tbxDisSearchQuantityTo;
         private System.Windows.Forms.Label lblDisSearchQuantityAnd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Delete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Edit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Prix;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnName;
         private System.Windows.Forms.DataGridView dgvDis;
         private System.Windows.Forms.Button btnDisDelAll;
     }

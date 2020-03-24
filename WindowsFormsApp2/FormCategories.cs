@@ -19,5 +19,10 @@ namespace WindowsFormsApp2
         {
             new FormAddCategory().Show();
         }
+
+        private void dgvIng_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
