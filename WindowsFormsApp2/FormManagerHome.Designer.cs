@@ -52,7 +52,7 @@
             this.msiStats});
             this.mstManager.Location = new System.Drawing.Point(0, 0);
             this.mstManager.Name = "mstManager";
-            this.mstManager.Size = new System.Drawing.Size(917, 28);
+            this.mstManager.Size = new System.Drawing.Size(505, 28);
             this.mstManager.TabIndex = 4;
             this.mstManager.Text = "menuStrip1";
             // 
@@ -90,21 +90,21 @@
             // gérerTablesToolStripMenuItem
             // 
             this.gérerTablesToolStripMenuItem.Name = "gérerTablesToolStripMenuItem";
-            this.gérerTablesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gérerTablesToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
             this.gérerTablesToolStripMenuItem.Text = "Gérer &Tables";
             this.gérerTablesToolStripMenuItem.Click += new System.EventHandler(this.gérerTablesToolStripMenuItem_Click);
             // 
             // gérerToolStripMenuItem
             // 
             this.gérerToolStripMenuItem.Name = "gérerToolStripMenuItem";
-            this.gérerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gérerToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
             this.gérerToolStripMenuItem.Text = "Gérer &Comptes";
             this.gérerToolStripMenuItem.Click += new System.EventHandler(this.gérerToolStripMenuItem_Click);
             // 
             // gérerToolStripMenuItem1
             // 
             this.gérerToolStripMenuItem1.Name = "gérerToolStripMenuItem1";
-            this.gérerToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.gérerToolStripMenuItem1.Size = new System.Drawing.Size(203, 26);
             this.gérerToolStripMenuItem1.Text = "&Gérer Catégories";
             this.gérerToolStripMenuItem1.Click += new System.EventHandler(this.gérerToolStripMenuItem1_Click);
             // 
@@ -119,11 +119,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 583);
+            this.ClientSize = new System.Drawing.Size(505, 583);
             this.Controls.Add(this.mstManager);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mstManager;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(523, 630);
             this.Name = "FormManagerHome";
             this.ShowIcon = false;
             this.Text = "Page d\'accueil";

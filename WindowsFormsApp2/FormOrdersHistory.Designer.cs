@@ -70,7 +70,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(756, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(553, 150);
             this.dataGridView1.TabIndex = 4;
             // 
             // clnQuantity
@@ -115,7 +115,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(632, 29);
+            this.label4.Location = new System.Drawing.Point(429, 29);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 17);
             this.label4.TabIndex = 3;
@@ -125,7 +125,7 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(632, 242);
+            this.label5.Location = new System.Drawing.Point(429, 242);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 17);
             this.label5.TabIndex = 6;
@@ -146,7 +146,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(756, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(553, 150);
             this.dataGridView2.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn1
@@ -181,7 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 472);
+            this.ClientSize = new System.Drawing.Size(633, 242);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -189,6 +189,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(651, 289);
             this.Name = "FormOrdersHistory";
             this.Text = "Historique des commandes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -221,6 +221,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblAddDishName);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAddDish";
             this.Text = "Nouveau plat";

@@ -39,7 +39,7 @@
             // btnIngAdd
             // 
             this.btnIngAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIngAdd.Location = new System.Drawing.Point(667, 38);
+            this.btnIngAdd.Location = new System.Drawing.Point(288, 38);
             this.btnIngAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIngAdd.Name = "btnIngAdd";
             this.btnIngAdd.Size = new System.Drawing.Size(129, 30);
@@ -76,13 +76,13 @@
             this.dgvIng.Name = "dgvIng";
             this.dgvIng.RowHeadersWidth = 51;
             this.dgvIng.RowTemplate.Height = 24;
-            this.dgvIng.Size = new System.Drawing.Size(892, 362);
+            this.dgvIng.Size = new System.Drawing.Size(513, 56);
             this.dgvIng.TabIndex = 5;
             // 
             // btnIngDelAll
             // 
             this.btnIngDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIngDelAll.Location = new System.Drawing.Point(820, 38);
+            this.btnIngDelAll.Location = new System.Drawing.Point(441, 38);
             this.btnIngDelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIngDelAll.Name = "btnIngDelAll";
             this.btnIngDelAll.Size = new System.Drawing.Size(107, 30);
@@ -94,13 +94,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 483);
+            this.ClientSize = new System.Drawing.Size(583, 177);
             this.Controls.Add(this.btnIngAdd);
             this.Controls.Add(this.lblIngSearchName);
             this.Controls.Add(this.tbxIngSearchName);
             this.Controls.Add(this.dgvIng);
             this.Controls.Add(this.btnIngDelAll);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(601, 220);
             this.Name = "frmTables";
             this.Text = "Tables";
             this.Load += new System.EventHandler(this.FormTables_Load);

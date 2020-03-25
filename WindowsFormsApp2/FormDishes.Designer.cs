@@ -152,7 +152,7 @@
             this.dgvDis.Name = "dgvDis";
             this.dgvDis.RowHeadersWidth = 51;
             this.dgvDis.RowTemplate.Height = 24;
-            this.dgvDis.Size = new System.Drawing.Size(892, 368);
+            this.dgvDis.Size = new System.Drawing.Size(892, 55);
             this.dgvDis.TabIndex = 13;
             // 
             // btnDisDelAll
@@ -170,7 +170,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 483);
+            this.ClientSize = new System.Drawing.Size(962, 170);
             this.Controls.Add(this.btnDisAdd);
             this.Controls.Add(this.lblDisSearchQuantityAnd);
             this.Controls.Add(this.tbxDisSearchQuantityTo);
@@ -185,6 +185,7 @@
             this.Controls.Add(this.dgvDis);
             this.Controls.Add(this.btnDisDelAll);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(980, 217);
             this.Name = "frmDishes";
             this.Text = "Plats";
             this.Load += new System.EventHandler(this.FormDishes_Load);

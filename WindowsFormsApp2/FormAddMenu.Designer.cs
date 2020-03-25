@@ -188,6 +188,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormAddMenu";
             this.Text = "FormAddMenu";
             this.groupBox1.ResumeLayout(false);
