@@ -38,6 +38,7 @@
             this.gérerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gérerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.msiStats = new System.Windows.Forms.ToolStripMenuItem();
+            this.déconnection = new System.Windows.Forms.Button();
             this.mstManager.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,29 +53,30 @@
             this.msiStats});
             this.mstManager.Location = new System.Drawing.Point(0, 0);
             this.mstManager.Name = "mstManager";
-            this.mstManager.Size = new System.Drawing.Size(505, 28);
+            this.mstManager.Size = new System.Drawing.Size(660, 28);
             this.mstManager.TabIndex = 4;
             this.mstManager.Text = "menuStrip1";
+            this.mstManager.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mstManager_ItemClicked);
             // 
             // msiDishes
             // 
             this.msiDishes.Name = "msiDishes";
-            this.msiDishes.Size = new System.Drawing.Size(94, 24);
-            this.msiDishes.Text = "Gérer &Plats";
+            this.msiDishes.Size = new System.Drawing.Size(95, 24);
+            this.msiDishes.Text = "Gérer &plats";
             this.msiDishes.Click += new System.EventHandler(this.msiDishes_Click);
             // 
             // msiIngredients
             // 
             this.msiIngredients.Name = "msiIngredients";
             this.msiIngredients.Size = new System.Drawing.Size(137, 24);
-            this.msiIngredients.Text = "Gérer &Ingredients";
+            this.msiIngredients.Text = "Gérer &ingredients";
             this.msiIngredients.Click += new System.EventHandler(this.msiIngredients_Click);
             // 
             // msiMenus
             // 
             this.msiMenus.Name = "msiMenus";
             this.msiMenus.Size = new System.Drawing.Size(100, 24);
-            this.msiMenus.Text = "Gérer &Menu";
+            this.msiMenus.Text = "Gérer &menu";
             this.msiMenus.Click += new System.EventHandler(this.msiMenus_Click);
             // 
             // msiOthers
@@ -90,22 +92,22 @@
             // gérerTablesToolStripMenuItem
             // 
             this.gérerTablesToolStripMenuItem.Name = "gérerTablesToolStripMenuItem";
-            this.gérerTablesToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
-            this.gérerTablesToolStripMenuItem.Text = "Gérer &Tables";
+            this.gérerTablesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gérerTablesToolStripMenuItem.Text = "Gérer &tables";
             this.gérerTablesToolStripMenuItem.Click += new System.EventHandler(this.gérerTablesToolStripMenuItem_Click);
             // 
             // gérerToolStripMenuItem
             // 
             this.gérerToolStripMenuItem.Name = "gérerToolStripMenuItem";
-            this.gérerToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
-            this.gérerToolStripMenuItem.Text = "Gérer &Comptes";
+            this.gérerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gérerToolStripMenuItem.Text = "Gérer &comptes";
             this.gérerToolStripMenuItem.Click += new System.EventHandler(this.gérerToolStripMenuItem_Click);
             // 
             // gérerToolStripMenuItem1
             // 
             this.gérerToolStripMenuItem1.Name = "gérerToolStripMenuItem1";
-            this.gérerToolStripMenuItem1.Size = new System.Drawing.Size(203, 26);
-            this.gérerToolStripMenuItem1.Text = "&Gérer Catégories";
+            this.gérerToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.gérerToolStripMenuItem1.Text = "&Gérer catégories";
             this.gérerToolStripMenuItem1.Click += new System.EventHandler(this.gérerToolStripMenuItem1_Click);
             // 
             // msiStats
@@ -115,16 +117,27 @@
             this.msiStats.Text = "&Statistiques";
             this.msiStats.Click += new System.EventHandler(this.msiStats_Click);
             // 
+            // déconnection
+            // 
+            this.déconnection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.déconnection.Location = new System.Drawing.Point(527, -1);
+            this.déconnection.Name = "déconnection";
+            this.déconnection.Size = new System.Drawing.Size(127, 30);
+            this.déconnection.TabIndex = 6;
+            this.déconnection.Text = "se &déconnecter";
+            this.déconnection.UseVisualStyleBackColor = true;
+            // 
             // FormManagerHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 583);
+            this.ClientSize = new System.Drawing.Size(660, 153);
+            this.Controls.Add(this.déconnection);
             this.Controls.Add(this.mstManager);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mstManager;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(523, 630);
+            this.MinimumSize = new System.Drawing.Size(678, 200);
             this.Name = "FormManagerHome";
             this.ShowIcon = false;
             this.Text = "Page d\'accueil";
@@ -147,5 +160,6 @@
         private System.Windows.Forms.ToolStripMenuItem gérerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gérerToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem msiStats;
+        private System.Windows.Forms.Button déconnection;
     }
 }

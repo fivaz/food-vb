@@ -156,5 +156,15 @@ namespace WindowsFormsApp2
                 f2.Show();
             }
         }
+
+        private void mstManager_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

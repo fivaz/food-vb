@@ -21,5 +21,18 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void btnSInSubmit_Click(object sender, EventArgs e)
+        {
+            if(txbSInEmail.Text == "admin")
+            {
+                new FormManagerHome().Show();
+            }
+            else
+            {
+                new FormWaiterHome().Show();
+            }
+            this.Hide();
+        }
     }
 }
