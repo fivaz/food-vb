@@ -150,7 +150,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(80, 30);
             this.button1.TabIndex = 12;
-            this.button1.Text = "Ajouter";
+            this.button1.Text = "&Créer";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // FormAddIngredient

@@ -169,10 +169,10 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 30);
             this.button1.TabIndex = 14;
-            this.button1.Text = "créer compte";
+            this.button1.Text = "&créer compte";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // FormSignUp
+            // FormAddAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -195,7 +195,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximumSize = new System.Drawing.Size(422, 385);
             this.MinimumSize = new System.Drawing.Size(422, 385);
-            this.Name = "FormSignUp";
+            this.Name = "FormAddAccount";
             this.Text = "Nouveau compte";
             this.Load += new System.EventHandler(this.FormSignUp_Load);
             this.ResumeLayout(false);

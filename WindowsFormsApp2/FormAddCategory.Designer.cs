@@ -55,7 +55,7 @@
             this.ajouter.Name = "ajouter";
             this.ajouter.Size = new System.Drawing.Size(75, 30);
             this.ajouter.TabIndex = 2;
-            this.ajouter.Text = "ajouter";
+            this.ajouter.Text = "&Créer";
             this.ajouter.UseVisualStyleBackColor = true;
             // 
             // FormAddCategory

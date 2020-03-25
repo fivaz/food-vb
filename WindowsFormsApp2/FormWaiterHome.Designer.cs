@@ -65,7 +65,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(172, 28);
             this.button1.TabIndex = 3;
-            this.button1.Text = "nouvelle commande";
+            this.button1.Text = "&Nouvelle commande";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -95,7 +95,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(108, 28);
             this.button2.TabIndex = 14;
-            this.button2.Text = "confirmer";
+            this.button2.Text = "&Confirmer";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // linkLabel1
@@ -104,10 +104,10 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(520, 39);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(177, 17);
+            this.linkLabel1.Size = new System.Drawing.Size(179, 17);
             this.linkLabel1.TabIndex = 15;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "historique des commandes";
+            this.linkLabel1.Text = "Historique des commandes";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // groupBox1
@@ -293,6 +293,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(979, 882);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);

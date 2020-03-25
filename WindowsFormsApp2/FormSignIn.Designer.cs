@@ -49,9 +49,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(29, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 17);
+            this.label2.Size = new System.Drawing.Size(42, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "email";
+            this.label2.Text = "Email";
             // 
             // label3
             // 
@@ -60,7 +60,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 17);
             this.label3.TabIndex = 4;
-            this.label3.Text = "mot de passe";
+            this.label3.Text = "Mot de passe";
             // 
             // textBox2
             // 
@@ -77,7 +77,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(85, 28);
             this.button1.TabIndex = 5;
-            this.button1.Text = "connexion";
+            this.button1.Text = "&Connexion";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // FormSignIn
