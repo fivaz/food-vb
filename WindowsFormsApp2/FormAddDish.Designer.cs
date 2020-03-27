@@ -65,7 +65,7 @@
             this.lblAddDishName.Name = "lblAddDishName";
             this.lblAddDishName.Size = new System.Drawing.Size(37, 17);
             this.lblAddDishName.TabIndex = 1;
-            this.lblAddDishName.Text = "Nom";
+            this.lblAddDishName.Text = "&Nom";
             // 
             // label2
             // 
@@ -75,7 +75,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Catégorie";
+            this.label2.Text = "&Catégorie";
             // 
             // comboBox1
             // 
@@ -136,9 +136,9 @@
             this.label6.Location = new System.Drawing.Point(352, 62);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 17);
+            this.label6.Size = new System.Drawing.Size(82, 17);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Recherche";
+            this.label6.Text = "Rechercher";
             // 
             // dataGridView2
             // 
@@ -158,14 +158,14 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 17);
             this.label7.TabIndex = 9;
-            this.label7.Text = "Disponibles";
+            this.label7.Text = "&Disponibles";
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(352, 83);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(214, 22);
+            this.textBox3.Size = new System.Drawing.Size(315, 22);
             this.textBox3.TabIndex = 11;
             // 
             // label5
@@ -174,9 +174,9 @@
             this.label5.Location = new System.Drawing.Point(17, 62);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 17);
+            this.label5.Size = new System.Drawing.Size(82, 17);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Recherche";
+            this.label5.Text = "Rechercher";
             // 
             // dataGridView1
             // 
@@ -197,7 +197,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 17);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Ajoutés";
+            this.label3.Text = "&Ajoutés";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBox2
@@ -205,7 +205,7 @@
             this.textBox2.Location = new System.Drawing.Point(17, 83);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(214, 22);
+            this.textBox2.Size = new System.Drawing.Size(315, 22);
             this.textBox2.TabIndex = 8;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 

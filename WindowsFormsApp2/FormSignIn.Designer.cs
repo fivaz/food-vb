@@ -51,7 +51,7 @@
             this.lblSInEmail.Name = "lblSInEmail";
             this.lblSInEmail.Size = new System.Drawing.Size(42, 17);
             this.lblSInEmail.TabIndex = 2;
-            this.lblSInEmail.Text = "Email";
+            this.lblSInEmail.Text = "&Email";
             // 
             // lblSInPassword
             // 
@@ -60,7 +60,7 @@
             this.lblSInPassword.Name = "lblSInPassword";
             this.lblSInPassword.Size = new System.Drawing.Size(93, 17);
             this.lblSInPassword.TabIndex = 4;
-            this.lblSInPassword.Text = "Mot de passe";
+            this.lblSInPassword.Text = "&Mot de passe";
             // 
             // txbSInPassword
             // 

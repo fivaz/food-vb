@@ -58,7 +58,7 @@
             this.btnIngAdd.Name = "btnIngAdd";
             this.btnIngAdd.Size = new System.Drawing.Size(129, 30);
             this.btnIngAdd.TabIndex = 11;
-            this.btnIngAdd.Text = "&nouvel ingredient";
+            this.btnIngAdd.Text = "&Nouvel ingrédient";
             this.btnIngAdd.UseVisualStyleBackColor = true;
             this.btnIngAdd.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -77,7 +77,7 @@
             this.lblIngSearchName.Name = "lblIngSearchName";
             this.lblIngSearchName.Size = new System.Drawing.Size(82, 17);
             this.lblIngSearchName.TabIndex = 1;
-            this.lblIngSearchName.Text = "Rechercher";
+            this.lblIngSearchName.Text = "&Rechercher";
             // 
             // tbxIngSearchPriceFrom
             // 
@@ -94,7 +94,7 @@
             this.lblIngSearchPrice.Name = "lblIngSearchPrice";
             this.lblIngSearchPrice.Size = new System.Drawing.Size(68, 17);
             this.lblIngSearchPrice.TabIndex = 3;
-            this.lblIngSearchPrice.Text = "Prix entre";
+            this.lblIngSearchPrice.Text = "&Prix entre";
             // 
             // textBox3
             // 
@@ -120,7 +120,7 @@
             this.lblIngSearchQuantity.Name = "lblIngSearchQuantity";
             this.lblIngSearchQuantity.Size = new System.Drawing.Size(99, 17);
             this.lblIngSearchQuantity.TabIndex = 7;
-            this.lblIngSearchQuantity.Text = "Quantité entre";
+            this.lblIngSearchQuantity.Text = "&Quantité entre";
             // 
             // tbxIngSearchQuantityFrom
             // 
@@ -218,7 +218,7 @@
             this.btnIngDelAll.Name = "btnIngDelAll";
             this.btnIngDelAll.Size = new System.Drawing.Size(107, 30);
             this.btnIngDelAll.TabIndex = 12;
-            this.btnIngDelAll.Text = "&supprimer";
+            this.btnIngDelAll.Text = "&Supprimer";
             this.btnIngDelAll.UseVisualStyleBackColor = true;
             // 
             // frmIngredients
@@ -241,7 +241,7 @@
             this.Controls.Add(this.btnIngDelAll);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmIngredients";
-            this.Text = "Ingredients";
+            this.Text = "Ingrédients";
             this.Load += new System.EventHandler(this.FormIngredients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvIng)).EndInit();
             this.ResumeLayout(false);

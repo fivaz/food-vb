@@ -39,12 +39,12 @@
             // btnMenAdd
             // 
             this.btnMenAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMenAdd.Location = new System.Drawing.Point(289, 39);
+            this.btnMenAdd.Location = new System.Drawing.Point(562, 39);
             this.btnMenAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenAdd.Name = "btnMenAdd";
             this.btnMenAdd.Size = new System.Drawing.Size(129, 30);
             this.btnMenAdd.TabIndex = 3;
-            this.btnMenAdd.Text = "&nouveau menu";
+            this.btnMenAdd.Text = "&Nouveau menu";
             this.btnMenAdd.UseVisualStyleBackColor = true;
             this.btnMenAdd.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -59,11 +59,11 @@
             // lblMenSearchName
             // 
             this.lblMenSearchName.AutoSize = true;
-            this.lblMenSearchName.Location = new System.Drawing.Point(34, 22);
+            this.lblMenSearchName.Location = new System.Drawing.Point(34, 24);
             this.lblMenSearchName.Name = "lblMenSearchName";
             this.lblMenSearchName.Size = new System.Drawing.Size(82, 17);
             this.lblMenSearchName.TabIndex = 1;
-            this.lblMenSearchName.Text = "Rechercher";
+            this.lblMenSearchName.Text = "&Rechercher";
             // 
             // dgvMen
             // 
@@ -76,25 +76,25 @@
             this.dgvMen.Name = "dgvMen";
             this.dgvMen.RowHeadersWidth = 51;
             this.dgvMen.RowTemplate.Height = 24;
-            this.dgvMen.Size = new System.Drawing.Size(514, 58);
+            this.dgvMen.Size = new System.Drawing.Size(787, 339);
             this.dgvMen.TabIndex = 5;
             // 
             // btnMenDelAll
             // 
             this.btnMenDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMenDelAll.Location = new System.Drawing.Point(443, 39);
+            this.btnMenDelAll.Location = new System.Drawing.Point(716, 39);
             this.btnMenDelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenDelAll.Name = "btnMenDelAll";
             this.btnMenDelAll.Size = new System.Drawing.Size(107, 30);
             this.btnMenDelAll.TabIndex = 4;
-            this.btnMenDelAll.Text = "&supprimer";
+            this.btnMenDelAll.Text = "&Supprimer";
             this.btnMenDelAll.UseVisualStyleBackColor = true;
             // 
             // frmMenus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 173);
+            this.ClientSize = new System.Drawing.Size(857, 454);
             this.Controls.Add(this.btnMenAdd);
             this.Controls.Add(this.lblMenSearchName);
             this.Controls.Add(this.tbxMenSearchName);

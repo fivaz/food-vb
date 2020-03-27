@@ -44,7 +44,7 @@
             this.btnIngAdd.Name = "btnIngAdd";
             this.btnIngAdd.Size = new System.Drawing.Size(129, 30);
             this.btnIngAdd.TabIndex = 3;
-            this.btnIngAdd.Text = "&nouveau compte";
+            this.btnIngAdd.Text = "&Nouveau compte";
             this.btnIngAdd.UseVisualStyleBackColor = true;
             this.btnIngAdd.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -63,7 +63,7 @@
             this.lblIngSearchName.Name = "lblIngSearchName";
             this.lblIngSearchName.Size = new System.Drawing.Size(82, 17);
             this.lblIngSearchName.TabIndex = 1;
-            this.lblIngSearchName.Text = "Rechercher";
+            this.lblIngSearchName.Text = "&Rechercher";
             // 
             // dgvIng
             // 
@@ -87,7 +87,7 @@
             this.btnIngDelAll.Name = "btnIngDelAll";
             this.btnIngDelAll.Size = new System.Drawing.Size(107, 30);
             this.btnIngDelAll.TabIndex = 4;
-            this.btnIngDelAll.Text = "&supprimer";
+            this.btnIngDelAll.Text = "&Supprimer";
             this.btnIngDelAll.UseVisualStyleBackColor = true;
             // 
             // frmAccounts

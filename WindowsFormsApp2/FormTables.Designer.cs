@@ -39,12 +39,12 @@
             // btnIngAdd
             // 
             this.btnIngAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIngAdd.Location = new System.Drawing.Point(288, 38);
+            this.btnIngAdd.Location = new System.Drawing.Point(532, 38);
             this.btnIngAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIngAdd.Name = "btnIngAdd";
             this.btnIngAdd.Size = new System.Drawing.Size(129, 30);
             this.btnIngAdd.TabIndex = 3;
-            this.btnIngAdd.Text = "&nouvelle table";
+            this.btnIngAdd.Text = "&Nouvelle table";
             this.btnIngAdd.UseVisualStyleBackColor = true;
             this.btnIngAdd.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -63,7 +63,7 @@
             this.lblIngSearchName.Name = "lblIngSearchName";
             this.lblIngSearchName.Size = new System.Drawing.Size(82, 17);
             this.lblIngSearchName.TabIndex = 1;
-            this.lblIngSearchName.Text = "Rechercher";
+            this.lblIngSearchName.Text = "&Rechercher";
             // 
             // dgvIng
             // 
@@ -76,25 +76,25 @@
             this.dgvIng.Name = "dgvIng";
             this.dgvIng.RowHeadersWidth = 51;
             this.dgvIng.RowTemplate.Height = 24;
-            this.dgvIng.Size = new System.Drawing.Size(513, 56);
+            this.dgvIng.Size = new System.Drawing.Size(757, 324);
             this.dgvIng.TabIndex = 5;
             // 
             // btnIngDelAll
             // 
             this.btnIngDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIngDelAll.Location = new System.Drawing.Point(441, 38);
+            this.btnIngDelAll.Location = new System.Drawing.Point(685, 38);
             this.btnIngDelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIngDelAll.Name = "btnIngDelAll";
             this.btnIngDelAll.Size = new System.Drawing.Size(107, 30);
             this.btnIngDelAll.TabIndex = 4;
-            this.btnIngDelAll.Text = "&supprimer";
+            this.btnIngDelAll.Text = "&Supprimer";
             this.btnIngDelAll.UseVisualStyleBackColor = true;
             // 
             // frmTables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(583, 177);
+            this.ClientSize = new System.Drawing.Size(827, 445);
             this.Controls.Add(this.btnIngAdd);
             this.Controls.Add(this.lblIngSearchName);
             this.Controls.Add(this.tbxIngSearchName);

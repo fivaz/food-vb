@@ -47,12 +47,12 @@
             // btnDisAdd
             // 
             this.btnDisAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDisAdd.Location = new System.Drawing.Point(667, 38);
+            this.btnDisAdd.Location = new System.Drawing.Point(888, 38);
             this.btnDisAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDisAdd.Name = "btnDisAdd";
             this.btnDisAdd.Size = new System.Drawing.Size(129, 30);
             this.btnDisAdd.TabIndex = 11;
-            this.btnDisAdd.Text = "&nouveau plat";
+            this.btnDisAdd.Text = "&Nouveau plat";
             this.btnDisAdd.UseVisualStyleBackColor = true;
             this.btnDisAdd.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -71,7 +71,7 @@
             this.lblDisSearchName.Name = "lblDisSearchName";
             this.lblDisSearchName.Size = new System.Drawing.Size(82, 17);
             this.lblDisSearchName.TabIndex = 1;
-            this.lblDisSearchName.Text = "Rechercher";
+            this.lblDisSearchName.Text = "&Rechercher";
             // 
             // tbxDisSearchPriceFrom
             // 
@@ -88,7 +88,7 @@
             this.lblDisSearchPrice.Name = "lblDisSearchPrice";
             this.lblDisSearchPrice.Size = new System.Drawing.Size(68, 17);
             this.lblDisSearchPrice.TabIndex = 3;
-            this.lblDisSearchPrice.Text = "Prix entre";
+            this.lblDisSearchPrice.Text = "&Prix entre";
             // 
             // textBox3
             // 
@@ -114,7 +114,7 @@
             this.lblDisSearchQuantity.Name = "lblDisSearchQuantity";
             this.lblDisSearchQuantity.Size = new System.Drawing.Size(99, 17);
             this.lblDisSearchQuantity.TabIndex = 7;
-            this.lblDisSearchQuantity.Text = "Quantité entre";
+            this.lblDisSearchQuantity.Text = "&Quantité entre";
             // 
             // tbxDisSearchQuantityFrom
             // 
@@ -152,25 +152,25 @@
             this.dgvDis.Name = "dgvDis";
             this.dgvDis.RowHeadersWidth = 51;
             this.dgvDis.RowTemplate.Height = 24;
-            this.dgvDis.Size = new System.Drawing.Size(892, 55);
+            this.dgvDis.Size = new System.Drawing.Size(1113, 383);
             this.dgvDis.TabIndex = 13;
             // 
             // btnDisDelAll
             // 
             this.btnDisDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDisDelAll.Location = new System.Drawing.Point(821, 38);
+            this.btnDisDelAll.Location = new System.Drawing.Point(1042, 38);
             this.btnDisDelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDisDelAll.Name = "btnDisDelAll";
             this.btnDisDelAll.Size = new System.Drawing.Size(107, 30);
             this.btnDisDelAll.TabIndex = 12;
-            this.btnDisDelAll.Text = "&supprimer";
+            this.btnDisDelAll.Text = "&Supprimer";
             this.btnDisDelAll.UseVisualStyleBackColor = true;
             // 
             // frmDishes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 170);
+            this.ClientSize = new System.Drawing.Size(1183, 498);
             this.Controls.Add(this.btnDisAdd);
             this.Controls.Add(this.lblDisSearchQuantityAnd);
             this.Controls.Add(this.tbxDisSearchQuantityTo);

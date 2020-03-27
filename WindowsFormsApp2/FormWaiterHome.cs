@@ -52,7 +52,12 @@ namespace WindowsFormsApp2
 
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
             new FormOrdersHistory().Show();
         }

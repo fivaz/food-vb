@@ -44,13 +44,13 @@
             this.btnIngAdd.Name = "btnIngAdd";
             this.btnIngAdd.Size = new System.Drawing.Size(148, 30);
             this.btnIngAdd.TabIndex = 3;
-            this.btnIngAdd.Text = "&nouvelle catégorie";
+            this.btnIngAdd.Text = "&Nouvelle catégorie";
             this.btnIngAdd.UseVisualStyleBackColor = true;
             this.btnIngAdd.Click += new System.EventHandler(this.button2_Click);
             // 
             // tbxIngSearchName
             // 
-            this.tbxIngSearchName.Location = new System.Drawing.Point(36, 46);
+            this.tbxIngSearchName.Location = new System.Drawing.Point(35, 46);
             this.tbxIngSearchName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxIngSearchName.Name = "tbxIngSearchName";
             this.tbxIngSearchName.Size = new System.Drawing.Size(227, 22);
@@ -59,11 +59,11 @@
             // lblIngSearchName
             // 
             this.lblIngSearchName.AutoSize = true;
-            this.lblIngSearchName.Location = new System.Drawing.Point(34, 22);
+            this.lblIngSearchName.Location = new System.Drawing.Point(32, 27);
             this.lblIngSearchName.Name = "lblIngSearchName";
             this.lblIngSearchName.Size = new System.Drawing.Size(82, 17);
             this.lblIngSearchName.TabIndex = 1;
-            this.lblIngSearchName.Text = "Rechercher";
+            this.lblIngSearchName.Text = "&Rechercher";
             // 
             // dgvIng
             // 
@@ -71,7 +71,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvIng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIng.Location = new System.Drawing.Point(36, 92);
+            this.dgvIng.Location = new System.Drawing.Point(35, 92);
             this.dgvIng.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvIng.Name = "dgvIng";
             this.dgvIng.RowHeadersWidth = 51;
@@ -83,12 +83,12 @@
             // btnIngDelAll
             // 
             this.btnIngDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIngDelAll.Location = new System.Drawing.Point(458, 38);
+            this.btnIngDelAll.Location = new System.Drawing.Point(457, 38);
             this.btnIngDelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIngDelAll.Name = "btnIngDelAll";
             this.btnIngDelAll.Size = new System.Drawing.Size(107, 30);
             this.btnIngDelAll.TabIndex = 4;
-            this.btnIngDelAll.Text = "&supprimer";
+            this.btnIngDelAll.Text = "&Supprimer";
             this.btnIngDelAll.UseVisualStyleBackColor = true;
             // 
             // frmCategories
