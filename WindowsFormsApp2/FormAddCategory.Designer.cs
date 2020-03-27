@@ -28,45 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.ajouter = new System.Windows.Forms.Button();
+            this.lblACaName = new System.Windows.Forms.Label();
+            this.tbxACaName = new System.Windows.Forms.TextBox();
+            this.btnACaSubmit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblACaName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "&Nom";
+            this.lblACaName.AutoSize = true;
+            this.lblACaName.Location = new System.Drawing.Point(53, 35);
+            this.lblACaName.Name = "lblACaName";
+            this.lblACaName.Size = new System.Drawing.Size(37, 17);
+            this.lblACaName.TabIndex = 0;
+            this.lblACaName.Text = "&Nom";
             // 
-            // textBox1
+            // tbxACaName
             // 
-            this.textBox1.Location = new System.Drawing.Point(56, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 22);
-            this.textBox1.TabIndex = 1;
+            this.tbxACaName.Location = new System.Drawing.Point(57, 56);
+            this.tbxACaName.Name = "tbxACaName";
+            this.tbxACaName.Size = new System.Drawing.Size(224, 22);
+            this.tbxACaName.TabIndex = 1;
             // 
-            // ajouter
+            // btnACaSubmit
             // 
-            this.ajouter.Location = new System.Drawing.Point(112, 98);
-            this.ajouter.Name = "ajouter";
-            this.ajouter.Size = new System.Drawing.Size(75, 30);
-            this.ajouter.TabIndex = 2;
-            this.ajouter.Text = "&Créer";
-            this.ajouter.UseVisualStyleBackColor = true;
+            this.btnACaSubmit.Location = new System.Drawing.Point(132, 98);
+            this.btnACaSubmit.Name = "btnACaSubmit";
+            this.btnACaSubmit.Size = new System.Drawing.Size(75, 30);
+            this.btnACaSubmit.TabIndex = 2;
+            this.btnACaSubmit.Text = "&Créer";
+            this.btnACaSubmit.UseVisualStyleBackColor = true;
             // 
             // FormAddCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 155);
-            this.Controls.Add(this.ajouter);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(338, 155);
+            this.Controls.Add(this.btnACaSubmit);
+            this.Controls.Add(this.tbxACaName);
+            this.Controls.Add(this.lblACaName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FormAddCategory";
             this.Text = "Nouvelle catégorie";
             this.ResumeLayout(false);
@@ -76,8 +77,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button ajouter;
+        private System.Windows.Forms.Label lblACaName;
+        private System.Windows.Forms.TextBox tbxACaName;
+        private System.Windows.Forms.Button btnACaSubmit;
     }
 }

@@ -28,174 +28,175 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gbxAMenuItem = new System.Windows.Forms.GroupBox();
+            this.lblAMeAvaSearch = new System.Windows.Forms.Label();
+            this.dgvAMeAvaSearch = new System.Windows.Forms.DataGridView();
+            this.lblAMeAvailable = new System.Windows.Forms.Label();
+            this.tbxAMeAvaSearch = new System.Windows.Forms.TextBox();
+            this.lblAMeAddSearch = new System.Windows.Forms.Label();
+            this.dgvAMeAddSearch = new System.Windows.Forms.DataGridView();
+            this.lblAMeAdded = new System.Windows.Forms.Label();
+            this.tbxAMeAddSearch = new System.Windows.Forms.TextBox();
+            this.lblAMePrice = new System.Windows.Forms.Label();
+            this.btnAMeSubmit = new System.Windows.Forms.Button();
+            this.lblAMeName = new System.Windows.Forms.Label();
+            this.tbxAMeName = new System.Windows.Forms.TextBox();
+            this.gbxAMenuItem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAMeAvaSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAMeAddSearch)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gbxAMenuItem
             // 
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.dataGridView2);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Location = new System.Drawing.Point(38, 98);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(683, 344);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Items";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.gbxAMenuItem.Controls.Add(this.lblAMeAvaSearch);
+            this.gbxAMenuItem.Controls.Add(this.dgvAMeAvaSearch);
+            this.gbxAMenuItem.Controls.Add(this.lblAMeAvailable);
+            this.gbxAMenuItem.Controls.Add(this.tbxAMeAvaSearch);
+            this.gbxAMenuItem.Controls.Add(this.lblAMeAddSearch);
+            this.gbxAMenuItem.Controls.Add(this.dgvAMeAddSearch);
+            this.gbxAMenuItem.Controls.Add(this.lblAMeAdded);
+            this.gbxAMenuItem.Controls.Add(this.tbxAMeAddSearch);
+            this.gbxAMenuItem.Location = new System.Drawing.Point(38, 98);
+            this.gbxAMenuItem.Name = "gbxAMenuItem";
+            this.gbxAMenuItem.Size = new System.Drawing.Size(683, 344);
+            this.gbxAMenuItem.TabIndex = 3;
+            this.gbxAMenuItem.TabStop = false;
+            this.gbxAMenuItem.Text = "Items";
+            this.gbxAMenuItem.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // label6
+            // lblAMeAvaSearch
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(347, 62);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 17);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Rechercher";
+            this.lblAMeAvaSearch.AutoSize = true;
+            this.lblAMeAvaSearch.Location = new System.Drawing.Point(347, 62);
+            this.lblAMeAvaSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAMeAvaSearch.Name = "lblAMeAvaSearch";
+            this.lblAMeAvaSearch.Size = new System.Drawing.Size(82, 17);
+            this.lblAMeAvaSearch.TabIndex = 9;
+            this.lblAMeAvaSearch.Text = "Rechercher";
             // 
-            // dataGridView2
+            // dgvAMeAvaSearch
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(350, 113);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(315, 218);
-            this.dataGridView2.TabIndex = 11;
+            this.dgvAMeAvaSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAMeAvaSearch.Location = new System.Drawing.Point(350, 113);
+            this.dgvAMeAvaSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvAMeAvaSearch.Name = "dgvAMeAvaSearch";
+            this.dgvAMeAvaSearch.RowHeadersWidth = 51;
+            this.dgvAMeAvaSearch.Size = new System.Drawing.Size(315, 218);
+            this.dgvAMeAvaSearch.TabIndex = 11;
             // 
-            // label7
+            // lblAMeAvailable
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(347, 25);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 17);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "&Disponibles";
+            this.lblAMeAvailable.AutoSize = true;
+            this.lblAMeAvailable.Location = new System.Drawing.Point(347, 25);
+            this.lblAMeAvailable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAMeAvailable.Name = "lblAMeAvailable";
+            this.lblAMeAvailable.Size = new System.Drawing.Size(81, 17);
+            this.lblAMeAvailable.TabIndex = 8;
+            this.lblAMeAvailable.Text = "&Disponibles";
             // 
-            // textBox3
+            // tbxAMeAvaSearch
             // 
-            this.textBox3.Location = new System.Drawing.Point(350, 83);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(214, 22);
-            this.textBox3.TabIndex = 10;
+            this.tbxAMeAvaSearch.Location = new System.Drawing.Point(350, 83);
+            this.tbxAMeAvaSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxAMeAvaSearch.Name = "tbxAMeAvaSearch";
+            this.tbxAMeAvaSearch.Size = new System.Drawing.Size(315, 22);
+            this.tbxAMeAvaSearch.TabIndex = 10;
             // 
-            // label5
+            // lblAMeAddSearch
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 62);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 17);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Rechercher";
+            this.lblAMeAddSearch.AutoSize = true;
+            this.lblAMeAddSearch.Location = new System.Drawing.Point(15, 62);
+            this.lblAMeAddSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAMeAddSearch.Name = "lblAMeAddSearch";
+            this.lblAMeAddSearch.Size = new System.Drawing.Size(82, 17);
+            this.lblAMeAddSearch.TabIndex = 5;
+            this.lblAMeAddSearch.Text = "Rechercher";
             // 
-            // dataGridView1
+            // dgvAMeAddSearch
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 113);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(315, 218);
-            this.dataGridView1.TabIndex = 7;
+            this.dgvAMeAddSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAMeAddSearch.Location = new System.Drawing.Point(18, 113);
+            this.dgvAMeAddSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvAMeAddSearch.Name = "dgvAMeAddSearch";
+            this.dgvAMeAddSearch.RowHeadersWidth = 51;
+            this.dgvAMeAddSearch.Size = new System.Drawing.Size(315, 218);
+            this.dgvAMeAddSearch.TabIndex = 7;
             // 
-            // label3
+            // lblAMeAdded
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 25);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "&Ajoutés";
+            this.lblAMeAdded.AutoSize = true;
+            this.lblAMeAdded.Location = new System.Drawing.Point(15, 25);
+            this.lblAMeAdded.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAMeAdded.Name = "lblAMeAdded";
+            this.lblAMeAdded.Size = new System.Drawing.Size(55, 17);
+            this.lblAMeAdded.TabIndex = 4;
+            this.lblAMeAdded.Text = "&Ajoutés";
             // 
-            // textBox2
+            // tbxAMeAddSearch
             // 
-            this.textBox2.Location = new System.Drawing.Point(18, 83);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(214, 22);
-            this.textBox2.TabIndex = 6;
+            this.tbxAMeAddSearch.Location = new System.Drawing.Point(18, 83);
+            this.tbxAMeAddSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxAMeAddSearch.Name = "tbxAMeAddSearch";
+            this.tbxAMeAddSearch.Size = new System.Drawing.Size(315, 22);
+            this.tbxAMeAddSearch.TabIndex = 6;
             // 
-            // label4
+            // lblAMePrice
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(591, 467);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 17);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Prix calculé: 29.43";
+            this.lblAMePrice.AutoSize = true;
+            this.lblAMePrice.Location = new System.Drawing.Point(591, 467);
+            this.lblAMePrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAMePrice.Name = "lblAMePrice";
+            this.lblAMePrice.Size = new System.Drawing.Size(123, 17);
+            this.lblAMePrice.TabIndex = 15;
+            this.lblAMePrice.Text = "Prix calculé: 29.43";
             // 
-            // button1
+            // btnAMeSubmit
             // 
-            this.button1.Location = new System.Drawing.Point(329, 461);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "&Créer";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAMeSubmit.Location = new System.Drawing.Point(329, 461);
+            this.btnAMeSubmit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAMeSubmit.Name = "btnAMeSubmit";
+            this.btnAMeSubmit.Size = new System.Drawing.Size(100, 28);
+            this.btnAMeSubmit.TabIndex = 13;
+            this.btnAMeSubmit.Text = "&Créer";
+            this.btnAMeSubmit.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblAMeName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 35);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "&Nom";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblAMeName.AutoSize = true;
+            this.lblAMeName.Location = new System.Drawing.Point(35, 35);
+            this.lblAMeName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAMeName.Name = "lblAMeName";
+            this.lblAMeName.Size = new System.Drawing.Size(37, 17);
+            this.lblAMeName.TabIndex = 1;
+            this.lblAMeName.Text = "&Nom";
+            this.lblAMeName.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // tbxAMeName
             // 
-            this.textBox1.Location = new System.Drawing.Point(38, 56);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
-            this.textBox1.TabIndex = 2;
+            this.tbxAMeName.Location = new System.Drawing.Point(38, 56);
+            this.tbxAMeName.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxAMeName.Name = "tbxAMeName";
+            this.tbxAMeName.Size = new System.Drawing.Size(132, 22);
+            this.tbxAMeName.TabIndex = 2;
             // 
             // FormAddMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 529);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.gbxAMenuItem);
+            this.Controls.Add(this.lblAMePrice);
+            this.Controls.Add(this.btnAMeSubmit);
+            this.Controls.Add(this.lblAMeName);
+            this.Controls.Add(this.tbxAMeName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FormAddMenu";
             this.Text = "Nouveau menu";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.gbxAMenuItem.ResumeLayout(false);
+            this.gbxAMenuItem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAMeAvaSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAMeAddSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,18 +204,18 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox gbxAMenuItem;
+        private System.Windows.Forms.Label lblAMeAvaSearch;
+        private System.Windows.Forms.DataGridView dgvAMeAvaSearch;
+        private System.Windows.Forms.Label lblAMeAvailable;
+        private System.Windows.Forms.TextBox tbxAMeAvaSearch;
+        private System.Windows.Forms.Label lblAMeAddSearch;
+        private System.Windows.Forms.DataGridView dgvAMeAddSearch;
+        private System.Windows.Forms.Label lblAMeAdded;
+        private System.Windows.Forms.TextBox tbxAMeAddSearch;
+        private System.Windows.Forms.Label lblAMePrice;
+        private System.Windows.Forms.Button btnAMeSubmit;
+        private System.Windows.Forms.Label lblAMeName;
+        private System.Windows.Forms.TextBox tbxAMeName;
     }
 }

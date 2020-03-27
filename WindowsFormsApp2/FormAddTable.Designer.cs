@@ -44,14 +44,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(53, 56);
+            this.textBox1.Location = new System.Drawing.Point(54, 56);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 22);
+            this.textBox1.Size = new System.Drawing.Size(196, 22);
             this.textBox1.TabIndex = 2;
             // 
             // ajouter
             // 
-            this.ajouter.Location = new System.Drawing.Point(109, 98);
+            this.ajouter.Location = new System.Drawing.Point(115, 98);
             this.ajouter.Name = "ajouter";
             this.ajouter.Size = new System.Drawing.Size(75, 30);
             this.ajouter.TabIndex = 3;
@@ -62,11 +62,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 155);
+            this.ClientSize = new System.Drawing.Size(305, 155);
             this.Controls.Add(this.ajouter);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FormAddTable";
             this.Text = "Nouvelle table";
             this.ResumeLayout(false);
