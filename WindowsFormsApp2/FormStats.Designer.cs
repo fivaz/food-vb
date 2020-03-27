@@ -119,7 +119,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(344, 392);
             this.Name = "frmStats";
-            this.Text = "FormStats";
+            this.Text = "Statistiques";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

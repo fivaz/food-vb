@@ -174,7 +174,7 @@
             this.MaximumSize = new System.Drawing.Size(405, 325);
             this.MinimumSize = new System.Drawing.Size(405, 325);
             this.Name = "FormAddIngredient";
-            this.Text = "Nouveal Ingrédient";
+            this.Text = "Nouvel Ingrédient";
             this.ResumeLayout(false);
             this.PerformLayout();
 
