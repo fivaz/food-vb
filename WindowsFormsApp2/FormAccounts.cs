@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class frmAccounts : Form
+    public partial class FormAccounts : Form
     {
-        public frmAccounts()
+        public FormAccounts()
         {
             InitializeComponent();
         }

@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class frmMenus : Form
+    public partial class FormMenus : Form
     {
-        public frmMenus()
+        public FormMenus()
         {
             InitializeComponent();
         }

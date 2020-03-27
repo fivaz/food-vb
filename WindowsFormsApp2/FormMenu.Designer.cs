@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp2
 {
-    partial class frmMenus
+    partial class FormMenus
     {
         /// <summary>
         /// Required designer variable.
@@ -90,7 +90,7 @@
             this.btnMenDelAll.Text = "&Supprimer";
             this.btnMenDelAll.UseVisualStyleBackColor = true;
             // 
-            // frmMenus
+            // FormMenus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,7 +102,7 @@
             this.Controls.Add(this.btnMenDelAll);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(602, 220);
-            this.Name = "frmMenus";
+            this.Name = "FormMenus";
             this.Text = "Menus";
             this.Load += new System.EventHandler(this.FormMenus_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMen)).EndInit();

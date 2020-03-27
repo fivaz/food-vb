@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp2
 {
-    partial class frmIngredients
+    partial class FormIngredients
     {
         /// <summary>
         /// Required designer variable.
@@ -53,10 +53,10 @@
             // btnIngAdd
             // 
             this.btnIngAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIngAdd.Location = new System.Drawing.Point(667, 38);
+            this.btnIngAdd.Location = new System.Drawing.Point(669, 38);
             this.btnIngAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIngAdd.Name = "btnIngAdd";
-            this.btnIngAdd.Size = new System.Drawing.Size(129, 30);
+            this.btnIngAdd.Size = new System.Drawing.Size(138, 30);
             this.btnIngAdd.TabIndex = 11;
             this.btnIngAdd.Text = "&Nouvel ingrédient";
             this.btnIngAdd.UseVisualStyleBackColor = true;
@@ -213,15 +213,15 @@
             // btnIngDelAll
             // 
             this.btnIngDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIngDelAll.Location = new System.Drawing.Point(821, 38);
+            this.btnIngDelAll.Location = new System.Drawing.Point(831, 38);
             this.btnIngDelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIngDelAll.Name = "btnIngDelAll";
-            this.btnIngDelAll.Size = new System.Drawing.Size(107, 30);
+            this.btnIngDelAll.Size = new System.Drawing.Size(96, 30);
             this.btnIngDelAll.TabIndex = 12;
             this.btnIngDelAll.Text = "&Supprimer";
             this.btnIngDelAll.UseVisualStyleBackColor = true;
             // 
-            // frmIngredients
+            // FormIngredients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -240,7 +240,7 @@
             this.Controls.Add(this.dgvIng);
             this.Controls.Add(this.btnIngDelAll);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "frmIngredients";
+            this.Name = "FormIngredients";
             this.Text = "Ingrédients";
             this.Load += new System.EventHandler(this.FormIngredients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvIng)).EndInit();

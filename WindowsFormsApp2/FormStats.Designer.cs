@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp2
 {
-    partial class frmStats
+    partial class FormStats
     {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,7 @@
             // 
             // gpbStaIngredient
             // 
-            this.gpbStaIngredient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gpbStaIngredient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gpbStaIngredient.Controls.Add(this.lblStaIngredient);
             this.gpbStaIngredient.Controls.Add(this.dgvStaIngredient);
@@ -65,7 +65,7 @@
             // 
             // dgvStaIngredient
             // 
-            this.dgvStaIngredient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvStaIngredient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvStaIngredient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStaIngredient.Location = new System.Drawing.Point(23, 61);
@@ -86,7 +86,7 @@
             // 
             // dgvStaDish
             // 
-            this.dgvStaDish.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvStaDish.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvStaDish.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStaDish.Location = new System.Drawing.Point(23, 61);
@@ -98,7 +98,7 @@
             // 
             // gpbStaDish
             // 
-            this.gpbStaDish.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gpbStaDish.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gpbStaDish.Controls.Add(this.lblStaDish);
             this.gpbStaDish.Controls.Add(this.dgvStaDish);
@@ -109,7 +109,7 @@
             this.gpbStaDish.TabStop = false;
             this.gpbStaDish.Text = "Plats";
             // 
-            // frmStats
+            // FormStats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,7 +118,7 @@
             this.Controls.Add(this.gpbStaIngredient);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(344, 392);
-            this.Name = "frmStats";
+            this.Name = "FormStats";
             this.Text = "Statistiques";
             this.gpbStaIngredient.ResumeLayout(false);
             this.gpbStaIngredient.PerformLayout();

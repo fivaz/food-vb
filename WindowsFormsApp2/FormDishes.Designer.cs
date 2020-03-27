@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp2
 {
-    partial class frmDishes
+    partial class FormDishes
     {
         /// <summary>
         /// Required designer variable.
@@ -143,8 +143,8 @@
             // 
             // dgvDis
             // 
-            this.dgvDis.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvDis.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDis.Location = new System.Drawing.Point(36, 92);
@@ -166,7 +166,7 @@
             this.btnDisDelAll.Text = "&Supprimer";
             this.btnDisDelAll.UseVisualStyleBackColor = true;
             // 
-            // frmDishes
+            // FormDishes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -186,7 +186,7 @@
             this.Controls.Add(this.btnDisDelAll);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(980, 217);
-            this.Name = "frmDishes";
+            this.Name = "FormDishes";
             this.Text = "Plats";
             this.Load += new System.EventHandler(this.FormDishes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDis)).EndInit();

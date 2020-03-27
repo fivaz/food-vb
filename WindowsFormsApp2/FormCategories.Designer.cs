@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp2
 {
-    partial class frmCategories
+    partial class FormCategories
     {
         /// <summary>
         /// Required designer variable.
@@ -67,8 +67,8 @@
             // 
             // dgvCat
             // 
-            this.dgvCat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvCat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCat.Location = new System.Drawing.Point(35, 92);
@@ -91,7 +91,7 @@
             this.btnCatDelAll.Text = "&Supprimer";
             this.btnCatDelAll.UseVisualStyleBackColor = true;
             // 
-            // frmCategories
+            // FormCategories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,7 +103,7 @@
             this.Controls.Add(this.btnCatDelAll);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(617, 530);
-            this.Name = "frmCategories";
+            this.Name = "FormCategories";
             this.Text = "Categories";
             this.Load += new System.EventHandler(this.FormCategories_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCat)).EndInit();

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp2
 {
-    partial class frmAccounts
+    partial class FormAccounts
     {
         /// <summary>
         /// Required designer variable.
@@ -90,7 +90,7 @@
             this.btnAccDelAll.Text = "&Supprimer";
             this.btnAccDelAll.UseVisualStyleBackColor = true;
             // 
-            // frmAccounts
+            // FormAccounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,8 +102,8 @@
             this.Controls.Add(this.btnAccDelAll);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(595, 530);
-            this.Name = "frmAccounts";
-            this.Text = "Accounts";
+            this.Name = "FormAccounts";
+            this.Text = "Comptes";
             this.Load += new System.EventHandler(this.FormAccounts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcc)).EndInit();
             this.ResumeLayout(false);

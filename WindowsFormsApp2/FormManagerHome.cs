@@ -25,7 +25,7 @@ namespace WindowsFormsApp2
 
             if (IsOpen == false)
             {
-                frmIngredients f2 = new frmIngredients();
+                FormIngredients f2 = new FormIngredients();
                 f2.MdiParent = this;
                 f2.Show();
             }
@@ -46,7 +46,7 @@ namespace WindowsFormsApp2
 
             if (IsOpen == false)
             {
-                frmDishes f2 = new frmDishes();
+                FormDishes f2 = new FormDishes();
                 f2.MdiParent = this;
                 f2.Show();
             }
@@ -67,7 +67,7 @@ namespace WindowsFormsApp2
 
             if (IsOpen == false)
             {
-                frmMenus f2 = new frmMenus();
+                FormMenus f2 = new FormMenus();
                 f2.MdiParent = this;
                 f2.Show();
             }
@@ -88,7 +88,7 @@ namespace WindowsFormsApp2
 
             if (IsOpen == false)
             {
-                frmAccounts f2 = new frmAccounts();
+                FormAccounts f2 = new FormAccounts();
                 f2.MdiParent = this;
                 f2.Show();
             }
@@ -109,7 +109,7 @@ namespace WindowsFormsApp2
 
             if (IsOpen == false)
             {
-                frmCategories f2 = new frmCategories();
+                FormCategories f2 = new FormCategories();
                 f2.MdiParent = this;
                 f2.Show();
             }
@@ -130,7 +130,7 @@ namespace WindowsFormsApp2
 
             if (IsOpen == false)
             {
-                frmTables f2 = new frmTables();
+                FormTables f2 = new FormTables();
                 f2.MdiParent = this;
                 f2.Show();
             }
@@ -151,7 +151,7 @@ namespace WindowsFormsApp2
 
             if (IsOpen == false)
             {
-                frmStats f2 = new frmStats();
+                FormStats f2 = new FormStats();
                 f2.MdiParent = this;
                 f2.Show();
             }

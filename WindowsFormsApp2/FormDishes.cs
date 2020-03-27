@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class frmDishes : Form
+    public partial class FormDishes : Form
     {
-        public frmDishes()
+        public FormDishes()
         {
             InitializeComponent();
         }
