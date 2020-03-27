@@ -61,5 +61,10 @@ namespace WindowsFormsApp2
         {
             new FormOrdersHistory().Show();
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

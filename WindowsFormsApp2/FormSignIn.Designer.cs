@@ -37,17 +37,17 @@
             // 
             // txbSInEmail
             // 
-            this.txbSInEmail.Location = new System.Drawing.Point(29, 50);
+            this.txbSInEmail.Location = new System.Drawing.Point(38, 50);
             this.txbSInEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbSInEmail.Name = "txbSInEmail";
-            this.txbSInEmail.Size = new System.Drawing.Size(176, 22);
+            this.txbSInEmail.Size = new System.Drawing.Size(230, 22);
             this.txbSInEmail.TabIndex = 0;
             this.txbSInEmail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblSInEmail
             // 
             this.lblSInEmail.AutoSize = true;
-            this.lblSInEmail.Location = new System.Drawing.Point(29, 31);
+            this.lblSInEmail.Location = new System.Drawing.Point(37, 31);
             this.lblSInEmail.Name = "lblSInEmail";
             this.lblSInEmail.Size = new System.Drawing.Size(42, 17);
             this.lblSInEmail.TabIndex = 2;
@@ -56,7 +56,7 @@
             // lblSInPassword
             // 
             this.lblSInPassword.AutoSize = true;
-            this.lblSInPassword.Location = new System.Drawing.Point(29, 90);
+            this.lblSInPassword.Location = new System.Drawing.Point(37, 90);
             this.lblSInPassword.Name = "lblSInPassword";
             this.lblSInPassword.Size = new System.Drawing.Size(93, 17);
             this.lblSInPassword.TabIndex = 4;
@@ -64,18 +64,18 @@
             // 
             // txbSInPassword
             // 
-            this.txbSInPassword.Location = new System.Drawing.Point(29, 109);
+            this.txbSInPassword.Location = new System.Drawing.Point(38, 109);
             this.txbSInPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbSInPassword.Name = "txbSInPassword";
-            this.txbSInPassword.Size = new System.Drawing.Size(176, 22);
+            this.txbSInPassword.Size = new System.Drawing.Size(230, 22);
             this.txbSInPassword.TabIndex = 3;
             // 
             // btnSInSubmit
             // 
-            this.btnSInSubmit.Location = new System.Drawing.Point(75, 153);
+            this.btnSInSubmit.Location = new System.Drawing.Point(84, 153);
             this.btnSInSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSInSubmit.Name = "btnSInSubmit";
-            this.btnSInSubmit.Size = new System.Drawing.Size(85, 28);
+            this.btnSInSubmit.Size = new System.Drawing.Size(139, 28);
             this.btnSInSubmit.TabIndex = 5;
             this.btnSInSubmit.Text = "&Connexion";
             this.btnSInSubmit.UseVisualStyleBackColor = true;
@@ -85,14 +85,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(234, 207);
+            this.ClientSize = new System.Drawing.Size(307, 215);
             this.Controls.Add(this.btnSInSubmit);
             this.Controls.Add(this.lblSInPassword);
             this.Controls.Add(this.txbSInPassword);
             this.Controls.Add(this.lblSInEmail);
             this.Controls.Add(this.txbSInEmail);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "FormSignIn";
             this.Text = "Connexion";
             this.ResumeLayout(false);
