@@ -16,7 +16,7 @@ namespace WindowsFormsApp2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormAddCategory
+            Application.Run(new FormManagerHome
                 ());
             //Application.Run(new FormSignIn());
         }

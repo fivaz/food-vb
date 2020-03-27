@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.btnMenAdd = new System.Windows.Forms.Button();
-            this.tbxMenSearchName = new System.Windows.Forms.TextBox();
-            this.lblMenSearchName = new System.Windows.Forms.Label();
+            this.tbxMenSearch = new System.Windows.Forms.TextBox();
+            this.lblMenSearch = new System.Windows.Forms.Label();
             this.dgvMen = new System.Windows.Forms.DataGridView();
             this.btnMenDelAll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMen)).BeginInit();
@@ -48,22 +48,22 @@
             this.btnMenAdd.UseVisualStyleBackColor = true;
             this.btnMenAdd.Click += new System.EventHandler(this.button2_Click);
             // 
-            // tbxMenSearchName
+            // tbxMenSearch
             // 
-            this.tbxMenSearchName.Location = new System.Drawing.Point(36, 46);
-            this.tbxMenSearchName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbxMenSearchName.Name = "tbxMenSearchName";
-            this.tbxMenSearchName.Size = new System.Drawing.Size(227, 22);
-            this.tbxMenSearchName.TabIndex = 2;
+            this.tbxMenSearch.Location = new System.Drawing.Point(36, 46);
+            this.tbxMenSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxMenSearch.Name = "tbxMenSearch";
+            this.tbxMenSearch.Size = new System.Drawing.Size(227, 22);
+            this.tbxMenSearch.TabIndex = 2;
             // 
-            // lblMenSearchName
+            // lblMenSearch
             // 
-            this.lblMenSearchName.AutoSize = true;
-            this.lblMenSearchName.Location = new System.Drawing.Point(34, 24);
-            this.lblMenSearchName.Name = "lblMenSearchName";
-            this.lblMenSearchName.Size = new System.Drawing.Size(82, 17);
-            this.lblMenSearchName.TabIndex = 1;
-            this.lblMenSearchName.Text = "&Rechercher";
+            this.lblMenSearch.AutoSize = true;
+            this.lblMenSearch.Location = new System.Drawing.Point(34, 24);
+            this.lblMenSearch.Name = "lblMenSearch";
+            this.lblMenSearch.Size = new System.Drawing.Size(82, 17);
+            this.lblMenSearch.TabIndex = 1;
+            this.lblMenSearch.Text = "&Rechercher";
             // 
             // dgvMen
             // 
@@ -96,8 +96,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 454);
             this.Controls.Add(this.btnMenAdd);
-            this.Controls.Add(this.lblMenSearchName);
-            this.Controls.Add(this.tbxMenSearchName);
+            this.Controls.Add(this.lblMenSearch);
+            this.Controls.Add(this.tbxMenSearch);
             this.Controls.Add(this.dgvMen);
             this.Controls.Add(this.btnMenDelAll);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -114,8 +114,8 @@
         #endregion
 
         private System.Windows.Forms.Button btnMenAdd;
-        private System.Windows.Forms.TextBox tbxMenSearchName;
-        private System.Windows.Forms.Label lblMenSearchName;
+        private System.Windows.Forms.TextBox tbxMenSearch;
+        private System.Windows.Forms.Label lblMenSearch;
         private System.Windows.Forms.DataGridView dgvMen;
         private System.Windows.Forms.Button btnMenDelAll;
     }

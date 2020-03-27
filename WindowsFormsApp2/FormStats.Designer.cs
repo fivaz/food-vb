@@ -28,115 +28,115 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.gpbStaIngredient = new System.Windows.Forms.GroupBox();
+            this.lblStaIngredient = new System.Windows.Forms.Label();
+            this.dgvStaIngredient = new System.Windows.Forms.DataGridView();
+            this.lblStaDish = new System.Windows.Forms.Label();
+            this.dgvStaDish = new System.Windows.Forms.DataGridView();
+            this.gpbStaDish = new System.Windows.Forms.GroupBox();
+            this.gpbStaIngredient.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaIngredient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaDish)).BeginInit();
+            this.gpbStaDish.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gpbStaIngredient
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gpbStaIngredient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(34, 33);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(909, 290);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Ingrédients";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.gpbStaIngredient.Controls.Add(this.lblStaIngredient);
+            this.gpbStaIngredient.Controls.Add(this.dgvStaIngredient);
+            this.gpbStaIngredient.Location = new System.Drawing.Point(34, 33);
+            this.gpbStaIngredient.Name = "gpbStaIngredient";
+            this.gpbStaIngredient.Size = new System.Drawing.Size(909, 290);
+            this.gpbStaIngredient.TabIndex = 2;
+            this.gpbStaIngredient.TabStop = false;
+            this.gpbStaIngredient.Text = "Ingrédients";
+            this.gpbStaIngredient.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // label1
+            // lblStaIngredient
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 17);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Les plus utilisées";
+            this.lblStaIngredient.AutoSize = true;
+            this.lblStaIngredient.Location = new System.Drawing.Point(23, 32);
+            this.lblStaIngredient.Name = "lblStaIngredient";
+            this.lblStaIngredient.Size = new System.Drawing.Size(116, 17);
+            this.lblStaIngredient.TabIndex = 4;
+            this.lblStaIngredient.Text = "Les plus utilisées";
             // 
-            // dataGridView1
+            // dgvStaIngredient
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvStaIngredient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 61);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(864, 203);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvStaIngredient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStaIngredient.Location = new System.Drawing.Point(23, 61);
+            this.dgvStaIngredient.Name = "dgvStaIngredient";
+            this.dgvStaIngredient.RowHeadersWidth = 51;
+            this.dgvStaIngredient.RowTemplate.Height = 24;
+            this.dgvStaIngredient.Size = new System.Drawing.Size(864, 203);
+            this.dgvStaIngredient.TabIndex = 3;
             // 
-            // label2
+            // lblStaDish
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Les plus commandés";
+            this.lblStaDish.AutoSize = true;
+            this.lblStaDish.Location = new System.Drawing.Point(23, 32);
+            this.lblStaDish.Name = "lblStaDish";
+            this.lblStaDish.Size = new System.Drawing.Size(141, 17);
+            this.lblStaDish.TabIndex = 4;
+            this.lblStaDish.Text = "Les plus commandés";
             // 
-            // dataGridView2
+            // dgvStaDish
             // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvStaDish.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(23, 61);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(864, 203);
-            this.dataGridView2.TabIndex = 6;
+            this.dgvStaDish.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStaDish.Location = new System.Drawing.Point(23, 61);
+            this.dgvStaDish.Name = "dgvStaDish";
+            this.dgvStaDish.RowHeadersWidth = 51;
+            this.dgvStaDish.RowTemplate.Height = 24;
+            this.dgvStaDish.Size = new System.Drawing.Size(864, 203);
+            this.dgvStaDish.TabIndex = 6;
             // 
-            // groupBox2
+            // gpbStaDish
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gpbStaDish.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.dataGridView2);
-            this.groupBox2.Location = new System.Drawing.Point(34, 350);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(909, 290);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Plats";
+            this.gpbStaDish.Controls.Add(this.lblStaDish);
+            this.gpbStaDish.Controls.Add(this.dgvStaDish);
+            this.gpbStaDish.Location = new System.Drawing.Point(34, 350);
+            this.gpbStaDish.Name = "gpbStaDish";
+            this.gpbStaDish.Size = new System.Drawing.Size(909, 290);
+            this.gpbStaDish.TabIndex = 5;
+            this.gpbStaDish.TabStop = false;
+            this.gpbStaDish.Text = "Plats";
             // 
             // frmStats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(977, 500);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(977, 677);
+            this.Controls.Add(this.gpbStaDish);
+            this.Controls.Add(this.gpbStaIngredient);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(344, 392);
             this.Name = "frmStats";
             this.Text = "Statistiques";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gpbStaIngredient.ResumeLayout(false);
+            this.gpbStaIngredient.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaIngredient)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaDish)).EndInit();
+            this.gpbStaDish.ResumeLayout(false);
+            this.gpbStaDish.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gpbStaIngredient;
+        private System.Windows.Forms.Label lblStaIngredient;
+        private System.Windows.Forms.DataGridView dgvStaIngredient;
+        private System.Windows.Forms.Label lblStaDish;
+        private System.Windows.Forms.DataGridView dgvStaDish;
+        private System.Windows.Forms.GroupBox gpbStaDish;
     }
 }

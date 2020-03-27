@@ -28,84 +28,84 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnIngAdd = new System.Windows.Forms.Button();
-            this.tbxIngSearchName = new System.Windows.Forms.TextBox();
-            this.lblIngSearchName = new System.Windows.Forms.Label();
-            this.dgvIng = new System.Windows.Forms.DataGridView();
-            this.btnIngDelAll = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIng)).BeginInit();
+            this.btnTabAdd = new System.Windows.Forms.Button();
+            this.tbxTabSearch = new System.Windows.Forms.TextBox();
+            this.lblTabSearch = new System.Windows.Forms.Label();
+            this.dgvTab = new System.Windows.Forms.DataGridView();
+            this.btnTabDelAll = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTab)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnIngAdd
+            // btnTabAdd
             // 
-            this.btnIngAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIngAdd.Location = new System.Drawing.Point(532, 38);
-            this.btnIngAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIngAdd.Name = "btnIngAdd";
-            this.btnIngAdd.Size = new System.Drawing.Size(129, 30);
-            this.btnIngAdd.TabIndex = 3;
-            this.btnIngAdd.Text = "&Nouvelle table";
-            this.btnIngAdd.UseVisualStyleBackColor = true;
-            this.btnIngAdd.Click += new System.EventHandler(this.button2_Click);
+            this.btnTabAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTabAdd.Location = new System.Drawing.Point(532, 38);
+            this.btnTabAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTabAdd.Name = "btnTabAdd";
+            this.btnTabAdd.Size = new System.Drawing.Size(129, 30);
+            this.btnTabAdd.TabIndex = 3;
+            this.btnTabAdd.Text = "&Nouvelle table";
+            this.btnTabAdd.UseVisualStyleBackColor = true;
+            this.btnTabAdd.Click += new System.EventHandler(this.button2_Click);
             // 
-            // tbxIngSearchName
+            // tbxTabSearch
             // 
-            this.tbxIngSearchName.Location = new System.Drawing.Point(35, 46);
-            this.tbxIngSearchName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbxIngSearchName.Name = "tbxIngSearchName";
-            this.tbxIngSearchName.Size = new System.Drawing.Size(227, 22);
-            this.tbxIngSearchName.TabIndex = 2;
+            this.tbxTabSearch.Location = new System.Drawing.Point(35, 46);
+            this.tbxTabSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxTabSearch.Name = "tbxTabSearch";
+            this.tbxTabSearch.Size = new System.Drawing.Size(227, 22);
+            this.tbxTabSearch.TabIndex = 2;
             // 
-            // lblIngSearchName
+            // lblTabSearch
             // 
-            this.lblIngSearchName.AutoSize = true;
-            this.lblIngSearchName.Location = new System.Drawing.Point(35, 22);
-            this.lblIngSearchName.Name = "lblIngSearchName";
-            this.lblIngSearchName.Size = new System.Drawing.Size(82, 17);
-            this.lblIngSearchName.TabIndex = 1;
-            this.lblIngSearchName.Text = "&Rechercher";
+            this.lblTabSearch.AutoSize = true;
+            this.lblTabSearch.Location = new System.Drawing.Point(35, 22);
+            this.lblTabSearch.Name = "lblTabSearch";
+            this.lblTabSearch.Size = new System.Drawing.Size(82, 17);
+            this.lblTabSearch.TabIndex = 1;
+            this.lblTabSearch.Text = "&Rechercher";
             // 
-            // dgvIng
+            // dgvTab
             // 
-            this.dgvIng.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvTab.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvIng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIng.Location = new System.Drawing.Point(35, 92);
-            this.dgvIng.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvIng.Name = "dgvIng";
-            this.dgvIng.RowHeadersWidth = 51;
-            this.dgvIng.RowTemplate.Height = 24;
-            this.dgvIng.Size = new System.Drawing.Size(757, 324);
-            this.dgvIng.TabIndex = 5;
+            this.dgvTab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTab.Location = new System.Drawing.Point(35, 92);
+            this.dgvTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvTab.Name = "dgvTab";
+            this.dgvTab.RowHeadersWidth = 51;
+            this.dgvTab.RowTemplate.Height = 24;
+            this.dgvTab.Size = new System.Drawing.Size(757, 324);
+            this.dgvTab.TabIndex = 5;
             // 
-            // btnIngDelAll
+            // btnTabDelAll
             // 
-            this.btnIngDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIngDelAll.Location = new System.Drawing.Point(685, 38);
-            this.btnIngDelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIngDelAll.Name = "btnIngDelAll";
-            this.btnIngDelAll.Size = new System.Drawing.Size(107, 30);
-            this.btnIngDelAll.TabIndex = 4;
-            this.btnIngDelAll.Text = "&Supprimer";
-            this.btnIngDelAll.UseVisualStyleBackColor = true;
+            this.btnTabDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTabDelAll.Location = new System.Drawing.Point(685, 38);
+            this.btnTabDelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTabDelAll.Name = "btnTabDelAll";
+            this.btnTabDelAll.Size = new System.Drawing.Size(107, 30);
+            this.btnTabDelAll.TabIndex = 4;
+            this.btnTabDelAll.Text = "&Supprimer";
+            this.btnTabDelAll.UseVisualStyleBackColor = true;
             // 
             // frmTables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 445);
-            this.Controls.Add(this.btnIngAdd);
-            this.Controls.Add(this.lblIngSearchName);
-            this.Controls.Add(this.tbxIngSearchName);
-            this.Controls.Add(this.dgvIng);
-            this.Controls.Add(this.btnIngDelAll);
+            this.Controls.Add(this.btnTabAdd);
+            this.Controls.Add(this.lblTabSearch);
+            this.Controls.Add(this.tbxTabSearch);
+            this.Controls.Add(this.dgvTab);
+            this.Controls.Add(this.btnTabDelAll);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(601, 220);
             this.Name = "frmTables";
             this.Text = "Tables";
             this.Load += new System.EventHandler(this.FormTables_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIng)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTab)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,10 +113,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnIngAdd;
-        private System.Windows.Forms.TextBox tbxIngSearchName;
-        private System.Windows.Forms.Label lblIngSearchName;
-        private System.Windows.Forms.DataGridView dgvIng;
-        private System.Windows.Forms.Button btnIngDelAll;
+        private System.Windows.Forms.Button btnTabAdd;
+        private System.Windows.Forms.TextBox tbxTabSearch;
+        private System.Windows.Forms.Label lblTabSearch;
+        private System.Windows.Forms.DataGridView dgvTab;
+        private System.Windows.Forms.Button btnTabDelAll;
     }
 }

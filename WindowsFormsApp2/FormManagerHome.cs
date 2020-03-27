@@ -171,5 +171,15 @@ namespace WindowsFormsApp2
         {
             LayoutMdi(MdiLayout.TileHorizontal);
         }
+
+        private void fenêtreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void alignerVerticalementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.TileVertical);
+        }
     }
 }

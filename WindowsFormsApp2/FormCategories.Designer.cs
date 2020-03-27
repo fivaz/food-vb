@@ -28,85 +28,85 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnIngAdd = new System.Windows.Forms.Button();
-            this.tbxIngSearchName = new System.Windows.Forms.TextBox();
-            this.lblIngSearchName = new System.Windows.Forms.Label();
-            this.dgvIng = new System.Windows.Forms.DataGridView();
-            this.btnIngDelAll = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIng)).BeginInit();
+            this.btnCatAdd = new System.Windows.Forms.Button();
+            this.tbxCatSearchName = new System.Windows.Forms.TextBox();
+            this.lblCatSearchName = new System.Windows.Forms.Label();
+            this.dgvCat = new System.Windows.Forms.DataGridView();
+            this.btnCatDelAll = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCat)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnIngAdd
+            // btnCatAdd
             // 
-            this.btnIngAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIngAdd.Location = new System.Drawing.Point(286, 38);
-            this.btnIngAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIngAdd.Name = "btnIngAdd";
-            this.btnIngAdd.Size = new System.Drawing.Size(148, 30);
-            this.btnIngAdd.TabIndex = 3;
-            this.btnIngAdd.Text = "&Nouvelle catégorie";
-            this.btnIngAdd.UseVisualStyleBackColor = true;
-            this.btnIngAdd.Click += new System.EventHandler(this.button2_Click);
+            this.btnCatAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCatAdd.Location = new System.Drawing.Point(286, 38);
+            this.btnCatAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCatAdd.Name = "btnCatAdd";
+            this.btnCatAdd.Size = new System.Drawing.Size(148, 30);
+            this.btnCatAdd.TabIndex = 3;
+            this.btnCatAdd.Text = "&Nouvelle catégorie";
+            this.btnCatAdd.UseVisualStyleBackColor = true;
+            this.btnCatAdd.Click += new System.EventHandler(this.button2_Click);
             // 
-            // tbxIngSearchName
+            // tbxCatSearchName
             // 
-            this.tbxIngSearchName.Location = new System.Drawing.Point(35, 46);
-            this.tbxIngSearchName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbxIngSearchName.Name = "tbxIngSearchName";
-            this.tbxIngSearchName.Size = new System.Drawing.Size(227, 22);
-            this.tbxIngSearchName.TabIndex = 2;
+            this.tbxCatSearchName.Location = new System.Drawing.Point(35, 46);
+            this.tbxCatSearchName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxCatSearchName.Name = "tbxCatSearchName";
+            this.tbxCatSearchName.Size = new System.Drawing.Size(227, 22);
+            this.tbxCatSearchName.TabIndex = 2;
             // 
-            // lblIngSearchName
+            // lblCatSearchName
             // 
-            this.lblIngSearchName.AutoSize = true;
-            this.lblIngSearchName.Location = new System.Drawing.Point(32, 27);
-            this.lblIngSearchName.Name = "lblIngSearchName";
-            this.lblIngSearchName.Size = new System.Drawing.Size(82, 17);
-            this.lblIngSearchName.TabIndex = 1;
-            this.lblIngSearchName.Text = "&Rechercher";
+            this.lblCatSearchName.AutoSize = true;
+            this.lblCatSearchName.Location = new System.Drawing.Point(32, 27);
+            this.lblCatSearchName.Name = "lblCatSearchName";
+            this.lblCatSearchName.Size = new System.Drawing.Size(82, 17);
+            this.lblCatSearchName.TabIndex = 1;
+            this.lblCatSearchName.Text = "&Rechercher";
             // 
-            // dgvIng
+            // dgvCat
             // 
-            this.dgvIng.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvCat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvIng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIng.Location = new System.Drawing.Point(35, 92);
-            this.dgvIng.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvIng.Name = "dgvIng";
-            this.dgvIng.RowHeadersWidth = 51;
-            this.dgvIng.RowTemplate.Height = 24;
-            this.dgvIng.Size = new System.Drawing.Size(529, 363);
-            this.dgvIng.TabIndex = 5;
-            this.dgvIng.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIng_CellContentClick);
+            this.dgvCat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCat.Location = new System.Drawing.Point(35, 92);
+            this.dgvCat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvCat.Name = "dgvCat";
+            this.dgvCat.RowHeadersWidth = 51;
+            this.dgvCat.RowTemplate.Height = 24;
+            this.dgvCat.Size = new System.Drawing.Size(529, 363);
+            this.dgvCat.TabIndex = 5;
+            this.dgvCat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIng_CellContentClick);
             // 
-            // btnIngDelAll
+            // btnCatDelAll
             // 
-            this.btnIngDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIngDelAll.Location = new System.Drawing.Point(457, 38);
-            this.btnIngDelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIngDelAll.Name = "btnIngDelAll";
-            this.btnIngDelAll.Size = new System.Drawing.Size(107, 30);
-            this.btnIngDelAll.TabIndex = 4;
-            this.btnIngDelAll.Text = "&Supprimer";
-            this.btnIngDelAll.UseVisualStyleBackColor = true;
+            this.btnCatDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCatDelAll.Location = new System.Drawing.Point(457, 38);
+            this.btnCatDelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCatDelAll.Name = "btnCatDelAll";
+            this.btnCatDelAll.Size = new System.Drawing.Size(107, 30);
+            this.btnCatDelAll.TabIndex = 4;
+            this.btnCatDelAll.Text = "&Supprimer";
+            this.btnCatDelAll.UseVisualStyleBackColor = true;
             // 
             // frmCategories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(599, 483);
-            this.Controls.Add(this.btnIngAdd);
-            this.Controls.Add(this.lblIngSearchName);
-            this.Controls.Add(this.tbxIngSearchName);
-            this.Controls.Add(this.dgvIng);
-            this.Controls.Add(this.btnIngDelAll);
+            this.Controls.Add(this.btnCatAdd);
+            this.Controls.Add(this.lblCatSearchName);
+            this.Controls.Add(this.tbxCatSearchName);
+            this.Controls.Add(this.dgvCat);
+            this.Controls.Add(this.btnCatDelAll);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(617, 530);
             this.Name = "frmCategories";
             this.Text = "Categories";
             this.Load += new System.EventHandler(this.FormCategories_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIng)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,10 +114,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnIngAdd;
-        private System.Windows.Forms.TextBox tbxIngSearchName;
-        private System.Windows.Forms.Label lblIngSearchName;
-        private System.Windows.Forms.DataGridView dgvIng;
-        private System.Windows.Forms.Button btnIngDelAll;
+        private System.Windows.Forms.Button btnCatAdd;
+        private System.Windows.Forms.TextBox tbxCatSearchName;
+        private System.Windows.Forms.Label lblCatSearchName;
+        private System.Windows.Forms.DataGridView dgvCat;
+        private System.Windows.Forms.Button btnCatDelAll;
     }
 }
