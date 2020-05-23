@@ -1,20 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp2.DataSet2TableAdapters;
+using WindowsFormsApp2.Classes.Database;
 
 namespace WindowsFormsApp2
 {
     public partial class FormAddAccount : Form
     {
         internal int id;
-        internal bool editMode;
+        internal bool editMode = false;
 
         public FormAddAccount()
         {
@@ -57,13 +50,13 @@ namespace WindowsFormsApp2
 
         private void createAccount()
         {
-            Account account = buildAccount();
-            TableAdapterManager tam = new TableAdapterManager();
+            AccountORM accountORM = new AccountORM();
+            accountORM.create(buildAccount());
         }
 
         internal void setEditMode()
         {
-            btnAAcSubmit.Text = "Modifier &compte"; 
+            btnAAcSubmit.Text = "Modifier &compte";
             editMode = true;
         }
     }

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp2
 {
-    class Account
+    public class Account
     {
-        int id;
-        String firstName;
-        String lastName;
-        String email;
-        String password;
-        String type;
+        public int id;
+        public String firstName;
+        public String lastName;
+        public String email;
+        public String password;
+        public String type;
 
         public Account(int id, String firstName, String lastName, String email, String password, String type)
         {

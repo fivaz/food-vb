@@ -32,19 +32,21 @@ namespace WindowsFormsApp2.Classes.Database
 
         #endregion
 
-        
+
         #region methods
 
         public String sqlQuery(String sql, DataTable dt)
         {
-            try{
-                IDbCommand command = new OracleCommand(sql, connection);
+            try
+            {
+                OracleCommand command = new OracleCommand(sql, connection);
                 command.CommandTimeout = 0;
                 IDataReader reader = command.ExecuteReader();
                 dt.Load(reader);
                 return "";
             }
-            catch(Exception ex){
+            catch (Exception ex)
+            {
                 throw new Exception(ex.Message);
             }
         }
@@ -53,7 +55,8 @@ namespace WindowsFormsApp2.Classes.Database
         {
             try
             {
-                IDbCommand command = new OracleCommand(sql, connection);
+                OracleCommand command = new OracleCommand(sql, connection);
+                command.CommandType = CommandType.Text;
                 command.CommandTimeout = 0;
                 IDataReader reader = command.ExecuteReader();
                 return "";
@@ -62,6 +65,41 @@ namespace WindowsFormsApp2.Classes.Database
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        public OracleCommand sqlPrepare(String sql)
+        {
+            try
+            {
+                OracleCommand command = new OracleCommand(sql, connection);
+                command.CommandType = CommandType.Text;
+                command.CommandTimeout = 0;
+                return command;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public void execute(OracleCommand currentCommand)
+        {
+            try
+            {
+                currentCommand.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public void AddString(OracleCommand currentCommand, String value)
+        {
+            OracleParameter param = new OracleParameter();
+            param.OracleDbType = OracleDbType.NVarchar2;
+            param.Value = value;
+            currentCommand.Parameters.Add(param);
         }
 
         public void close()

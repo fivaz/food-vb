@@ -17,22 +17,16 @@ namespace WindowsFormsApp2
         static void Main()
         {
             Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FormSignIn());
-            OracleConn oracleConn = new OracleConn("XE", "foo_dba", "foo_dba");
-            try
-            {
+            
+            //check1();
+            check2();
+        }
 
-                DataTable dt = new DataTable();
-                String sql = "SELECT * FROM foo_account";
-                oracleConn.sqlQuery(sql, dt);
-                oracleConn.close();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-            //Application.Run(new FormAccounts());
+        static void check2()
+        {
+            Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new FormSignIn());
+            Application.Run(new FormAccounts());
         }
     }
 }
