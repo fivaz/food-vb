@@ -39,9 +39,25 @@ namespace WindowsFormsApp2.Classes.Database
             }
         }
 
-        public DataTable edit(Account account)
+        public void edit(Account account)
         {
-            return null;
+            try
+            {
+                String sql = "UPDATE foo_account SET ACC_LAST_NAME = :lastName, ACC_FIRST_NAME = :firstName, " +
+                    "ACC_EMAIL = :email, ACC_PASSWORD = :password, ACC_TYPE = :type WHERE ACC_ID = :id";
+                OracleCommand command = connection.sqlPrepare(sql);
+                connection.AddString(command, account.firstName);
+                connection.AddString(command, account.lastName);
+                connection.AddString(command, account.email);
+                connection.AddString(command, account.password);
+                connection.AddString(command, account.type);
+                connection.AddInt(command, account.id);
+                connection.execute(command);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public DataTable delete(Account account)

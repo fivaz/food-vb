@@ -47,6 +47,8 @@ namespace WindowsFormsApp2
 
         private void editAccount()
         {
+            AccountORM accountORM = new AccountORM();
+            accountORM.edit(buildAccount());
         }
 
         private void createAccount()

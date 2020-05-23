@@ -94,6 +94,14 @@ namespace WindowsFormsApp2.Classes.Database
             currentCommand.Parameters.Add(param);
         }
 
+        public void AddInt(OracleCommand currentCommand, int value)
+        {
+            OracleParameter param = new OracleParameter();
+            param.OracleDbType = OracleDbType.Int32;
+            param.Value = value;
+            currentCommand.Parameters.Add(param);
+        }
+
         public void close()
         {
             connection.Close();
