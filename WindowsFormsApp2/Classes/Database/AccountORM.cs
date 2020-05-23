@@ -60,9 +60,21 @@ namespace WindowsFormsApp2.Classes.Database
             }
         }
 
-        public DataTable delete(Account account)
+        public void delete(int id)
         {
-            return null;
+            try
+            {
+                String sql = "UPDATE foo_account SET ACC_IS_DELETED = 1 WHERE ACC_ID = :id";
+                OracleCommand command = connection.sqlPrepare(sql);
+                connection.AddInt(command, id);
+                connection.execute(command);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
+
+        //TODO check unique email
     }
 }

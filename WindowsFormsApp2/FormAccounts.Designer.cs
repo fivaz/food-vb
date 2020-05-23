@@ -29,36 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnAccAdd = new System.Windows.Forms.Button();
             this.tbxAccSearchName = new System.Windows.Forms.TextBox();
             this.lblAccSearchName = new System.Windows.Forms.Label();
-            this.btnAccDelAll = new System.Windows.Forms.Button();
+            this.btnAccDel = new System.Windows.Forms.Button();
             this.dgvAcc = new System.Windows.Forms.DataGridView();
+            this.dataSet1 = new WindowsFormsApp2.DataSet1();
+            this.btnAccAdd = new System.Windows.Forms.Button();
+            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vWACCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vW_ACCOUNTTableAdapter = new WindowsFormsApp2.DataSet1TableAdapters.VW_ACCOUNTTableAdapter();
             this.aCCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCLASTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCFIRSTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCPASSWORDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fOOACCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet2 = new WindowsFormsApp2.DataSet2();
-            this.fOO_ACCOUNTTableAdapter = new WindowsFormsApp2.DataSet2TableAdapters.FOO_ACCOUNTTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fOOACCOUNTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWACCOUNTBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnAccAdd
-            // 
-            this.btnAccAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAccAdd.Location = new System.Drawing.Point(577, 38);
-            this.btnAccAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAccAdd.Name = "btnAccAdd";
-            this.btnAccAdd.Size = new System.Drawing.Size(129, 30);
-            this.btnAccAdd.TabIndex = 3;
-            this.btnAccAdd.Text = "&Nouveau compte";
-            this.btnAccAdd.UseVisualStyleBackColor = true;
-            this.btnAccAdd.Click += new System.EventHandler(this.button2_Click);
             // 
             // tbxAccSearchName
             // 
@@ -77,16 +67,17 @@
             this.lblAccSearchName.TabIndex = 1;
             this.lblAccSearchName.Text = "&Rechercher";
             // 
-            // btnAccDelAll
+            // btnAccDel
             // 
-            this.btnAccDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAccDelAll.Location = new System.Drawing.Point(731, 38);
-            this.btnAccDelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAccDelAll.Name = "btnAccDelAll";
-            this.btnAccDelAll.Size = new System.Drawing.Size(107, 30);
-            this.btnAccDelAll.TabIndex = 4;
-            this.btnAccDelAll.Text = "&Supprimer";
-            this.btnAccDelAll.UseVisualStyleBackColor = true;
+            this.btnAccDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAccDel.Location = new System.Drawing.Point(731, 38);
+            this.btnAccDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAccDel.Name = "btnAccDel";
+            this.btnAccDel.Size = new System.Drawing.Size(107, 30);
+            this.btnAccDel.TabIndex = 4;
+            this.btnAccDel.Text = "&Supprimer";
+            this.btnAccDel.UseVisualStyleBackColor = true;
+            this.btnAccDel.Click += new System.EventHandler(this.btnAccDel_Click);
             // 
             // dgvAcc
             // 
@@ -102,7 +93,7 @@
             this.aCCEMAILDataGridViewTextBoxColumn,
             this.aCCPASSWORDDataGridViewTextBoxColumn,
             this.aCCTYPEDataGridViewTextBoxColumn});
-            this.dgvAcc.DataSource = this.fOOACCOUNTBindingSource;
+            this.dgvAcc.DataSource = this.vWACCOUNTBindingSource;
             this.dgvAcc.Location = new System.Drawing.Point(35, 92);
             this.dgvAcc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvAcc.Name = "dgvAcc";
@@ -112,6 +103,37 @@
             this.dgvAcc.Size = new System.Drawing.Size(802, 360);
             this.dgvAcc.TabIndex = 12;
             this.dgvAcc.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAcc_CellDoubleClick);
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnAccAdd
+            // 
+            this.btnAccAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAccAdd.Location = new System.Drawing.Point(577, 38);
+            this.btnAccAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAccAdd.Name = "btnAccAdd";
+            this.btnAccAdd.Size = new System.Drawing.Size(129, 30);
+            this.btnAccAdd.TabIndex = 3;
+            this.btnAccAdd.Text = "&Nouveau compte";
+            this.btnAccAdd.UseVisualStyleBackColor = true;
+            this.btnAccAdd.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // dataSet1BindingSource
+            // 
+            this.dataSet1BindingSource.DataSource = this.dataSet1;
+            this.dataSet1BindingSource.Position = 0;
+            // 
+            // vWACCOUNTBindingSource
+            // 
+            this.vWACCOUNTBindingSource.DataMember = "VW_ACCOUNT";
+            this.vWACCOUNTBindingSource.DataSource = this.dataSet1BindingSource;
+            // 
+            // vW_ACCOUNTTableAdapter
+            // 
+            this.vW_ACCOUNTTableAdapter.ClearBeforeFill = true;
             // 
             // aCCIDDataGridViewTextBoxColumn
             // 
@@ -161,20 +183,6 @@
             this.aCCTYPEDataGridViewTextBoxColumn.Name = "aCCTYPEDataGridViewTextBoxColumn";
             this.aCCTYPEDataGridViewTextBoxColumn.Width = 125;
             // 
-            // fOOACCOUNTBindingSource
-            // 
-            this.fOOACCOUNTBindingSource.DataMember = "FOO_ACCOUNT";
-            this.fOOACCOUNTBindingSource.DataSource = this.dataSet2;
-            // 
-            // dataSet2
-            // 
-            this.dataSet2.DataSetName = "DataSet2";
-            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // fOO_ACCOUNTTableAdapter
-            // 
-            this.fOO_ACCOUNTTableAdapter.ClearBeforeFill = true;
-            // 
             // FormAccounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -184,30 +192,31 @@
             this.Controls.Add(this.lblAccSearchName);
             this.Controls.Add(this.tbxAccSearchName);
             this.Controls.Add(this.dgvAcc);
-            this.Controls.Add(this.btnAccDelAll);
+            this.Controls.Add(this.btnAccDel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(595, 530);
             this.Name = "FormAccounts";
             this.Text = "Comptes";
             this.Load += new System.EventHandler(this.FormAccounts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fOOACCOUNTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWACCOUNTBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAccAdd;
         private System.Windows.Forms.TextBox tbxAccSearchName;
         private System.Windows.Forms.Label lblAccSearchName;
-        private System.Windows.Forms.Button btnAccDelAll;
+        private System.Windows.Forms.Button btnAccDel;
         private System.Windows.Forms.DataGridView dgvAcc;
-        private DataSet2 dataSet2;
-        private System.Windows.Forms.BindingSource fOOACCOUNTBindingSource;
-        private DataSet2TableAdapters.FOO_ACCOUNTTableAdapter fOO_ACCOUNTTableAdapter;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.Button btnAccAdd;
+        private System.Windows.Forms.BindingSource dataSet1BindingSource;
+        private System.Windows.Forms.BindingSource vWACCOUNTBindingSource;
+        private DataSet1TableAdapters.VW_ACCOUNTTableAdapter vW_ACCOUNTTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn aCCIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aCCLASTNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aCCFIRSTNAMEDataGridViewTextBoxColumn;
