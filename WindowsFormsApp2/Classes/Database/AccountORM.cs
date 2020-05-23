@@ -12,7 +12,7 @@ namespace WindowsFormsApp2.Classes.Database
             connection = OracleConnector.getConnection();
         }
 
-        public DataTable add()
+        public DataTable show()
         {
             return null;
         }

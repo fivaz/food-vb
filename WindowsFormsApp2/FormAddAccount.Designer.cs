@@ -200,6 +200,7 @@
             this.MinimumSize = new System.Drawing.Size(422, 385);
             this.Name = "FormAddAccount";
             this.Text = "Nouveau compte";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAddAccount_FormClosing);
             this.Load += new System.EventHandler(this.FormSignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

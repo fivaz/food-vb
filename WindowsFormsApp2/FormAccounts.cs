@@ -5,9 +5,20 @@ namespace WindowsFormsApp2
 {
     public partial class FormAccounts : Form
     {
+        static FormAccounts instance;
         public FormAccounts()
         {
             InitializeComponent();
+            instance = this;
+        }
+
+        public static FormAccounts getInstance()
+        {
+            if(instance == null)
+            {
+                new FormAccounts();
+            }
+            return instance;
         }
 
         private void FormAccounts_Load(object sender, EventArgs e)
@@ -19,11 +30,6 @@ namespace WindowsFormsApp2
         private void button2_Click(object sender, EventArgs e)
         {
             new FormAddAccount().Show();
-        }
-
-        private void dgvAcc_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void dgvAcc_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -43,6 +49,12 @@ namespace WindowsFormsApp2
                 fa.rbtAAcWaiter.Checked = true;
 
             fa.ShowDialog();
+        }
+
+        internal void refreshData()
+        {
+            this.fOO_ACCOUNTTableAdapter.ClearBeforeFill = true;
+            this.fOO_ACCOUNTTableAdapter.Fill(this.dataSet2.FOO_ACCOUNT);
         }
     }
 }

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
-using System.Linq;
-using System.Runtime.Remoting.Channels;
-using System.Text;
-using System.Threading.Tasks;
 using Oracle.DataAccess.Client;
 
 namespace WindowsFormsApp2.Classes.Database
@@ -23,7 +17,6 @@ namespace WindowsFormsApp2.Classes.Database
 
         public OracleConn(String server, String user, String password)
         {
-            //stringConn = 'DATA SOURCE=localhost:1521/xe;PERSIST SECURITY INFO=True;USER ID=FOO_DBA;';
             stringConn = "DATA SOURCE=" + server + ";USER ID=" + user + ";PASSWORD=" + password;
 
             connection = new OracleConnection(stringConn);
@@ -31,7 +24,6 @@ namespace WindowsFormsApp2.Classes.Database
         }
 
         #endregion
-
 
         #region methods
 

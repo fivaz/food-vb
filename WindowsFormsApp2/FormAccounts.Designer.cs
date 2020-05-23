@@ -111,7 +111,6 @@
             this.dgvAcc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAcc.Size = new System.Drawing.Size(802, 360);
             this.dgvAcc.TabIndex = 12;
-            this.dgvAcc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAcc_CellContentClick);
             this.dgvAcc.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAcc_CellDoubleClick);
             // 
             // aCCIDDataGridViewTextBoxColumn

@@ -30,6 +30,7 @@ namespace WindowsFormsApp2
                 editAccount();
             else
                 createAccount();
+            clearForm();
         }
 
         private Account buildAccount()
@@ -59,5 +60,23 @@ namespace WindowsFormsApp2
             btnAAcSubmit.Text = "Modifier &compte";
             editMode = true;
         }
+
+        private void clearForm(){
+            tbxAAcFirstName.Text = "";
+            tbxAAcLastName.Text = "";
+            tbxAAcEmail.Text = "";
+            tbxAAcPassword1.Text = "";
+            tbxAAcPassword2.Text = "";
+            rbtAAcManager.Checked = false;
+            rbtAAcWaiter.Checked = false;      
+        }
+
+        private void FormAddAccount_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FormAccounts form = FormAccounts.getInstance();
+            form.refreshData();
+        }
+
+        //TODO check passwords match
     }
 }
