@@ -34,24 +34,24 @@
             this.lblAccSearchName = new System.Windows.Forms.Label();
             this.btnAccDelAll = new System.Windows.Forms.Button();
             this.dgvAcc = new System.Windows.Forms.DataGridView();
-            this.dataSet2 = new WindowsFormsApp2.DataSet2();
-            this.fOOACCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fOO_ACCOUNTTableAdapter = new WindowsFormsApp2.DataSet2TableAdapters.FOO_ACCOUNTTableAdapter();
             this.aCCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCLASTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCFIRSTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCPASSWORDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fOOACCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet2 = new WindowsFormsApp2.DataSet2();
+            this.fOO_ACCOUNTTableAdapter = new WindowsFormsApp2.DataSet2TableAdapters.FOO_ACCOUNTTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fOOACCOUNTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAccAdd
             // 
             this.btnAccAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAccAdd.Location = new System.Drawing.Point(282, 38);
+            this.btnAccAdd.Location = new System.Drawing.Point(577, 38);
             this.btnAccAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAccAdd.Name = "btnAccAdd";
             this.btnAccAdd.Size = new System.Drawing.Size(129, 30);
@@ -80,7 +80,7 @@
             // btnAccDelAll
             // 
             this.btnAccDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAccDelAll.Location = new System.Drawing.Point(436, 38);
+            this.btnAccDelAll.Location = new System.Drawing.Point(731, 38);
             this.btnAccDelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAccDelAll.Name = "btnAccDelAll";
             this.btnAccDelAll.Size = new System.Drawing.Size(107, 30);
@@ -108,23 +108,11 @@
             this.dgvAcc.Name = "dgvAcc";
             this.dgvAcc.RowHeadersWidth = 51;
             this.dgvAcc.RowTemplate.Height = 24;
-            this.dgvAcc.Size = new System.Drawing.Size(507, 360);
+            this.dgvAcc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAcc.Size = new System.Drawing.Size(802, 360);
             this.dgvAcc.TabIndex = 12;
             this.dgvAcc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAcc_CellContentClick);
-            // 
-            // dataSet2
-            // 
-            this.dataSet2.DataSetName = "DataSet2";
-            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // fOOACCOUNTBindingSource
-            // 
-            this.fOOACCOUNTBindingSource.DataMember = "FOO_ACCOUNT";
-            this.fOOACCOUNTBindingSource.DataSource = this.dataSet2;
-            // 
-            // fOO_ACCOUNTTableAdapter
-            // 
-            this.fOO_ACCOUNTTableAdapter.ClearBeforeFill = true;
+            this.dgvAcc.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAcc_CellDoubleClick);
             // 
             // aCCIDDataGridViewTextBoxColumn
             // 
@@ -174,11 +162,25 @@
             this.aCCTYPEDataGridViewTextBoxColumn.Name = "aCCTYPEDataGridViewTextBoxColumn";
             this.aCCTYPEDataGridViewTextBoxColumn.Width = 125;
             // 
+            // fOOACCOUNTBindingSource
+            // 
+            this.fOOACCOUNTBindingSource.DataMember = "FOO_ACCOUNT";
+            this.fOOACCOUNTBindingSource.DataSource = this.dataSet2;
+            // 
+            // dataSet2
+            // 
+            this.dataSet2.DataSetName = "DataSet2";
+            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fOO_ACCOUNTTableAdapter
+            // 
+            this.fOO_ACCOUNTTableAdapter.ClearBeforeFill = true;
+            // 
             // FormAccounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(577, 483);
+            this.ClientSize = new System.Drawing.Size(872, 483);
             this.Controls.Add(this.btnAccAdd);
             this.Controls.Add(this.lblAccSearchName);
             this.Controls.Add(this.tbxAccSearchName);
@@ -190,8 +192,8 @@
             this.Text = "Comptes";
             this.Load += new System.EventHandler(this.FormAccounts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fOOACCOUNTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

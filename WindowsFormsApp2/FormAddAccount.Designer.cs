@@ -93,6 +93,7 @@
             this.tbxAAcLastName.Name = "tbxAAcLastName";
             this.tbxAAcLastName.Size = new System.Drawing.Size(145, 22);
             this.tbxAAcLastName.TabIndex = 5;
+            this.tbxAAcLastName.TextChanged += new System.EventHandler(this.tbxAAcLastName_TextChanged);
             // 
             // tbxAAcFirstName
             // 
@@ -164,13 +165,14 @@
             // 
             // btnAAcSubmit
             // 
-            this.btnAAcSubmit.Location = new System.Drawing.Point(141, 286);
+            this.btnAAcSubmit.Location = new System.Drawing.Point(137, 286);
             this.btnAAcSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAAcSubmit.Name = "btnAAcSubmit";
-            this.btnAAcSubmit.Size = new System.Drawing.Size(117, 30);
+            this.btnAAcSubmit.Size = new System.Drawing.Size(130, 30);
             this.btnAAcSubmit.TabIndex = 14;
-            this.btnAAcSubmit.Text = "&Créer compte";
+            this.btnAAcSubmit.Text = "Créer &compte";
             this.btnAAcSubmit.UseVisualStyleBackColor = true;
+            this.btnAAcSubmit.Click += new System.EventHandler(this.btnAAcSubmit_Click);
             // 
             // FormAddAccount
             // 
@@ -206,18 +208,18 @@
 
         #endregion
         private System.Windows.Forms.Label lblAAcUserType;
-        private System.Windows.Forms.RadioButton rbtAAcManager;
-        private System.Windows.Forms.RadioButton rbtAAcWaiter;
         private System.Windows.Forms.Label lblAAcLastName;
-        private System.Windows.Forms.TextBox tbxAAcLastName;
-        private System.Windows.Forms.TextBox tbxAAcFirstName;
         private System.Windows.Forms.Label lblAAcFirstName;
-        private System.Windows.Forms.TextBox tbxAAcEmail;
         private System.Windows.Forms.Label lblAAcEmail;
         private System.Windows.Forms.TextBox tbxAAcPassword1;
         private System.Windows.Forms.Label lblAAcPassword1;
         private System.Windows.Forms.TextBox tbxAAcPassword2;
         private System.Windows.Forms.Label lblAAcPassword2;
         private System.Windows.Forms.Button btnAAcSubmit;
+        public System.Windows.Forms.TextBox tbxAAcLastName;
+        public System.Windows.Forms.RadioButton rbtAAcManager;
+        public System.Windows.Forms.RadioButton rbtAAcWaiter;
+        public System.Windows.Forms.TextBox tbxAAcFirstName;
+        public System.Windows.Forms.TextBox tbxAAcEmail;
     }
 }

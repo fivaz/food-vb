@@ -25,5 +25,24 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void dgvAcc_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            FormAddAccount fa = new FormAddAccount();
+
+            fa.setEditMode();
+            fa.id = Int32.Parse(dgvAcc.CurrentRow.Cells[0].Value.ToString());
+            fa.tbxAAcLastName.Text = this.dgvAcc.CurrentRow.Cells[1].Value.ToString();
+            fa.tbxAAcFirstName.Text = this.dgvAcc.CurrentRow.Cells[2].Value.ToString();
+            fa.tbxAAcEmail.Text = this.dgvAcc.CurrentRow.Cells[3].Value.ToString();
+            String role = this.dgvAcc.CurrentRow.Cells[5].Value.ToString();
+            
+            if (role.Equals("Manager"))            
+                fa.rbtAAcManager.Checked = true;
+            else 
+                fa.rbtAAcWaiter.Checked = true;
+
+            fa.ShowDialog();
+        }
     }
 }
