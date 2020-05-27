@@ -28,12 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnCatAdd = new System.Windows.Forms.Button();
             this.tbxCatSearchName = new System.Windows.Forms.TextBox();
             this.lblCatSearchName = new System.Windows.Forms.Label();
             this.dgvCat = new System.Windows.Forms.DataGridView();
-            this.btnCatDelAll = new System.Windows.Forms.Button();
+            this.cATIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cATNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vWCATEGORYBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet = new WindowsFormsApp2.DataSet();
+            this.btnCatDel = new System.Windows.Forms.Button();
+            this.vW_CATEGORYTableAdapter = new WindowsFormsApp2.DataSetTableAdapters.VW_CATEGORYTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWCATEGORYBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCatAdd
@@ -46,7 +54,7 @@
             this.btnCatAdd.TabIndex = 3;
             this.btnCatAdd.Text = "&Nouvelle catégorie";
             this.btnCatAdd.UseVisualStyleBackColor = true;
-            this.btnCatAdd.Click += new System.EventHandler(this.button2_Click);
+            this.btnCatAdd.Click += new System.EventHandler(this.btnCatAdd_Click);
             // 
             // tbxCatSearchName
             // 
@@ -55,6 +63,7 @@
             this.tbxCatSearchName.Name = "tbxCatSearchName";
             this.tbxCatSearchName.Size = new System.Drawing.Size(227, 22);
             this.tbxCatSearchName.TabIndex = 2;
+            this.tbxCatSearchName.TextChanged += new System.EventHandler(this.tbxCatSearchName_TextChanged);
             // 
             // lblCatSearchName
             // 
@@ -67,10 +76,15 @@
             // 
             // dgvCat
             // 
-            this.dgvCat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvCat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCat.AutoGenerateColumns = false;
             this.dgvCat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cATIDDataGridViewTextBoxColumn,
+            this.cATNAMEDataGridViewTextBoxColumn});
+            this.dgvCat.DataSource = this.vWCATEGORYBindingSource;
             this.dgvCat.Location = new System.Drawing.Point(35, 92);
             this.dgvCat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvCat.Name = "dgvCat";
@@ -78,18 +92,49 @@
             this.dgvCat.RowTemplate.Height = 24;
             this.dgvCat.Size = new System.Drawing.Size(529, 363);
             this.dgvCat.TabIndex = 5;
-            this.dgvCat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIng_CellContentClick);
+            this.dgvCat.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCat_CellDoubleClick);
             // 
-            // btnCatDelAll
+            // cATIDDataGridViewTextBoxColumn
             // 
-            this.btnCatDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCatDelAll.Location = new System.Drawing.Point(457, 38);
-            this.btnCatDelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCatDelAll.Name = "btnCatDelAll";
-            this.btnCatDelAll.Size = new System.Drawing.Size(107, 30);
-            this.btnCatDelAll.TabIndex = 4;
-            this.btnCatDelAll.Text = "&Supprimer";
-            this.btnCatDelAll.UseVisualStyleBackColor = true;
+            this.cATIDDataGridViewTextBoxColumn.DataPropertyName = "CAT_ID";
+            this.cATIDDataGridViewTextBoxColumn.HeaderText = "CAT_ID";
+            this.cATIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cATIDDataGridViewTextBoxColumn.Name = "cATIDDataGridViewTextBoxColumn";
+            this.cATIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // cATNAMEDataGridViewTextBoxColumn
+            // 
+            this.cATNAMEDataGridViewTextBoxColumn.DataPropertyName = "CAT_NAME";
+            this.cATNAMEDataGridViewTextBoxColumn.HeaderText = "CAT_NAME";
+            this.cATNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cATNAMEDataGridViewTextBoxColumn.Name = "cATNAMEDataGridViewTextBoxColumn";
+            this.cATNAMEDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // vWCATEGORYBindingSource
+            // 
+            this.vWCATEGORYBindingSource.DataMember = "VW_CATEGORY";
+            this.vWCATEGORYBindingSource.DataSource = this.dataSet;
+            // 
+            // dataSet
+            // 
+            this.dataSet.DataSetName = "DataSet";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnCatDel
+            // 
+            this.btnCatDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCatDel.Location = new System.Drawing.Point(457, 38);
+            this.btnCatDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCatDel.Name = "btnCatDel";
+            this.btnCatDel.Size = new System.Drawing.Size(107, 30);
+            this.btnCatDel.TabIndex = 4;
+            this.btnCatDel.Text = "&Supprimer";
+            this.btnCatDel.UseVisualStyleBackColor = true;
+            this.btnCatDel.Click += new System.EventHandler(this.btnCatDel_Click);
+            // 
+            // vW_CATEGORYTableAdapter
+            // 
+            this.vW_CATEGORYTableAdapter.ClearBeforeFill = true;
             // 
             // FormCategories
             // 
@@ -100,13 +145,15 @@
             this.Controls.Add(this.lblCatSearchName);
             this.Controls.Add(this.tbxCatSearchName);
             this.Controls.Add(this.dgvCat);
-            this.Controls.Add(this.btnCatDelAll);
+            this.Controls.Add(this.btnCatDel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(617, 530);
             this.Name = "FormCategories";
             this.Text = "Categories";
             this.Load += new System.EventHandler(this.FormCategories_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWCATEGORYBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,6 +165,11 @@
         private System.Windows.Forms.TextBox tbxCatSearchName;
         private System.Windows.Forms.Label lblCatSearchName;
         private System.Windows.Forms.DataGridView dgvCat;
-        private System.Windows.Forms.Button btnCatDelAll;
+        private System.Windows.Forms.Button btnCatDel;
+        private DataSet dataSet;
+        private System.Windows.Forms.BindingSource vWCATEGORYBindingSource;
+        private DataSetTableAdapters.VW_CATEGORYTableAdapter vW_CATEGORYTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cATIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cATNAMEDataGridViewTextBoxColumn;
     }
 }

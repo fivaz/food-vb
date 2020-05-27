@@ -57,6 +57,7 @@
             this.btnACaSubmit.TabIndex = 2;
             this.btnACaSubmit.Text = "&Créer";
             this.btnACaSubmit.UseVisualStyleBackColor = true;
+            this.btnACaSubmit.Click += new System.EventHandler(this.btnACaSubmit_Click);
             // 
             // FormAddCategory
             // 
@@ -70,6 +71,7 @@
             this.MaximizeBox = false;
             this.Name = "FormAddCategory";
             this.Text = "Nouvelle catégorie";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAddCategory_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,7 +80,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblACaName;
-        private System.Windows.Forms.TextBox tbxACaName;
         private System.Windows.Forms.Button btnACaSubmit;
+        public System.Windows.Forms.TextBox tbxACaName;
     }
 }

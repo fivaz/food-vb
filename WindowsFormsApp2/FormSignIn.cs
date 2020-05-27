@@ -26,6 +26,7 @@ namespace WindowsFormsApp2
         {
             if(txbSInEmail.Text == "admin")
             {
+                //check if I should use ShowDialog instead
                 new FormManagerHome().Show();
             }
             else

@@ -93,7 +93,6 @@
             this.tbxAAcLastName.Name = "tbxAAcLastName";
             this.tbxAAcLastName.Size = new System.Drawing.Size(145, 22);
             this.tbxAAcLastName.TabIndex = 5;
-            this.tbxAAcLastName.TextChanged += new System.EventHandler(this.tbxAAcLastName_TextChanged);
             // 
             // tbxAAcFirstName
             // 
@@ -201,7 +200,6 @@
             this.Name = "FormAddAccount";
             this.Text = "Nouveau compte";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAddAccount_FormClosing);
-            this.Load += new System.EventHandler(this.FormSignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

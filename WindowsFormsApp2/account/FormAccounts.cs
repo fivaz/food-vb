@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-using WindowsFormsApp2.Classes.Database;
+using WindowsFormsApp2.account;
 
 namespace WindowsFormsApp2
 {
@@ -42,6 +42,13 @@ namespace WindowsFormsApp2
             //DataTable a = this.dataSet3.VW_ACCOUNT;
         }
 
+        internal void refreshData()
+        {
+            dgvAcc.DataSource = this.dataSet3.VW_ACCOUNT;
+            this.vW_ACCOUNTTableAdapter.ClearBeforeFill = true;
+            this.vW_ACCOUNTTableAdapter.Fill(this.dataSet3.VW_ACCOUNT);
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             new FormAddAccount().Show();
@@ -66,12 +73,6 @@ namespace WindowsFormsApp2
             fa.ShowDialog();
         }
 
-        internal void refreshData()
-        {
-            dgvAcc.DataSource = this.dataSet3.VW_ACCOUNT;
-            this.vW_ACCOUNTTableAdapter.ClearBeforeFill = true;
-            this.vW_ACCOUNTTableAdapter.Fill(this.dataSet3.VW_ACCOUNT);
-        }
 
         private void btnAccDel_Click(object sender, EventArgs e)
         {
@@ -80,18 +81,10 @@ namespace WindowsFormsApp2
             refreshData();
         }
 
-        private void dgvAcc_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void tbxAccSearchName_TextChanged(object sender, EventArgs e)
         {
-            if (tbxAccSearchName.Text.Equals(""))
-            {
-                Console.WriteLine("Now");                
+            if (tbxAccSearchName.Text.Equals(""))             
                 refreshData();
-            }
             else
             {
                 DataTable data = new AccountORM().search(tbxAccSearchName.Text);

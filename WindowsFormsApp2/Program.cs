@@ -12,16 +12,12 @@ namespace WindowsFormsApp2
         static void Main()
         {
             Application.EnableVisualStyles();
-            
-            //check1();
-            check2();
-        }
 
-        static void check2()
-        {
+
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FormSignIn());
-            Application.Run(new FormAccounts());
+            //Application.Run(new FormAccounts());
+            Application.Run(new FormCategories());
         }
     }
 }

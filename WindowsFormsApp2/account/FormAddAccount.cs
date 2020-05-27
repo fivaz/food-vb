@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using WindowsFormsApp2.Classes.Database;
+using WindowsFormsApp2.account;
 
 namespace WindowsFormsApp2
 {
@@ -14,41 +14,31 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
-        private void FormSignUp_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbxAAcLastName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAAcSubmit_Click(object sender, EventArgs e)
         {
             if (editMode)
-                editAccount();
+                edit();
             else
                 createAccount();
             clearForm();
         }
 
-        private Account buildAccount()
+        private Account build()
         {
-            String firstName = tbxAAcFirstName.Text.ToString();
-            String lastName = tbxAAcLastName.Text.ToString();
-            String email = tbxAAcEmail.Text.ToString();
-            String password = tbxAAcPassword1.Text.ToString();
-            String type = "Waiter";
+            string firstName = tbxAAcFirstName.Text.ToString();
+            string lastName = tbxAAcLastName.Text.ToString();
+            string email = tbxAAcEmail.Text.ToString();
+            string password = tbxAAcPassword1.Text.ToString();
+            string type = "Waiter";
             if (rbtAAcManager.Checked)
                 type = "Manager";
             return new Account(id, firstName, lastName, email, password, type);
         }
 
-        private void editAccount()
+        private void edit()
         {
             AccountORM accountORM = new AccountORM();
-            Account account = buildAccount();
+            Account account = build();
             if (account.password == "")
                 accountORM.editWithoutPassword(account);
             else
@@ -58,7 +48,7 @@ namespace WindowsFormsApp2
         private void createAccount()
         {
             AccountORM accountORM = new AccountORM();
-            accountORM.create(buildAccount());
+            accountORM.create(build());
         }
 
         internal void setEditMode()

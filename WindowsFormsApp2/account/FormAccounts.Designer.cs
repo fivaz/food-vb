@@ -33,20 +33,20 @@
             this.lblAccSearchName = new System.Windows.Forms.Label();
             this.btnAccDel = new System.Windows.Forms.Button();
             this.dgvAcc = new System.Windows.Forms.DataGridView();
-            this.btnAccAdd = new System.Windows.Forms.Button();
-            this.dataSet3 = new WindowsFormsApp2.DataSet3();
-            this.vWACCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vW_ACCOUNTTableAdapter = new WindowsFormsApp2.DataSet3TableAdapters.VW_ACCOUNTTableAdapter();
-            this.vWACCOUNTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.aCCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCLASTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCFIRSTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vWACCOUNTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet3 = new WindowsFormsApp2.DataSet3();
+            this.btnAccAdd = new System.Windows.Forms.Button();
+            this.vWACCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vW_ACCOUNTTableAdapter = new WindowsFormsApp2.DataSet3TableAdapters.VW_ACCOUNTTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWACCOUNTBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vWACCOUNTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWACCOUNTBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tbxAccSearchName
@@ -103,39 +103,7 @@
             this.dgvAcc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAcc.Size = new System.Drawing.Size(802, 360);
             this.dgvAcc.TabIndex = 12;
-            this.dgvAcc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAcc_CellContentClick);
             this.dgvAcc.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAcc_CellDoubleClick);
-            // 
-            // btnAccAdd
-            // 
-            this.btnAccAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAccAdd.Location = new System.Drawing.Point(577, 38);
-            this.btnAccAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAccAdd.Name = "btnAccAdd";
-            this.btnAccAdd.Size = new System.Drawing.Size(129, 30);
-            this.btnAccAdd.TabIndex = 3;
-            this.btnAccAdd.Text = "&Nouveau compte";
-            this.btnAccAdd.UseVisualStyleBackColor = true;
-            this.btnAccAdd.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // dataSet3
-            // 
-            this.dataSet3.DataSetName = "DataSet3";
-            this.dataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vWACCOUNTBindingSource
-            // 
-            this.vWACCOUNTBindingSource.DataMember = "VW_ACCOUNT";
-            this.vWACCOUNTBindingSource.DataSource = this.dataSet3;
-            // 
-            // vW_ACCOUNTTableAdapter
-            // 
-            this.vW_ACCOUNTTableAdapter.ClearBeforeFill = true;
-            // 
-            // vWACCOUNTBindingSource1
-            // 
-            this.vWACCOUNTBindingSource1.DataMember = "VW_ACCOUNT";
-            this.vWACCOUNTBindingSource1.DataSource = this.dataSet3;
             // 
             // aCCIDDataGridViewTextBoxColumn
             // 
@@ -177,6 +145,37 @@
             this.aCCTYPEDataGridViewTextBoxColumn.Name = "aCCTYPEDataGridViewTextBoxColumn";
             this.aCCTYPEDataGridViewTextBoxColumn.Width = 125;
             // 
+            // vWACCOUNTBindingSource1
+            // 
+            this.vWACCOUNTBindingSource1.DataMember = "VW_ACCOUNT";
+            this.vWACCOUNTBindingSource1.DataSource = this.dataSet3;
+            // 
+            // dataSet3
+            // 
+            this.dataSet3.DataSetName = "DataSet3";
+            this.dataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnAccAdd
+            // 
+            this.btnAccAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAccAdd.Location = new System.Drawing.Point(577, 38);
+            this.btnAccAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAccAdd.Name = "btnAccAdd";
+            this.btnAccAdd.Size = new System.Drawing.Size(129, 30);
+            this.btnAccAdd.TabIndex = 3;
+            this.btnAccAdd.Text = "&Nouveau compte";
+            this.btnAccAdd.UseVisualStyleBackColor = true;
+            this.btnAccAdd.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // vWACCOUNTBindingSource
+            // 
+            this.vWACCOUNTBindingSource.DataMember = "VW_ACCOUNT";
+            this.vWACCOUNTBindingSource.DataSource = this.dataSet3;
+            // 
+            // vW_ACCOUNTTableAdapter
+            // 
+            this.vW_ACCOUNTTableAdapter.ClearBeforeFill = true;
+            // 
             // FormAccounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -193,9 +192,9 @@
             this.Text = "Comptes";
             this.Load += new System.EventHandler(this.FormAccounts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWACCOUNTBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vWACCOUNTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWACCOUNTBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

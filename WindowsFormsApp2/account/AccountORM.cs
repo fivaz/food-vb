@@ -1,8 +1,10 @@
 ﻿using Oracle.DataAccess.Client;
 using System;
 using System.Data;
+using WindowsFormsApp2.shared;
+using WindowsFormsApp2.shared.database;
 
-namespace WindowsFormsApp2.Classes.Database
+namespace WindowsFormsApp2.account
 {
     class AccountORM : ORM<Account>
     {

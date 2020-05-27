@@ -2,7 +2,7 @@
 using System.Data;
 using Oracle.DataAccess.Client;
 
-namespace WindowsFormsApp2.Classes.Database
+namespace WindowsFormsApp2.shared.database
 {
     public class OracleConn
     {

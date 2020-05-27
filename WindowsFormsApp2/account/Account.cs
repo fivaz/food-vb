@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WindowsFormsApp2
+namespace WindowsFormsApp2.account
 {
     public class Account
     {

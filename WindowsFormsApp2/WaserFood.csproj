@@ -80,11 +80,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
-    <Compile Include="Classes\Database\ORM.cs" />
-    <Compile Include="Classes\Database\AccountORM.cs" />
-    <Compile Include="Classes\Database\OracleConn.cs" />
-    <Compile Include="Classes\Database\OracleConnector.cs" />
+    <Compile Include="category\Category.cs" />
+    <Compile Include="account\Account.cs" />
+    <Compile Include="category\CategoryORM.cs" />
+    <Compile Include="DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="shared\ORM.cs" />
+    <Compile Include="account\AccountORM.cs" />
+    <Compile Include="shared\database\OracleConn.cs" />
+    <Compile Include="shared\database\OracleConnector.cs" />
     <Compile Include="DataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -96,10 +103,10 @@
     <Compile Include="FormAddTable.Designer.cs">
       <DependentUpon>FormAddTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddCategory.cs">
+    <Compile Include="category\FormAddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddCategory.Designer.cs">
+    <Compile Include="category\FormAddCategory.Designer.cs">
       <DependentUpon>FormAddCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAddDish.cs">
@@ -120,16 +127,16 @@
     <Compile Include="FormDishes.Designer.cs">
       <DependentUpon>FormDishes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAccounts.cs">
+    <Compile Include="account\FormAccounts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAccounts.Designer.cs">
+    <Compile Include="account\FormAccounts.Designer.cs">
       <DependentUpon>FormAccounts.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCategories.cs">
+    <Compile Include="category\FormCategories.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCategories.Designer.cs">
+    <Compile Include="category\FormCategories.Designer.cs">
       <DependentUpon>FormCategories.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTables.cs">
@@ -174,10 +181,10 @@
     <Compile Include="FormIngredients.Designer.cs">
       <DependentUpon>FormIngredients.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddAccount.cs">
+    <Compile Include="account\FormAddAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddAccount.Designer.cs">
+    <Compile Include="account\FormAddAccount.Designer.cs">
       <DependentUpon>FormAddAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="FormStats.cs">
@@ -197,7 +204,7 @@
     <EmbeddedResource Include="FormAddTable.resx">
       <DependentUpon>FormAddTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddCategory.resx">
+    <EmbeddedResource Include="category\FormAddCategory.resx">
       <DependentUpon>FormAddCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddDish.resx">
@@ -209,10 +216,10 @@
     <EmbeddedResource Include="FormDishes.resx">
       <DependentUpon>FormDishes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAccounts.resx">
+    <EmbeddedResource Include="account\FormAccounts.resx">
       <DependentUpon>FormAccounts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCategories.resx">
+    <EmbeddedResource Include="category\FormCategories.resx">
       <DependentUpon>FormCategories.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTables.resx">
@@ -233,7 +240,7 @@
     <EmbeddedResource Include="FormAddIngredient.resx">
       <DependentUpon>FormAddIngredient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddAccount.resx">
+    <EmbeddedResource Include="account\FormAddAccount.resx">
       <DependentUpon>FormAddAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormStats.resx">
@@ -254,6 +261,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
     <None Include="DataSet3.xsc">
       <DependentUpon>DataSet3.xsd</DependentUpon>
     </None>

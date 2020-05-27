@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace WindowsFormsApp2.Classes.Database
+namespace WindowsFormsApp2.shared
 {
     public interface ORM<T>
     {
