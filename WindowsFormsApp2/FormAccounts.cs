@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using WindowsFormsApp2.Classes.Database;
 
@@ -82,8 +83,8 @@ namespace WindowsFormsApp2
 
         private void tbxAccSearchName_TextChanged(object sender, EventArgs e)
         {
-            new AccountORM().search(tbxAccSearchName.Text);
-            //this.vW_ACCOUNTTableAdapter.Fill();
+            DataTable data = new AccountORM().search(tbxAccSearchName.Text);
+            dgvAcc.DataSource = data;
         }
     }
 }

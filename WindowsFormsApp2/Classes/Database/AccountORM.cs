@@ -7,6 +7,8 @@ namespace WindowsFormsApp2.Classes.Database
     class AccountORM
     {
         OracleConn connection;
+        String table = "foo_account";
+        String view = "vw_account";
         public AccountORM()
         {
             connection = OracleConnector.getConnection();
@@ -75,16 +77,19 @@ namespace WindowsFormsApp2.Classes.Database
             }
         }
 
-        internal void search(string text)
+        internal DataTable search(string text)
         {
-            String sql = "SELECT * FROM foo_account WHERE ACC_LAST_NAME = :query OR ACC_FIRST_NAME = :query OR " +
-                    "ACC_EMAIL = :query OR ACC_TYPE = :query";
+            String sql = "SELECT * FROM " + view + " WHERE ACC_LAST_NAME LIKE :query OR ACC_FIRST_NAME LIKE :query OR " +
+                    "ACC_EMAIL LIKE :query OR ACC_TYPE LIKE :query";
             OracleCommand command = connection.sqlPrepare(sql);
-            connection.AddString(command, text);
-            connection.AddString(command, text);
-            connection.AddString(command, text);
-            connection.AddString(command, text);
-            connection.execute(command);
+            connection.AddString(command, text + "%");
+            connection.AddString(command, text + "%");
+            connection.AddString(command, text + "%");
+            connection.AddString(command, text + "%");
+            OracleDataReader odr = connection.execute(command);
+            DataTable data = new DataTable();
+            data.Load(odr);
+            return data;
         }
 
         //TODO check unique email

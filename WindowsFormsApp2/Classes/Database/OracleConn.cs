@@ -74,11 +74,11 @@ namespace WindowsFormsApp2.Classes.Database
             }
         }
 
-        public void execute(OracleCommand currentCommand)
+        public OracleDataReader execute(OracleCommand currentCommand)
         {
             try
             {
-                currentCommand.ExecuteReader();
+                return currentCommand.ExecuteReader();
             }
             catch (Exception ex)
             {
