@@ -48,7 +48,11 @@ namespace WindowsFormsApp2
         private void editAccount()
         {
             AccountORM accountORM = new AccountORM();
-            accountORM.edit(buildAccount());
+            Account account = buildAccount();
+            if (account.password == "")
+                accountORM.editWithoutPassword(account);
+            else
+                accountORM.edit(account);
         }
 
         private void createAccount()
@@ -63,14 +67,15 @@ namespace WindowsFormsApp2
             editMode = true;
         }
 
-        private void clearForm(){
+        private void clearForm()
+        {
             tbxAAcFirstName.Text = "";
             tbxAAcLastName.Text = "";
             tbxAAcEmail.Text = "";
             tbxAAcPassword1.Text = "";
             tbxAAcPassword2.Text = "";
             rbtAAcManager.Checked = false;
-            rbtAAcWaiter.Checked = false;      
+            rbtAAcWaiter.Checked = false;
         }
 
         private void FormAddAccount_FormClosing(object sender, FormClosingEventArgs e)

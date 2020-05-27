@@ -12,6 +12,7 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
             instance = this;
+            
         }
 
         public static FormAccounts getInstance()
@@ -26,7 +27,7 @@ namespace WindowsFormsApp2
         private void FormAccounts_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dataSet3.VW_ACCOUNT' table. You can move, or remove it, as needed.
-            this.vW_ACCOUNTTableAdapter.Fill(this.dataSet3.VW_ACCOUNT);            
+            this.vW_ACCOUNTTableAdapter.Fill(this.dataSet3.VW_ACCOUNT);
             this.dgvAcc.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.dgvAcc.Columns[0].HeaderText = "id";
             this.dgvAcc.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -37,6 +38,8 @@ namespace WindowsFormsApp2
             this.dgvAcc.Columns[3].HeaderText = "email";
             this.dgvAcc.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.dgvAcc.Columns[4].HeaderText = "type";
+
+            //DataTable a = this.dataSet3.VW_ACCOUNT;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -53,7 +56,7 @@ namespace WindowsFormsApp2
             fa.tbxAAcLastName.Text = this.dgvAcc.CurrentRow.Cells[1].Value.ToString();
             fa.tbxAAcFirstName.Text = this.dgvAcc.CurrentRow.Cells[2].Value.ToString();
             fa.tbxAAcEmail.Text = this.dgvAcc.CurrentRow.Cells[3].Value.ToString();
-            String role = this.dgvAcc.CurrentRow.Cells[5].Value.ToString();
+            String role = this.dgvAcc.CurrentRow.Cells[4].Value.ToString();
 
             if (role.Equals("Manager"))
                 fa.rbtAAcManager.Checked = true;
@@ -65,6 +68,7 @@ namespace WindowsFormsApp2
 
         internal void refreshData()
         {
+            dgvAcc.DataSource = this.dataSet3.VW_ACCOUNT;
             this.vW_ACCOUNTTableAdapter.ClearBeforeFill = true;
             this.vW_ACCOUNTTableAdapter.Fill(this.dataSet3.VW_ACCOUNT);
         }
@@ -83,8 +87,16 @@ namespace WindowsFormsApp2
 
         private void tbxAccSearchName_TextChanged(object sender, EventArgs e)
         {
-            DataTable data = new AccountORM().search(tbxAccSearchName.Text);
-            dgvAcc.DataSource = data;
+            if (tbxAccSearchName.Text.Equals(""))
+            {
+                Console.WriteLine("Now");                
+                refreshData();
+            }
+            else
+            {
+                DataTable data = new AccountORM().search(tbxAccSearchName.Text);
+                dgvAcc.DataSource = data;
+            }
         }
     }
 }
