@@ -75,6 +75,18 @@ namespace WindowsFormsApp2.Classes.Database
             }
         }
 
+        internal void search(string text)
+        {
+            String sql = "SELECT * FROM foo_account WHERE ACC_LAST_NAME = :query OR ACC_FIRST_NAME = :query OR " +
+                    "ACC_EMAIL = :query OR ACC_TYPE = :query";
+            OracleCommand command = connection.sqlPrepare(sql);
+            connection.AddString(command, text);
+            connection.AddString(command, text);
+            connection.AddString(command, text);
+            connection.AddString(command, text);
+            connection.execute(command);
+        }
+
         //TODO check unique email
     }
 }

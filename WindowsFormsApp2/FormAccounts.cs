@@ -15,7 +15,7 @@ namespace WindowsFormsApp2
 
         public static FormAccounts getInstance()
         {
-            if(instance == null)
+            if (instance == null)
             {
                 new FormAccounts();
             }
@@ -24,11 +24,18 @@ namespace WindowsFormsApp2
 
         private void FormAccounts_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSet1.VW_ACCOUNT' table. You can move, or remove it, as needed.
-            this.vW_ACCOUNTTableAdapter.Fill(this.dataSet1.VW_ACCOUNT);
-            // TODO: This line of code loads data into the 'dataSet1.VW_ACCOUNT' table. You can move, or remove it, as needed.
-            this.vW_ACCOUNTTableAdapter.Fill(this.dataSet1.VW_ACCOUNT);
-
+            // TODO: This line of code loads data into the 'dataSet3.VW_ACCOUNT' table. You can move, or remove it, as needed.
+            this.vW_ACCOUNTTableAdapter.Fill(this.dataSet3.VW_ACCOUNT);            
+            this.dgvAcc.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvAcc.Columns[0].HeaderText = "id";
+            this.dgvAcc.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvAcc.Columns[1].HeaderText = "nom";
+            this.dgvAcc.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvAcc.Columns[2].HeaderText = "prénom";
+            this.dgvAcc.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvAcc.Columns[3].HeaderText = "email";
+            this.dgvAcc.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvAcc.Columns[4].HeaderText = "type";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -46,10 +53,10 @@ namespace WindowsFormsApp2
             fa.tbxAAcFirstName.Text = this.dgvAcc.CurrentRow.Cells[2].Value.ToString();
             fa.tbxAAcEmail.Text = this.dgvAcc.CurrentRow.Cells[3].Value.ToString();
             String role = this.dgvAcc.CurrentRow.Cells[5].Value.ToString();
-            
-            if (role.Equals("Manager"))            
+
+            if (role.Equals("Manager"))
                 fa.rbtAAcManager.Checked = true;
-            else 
+            else
                 fa.rbtAAcWaiter.Checked = true;
 
             fa.ShowDialog();
@@ -58,7 +65,7 @@ namespace WindowsFormsApp2
         internal void refreshData()
         {
             this.vW_ACCOUNTTableAdapter.ClearBeforeFill = true;
-            this.vW_ACCOUNTTableAdapter.Fill(this.dataSet1.VW_ACCOUNT);
+            this.vW_ACCOUNTTableAdapter.Fill(this.dataSet3.VW_ACCOUNT);
         }
 
         private void btnAccDel_Click(object sender, EventArgs e)
@@ -66,6 +73,17 @@ namespace WindowsFormsApp2
             int id = Int32.Parse(dgvAcc.CurrentRow.Cells[0].Value.ToString());
             new AccountORM().delete(id);
             refreshData();
+        }
+
+        private void dgvAcc_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tbxAccSearchName_TextChanged(object sender, EventArgs e)
+        {
+            new AccountORM().search(tbxAccSearchName.Text);
+            //this.vW_ACCOUNTTableAdapter.Fill();
         }
     }
 }

@@ -33,21 +33,20 @@
             this.lblAccSearchName = new System.Windows.Forms.Label();
             this.btnAccDel = new System.Windows.Forms.Button();
             this.dgvAcc = new System.Windows.Forms.DataGridView();
-            this.dataSet1 = new WindowsFormsApp2.DataSet1();
             this.btnAccAdd = new System.Windows.Forms.Button();
-            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet3 = new WindowsFormsApp2.DataSet3();
             this.vWACCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vW_ACCOUNTTableAdapter = new WindowsFormsApp2.DataSet1TableAdapters.VW_ACCOUNTTableAdapter();
+            this.vW_ACCOUNTTableAdapter = new WindowsFormsApp2.DataSet3TableAdapters.VW_ACCOUNTTableAdapter();
+            this.vWACCOUNTBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.aCCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCLASTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCFIRSTNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aCCPASSWORDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aCCTYPEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vWACCOUNTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWACCOUNTBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tbxAccSearchName
@@ -57,6 +56,7 @@
             this.tbxAccSearchName.Name = "tbxAccSearchName";
             this.tbxAccSearchName.Size = new System.Drawing.Size(227, 22);
             this.tbxAccSearchName.TabIndex = 2;
+            this.tbxAccSearchName.TextChanged += new System.EventHandler(this.tbxAccSearchName_TextChanged);
             // 
             // lblAccSearchName
             // 
@@ -81,6 +81,8 @@
             // 
             // dgvAcc
             // 
+            this.dgvAcc.AllowUserToAddRows = false;
+            this.dgvAcc.AllowUserToOrderColumns = true;
             this.dgvAcc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -91,9 +93,8 @@
             this.aCCLASTNAMEDataGridViewTextBoxColumn,
             this.aCCFIRSTNAMEDataGridViewTextBoxColumn,
             this.aCCEMAILDataGridViewTextBoxColumn,
-            this.aCCPASSWORDDataGridViewTextBoxColumn,
             this.aCCTYPEDataGridViewTextBoxColumn});
-            this.dgvAcc.DataSource = this.vWACCOUNTBindingSource;
+            this.dgvAcc.DataSource = this.vWACCOUNTBindingSource1;
             this.dgvAcc.Location = new System.Drawing.Point(35, 92);
             this.dgvAcc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvAcc.Name = "dgvAcc";
@@ -102,12 +103,8 @@
             this.dgvAcc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAcc.Size = new System.Drawing.Size(802, 360);
             this.dgvAcc.TabIndex = 12;
+            this.dgvAcc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAcc_CellContentClick);
             this.dgvAcc.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAcc_CellDoubleClick);
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnAccAdd
             // 
@@ -121,19 +118,24 @@
             this.btnAccAdd.UseVisualStyleBackColor = true;
             this.btnAccAdd.Click += new System.EventHandler(this.button2_Click);
             // 
-            // dataSet1BindingSource
+            // dataSet3
             // 
-            this.dataSet1BindingSource.DataSource = this.dataSet1;
-            this.dataSet1BindingSource.Position = 0;
+            this.dataSet3.DataSetName = "DataSet3";
+            this.dataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // vWACCOUNTBindingSource
             // 
             this.vWACCOUNTBindingSource.DataMember = "VW_ACCOUNT";
-            this.vWACCOUNTBindingSource.DataSource = this.dataSet1BindingSource;
+            this.vWACCOUNTBindingSource.DataSource = this.dataSet3;
             // 
             // vW_ACCOUNTTableAdapter
             // 
             this.vW_ACCOUNTTableAdapter.ClearBeforeFill = true;
+            // 
+            // vWACCOUNTBindingSource1
+            // 
+            this.vWACCOUNTBindingSource1.DataMember = "VW_ACCOUNT";
+            this.vWACCOUNTBindingSource1.DataSource = this.dataSet3;
             // 
             // aCCIDDataGridViewTextBoxColumn
             // 
@@ -167,14 +169,6 @@
             this.aCCEMAILDataGridViewTextBoxColumn.Name = "aCCEMAILDataGridViewTextBoxColumn";
             this.aCCEMAILDataGridViewTextBoxColumn.Width = 125;
             // 
-            // aCCPASSWORDDataGridViewTextBoxColumn
-            // 
-            this.aCCPASSWORDDataGridViewTextBoxColumn.DataPropertyName = "ACC_PASSWORD";
-            this.aCCPASSWORDDataGridViewTextBoxColumn.HeaderText = "ACC_PASSWORD";
-            this.aCCPASSWORDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.aCCPASSWORDDataGridViewTextBoxColumn.Name = "aCCPASSWORDDataGridViewTextBoxColumn";
-            this.aCCPASSWORDDataGridViewTextBoxColumn.Width = 125;
-            // 
             // aCCTYPEDataGridViewTextBoxColumn
             // 
             this.aCCTYPEDataGridViewTextBoxColumn.DataPropertyName = "ACC_TYPE";
@@ -199,9 +193,9 @@
             this.Text = "Comptes";
             this.Load += new System.EventHandler(this.FormAccounts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vWACCOUNTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWACCOUNTBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,16 +206,15 @@
         private System.Windows.Forms.Label lblAccSearchName;
         private System.Windows.Forms.Button btnAccDel;
         private System.Windows.Forms.DataGridView dgvAcc;
-        private DataSet1 dataSet1;
         private System.Windows.Forms.Button btnAccAdd;
-        private System.Windows.Forms.BindingSource dataSet1BindingSource;
+        private DataSet3 dataSet3;
         private System.Windows.Forms.BindingSource vWACCOUNTBindingSource;
-        private DataSet1TableAdapters.VW_ACCOUNTTableAdapter vW_ACCOUNTTableAdapter;
+        private DataSet3TableAdapters.VW_ACCOUNTTableAdapter vW_ACCOUNTTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn aCCIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aCCLASTNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aCCFIRSTNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aCCEMAILDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aCCPASSWORDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn aCCTYPEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource vWACCOUNTBindingSource1;
     }
 }
