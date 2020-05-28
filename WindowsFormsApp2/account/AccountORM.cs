@@ -16,21 +16,23 @@ namespace WindowsFormsApp2.account
         string[] columns = { "ACC_LAST_NAME", "ACC_FIRST_NAME", "ACC_EMAIL", "ACC_PASSWORD", "ACC_TYPE" };
         string[] ids = { "ACC_ID" };
         string deleteColumn = "ACC_IS_DELETED";
+        /*
         public AccountORM()
         {
             connection = OracleConnector.getConnection();
         }
+        */
 
+        /*
         public void create(Account account)
         {
             try
             {
-                /*   
-                string sql = "INSERT INTO " + table + " " +
-                   "(ACC_ID, ACC_LAST_NAME, ACC_FIRST_NAME, ACC_EMAIL, ACC_PASSWORD, ACC_TYPE) " +
-                   "VALUES " +
-                   "(NULL, :lastName, :firstName, :email, :password, :type)";
-                */
+                //string sql = "INSERT INTO " + table + " " +
+                //   "(ACC_ID, ACC_LAST_NAME, ACC_FIRST_NAME, ACC_EMAIL, ACC_PASSWORD, ACC_TYPE) " +
+                //   "VALUES " +
+                //   "(NULL, :lastName, :firstName, :email, :password, :type)";
+                
                 string sql = SQLHelper.insertQuery(table, columns, ids);
                 Console.WriteLine(sql);
                 OracleCommand command = connection.sqlPrepare(sql);
@@ -46,6 +48,7 @@ namespace WindowsFormsApp2.account
                 throw new Exception(ex.Message);
             }
         }
+        */
 
         public void editWithoutPassword(Account account)
         {
@@ -69,6 +72,7 @@ namespace WindowsFormsApp2.account
             }
         }
 
+        /*
         public void edit(Account account)
         {
             try
@@ -91,7 +95,8 @@ namespace WindowsFormsApp2.account
                 throw new Exception(ex.Message);
             }
         }
-
+        */
+        /*
         public void delete(int id)
         {
             try
@@ -109,7 +114,8 @@ namespace WindowsFormsApp2.account
                 throw new Exception(ex.Message);
             }
         }
-
+        */
+        /*
         public DataTable search(string text)
         {
             string[] searchable = columns.Where(val => !val.Equals("ACC_PASSWORD")).ToArray();
@@ -127,6 +133,17 @@ namespace WindowsFormsApp2.account
             DataTable data = new DataTable();
             data.Load(odr);
             return data;
+        }
+        */
+        public override void bindObject(OracleCommand command, Account account, bool withId)
+        {
+            connection.AddString(command, account.lastName);
+            connection.AddString(command, account.firstName);
+            connection.AddString(command, account.email);
+            connection.AddString(command, account.password);
+            connection.AddString(command, account.type);
+            if (withId)
+                connection.AddInt(command, account.id);
         }
 
         //TODO check unique email

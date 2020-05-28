@@ -95,7 +95,7 @@ namespace WindowsFormsApp2.shared.helper
                 .Append(" WHERE ");
 
             foreach (string column in columns)
-                query.Append(column).Append(" LIKE :").Append(column).Append(" OR ");
+                query.Append(column).Append(" LIKE :query OR ");
 
             query.Remove(query.Length - 3, 3);
 

@@ -1,26 +1,32 @@
 ﻿using Oracle.DataAccess.Client;
-using System;
-using System.Data;
 using WindowsFormsApp2.shared;
 using WindowsFormsApp2.shared.database;
-using WindowsFormsApp2.shared.helper;
 
 namespace WindowsFormsApp2.category
 {
     class CategoryORM : ORM<Category>
     {
-        OracleConn connection;
-        string table = "foo_category";
-        string view = "vw_category";
-        string[] columns = { "CAT_NAME" };
-        string[] ids = { "CAT_ID" };
-        string deleteColumn = "CAT_IS_DELETED";
 
-        public CategoryORM()
+        public override void bindObject(OracleCommand command, Category category, bool withId)
         {
-            connection = OracleConnector.getConnection();
+            connection.AddString(command, category.name);
+            if (withId)
+                connection.AddInt(command, category.id);
         }
 
+        
+        public CategoryORM()
+        {
+            table = "foo_category";
+            view = "vw_category";
+            string[] myColumns = { "CAT_NAME" };
+            columns = myColumns;
+            string[] myIds =  { "CAT_ID" };
+            ids = myIds;
+            deleteColumn = "CAT_IS_DELETED";
+        }
+
+        /*
         public void create(Category category)
         {
             try
@@ -85,5 +91,6 @@ namespace WindowsFormsApp2.category
             data.Load(odr);
             return data;
         }
+        */
     }
 }

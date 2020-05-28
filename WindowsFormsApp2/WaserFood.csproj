@@ -89,7 +89,6 @@
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="dish\Dish.cs" />
-    <Compile Include="dish\DishORM.cs" />
     <Compile Include="shared\helper\SQLHelper.cs" />
     <Compile Include="shared\ORM.cs" />
     <Compile Include="account\AccountORM.cs" />
