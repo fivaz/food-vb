@@ -30,7 +30,7 @@ namespace WindowsFormsApp2.account
                    "(ACC_ID, ACC_LAST_NAME, ACC_FIRST_NAME, ACC_EMAIL, ACC_PASSWORD, ACC_TYPE) " +
                    "VALUES " +
                    "(NULL, :lastName, :firstName, :email, :password, :type)";
-                */ 
+                */
                 string sql = SQLHelper.insertQuery(table, columns, ids);
                 Console.WriteLine(sql);
                 OracleCommand command = connection.sqlPrepare(sql);

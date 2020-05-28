@@ -15,7 +15,7 @@ namespace WindowsFormsApp2.category
         string[] columns = { "CAT_NAME" };
         string[] ids = { "CAT_ID" };
         string deleteColumn = "CAT_IS_DELETED";
-       
+
         public CategoryORM()
         {
             connection = OracleConnector.getConnection();
@@ -43,10 +43,8 @@ namespace WindowsFormsApp2.category
         {
             try
             {
-                string query = SQLHelper.updateQuery(table, columns, ids);
-                string sql = "UPDATE " + table + " SET CAT_NAME = :name WHERE CAT_ID = :id";
-                Console.WriteLine(sql);
-                Console.WriteLine(query);
+                string sql = SQLHelper.updateQuery(table, columns, ids);
+                //string sql = "UPDATE " + table + " SET CAT_NAME = :name WHERE CAT_ID = :id";
                 OracleCommand command = connection.sqlPrepare(sql);
                 connection.AddString(command, category.name);
                 connection.AddInt(command, category.id);
