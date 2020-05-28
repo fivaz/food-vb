@@ -52,8 +52,6 @@ namespace WindowsFormsApp2
             tbxACaName.Text = "";
         }
 
-
-
         private void FormAddCategory_FormClosing(object sender, FormClosingEventArgs e)
         {
             FormCategories form = FormCategories.getInstance();

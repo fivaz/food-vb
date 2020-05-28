@@ -102,6 +102,14 @@ namespace WindowsFormsApp2.shared.database
             currentCommand.Parameters.Add(param);
         }
 
+        public void AddDouble(OracleCommand currentCommand, double value)
+        {
+            OracleParameter param = new OracleParameter();
+            param.OracleDbType = OracleDbType.Double;
+            param.Value = value;
+            currentCommand.Parameters.Add(param);
+        }
+
         public void close()
         {
             connection.Close();
