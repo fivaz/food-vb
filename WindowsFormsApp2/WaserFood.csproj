@@ -120,6 +120,8 @@
     </Compile>
     <Compile Include="dish\DishORM.cs" />
     <Compile Include="dish\Dish.cs" />
+    <Compile Include="ingriedient\Ingredient.cs" />
+    <Compile Include="ingriedient\IngredientORM.cs" />
     <Compile Include="shared\helper\SQLHelper.cs" />
     <Compile Include="shared\FormAdd.cs" />
     <Compile Include="shared\ORM.cs" />

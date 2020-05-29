@@ -33,6 +33,8 @@
             this.lblADiName = new System.Windows.Forms.Label();
             this.lblADiCategory = new System.Windows.Forms.Label();
             this.cbbADiCategory = new System.Windows.Forms.ComboBox();
+            this.vWCATEGORYBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet6 = new WindowsFormsApp2.DataSet6();
             this.btnADiSubmit = new System.Windows.Forms.Button();
             this.lblADiPrice = new System.Windows.Forms.Label();
             this.gpbADiIngredients = new System.Windows.Forms.GroupBox();
@@ -44,14 +46,12 @@
             this.dgvADiAdded = new System.Windows.Forms.DataGridView();
             this.lblADiAdded = new System.Windows.Forms.Label();
             this.tbxADiAddSearch = new System.Windows.Forms.TextBox();
-            this.dataSet6 = new WindowsFormsApp2.DataSet6();
-            this.vWCATEGORYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vW_CATEGORYTableAdapter = new WindowsFormsApp2.DataSet6TableAdapters.VW_CATEGORYTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.vWCATEGORYBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).BeginInit();
             this.gpbADiIngredients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvADiAvailable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvADiAdded)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWCATEGORYBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tbxADiName
@@ -75,8 +75,9 @@
             // 
             // lblADiCategory
             // 
+            this.lblADiCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblADiCategory.AutoSize = true;
-            this.lblADiCategory.Location = new System.Drawing.Point(590, 40);
+            this.lblADiCategory.Location = new System.Drawing.Point(827, 40);
             this.lblADiCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblADiCategory.Name = "lblADiCategory";
             this.lblADiCategory.Size = new System.Drawing.Size(69, 17);
@@ -85,22 +86,35 @@
             // 
             // cbbADiCategory
             // 
+            this.cbbADiCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbbADiCategory.DataSource = this.vWCATEGORYBindingSource;
             this.cbbADiCategory.DisplayMember = "CAT_NAME";
             this.cbbADiCategory.FormattingEnabled = true;
-            this.cbbADiCategory.Location = new System.Drawing.Point(593, 61);
+            this.cbbADiCategory.Location = new System.Drawing.Point(830, 61);
             this.cbbADiCategory.Margin = new System.Windows.Forms.Padding(4);
             this.cbbADiCategory.Name = "cbbADiCategory";
             this.cbbADiCategory.Size = new System.Drawing.Size(125, 24);
             this.cbbADiCategory.TabIndex = 4;
             this.cbbADiCategory.ValueMember = "CAT_ID";
             // 
+            // vWCATEGORYBindingSource
+            // 
+            this.vWCATEGORYBindingSource.DataMember = "VW_CATEGORY";
+            this.vWCATEGORYBindingSource.DataSource = this.dataSet6;
+            // 
+            // dataSet6
+            // 
+            this.dataSet6.DataSetName = "DataSet6";
+            this.dataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btnADiSubmit
             // 
+            this.btnADiSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnADiSubmit.Location = new System.Drawing.Point(327, 476);
             this.btnADiSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnADiSubmit.Name = "btnADiSubmit";
-            this.btnADiSubmit.Size = new System.Drawing.Size(100, 28);
+            this.btnADiSubmit.Size = new System.Drawing.Size(337, 28);
             this.btnADiSubmit.TabIndex = 14;
             this.btnADiSubmit.Text = "&Créer";
             this.btnADiSubmit.UseVisualStyleBackColor = true;
@@ -108,8 +122,9 @@
             // 
             // lblADiPrice
             // 
+            this.lblADiPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblADiPrice.AutoSize = true;
-            this.lblADiPrice.Location = new System.Drawing.Point(579, 484);
+            this.lblADiPrice.Location = new System.Drawing.Point(816, 484);
             this.lblADiPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblADiPrice.Name = "lblADiPrice";
             this.lblADiPrice.Size = new System.Drawing.Size(123, 17);
@@ -118,6 +133,8 @@
             // 
             // gpbADiIngredients
             // 
+            this.gpbADiIngredients.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gpbADiIngredients.Controls.Add(this.lblADiAvaSearch);
             this.gpbADiIngredients.Controls.Add(this.dgvADiAvailable);
             this.gpbADiIngredients.Controls.Add(this.lblADiAvailable);
@@ -128,15 +145,16 @@
             this.gpbADiIngredients.Controls.Add(this.tbxADiAddSearch);
             this.gpbADiIngredients.Location = new System.Drawing.Point(35, 105);
             this.gpbADiIngredients.Name = "gpbADiIngredients";
-            this.gpbADiIngredients.Size = new System.Drawing.Size(683, 344);
+            this.gpbADiIngredients.Size = new System.Drawing.Size(920, 344);
             this.gpbADiIngredients.TabIndex = 5;
             this.gpbADiIngredients.TabStop = false;
             this.gpbADiIngredients.Text = "Ingrédients";
             // 
             // lblADiAvaSearch
             // 
+            this.lblADiAvaSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblADiAvaSearch.AutoSize = true;
-            this.lblADiAvaSearch.Location = new System.Drawing.Point(352, 62);
+            this.lblADiAvaSearch.Location = new System.Drawing.Point(497, 55);
             this.lblADiAvaSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblADiAvaSearch.Name = "lblADiAvaSearch";
             this.lblADiAvaSearch.Size = new System.Drawing.Size(82, 17);
@@ -145,18 +163,21 @@
             // 
             // dgvADiAvailable
             // 
+            this.dgvADiAvailable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvADiAvailable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvADiAvailable.Location = new System.Drawing.Point(352, 113);
+            this.dgvADiAvailable.Location = new System.Drawing.Point(500, 113);
             this.dgvADiAvailable.Margin = new System.Windows.Forms.Padding(4);
             this.dgvADiAvailable.Name = "dgvADiAvailable";
             this.dgvADiAvailable.RowHeadersWidth = 51;
-            this.dgvADiAvailable.Size = new System.Drawing.Size(315, 218);
+            this.dgvADiAvailable.Size = new System.Drawing.Size(404, 218);
             this.dgvADiAvailable.TabIndex = 13;
+            this.dgvADiAvailable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvADiAvailable_CellDoubleClick);
             // 
             // lblADiAvailable
             // 
+            this.lblADiAvailable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblADiAvailable.AutoSize = true;
-            this.lblADiAvailable.Location = new System.Drawing.Point(352, 25);
+            this.lblADiAvailable.Location = new System.Drawing.Point(497, 18);
             this.lblADiAvailable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblADiAvailable.Name = "lblADiAvailable";
             this.lblADiAvailable.Size = new System.Drawing.Size(81, 17);
@@ -165,16 +186,18 @@
             // 
             // tbxADiAvaSearch
             // 
-            this.tbxADiAvaSearch.Location = new System.Drawing.Point(352, 83);
+            this.tbxADiAvaSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxADiAvaSearch.Location = new System.Drawing.Point(500, 83);
             this.tbxADiAvaSearch.Margin = new System.Windows.Forms.Padding(4);
             this.tbxADiAvaSearch.Name = "tbxADiAvaSearch";
-            this.tbxADiAvaSearch.Size = new System.Drawing.Size(315, 22);
+            this.tbxADiAvaSearch.Size = new System.Drawing.Size(150, 22);
             this.tbxADiAvaSearch.TabIndex = 11;
+            this.tbxADiAvaSearch.TextChanged += new System.EventHandler(this.tbxADiAvaSearch_TextChanged);
             // 
             // lblADiAddSearch
             // 
             this.lblADiAddSearch.AutoSize = true;
-            this.lblADiAddSearch.Location = new System.Drawing.Point(17, 62);
+            this.lblADiAddSearch.Location = new System.Drawing.Point(18, 62);
             this.lblADiAddSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblADiAddSearch.Name = "lblADiAddSearch";
             this.lblADiAddSearch.Size = new System.Drawing.Size(82, 17);
@@ -184,17 +207,18 @@
             // dgvADiAdded
             // 
             this.dgvADiAdded.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvADiAdded.Location = new System.Drawing.Point(17, 113);
+            this.dgvADiAdded.Location = new System.Drawing.Point(18, 113);
             this.dgvADiAdded.Margin = new System.Windows.Forms.Padding(4);
             this.dgvADiAdded.Name = "dgvADiAdded";
             this.dgvADiAdded.RowHeadersWidth = 51;
-            this.dgvADiAdded.Size = new System.Drawing.Size(315, 218);
+            this.dgvADiAdded.Size = new System.Drawing.Size(400, 218);
             this.dgvADiAdded.TabIndex = 12;
+            this.dgvADiAdded.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvADiAdded_CellDoubleClick);
             // 
             // lblADiAdded
             // 
             this.lblADiAdded.AutoSize = true;
-            this.lblADiAdded.Location = new System.Drawing.Point(17, 25);
+            this.lblADiAdded.Location = new System.Drawing.Point(18, 25);
             this.lblADiAdded.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblADiAdded.Name = "lblADiAdded";
             this.lblADiAdded.Size = new System.Drawing.Size(55, 17);
@@ -203,21 +227,12 @@
             // 
             // tbxADiAddSearch
             // 
-            this.tbxADiAddSearch.Location = new System.Drawing.Point(17, 83);
+            this.tbxADiAddSearch.Location = new System.Drawing.Point(18, 83);
             this.tbxADiAddSearch.Margin = new System.Windows.Forms.Padding(4);
             this.tbxADiAddSearch.Name = "tbxADiAddSearch";
-            this.tbxADiAddSearch.Size = new System.Drawing.Size(315, 22);
+            this.tbxADiAddSearch.Size = new System.Drawing.Size(150, 22);
             this.tbxADiAddSearch.TabIndex = 8;
-            // 
-            // dataSet6
-            // 
-            this.dataSet6.DataSetName = "DataSet6";
-            this.dataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vWCATEGORYBindingSource
-            // 
-            this.vWCATEGORYBindingSource.DataMember = "VW_CATEGORY";
-            this.vWCATEGORYBindingSource.DataSource = this.dataSet6;
+            this.tbxADiAddSearch.TextChanged += new System.EventHandler(this.tbxADiAddSearch_TextChanged);
             // 
             // vW_CATEGORYTableAdapter
             // 
@@ -227,7 +242,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 537);
+            this.ClientSize = new System.Drawing.Size(994, 537);
             this.Controls.Add(this.gpbADiIngredients);
             this.Controls.Add(this.lblADiPrice);
             this.Controls.Add(this.btnADiSubmit);
@@ -235,20 +250,19 @@
             this.Controls.Add(this.lblADiCategory);
             this.Controls.Add(this.lblADiName);
             this.Controls.Add(this.tbxADiName);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1012, 584);
             this.Name = "FormAddDish";
             this.Text = "Nouveau plat";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAddDish_FormClosing);
             this.Load += new System.EventHandler(this.FormAddDish_Load);
+            this.Resize += new System.EventHandler(this.FormAddDish_Resize);
+            ((System.ComponentModel.ISupportInitialize)(this.vWCATEGORYBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).EndInit();
             this.gpbADiIngredients.ResumeLayout(false);
             this.gpbADiIngredients.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvADiAvailable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvADiAdded)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWCATEGORYBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
