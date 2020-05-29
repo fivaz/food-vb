@@ -11,6 +11,7 @@ namespace WindowsFormsApp2
         public FormDishes()
         {
             InitializeComponent();
+            instance = this;
         }
         public static FormDishes getInstance()
         {
@@ -33,7 +34,7 @@ namespace WindowsFormsApp2
             this.dgvDis.Columns[3].HeaderText = "nom";
         }
 
-        public void RefreshData()
+        internal void RefreshData()
         {
             dgvDis.DataSource = this.dataSet4.VW_DISH;
             this.vW_DISHTableAdapter2.ClearBeforeFill = true;
@@ -46,8 +47,8 @@ namespace WindowsFormsApp2
 
             fa.SetEditMode();
             fa.id = Int32.Parse(dgvDis.CurrentRow.Cells[0].Value.ToString());
-            fa.tbxADiName.Text = this.dgvDis.CurrentRow.Cells[1].Value.ToString();
-            fa.cbbADiCategory.Text = this.dgvDis.CurrentRow.Cells[2].Value.ToString();
+            fa.cbbADiCategory.SelectedValue = this.dgvDis.CurrentRow.Cells[1].Value.ToString();
+            fa.tbxADiName.Text = this.dgvDis.CurrentRow.Cells[3].Value.ToString();
 
             fa.ShowDialog();
         }

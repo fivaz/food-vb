@@ -25,7 +25,7 @@ namespace WindowsFormsApp2
         private void FormAddCategory_FormClosing(object sender, FormClosingEventArgs e)
         {
             FormCategories form = FormCategories.getInstance();
-            form.refreshData();
+            form.RefreshData();
         }
 
         public Category Build()

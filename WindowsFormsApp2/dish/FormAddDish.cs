@@ -12,6 +12,7 @@ namespace WindowsFormsApp2
         public FormAddDish()
         {
             InitializeComponent();
+            this.vW_CATEGORYTableAdapter.Fill(this.dataSet6.VW_CATEGORY);
         }
 
         public Dish Build()
@@ -48,7 +49,7 @@ namespace WindowsFormsApp2
         private void FormAddDish_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dataSet6.VW_CATEGORY' table. You can move, or remove it, as needed.
-            this.vW_CATEGORYTableAdapter.Fill(this.dataSet6.VW_CATEGORY);
+            
         }
 
         private void btnADiSubmit_Click(object sender, EventArgs e)

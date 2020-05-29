@@ -12,15 +12,12 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
             instance = this;
-            
         }
 
         public static FormAccounts getInstance()
         {
             if (instance == null)
-            {
-                new FormAccounts();
-            }
+                instance = new FormAccounts();
             return instance;
         }
 

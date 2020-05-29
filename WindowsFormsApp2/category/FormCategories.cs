@@ -12,7 +12,6 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
             instance = this;
-
         }
         public static FormCategories getInstance()
         {
@@ -31,7 +30,7 @@ namespace WindowsFormsApp2
             this.dgvCat.Columns[1].HeaderText = "nom";
         }
 
-        internal void refreshData()
+        internal void RefreshData()
         {
             dgvCat.DataSource = this.dataSet.VW_CATEGORY;
             this.vW_CATEGORYTableAdapter.ClearBeforeFill = true;
@@ -53,13 +52,13 @@ namespace WindowsFormsApp2
         {
             int id = Int32.Parse(dgvCat.CurrentRow.Cells[0].Value.ToString());
             new CategoryORM().Delete(id);
-            refreshData();
+            RefreshData();
         }
 
         private void tbxCatSearchName_TextChanged(object sender, EventArgs e)
         {
             if (tbxCatSearchName.Text.Equals(""))
-                refreshData();
+                RefreshData();
             else
             {
                 DataTable data = new CategoryORM().Search(tbxCatSearchName.Text);
