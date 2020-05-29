@@ -1,9 +1,10 @@
 ﻿using System.Windows.Forms;
 using WindowsFormsApp2.category;
+using WindowsFormsApp2.shared;
 
 namespace WindowsFormsApp2
 {
-    public partial class FormAddCategory : Form
+    public partial class FormAddCategory : Form, FormAdd<Category>
     {
         internal int id;
         internal bool editMode = false;
@@ -16,46 +17,45 @@ namespace WindowsFormsApp2
         private void btnACaSubmit_Click(object sender, System.EventArgs e)
         {
             if (editMode)
-                edit();
+                Edit();
             else
-                create();
-            clearForm();
+                Create();
+            ClearForm();
+        }
+        private void FormAddCategory_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FormCategories form = FormCategories.getInstance();
+            form.refreshData();
         }
 
-        private Category build()
+        public Category Build()
         {
             string name = tbxACaName.Text.ToString();
             return new Category(id, name);
         }
 
-        private void edit()
+        public void Edit()
         {
             CategoryORM categoryORM = new CategoryORM();
-            Category category = build();
+            Category category = Build();
             categoryORM.Edit(category);
         }
 
-        private void create()
+        public void Create()
         {
             CategoryORM categoryORM = new CategoryORM();
-            categoryORM.Create(build());
+            categoryORM.Create(Build());
         }
 
-        internal void setEditMode()
+        public void SetEditMode()
         {
             btnACaSubmit.Text = "Modifier &category";
             editMode = true;
         }
 
-        private void clearForm()
+        public void ClearForm()
         {
             tbxACaName.Text = "";
-        }
-
-        private void FormAddCategory_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            FormCategories form = FormCategories.getInstance();
-            form.refreshData();
         }
     }
 }
