@@ -26,17 +26,6 @@ namespace WindowsFormsApp2.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Persist Security Info=True;User ID=foo_stefane;Password=foo" +
-            "_stefane;Unicode=True")]
-        public string manager {
-            get {
-                return ((string)(this["manager"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("DATA SOURCE=localhost:1521/xe;PASSWORD=foo_dba;PERSIST SECURITY INFO=True;USER ID" +
             "=FOO_DBA")]
         public string newConnectionString {

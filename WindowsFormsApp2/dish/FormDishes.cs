@@ -22,16 +22,16 @@ namespace WindowsFormsApp2
 
         private void FormDishes_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSet4.VW_DISH' table. You can move, or remove it, as needed.
-            this.vW_DISHTableAdapter2.Fill(this.dataSet4.VW_DISH);
-            this.dgvDis.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dgvDis.Columns[0].HeaderText = "id";
-            this.dgvDis.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dgvDis.Columns[1].HeaderText = "id categorie";
+            // TODO: This line of code loads data into the 'dataSet7.VW_DISH' table. You can move, or remove it, as needed.
+            this.vW_DISHTableAdapter3.Fill(this.dataSet7.VW_DISH);
+            this.dgvDis.Columns[0].Visible = false;
+            this.dgvDis.Columns[1].Visible = false;
             this.dgvDis.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvDis.Columns[2].HeaderText = "categorie";
-            this.dgvDis.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvDis.Columns[3].HeaderText = "nom";
+            this.dgvDis.Columns[2].HeaderText = "nom";
+            this.dgvDis.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvDis.Columns[3].HeaderText = "categorie";
+            this.dgvDis.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dgvDis.Columns[4].HeaderText = "coût";
         }
 
         internal void RefreshData()
@@ -48,7 +48,7 @@ namespace WindowsFormsApp2
             fa.SetEditMode();
             fa.id = Int32.Parse(dgvDis.CurrentRow.Cells[0].Value.ToString());
             fa.cbbADiCategory.SelectedValue = this.dgvDis.CurrentRow.Cells[1].Value.ToString();
-            fa.tbxADiName.Text = this.dgvDis.CurrentRow.Cells[3].Value.ToString();
+            fa.tbxADiName.Text = this.dgvDis.CurrentRow.Cells[2].Value.ToString();
 
             fa.ShowDialog();
         }
@@ -70,7 +70,6 @@ namespace WindowsFormsApp2
                 dgvDis.DataSource = data;
             }
         }
-
         private void btnDisAdd_Click(object sender, EventArgs e)
         {
             new FormAddDish().Show();
