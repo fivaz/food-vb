@@ -17,7 +17,8 @@ namespace WindowsFormsApp2
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FormSignIn());
             //Application.Run(new FormAccounts());
-            Application.Run(new FormCategories());
+            //Application.Run(new FormCategories());
+            Application.Run(new FormDishes());
         }
     }
 }

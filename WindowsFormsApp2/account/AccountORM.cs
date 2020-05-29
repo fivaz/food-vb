@@ -19,7 +19,48 @@ namespace WindowsFormsApp2.account
             ids = new List<string>{ "ACC_ID" };
             deleteColumn = "ACC_IS_DELETED";
         }
-        
+
+        public void EditWithoutPassword(Account account)
+        {
+            try
+            {
+                string[] editable = columns.Where(val => !val.Equals("ACC_PASSWORD")).ToArray();
+                string sql = SQLHelper.UpdateQuery(table, editable, ids.ToArray());
+                //string sql = "UPDATE " + table + " SET ACC_LAST_NAME = :lastName, ACC_FIRST_NAME = :firstName, " +
+                //    "ACC_EMAIL = :email, ACC_TYPE = :type WHERE ACC_ID = :id";
+                OracleCommand command = connection.SqlPrepare(sql);
+                connection.AddString(command, "ACC_lAST_NAME", account.lastName);
+                connection.AddString(command, "ACC_FIRST_NAME", account.firstName);
+                connection.AddString(command, "ACC_EMAIL", account.email);
+                connection.AddString(command, "ACC_TYPE", account.type);
+                connection.AddInt(command, "ACC_ID", account.id);
+                connection.execute(command);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public DataTable Search(string text)
+        {
+            string[] searchable = columns.Where(val => !val.Equals("ACC_PASSWORD")).ToArray();
+            return base.Search(text, searchable);
+        }
+
+        public override void BindObject(OracleCommand command, Account account, bool withId)
+        {
+            connection.AddString(command, "ACC_LAST_NAME", account.lastName);
+            connection.AddString(command, "ACC_FIRST_NAME", account.firstName);
+            connection.AddString(command, "ACC_EMAIL", account.email);
+            connection.AddString(command, "ACC_PASSWORD", account.password);
+            connection.AddString(command, "ACC_TYPE", account.type);
+            if (withId)
+                connection.AddInt(command, "ACC_ID", account.id);
+        }
+
+        //TODO check unique email
+
         /*
         public void create(Account account)
         {
@@ -45,31 +86,7 @@ namespace WindowsFormsApp2.account
                 throw new Exception(ex.Message);
             }
         }
-        */
 
-        public void EditWithoutPassword(Account account)
-        {
-            try
-            {
-                string[] editable = columns.Where(val => !val.Equals("ACC_PASSWORD")).ToArray();
-                string sql = SQLHelper.UpdateQuery(table, editable, ids.ToArray());
-                //string sql = "UPDATE " + table + " SET ACC_LAST_NAME = :lastName, ACC_FIRST_NAME = :firstName, " +
-                //    "ACC_EMAIL = :email, ACC_TYPE = :type WHERE ACC_ID = :id";
-                OracleCommand command = connection.SqlPrepare(sql);
-                connection.AddString(command, "ACC_lAST_NAME", account.lastName);
-                connection.AddString(command, "ACC_FIRST_NAME", account.firstName);
-                connection.AddString(command, "ACC_EMAIL", account.email);
-                connection.AddString(command, "ACC_TYPE", account.type);
-                connection.AddInt(command, "ACC_ID", account.id);
-                connection.execute(command);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-
-        /*
         public void edit(Account account)
         {
             try
@@ -111,13 +128,9 @@ namespace WindowsFormsApp2.account
                 throw new Exception(ex.Message);
             }
         }
-        */
-        
+
         public DataTable Search(string text)
         {
-            string[] searchable = columns.Where(val => !val.Equals("ACC_PASSWORD")).ToArray();
-            return base.Search(text, searchable);
-            /*
             string sql = SQLHelper.searchQuery(view, searchable);
             //string sql = "SELECT * FROM " + view + " WHERE ACC_LAST_NAME LIKE :query OR ACC_FIRST_NAME LIKE :query OR " +
             //        "ACC_EMAIL LIKE :query OR ACC_TYPE LIKE :query"; 
@@ -132,20 +145,7 @@ namespace WindowsFormsApp2.account
             DataTable data = new DataTable();
             data.Load(odr);
             return data;
-            */
         }
-
-        public override void BindObject(OracleCommand command, Account account, bool withId)
-        {
-            connection.AddString(command, "ACC_LAST_NAME", account.lastName);
-            connection.AddString(command, "ACC_FIRST_NAME", account.firstName);
-            connection.AddString(command, "ACC_EMAIL", account.email);
-            connection.AddString(command, "ACC_PASSWORD", account.password);
-            connection.AddString(command, "ACC_TYPE", account.type);
-            if (withId)
-                connection.AddInt(command, "ACC_ID", account.id);
-        }
-
-        //TODO check unique email
+        */
     }
 }

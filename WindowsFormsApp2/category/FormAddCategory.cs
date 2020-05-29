@@ -33,6 +33,15 @@ namespace WindowsFormsApp2
             string name = tbxACaName.Text.ToString();
             return new Category(id, name);
         }
+        public void ClearForm()
+        {
+            tbxACaName.Text = "";
+        }
+        public void Create()
+        {
+            CategoryORM categoryORM = new CategoryORM();
+            categoryORM.Create(Build());
+        }
 
         public void Edit()
         {
@@ -41,21 +50,11 @@ namespace WindowsFormsApp2
             categoryORM.Edit(category);
         }
 
-        public void Create()
-        {
-            CategoryORM categoryORM = new CategoryORM();
-            categoryORM.Create(Build());
-        }
-
         public void SetEditMode()
         {
             btnACaSubmit.Text = "Modifier &category";
             editMode = true;
         }
 
-        public void ClearForm()
-        {
-            tbxACaName.Text = "";
-        }
     }
 }

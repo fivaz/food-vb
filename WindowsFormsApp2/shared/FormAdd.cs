@@ -3,9 +3,9 @@
     interface FormAdd<T>
     {
         T Build();
-        void Edit();
-        void Create();
-        void SetEditMode();
         void ClearForm();
+        void Create();
+        void Edit();
+        void SetEditMode();
     }
 }

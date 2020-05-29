@@ -1,5 +1,7 @@
 ﻿using Oracle.DataAccess.Client;
 using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 using WindowsFormsApp2.shared;
 
 namespace WindowsFormsApp2.dish
@@ -22,5 +24,12 @@ namespace WindowsFormsApp2.dish
             if (withId)
                 connection.AddInt(command, "DIS_ID", dish.id);
         }
+
+        public DataTable Search(string text)
+        {
+            string[] searchable = columns.Where(val => !val.Equals("DIS_CAT_ID")).ToArray();
+            return base.Search(text, searchable);
+        }
+
     }
 }

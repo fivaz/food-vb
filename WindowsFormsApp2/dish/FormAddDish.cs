@@ -1,50 +1,69 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp2.dish;
+using WindowsFormsApp2.shared;
 
 namespace WindowsFormsApp2
 {
-    public partial class FormAddDish : Form
+    public partial class FormAddDish : Form, FormAdd<Dish>
     {
+        internal int id;
+        internal bool editMode = false;
         public FormAddDish()
         {
             InitializeComponent();
         }
 
+        public Dish Build()
+        {
+            int categoryId = Int32.Parse(cbbADiCategory.SelectedValue.ToString());
+            string name = tbxADiName.Text.ToString();
+            return new Dish(id, categoryId, name);
+        }
+
+        public void ClearForm()
+        {
+            cbbADiCategory.SelectedIndex = 0;
+            tbxADiName.Text = "";
+        }
+
+        public void Create()
+        {
+            DishORM dishORM = new DishORM();
+            dishORM.Create(Build());
+        }
+
+        public void Edit()
+        {
+            DishORM dishORM = new DishORM();
+            dishORM.Edit(Build());
+        }
+
+        public void SetEditMode()
+        {
+            btnADiSubmit.Text = "Modifier &plat";
+            editMode = true;
+        }
+
         private void FormAddDish_Load(object sender, EventArgs e)
         {
-
+            // TODO: This line of code loads data into the 'dataSet6.VW_CATEGORY' table. You can move, or remove it, as needed.
+            this.vW_CATEGORYTableAdapter.Fill(this.dataSet6.VW_CATEGORY);
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btnADiSubmit_Click(object sender, EventArgs e)
         {
-
+            if (editMode)
+                Edit();
+            else
+                Create();
+            ClearForm();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void FormAddDish_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            FormDishes form = FormDishes.getInstance();
+            form.RefreshData();
         }
     }
 }

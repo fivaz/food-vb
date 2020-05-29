@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tbxADiName = new System.Windows.Forms.TextBox();
             this.lblADiName = new System.Windows.Forms.Label();
             this.lblADiCategory = new System.Windows.Forms.Label();
@@ -43,9 +44,14 @@
             this.dgvADiAdded = new System.Windows.Forms.DataGridView();
             this.lblADiAdded = new System.Windows.Forms.Label();
             this.tbxADiAddSearch = new System.Windows.Forms.TextBox();
+            this.dataSet6 = new WindowsFormsApp2.DataSet6();
+            this.vWCATEGORYBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vW_CATEGORYTableAdapter = new WindowsFormsApp2.DataSet6TableAdapters.VW_CATEGORYTableAdapter();
             this.gpbADiIngredients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvADiAvailable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvADiAdded)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWCATEGORYBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tbxADiName
@@ -79,17 +85,15 @@
             // 
             // cbbADiCategory
             // 
+            this.cbbADiCategory.DataSource = this.vWCATEGORYBindingSource;
+            this.cbbADiCategory.DisplayMember = "CAT_NAME";
             this.cbbADiCategory.FormattingEnabled = true;
-            this.cbbADiCategory.Items.AddRange(new object[] {
-            "a",
-            "b",
-            "c",
-            "d"});
             this.cbbADiCategory.Location = new System.Drawing.Point(593, 61);
             this.cbbADiCategory.Margin = new System.Windows.Forms.Padding(4);
             this.cbbADiCategory.Name = "cbbADiCategory";
             this.cbbADiCategory.Size = new System.Drawing.Size(125, 24);
             this.cbbADiCategory.TabIndex = 4;
+            this.cbbADiCategory.ValueMember = "CAT_ID";
             // 
             // btnADiSubmit
             // 
@@ -100,7 +104,7 @@
             this.btnADiSubmit.TabIndex = 14;
             this.btnADiSubmit.Text = "&Créer";
             this.btnADiSubmit.UseVisualStyleBackColor = true;
-            this.btnADiSubmit.Click += new System.EventHandler(this.button1_Click);
+            this.btnADiSubmit.Click += new System.EventHandler(this.btnADiSubmit_Click);
             // 
             // lblADiPrice
             // 
@@ -128,7 +132,6 @@
             this.gpbADiIngredients.TabIndex = 5;
             this.gpbADiIngredients.TabStop = false;
             this.gpbADiIngredients.Text = "Ingrédients";
-            this.gpbADiIngredients.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // lblADiAvaSearch
             // 
@@ -187,7 +190,6 @@
             this.dgvADiAdded.RowHeadersWidth = 51;
             this.dgvADiAdded.Size = new System.Drawing.Size(315, 218);
             this.dgvADiAdded.TabIndex = 12;
-            this.dgvADiAdded.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // lblADiAdded
             // 
@@ -198,7 +200,6 @@
             this.lblADiAdded.Size = new System.Drawing.Size(55, 17);
             this.lblADiAdded.TabIndex = 6;
             this.lblADiAdded.Text = "&Ajoutés";
-            this.lblADiAdded.Click += new System.EventHandler(this.label3_Click);
             // 
             // tbxADiAddSearch
             // 
@@ -207,7 +208,20 @@
             this.tbxADiAddSearch.Name = "tbxADiAddSearch";
             this.tbxADiAddSearch.Size = new System.Drawing.Size(315, 22);
             this.tbxADiAddSearch.TabIndex = 8;
-            this.tbxADiAddSearch.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // dataSet6
+            // 
+            this.dataSet6.DataSetName = "DataSet6";
+            this.dataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vWCATEGORYBindingSource
+            // 
+            this.vWCATEGORYBindingSource.DataMember = "VW_CATEGORY";
+            this.vWCATEGORYBindingSource.DataSource = this.dataSet6;
+            // 
+            // vW_CATEGORYTableAdapter
+            // 
+            this.vW_CATEGORYTableAdapter.ClearBeforeFill = true;
             // 
             // FormAddDish
             // 
@@ -227,22 +241,22 @@
             this.MinimizeBox = false;
             this.Name = "FormAddDish";
             this.Text = "Nouveau plat";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAddDish_FormClosing);
             this.Load += new System.EventHandler(this.FormAddDish_Load);
             this.gpbADiIngredients.ResumeLayout(false);
             this.gpbADiIngredients.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvADiAvailable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvADiAdded)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWCATEGORYBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tbxADiName;
         private System.Windows.Forms.Label lblADiName;
         private System.Windows.Forms.Label lblADiCategory;
-        private System.Windows.Forms.ComboBox cbbADiCategory;
         private System.Windows.Forms.Button btnADiSubmit;
         private System.Windows.Forms.Label lblADiPrice;
         private System.Windows.Forms.GroupBox gpbADiIngredients;
@@ -254,5 +268,10 @@
         private System.Windows.Forms.Label lblADiAvailable;
         private System.Windows.Forms.TextBox tbxADiAvaSearch;
         private System.Windows.Forms.Label lblADiAddSearch;
+        public System.Windows.Forms.TextBox tbxADiName;
+        public System.Windows.Forms.ComboBox cbbADiCategory;
+        private DataSet6 dataSet6;
+        private System.Windows.Forms.BindingSource vWCATEGORYBindingSource;
+        private DataSet6TableAdapters.VW_CATEGORYTableAdapter vW_CATEGORYTableAdapter;
     }
 }
