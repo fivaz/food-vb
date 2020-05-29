@@ -10,7 +10,7 @@ namespace WindowsFormsApp2.dish
         {
             table = "foo_dish";
             view = "vw_dish";
-            columns = new List<string> { "DIS_CAT_ID", "DIS_NAME", "DIS_SELLING_PRICE" };
+            columns = new List<string> { "DIS_CAT_ID", "DIS_NAME"};
             ids = new List<string> { "DIS_ID" };
             deleteColumn = "DIS_IS_DELETED";
         }
@@ -19,7 +19,6 @@ namespace WindowsFormsApp2.dish
         {
             connection.AddInt(command, "DIS_CAT_ID", dish.categoryId);
             connection.AddString(command, "DIS_NAME", dish.name);
-            connection.AddDouble(command, "DIS_SELLING_PRICE", dish.sellingPrice);
             if (withId)
                 connection.AddInt(command, "DIS_ID", dish.id);
         }

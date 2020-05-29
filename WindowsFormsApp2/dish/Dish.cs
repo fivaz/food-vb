@@ -5,14 +5,12 @@
         public int id;
         public int categoryId;
         public string name;
-        public double sellingPrice;
 
-        public Dish(int id, int categoryId, string name, double sellingPrice)
+        public Dish(int id, int categoryId, string name)
         {
             this.id = id;
             this.categoryId = categoryId;
             this.name = name;
-            this.sellingPrice = sellingPrice;
         }
     }
 }

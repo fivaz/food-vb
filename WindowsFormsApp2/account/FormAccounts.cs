@@ -58,7 +58,7 @@ namespace WindowsFormsApp2
         {
             FormAddAccount fa = new FormAddAccount();
 
-            fa.setEditMode();
+            fa.SetEditMode();
             fa.id = Int32.Parse(dgvAcc.CurrentRow.Cells[0].Value.ToString());
             fa.tbxAAcLastName.Text = this.dgvAcc.CurrentRow.Cells[1].Value.ToString();
             fa.tbxAAcFirstName.Text = this.dgvAcc.CurrentRow.Cells[2].Value.ToString();

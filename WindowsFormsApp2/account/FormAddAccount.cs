@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
 using WindowsFormsApp2.account;
+using WindowsFormsApp2.shared;
 
 namespace WindowsFormsApp2
 {
-    public partial class FormAddAccount : Form
+    public partial class FormAddAccount : Form, FormAdd<Account>
     {
         internal int id;
         internal bool editMode = false;
@@ -17,13 +18,19 @@ namespace WindowsFormsApp2
         private void btnAAcSubmit_Click(object sender, EventArgs e)
         {
             if (editMode)
-                edit();
+                Edit();
             else
-                createAccount();
-            clearForm();
+                Create();
+            ClearForm();
         }
 
-        private Account build()
+        private void FormAddAccount_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FormAccounts form = FormAccounts.getInstance();
+            form.refreshData();
+        }
+
+        public Account Build()
         {
             string firstName = tbxAAcFirstName.Text.ToString();
             string lastName = tbxAAcLastName.Text.ToString();
@@ -35,29 +42,29 @@ namespace WindowsFormsApp2
             return new Account(id, firstName, lastName, email, password, type);
         }
 
-        private void edit()
+        public void Edit()
         {
             AccountORM accountORM = new AccountORM();
-            Account account = build();
+            Account account = Build();
             if (account.password == "")
                 accountORM.EditWithoutPassword(account);
             else
                 accountORM.Edit(account);
         }
 
-        private void createAccount()
+        public void Create()
         {
             AccountORM accountORM = new AccountORM();
-            accountORM.Create(build());
+            accountORM.Create(Build());
         }
 
-        internal void setEditMode()
+        public void SetEditMode()
         {
             btnAAcSubmit.Text = "Modifier &compte";
             editMode = true;
         }
 
-        private void clearForm()
+        public void ClearForm()
         {
             tbxAAcFirstName.Text = "";
             tbxAAcLastName.Text = "";
@@ -66,12 +73,6 @@ namespace WindowsFormsApp2
             tbxAAcPassword2.Text = "";
             rbtAAcManager.Checked = false;
             rbtAAcWaiter.Checked = false;
-        }
-
-        private void FormAddAccount_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            FormAccounts form = FormAccounts.getInstance();
-            form.refreshData();
         }
 
         //TODO check passwords match
