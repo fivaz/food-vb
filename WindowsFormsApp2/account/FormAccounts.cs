@@ -77,7 +77,7 @@ namespace WindowsFormsApp2
         private void btnAccDel_Click(object sender, EventArgs e)
         {
             int id = Int32.Parse(dgvAcc.CurrentRow.Cells[0].Value.ToString());
-            new AccountORM().delete(id);
+            new AccountORM().Delete(id);
             refreshData();
         }
 
@@ -87,7 +87,7 @@ namespace WindowsFormsApp2
                 refreshData();
             else
             {
-                DataTable data = new AccountORM().search(tbxAccSearchName.Text);
+                DataTable data = new AccountORM().Search(tbxAccSearchName.Text);
                 dgvAcc.DataSource = data;
             }
         }

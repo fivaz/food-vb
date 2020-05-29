@@ -40,15 +40,15 @@ namespace WindowsFormsApp2
             AccountORM accountORM = new AccountORM();
             Account account = build();
             if (account.password == "")
-                accountORM.editWithoutPassword(account);
+                accountORM.EditWithoutPassword(account);
             else
-                accountORM.edit(account);
+                accountORM.Edit(account);
         }
 
         private void createAccount()
         {
             AccountORM accountORM = new AccountORM();
-            accountORM.create(build());
+            accountORM.Create(build());
         }
 
         internal void setEditMode()

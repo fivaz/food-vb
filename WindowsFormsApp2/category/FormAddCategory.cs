@@ -32,13 +32,13 @@ namespace WindowsFormsApp2
         {
             CategoryORM categoryORM = new CategoryORM();
             Category category = build();
-            categoryORM.edit(category);
+            categoryORM.Edit(category);
         }
 
         private void create()
         {
             CategoryORM categoryORM = new CategoryORM();
-            categoryORM.create(build());
+            categoryORM.Create(build());
         }
 
         internal void setEditMode()

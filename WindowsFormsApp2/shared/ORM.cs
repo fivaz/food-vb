@@ -1,5 +1,6 @@
 ﻿using Oracle.DataAccess.Client;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using WindowsFormsApp2.shared.database;
 using WindowsFormsApp2.shared.helper;
@@ -11,8 +12,8 @@ namespace WindowsFormsApp2.shared
         protected OracleConn connection;
         protected string table;
         protected string view;
-        protected string[] columns;
-        protected string[] ids;
+        protected List<string> columns;
+        protected List<string> ids;
         protected string deleteColumn;
 
         public ORM()
@@ -20,14 +21,14 @@ namespace WindowsFormsApp2.shared
             connection = OracleConnector.getConnection();
         }
 
-        public void create(T obj)
+        public void Create(T obj)
         {
             try
             {
-                string query = SQLHelper.insertQuery(table, columns, ids);
-                OracleCommand command = connection.sqlPrepare(query);
-                //connection.AddString(command, obj.name);
-                bindObject(command, obj, false);
+                string query = SQLHelper.InsertQuery(table, columns.ToArray(), ids.ToArray());
+                Console.WriteLine(query);
+                OracleCommand command = connection.SqlPrepare(query);
+                BindObject(command, obj, false);
                 connection.execute(command);
             }
             catch (Exception ex)
@@ -36,17 +37,16 @@ namespace WindowsFormsApp2.shared
             }
         }
 
-        public abstract void bindObject(OracleCommand command, T obj, Boolean withId);
+        public abstract void BindObject(OracleCommand command, T obj, Boolean withId);
 
-        public void edit(T obj)
+        public void Edit(T obj)
         {
             try
             {
-                string sql = SQLHelper.updateQuery(table, columns, ids);
-                OracleCommand command = connection.sqlPrepare(sql);
-                //connection.AddString(command, obj.name);
-                //connection.AddInt(command, obj.id);
-                bindObject(command, obj, true);
+                string query = SQLHelper.UpdateQuery(table, columns.ToArray(), ids.ToArray());
+                Console.WriteLine(query); 
+                OracleCommand command = connection.SqlPrepare(query);
+                BindObject(command, obj, true);
                 connection.execute(command);
             }
             catch (Exception ex)
@@ -55,13 +55,16 @@ namespace WindowsFormsApp2.shared
             }
         }
 
-        public void delete(int id)
+        public void Delete(int id)
         {
+            Console.Write(deleteColumn);
             try
             {
-                string sql = SQLHelper.deleteQuery(table, deleteColumn, ids);
-                OracleCommand command = connection.sqlPrepare(sql);
-                connection.AddInt(command, id);
+                string query = SQLHelper.DeleteQuery(table, deleteColumn, ids.ToArray());
+                Console.WriteLine(query);
+                OracleCommand command = connection.SqlPrepare(query);
+                command.BindByName = false;
+                connection.AddInt(command, "", id);
                 connection.execute(command);
             }
             catch (Exception ex)
@@ -70,12 +73,16 @@ namespace WindowsFormsApp2.shared
             }
         }
 
-        public DataTable search(string text)
+        public DataTable Search(string text, string[] usedColumns = null)
         {
-            string sql = SQLHelper.searchQuery(view, columns);
-            Console.WriteLine(sql);
-            OracleCommand command = connection.sqlPrepare(sql);
-            command.BindByName = true;
+            string query;
+            if (usedColumns != null)
+                query = SQLHelper.SearchQuery(view, usedColumns);
+            else
+                query = SQLHelper.SearchQuery(view, columns.ToArray());
+            
+            Console.WriteLine(query);
+            OracleCommand command = connection.SqlPrepare(query);
             
             OracleParameter param = new OracleParameter(":query", OracleDbType.NVarchar2);
             param.Value = text + "%";
@@ -88,3 +95,5 @@ namespace WindowsFormsApp2.shared
         }
     }
 }
+
+//use close()

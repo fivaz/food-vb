@@ -52,7 +52,7 @@ namespace WindowsFormsApp2
         private void btnCatDel_Click(object sender, EventArgs e)
         {
             int id = Int32.Parse(dgvCat.CurrentRow.Cells[0].Value.ToString());
-            new CategoryORM().delete(id);
+            new CategoryORM().Delete(id);
             refreshData();
         }
 
@@ -62,7 +62,7 @@ namespace WindowsFormsApp2
                 refreshData();
             else
             {
-                DataTable data = new CategoryORM().search(tbxCatSearchName.Text);
+                DataTable data = new CategoryORM().Search(tbxCatSearchName.Text);
                 dgvCat.DataSource = data;
             }
         }

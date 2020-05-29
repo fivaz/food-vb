@@ -1,15 +1,13 @@
-﻿using System;
-
-namespace WindowsFormsApp2.dish
+﻿namespace WindowsFormsApp2.dish
 {
     public class Dish
     {
         public int id;
         public int categoryId;
-        public String name;
+        public string name;
         public double sellingPrice;
 
-        public Dish(int id, int categoryId, String name, double sellingPrice)
+        public Dish(int id, int categoryId, string name, double sellingPrice)
         {
             this.id = id;
             this.categoryId = categoryId;

@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Text;
-using System.Windows.Forms;
 
 namespace WindowsFormsApp2.shared.helper
 {
     class SQLHelper
     {
-        public static StringBuilder removeComma(StringBuilder query)
+        public static StringBuilder RemoveComma(StringBuilder query)
         {
             return query.Remove(query.Length - 2, 2);
         }
 
-        public static string insertQuery(string table, string[] columns, string[] ids)
+        public static string InsertQuery(string table, string[] columns, string[] ids)
         {
             StringBuilder query = new StringBuilder();
             query
@@ -25,7 +24,7 @@ namespace WindowsFormsApp2.shared.helper
             foreach (string column in columns)
                 query.Append(column).Append(", ");
 
-            removeComma(query);
+            RemoveComma(query);
 
             query.Append(") VALUES (");
 
@@ -35,14 +34,14 @@ namespace WindowsFormsApp2.shared.helper
             foreach (string column in columns)
                 query.Append(":").Append(column).Append(", ");
 
-            removeComma(query);
+            RemoveComma(query);
 
             query.Append(")");
 
             return query.ToString();
         }
 
-        public static string updateQuery(string table, string[] columns, string[] ids)
+        public static string UpdateQuery(string table, string[] columns, string[] ids)
         {
             StringBuilder query = new StringBuilder();
             query
@@ -53,19 +52,19 @@ namespace WindowsFormsApp2.shared.helper
             foreach (string column in columns)
                 query.Append(column).Append(" = :").Append(column).Append(", ");
 
-            removeComma(query);
+            RemoveComma(query);
 
             query.Append(" WHERE ");
 
             foreach (string id in ids)
                 query.Append(id).Append(" = :").Append(id).Append(", ");
 
-            removeComma(query);
+            RemoveComma(query);
 
             return query.ToString();
         }
 
-        public static string deleteQuery(string table, string deleteColumn, string[] ids)
+        public static string DeleteQuery(string table, string deleteColumn, string[] ids)
         {
             //string sql = "UPDATE " + table + " SET ACC_IS_DELETED = 1 WHERE ACC_ID = :id";
             StringBuilder query = new StringBuilder();
@@ -79,12 +78,12 @@ namespace WindowsFormsApp2.shared.helper
             foreach (string id in ids)
                 query.Append(id).Append(" = :").Append(id).Append(", ");
 
-            removeComma(query);
+            RemoveComma(query);
 
             return query.ToString();
         }
 
-        public static string searchQuery(string view, string[] columns)
+        public static string SearchQuery(string view, string[] columns)
         {
             // string sql = "SELECT * FROM " + view + " WHERE ACC_LAST_NAME LIKE :query OR ACC_FIRST_NAME LIKE :query OR " +
             //"ACC_EMAIL LIKE :query OR ACC_TYPE LIKE :query";
@@ -99,6 +98,7 @@ namespace WindowsFormsApp2.shared.helper
 
             query.Remove(query.Length - 3, 3);
 
+            Console.WriteLine(query.ToString());
             return query.ToString();
         }
     }

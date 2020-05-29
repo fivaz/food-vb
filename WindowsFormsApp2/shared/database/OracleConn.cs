@@ -8,14 +8,14 @@ namespace WindowsFormsApp2.shared.database
     {
         #region properties
 
-        public String stringConn;
+        public string stringConn;
         public OracleConnection connection;
 
         #endregion
 
         #region constructor
 
-        public OracleConn(String server, String user, String password)
+        public OracleConn(string server, string user, string password)
         {
             stringConn = "DATA SOURCE=" + server + ";USER ID=" + user + ";PASSWORD=" + password;
 
@@ -27,23 +27,7 @@ namespace WindowsFormsApp2.shared.database
 
         #region methods
 
-        public String sqlQuery(String sql, DataTable dt)
-        {
-            try
-            {
-                OracleCommand command = new OracleCommand(sql, connection);
-                command.CommandTimeout = 0;
-                IDataReader reader = command.ExecuteReader();
-                dt.Load(reader);
-                return "";
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-
-        public String sqlCommand(String sql)
+        public void SqlCommand(string sql)
         {
             try
             {
@@ -51,7 +35,6 @@ namespace WindowsFormsApp2.shared.database
                 command.CommandType = CommandType.Text;
                 command.CommandTimeout = 0;
                 IDataReader reader = command.ExecuteReader();
-                return "";
             }
             catch (Exception ex)
             {
@@ -59,13 +42,14 @@ namespace WindowsFormsApp2.shared.database
             }
         }
 
-        public OracleCommand sqlPrepare(String sql)
+        public OracleCommand SqlPrepare(string sql)
         {
             try
             {
                 OracleCommand command = new OracleCommand(sql, connection);
                 command.CommandType = CommandType.Text;
                 command.CommandTimeout = 0;
+                command.BindByName = true;
                 return command;
             }
             catch (Exception ex)
@@ -86,26 +70,23 @@ namespace WindowsFormsApp2.shared.database
             }
         }
 
-        public void AddString(OracleCommand currentCommand, String value)
+        public void AddString(OracleCommand currentCommand, string column, string value)
         {
-            OracleParameter param = new OracleParameter();
-            param.OracleDbType = OracleDbType.NVarchar2;
+            OracleParameter param = new OracleParameter(":" + column, OracleDbType.NVarchar2);
             param.Value = value;
             currentCommand.Parameters.Add(param);
         }
 
-        public void AddInt(OracleCommand currentCommand, int value)
+        public void AddInt(OracleCommand currentCommand, string column, int value)
         {
-            OracleParameter param = new OracleParameter();
-            param.OracleDbType = OracleDbType.Int32;
+            OracleParameter param = new OracleParameter(":" + column, OracleDbType.Int32);
             param.Value = value;
             currentCommand.Parameters.Add(param);
         }
 
-        public void AddDouble(OracleCommand currentCommand, double value)
+        public void AddDouble(OracleCommand currentCommand, string column, double value)
         {
-            OracleParameter param = new OracleParameter();
-            param.OracleDbType = OracleDbType.Double;
+            OracleParameter param = new OracleParameter(":" + column, OracleDbType.Double);
             param.Value = value;
             currentCommand.Parameters.Add(param);
         }
