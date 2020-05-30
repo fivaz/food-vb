@@ -19,6 +19,19 @@ namespace WindowsFormsApp2
             this.vW_CATEGORYTableAdapter.Fill(this.dataSet6.VW_CATEGORY);
         }
 
+        private void FormAddDish_Load(object sender, EventArgs e)
+        {
+            IngredientORM ingredientORM = new IngredientORM();
+
+            dgvADiAdded.DataSource = ingredientORM.SearchFromDish(id);
+            dgvADiAvailable.DataSource = ingredientORM.SearchExceptFromDish(id);
+
+            formatAddedDgv(dgvADiAdded);
+            formatDgv(dgvADiAvailable);
+
+            resizeGrids();
+        }
+
         public Dish Build()
         {
             int categoryId = Int32.Parse(cbbADiCategory.SelectedValue.ToString());
@@ -50,12 +63,12 @@ namespace WindowsFormsApp2
             {
                 int ingredientId = Convert.ToInt32(row.Cells[0].Value.ToString());
                 double? quantity = null;
-                if(!string.IsNullOrEmpty(row.Cells[6].Value.ToString()))
+                if (!string.IsNullOrEmpty(row.Cells[6].Value.ToString()))
                     quantity = Convert.ToDouble(row.Cells[6].Value.ToString());
 
-                Console.WriteLine("ingredientId "+ ingredientId);
+                Console.WriteLine("ingredientId " + ingredientId);
                 Console.WriteLine("dishId " + dishId);
-                Console.WriteLine("quantity "+ quantity);
+                Console.WriteLine("quantity " + quantity);
 
                 Ingredient ingredient = new Ingredient(ingredientId, dishId, null, false, null, quantity, 0, 0);
                 ingredients.Add(ingredient);
@@ -80,34 +93,40 @@ namespace WindowsFormsApp2
             editMode = true;
         }
 
-        private void FormAddDish_Load(object sender, EventArgs e)
+        private void formatAddedDgv(DataGridView dgv)
         {
-            IngredientORM ingredientORM = new IngredientORM();
-
-            dgvADiAdded.DataSource = ingredientORM.SearchFromDish(id);
-            dgvADiAvailable.DataSource = ingredientORM.SearchExceptFromDish(id);
-
-            formatDgv(dgvADiAdded);
-            formatDgv(dgvADiAvailable);
-
-            resizeGrids();
+            dgv.Columns["ING_ID"].Visible = false;
+            dgv.Columns["DIR_DIS_ID"].Visible = false;
+            dgv.Columns["DIR_DIS_ID"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgv.Columns["ING_NAME"].HeaderText = "nom";
+            dgv.Columns["ING_IS_COUNTABLE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgv.Columns["ING_IS_COUNTABLE"].HeaderText = "comptable";
+            dgv.Columns["ING_UNIT"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgv.Columns["ING_UNIT"].HeaderText = "unité";
+            dgv.Columns["ING_PURCHASE_PRICE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgv.Columns["ING_PURCHASE_PRICE"].HeaderText = "prix";
+            dgv.Columns["DIR_QUANTITY"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgv.Columns["DIR_QUANTITY"].HeaderText = "quantité";
+            dgv.Columns["ING_QUANTITY"].Visible= false;
+            dgv.Columns["ING_MINIMUM_QUANTITY"].Visible= false;
+            dgv.AllowUserToAddRows = false;
         }
 
         private void formatDgv(DataGridView dgv)
         {
-            dgv.Columns[0].Visible = false;
-            dgv.Columns[1].Visible = false;
-            dgv.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dgv.Columns[2].HeaderText = "nom";
-            dgv.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dgv.Columns[3].HeaderText = "comptable";
-            dgv.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dgv.Columns[4].HeaderText = "unité";
-            dgv.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dgv.Columns[5].HeaderText = "prix";
-            dgv.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dgv.Columns[6].HeaderText = "quantité";
-            dgv.Columns[7].Visible = false;
+            dgv.Columns["ING_ID"].Visible = false;
+            dgv.Columns["ING_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgv.Columns["ING_NAME"].HeaderText = "nom";
+            dgv.Columns["ING_IS_COUNTABLE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgv.Columns["ING_IS_COUNTABLE"].HeaderText = "comptable";
+            dgv.Columns["ING_UNIT"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgv.Columns["ING_UNIT"].HeaderText = "unité";
+            dgv.Columns["ING_PURCHASE_PRICE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgv.Columns["ING_PURCHASE_PRICE"].HeaderText = "prix";
+            dgv.Columns["ING_QUANTITY"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgv.Columns["ING_QUANTITY"].HeaderText = "quantité";
+            dgv.Columns["ING_MINIMUM_QUANTITY"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgv.Columns["ING_MINIMUM_QUANTITY"].HeaderText = "quantité minimum";
             dgv.AllowUserToAddRows = false;
         }
 
@@ -143,12 +162,12 @@ namespace WindowsFormsApp2
 
         private void tbxADiAvaSearch_TextChanged(object sender, EventArgs e)
         {
-
+            //TODO implementer filtre 
         }
 
         private void tbxADiAddSearch_TextChanged(object sender, EventArgs e)
         {
-
+            //TODO implementer filtre 
         }
 
 
@@ -159,14 +178,14 @@ namespace WindowsFormsApp2
             DataTable ingredients = (DataTable)dgvADiAdded.DataSource;
 
             DataRow dataRow = ingredients.NewRow();
-            dataRow["ING_ID"] = currentRow.Cells[0].Value;
+            dataRow["ING_ID"] = currentRow.Cells["ING_ID"].Value;
             dataRow["DIR_DIS_ID"] = id;
-            dataRow["ING_NAME"] = currentRow.Cells[2].Value;
-            dataRow["ING_IS_COUNTABLE"] = currentRow.Cells[3].Value;
-            dataRow["ING_UNIT"] = currentRow.Cells[4].Value;
-            dataRow["ING_PURCHASE_PRICE"] = currentRow.Cells[5].Value;
-            dataRow["ING_QUANTITY"] = currentRow.Cells[6].Value;
-            dataRow["ING_MINIMUM_QUANTITY"] = currentRow.Cells[7].Value;
+            dataRow["ING_NAME"] = currentRow.Cells["ING_NAME"].Value;
+            dataRow["ING_IS_COUNTABLE"] = currentRow.Cells["ING_IS_COUNTABLE"].Value;
+            dataRow["ING_UNIT"] = currentRow.Cells["ING_UNIT"].Value;
+            dataRow["ING_PURCHASE_PRICE"] = currentRow.Cells["ING_PURCHASE_PRICE"].Value;
+            dataRow["ING_QUANTITY"] = currentRow.Cells["ING_QUANTITY"].Value;
+            dataRow["ING_MINIMUM_QUANTITY"] = currentRow.Cells["ING_MINIMUM_QUANTITY"].Value;
 
             ingredients.Rows.Add(dataRow);
 
@@ -180,14 +199,13 @@ namespace WindowsFormsApp2
             DataTable ingredients = (DataTable)dgvADiAvailable.DataSource;
 
             DataRow dataRow = ingredients.NewRow();
-            dataRow["ING_ID"] = currentRow.Cells[0].Value;
-            dataRow["DIR_DIS_ID"] = id;
-            dataRow["ING_NAME"] = currentRow.Cells[2].Value;
-            dataRow["ING_IS_COUNTABLE"] = currentRow.Cells[3].Value;
-            dataRow["ING_UNIT"] = currentRow.Cells[4].Value;
-            dataRow["ING_PURCHASE_PRICE"] = currentRow.Cells[5].Value;
-            dataRow["ING_QUANTITY"] = currentRow.Cells[6].Value;
-            dataRow["ING_MINIMUM_QUANTITY"] = currentRow.Cells[7].Value;
+            dataRow["ING_ID"] = currentRow.Cells["ING_ID"].Value;
+            dataRow["ING_NAME"] = currentRow.Cells["ING_NAME"].Value;
+            dataRow["ING_IS_COUNTABLE"] = currentRow.Cells["ING_IS_COUNTABLE"].Value;
+            dataRow["ING_UNIT"] = currentRow.Cells["ING_UNIT"].Value;
+            dataRow["ING_PURCHASE_PRICE"] = currentRow.Cells["ING_PURCHASE_PRICE"].Value;
+            dataRow["ING_QUANTITY"] = currentRow.Cells["ING_QUANTITY"].Value;
+            dataRow["ING_MINIMUM_QUANTITY"] = currentRow.Cells["ING_MINIMUM_QUANTITY"].Value;
 
             ingredients.Rows.Add(dataRow);
 

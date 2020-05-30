@@ -81,6 +81,7 @@ namespace WindowsFormsApp2.shared.database
                 throw new Exception(ex.Message);
             }
         }
+        //remove these :
 
         public void AddString(OracleCommand currentCommand, string column, string value)
         {

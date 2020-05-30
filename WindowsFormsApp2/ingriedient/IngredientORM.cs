@@ -13,8 +13,8 @@ namespace WindowsFormsApp2.ingredient
         {
             table = "foo_ingredient";
             view = "vw_ingredient";
-            columns = new List<string> { "ING_NAME", "ING_IS_COUNTABLE", "ING_UNIT", "ING_PURCHASE_PRICE", "ING_QUANTITY", "ING_MINIMUM_QUANTITY"};
-            columnId =  "ING_ID";
+            columns = new List<string> { "ING_NAME", "ING_IS_COUNTABLE", "ING_UNIT", "ING_PURCHASE_PRICE", "ING_QUANTITY", "ING_MINIMUM_QUANTITY" };
+            columnId = "ING_ID";
             deleteColumn = "ING_IS_DELETED";
         }
 
@@ -32,9 +32,9 @@ namespace WindowsFormsApp2.ingredient
 
         internal void addRelation(Ingredient ingredient)
         {
-            string query = SQLHelper.InsertQuery("FOO_DIS_ING_RELATION", new string []{ "DIR_QUANTITY" , "DIR_ING_ID", "DIR_DIS_ID" }, null, false);
+            string query = SQLHelper.InsertQuery("FOO_DIS_ING_RELATION", new string[] { "DIR_QUANTITY", "DIR_ING_ID", "DIR_DIS_ID" }, null, false);
             Console.WriteLine(query);
-            
+
             OracleCommand command = connection.SqlPrepare(query);
 
             connection.AddDouble(command, "DIR_QUANTITY", ingredient.quantity ?? default);
@@ -53,7 +53,7 @@ namespace WindowsFormsApp2.ingredient
 
         public DataTable SearchFromDish(int dishId)
         {
-            string query = "SELECT * FROM " + view + " WHERE DIR_DIS_ID = :DIR_DIS_ID";
+            string query = "SELECT * FROM vw_dish_ingredient WHERE DIR_DIS_ID = :DIR_DIS_ID";
 
             OracleCommand command = connection.SqlPrepare(query);
 
@@ -69,17 +69,22 @@ namespace WindowsFormsApp2.ingredient
 
         public DataTable SearchExceptFromDish(int dishId)
         {
-            string query = "SELECT * FROM " + view + " WHERE DIR_DIS_ID != :DIR_DIS_ID OR DIR_DIS_ID IS NULL";
+            DataTable addedIngredients = SearchFromDish(dishId);
+
+            string query = "SELECT * FROM vw_ingredient";
 
             OracleCommand command = connection.SqlPrepare(query);
 
-            OracleParameter param = new OracleParameter(":DIR_DIS_ID", OracleDbType.Int32);
-            param.Value = dishId;
-            command.Parameters.Add(param);
-
             OracleDataReader odr = connection.execute(command);
+
             DataTable data = new DataTable();
             data.Load(odr);
+
+            foreach (DataRow row in addedIngredients.Rows)
+            {
+                DataRow[] dataRow = data.Select("ING_ID = " + row["ING_ID"]);
+                data.Rows.Remove(dataRow[0]);
+            }
             return data;
         }
 
