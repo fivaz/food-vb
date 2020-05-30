@@ -165,6 +165,7 @@
             this.btnIngDelAll.TabIndex = 12;
             this.btnIngDelAll.Text = "&Supprimer";
             this.btnIngDelAll.UseVisualStyleBackColor = true;
+            this.btnIngDelAll.Click += new System.EventHandler(this.btnIngDelAll_Click);
             // 
             // FormIngredients
             // 

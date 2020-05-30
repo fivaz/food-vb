@@ -22,8 +22,8 @@ namespace WindowsFormsApp2
 
         private void FormIngredients_Load(object sender, EventArgs e)
         {
-            IngredientORM ingredientORM = new IngredientORM();
-            dgvIng.DataSource = ingredientORM.ListAll();
+            dgvIng.DataSource = new IngredientORM().ListAll();
+
             dgvIng.Columns["ING_ID"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dgvIng.Columns["ING_ID"].HeaderText = "id";
             dgvIng.Columns["ING_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -40,9 +40,23 @@ namespace WindowsFormsApp2
             dgvIng.Columns["ING_MINIMUM_QUANTITY"].HeaderText = "quantité minimum";
         }
 
+        internal void RefreshData()
+        {
+            dgvIng.DataSource = new IngredientORM().ListAll();
+        }
+
         private void btnIngAdd_Click(object sender, EventArgs e)
         {
             new FormAddIngredient().Show();
         }
+
+        private void btnIngDelAll_Click(object sender, EventArgs e)
+        {
+            int id = Int32.Parse(dgvIng.CurrentRow.Cells[0].Value.ToString());
+            new IngredientORM().Delete(id);
+            RefreshData();
+        }
+
+        //TODO filters
     }
 }

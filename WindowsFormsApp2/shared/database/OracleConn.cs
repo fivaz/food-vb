@@ -37,6 +37,7 @@ namespace WindowsFormsApp2.shared.database
                 OracleDataReader odr = command.ExecuteReader();
                 DataTable data = new DataTable();
                 data.Load(odr);
+                close();
                 return data;
             }
             catch (Exception ex)
