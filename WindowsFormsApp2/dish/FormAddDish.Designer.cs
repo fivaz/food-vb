@@ -33,8 +33,6 @@
             this.lblADiName = new System.Windows.Forms.Label();
             this.lblADiCategory = new System.Windows.Forms.Label();
             this.cbbADiCategory = new System.Windows.Forms.ComboBox();
-            this.vWCATEGORYBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet6 = new WindowsFormsApp2.DataSet6();
             this.btnADiSubmit = new System.Windows.Forms.Button();
             this.lblADiPrice = new System.Windows.Forms.Label();
             this.gpbADiIngredients = new System.Windows.Forms.GroupBox();
@@ -46,12 +44,14 @@
             this.dgvADiAdded = new System.Windows.Forms.DataGridView();
             this.lblADiAdded = new System.Windows.Forms.Label();
             this.tbxADiAddSearch = new System.Windows.Forms.TextBox();
-            this.vW_CATEGORYTableAdapter = new WindowsFormsApp2.DataSet6TableAdapters.VW_CATEGORYTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.vWCATEGORYBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).BeginInit();
+            this.categorySet = new WindowsFormsApp2.CategorySet();
+            this.vWCATEGORYBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vW_CATEGORYTableAdapter = new WindowsFormsApp2.CategorySetTableAdapters.VW_CATEGORYTableAdapter();
             this.gpbADiIngredients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvADiAvailable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvADiAdded)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categorySet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWCATEGORYBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tbxADiName
@@ -96,16 +96,6 @@
             this.cbbADiCategory.Size = new System.Drawing.Size(125, 24);
             this.cbbADiCategory.TabIndex = 4;
             this.cbbADiCategory.ValueMember = "CAT_ID";
-            // 
-            // vWCATEGORYBindingSource
-            // 
-            this.vWCATEGORYBindingSource.DataMember = "VW_CATEGORY";
-            this.vWCATEGORYBindingSource.DataSource = this.dataSet6;
-            // 
-            // dataSet6
-            // 
-            this.dataSet6.DataSetName = "DataSet6";
-            this.dataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnADiSubmit
             // 
@@ -233,6 +223,16 @@
             this.tbxADiAddSearch.TabIndex = 8;
             this.tbxADiAddSearch.TextChanged += new System.EventHandler(this.tbxADiAddSearch_TextChanged);
             // 
+            // categorySet
+            // 
+            this.categorySet.DataSetName = "CategorySet";
+            this.categorySet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vWCATEGORYBindingSource
+            // 
+            this.vWCATEGORYBindingSource.DataMember = "VW_CATEGORY";
+            this.vWCATEGORYBindingSource.DataSource = this.categorySet;
+            // 
             // vW_CATEGORYTableAdapter
             // 
             this.vW_CATEGORYTableAdapter.ClearBeforeFill = true;
@@ -256,12 +256,12 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAddDish_FormClosing);
             this.Load += new System.EventHandler(this.FormAddDish_Load);
             this.Resize += new System.EventHandler(this.FormAddDish_Resize);
-            ((System.ComponentModel.ISupportInitialize)(this.vWCATEGORYBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet6)).EndInit();
             this.gpbADiIngredients.ResumeLayout(false);
             this.gpbADiIngredients.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvADiAvailable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvADiAdded)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categorySet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWCATEGORYBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,8 +283,8 @@
         private System.Windows.Forms.Label lblADiAddSearch;
         public System.Windows.Forms.TextBox tbxADiName;
         public System.Windows.Forms.ComboBox cbbADiCategory;
-        private DataSet6 dataSet6;
+        private CategorySet categorySet;
         private System.Windows.Forms.BindingSource vWCATEGORYBindingSource;
-        private DataSet6TableAdapters.VW_CATEGORYTableAdapter vW_CATEGORYTableAdapter;
+        private CategorySetTableAdapters.VW_CATEGORYTableAdapter vW_CATEGORYTableAdapter;
     }
 }

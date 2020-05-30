@@ -20,17 +20,17 @@ namespace WindowsFormsApp2 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSet7")]
+    [global::System.Xml.Serialization.XmlRootAttribute("CategorySet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSet7 : global::System.Data.DataSet {
+    public partial class CategorySet : global::System.Data.DataSet {
         
-        private VW_DISHDataTable tableVW_DISH;
+        private VW_CATEGORYDataTable tableVW_CATEGORY;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public DataSet7() {
+        public CategorySet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace WindowsFormsApp2 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected DataSet7(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected CategorySet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace WindowsFormsApp2 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["VW_DISH"] != null)) {
-                    base.Tables.Add(new VW_DISHDataTable(ds.Tables["VW_DISH"]));
+                if ((ds.Tables["VW_CATEGORY"] != null)) {
+                    base.Tables.Add(new VW_CATEGORYDataTable(ds.Tables["VW_CATEGORY"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace WindowsFormsApp2 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public VW_DISHDataTable VW_DISH {
+        public VW_CATEGORYDataTable VW_CATEGORY {
             get {
-                return this.tableVW_DISH;
+                return this.tableVW_CATEGORY;
             }
         }
         
@@ -127,7 +127,7 @@ namespace WindowsFormsApp2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSet7 cln = ((DataSet7)(base.Clone()));
+            CategorySet cln = ((CategorySet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace WindowsFormsApp2 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["VW_DISH"] != null)) {
-                    base.Tables.Add(new VW_DISHDataTable(ds.Tables["VW_DISH"]));
+                if ((ds.Tables["VW_CATEGORY"] != null)) {
+                    base.Tables.Add(new VW_CATEGORYDataTable(ds.Tables["VW_CATEGORY"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace WindowsFormsApp2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableVW_DISH = ((VW_DISHDataTable)(base.Tables["VW_DISH"]));
+            this.tableVW_CATEGORY = ((VW_CATEGORYDataTable)(base.Tables["VW_CATEGORY"]));
             if ((initTable == true)) {
-                if ((this.tableVW_DISH != null)) {
-                    this.tableVW_DISH.InitVars();
+                if ((this.tableVW_CATEGORY != null)) {
+                    this.tableVW_CATEGORY.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace WindowsFormsApp2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSet7";
+            this.DataSetName = "CategorySet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSet7.xsd";
+            this.Namespace = "http://tempuri.org/CategorySet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableVW_DISH = new VW_DISHDataTable();
-            base.Tables.Add(this.tableVW_DISH);
+            this.tableVW_CATEGORY = new VW_CATEGORYDataTable();
+            base.Tables.Add(this.tableVW_CATEGORY);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeVW_DISH() {
+        private bool ShouldSerializeVW_CATEGORY() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace WindowsFormsApp2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSet7 ds = new DataSet7();
+            CategorySet ds = new CategorySet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,29 +270,23 @@ namespace WindowsFormsApp2 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void VW_DISHRowChangeEventHandler(object sender, VW_DISHRowChangeEvent e);
+        public delegate void VW_CATEGORYRowChangeEventHandler(object sender, VW_CATEGORYRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class VW_DISHDataTable : global::System.Data.TypedTableBase<VW_DISHRow> {
+        public partial class VW_CATEGORYDataTable : global::System.Data.TypedTableBase<VW_CATEGORYRow> {
             
-            private global::System.Data.DataColumn columnDIS_ID;
-            
-            private global::System.Data.DataColumn columnDIS_CAT_ID;
-            
-            private global::System.Data.DataColumn columnDIS_NAME;
+            private global::System.Data.DataColumn columnCAT_ID;
             
             private global::System.Data.DataColumn columnCAT_NAME;
             
-            private global::System.Data.DataColumn columnPURCHASE_PRICE;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public VW_DISHDataTable() {
-                this.TableName = "VW_DISH";
+            public VW_CATEGORYDataTable() {
+                this.TableName = "VW_CATEGORY";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +294,7 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal VW_DISHDataTable(global::System.Data.DataTable table) {
+            internal VW_CATEGORYDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,32 +311,16 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected VW_DISHDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected VW_CATEGORYDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DIS_IDColumn {
+            public global::System.Data.DataColumn CAT_IDColumn {
                 get {
-                    return this.columnDIS_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DIS_CAT_IDColumn {
-                get {
-                    return this.columnDIS_CAT_ID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DIS_NAMEColumn {
-                get {
-                    return this.columnDIS_NAME;
+                    return this.columnCAT_ID;
                 }
             }
             
@@ -351,14 +329,6 @@ namespace WindowsFormsApp2 {
             public global::System.Data.DataColumn CAT_NAMEColumn {
                 get {
                     return this.columnCAT_NAME;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PURCHASE_PRICEColumn {
-                get {
-                    return this.columnPURCHASE_PRICE;
                 }
             }
             
@@ -373,49 +343,46 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public VW_DISHRow this[int index] {
+            public VW_CATEGORYRow this[int index] {
                 get {
-                    return ((VW_DISHRow)(this.Rows[index]));
+                    return ((VW_CATEGORYRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event VW_DISHRowChangeEventHandler VW_DISHRowChanging;
+            public event VW_CATEGORYRowChangeEventHandler VW_CATEGORYRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event VW_DISHRowChangeEventHandler VW_DISHRowChanged;
+            public event VW_CATEGORYRowChangeEventHandler VW_CATEGORYRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event VW_DISHRowChangeEventHandler VW_DISHRowDeleting;
+            public event VW_CATEGORYRowChangeEventHandler VW_CATEGORYRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event VW_DISHRowChangeEventHandler VW_DISHRowDeleted;
+            public event VW_CATEGORYRowChangeEventHandler VW_CATEGORYRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddVW_DISHRow(VW_DISHRow row) {
+            public void AddVW_CATEGORYRow(VW_CATEGORYRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public VW_DISHRow AddVW_DISHRow(decimal DIS_ID, decimal DIS_CAT_ID, string DIS_NAME, string CAT_NAME, decimal PURCHASE_PRICE) {
-                VW_DISHRow rowVW_DISHRow = ((VW_DISHRow)(this.NewRow()));
+            public VW_CATEGORYRow AddVW_CATEGORYRow(decimal CAT_ID, string CAT_NAME) {
+                VW_CATEGORYRow rowVW_CATEGORYRow = ((VW_CATEGORYRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        DIS_ID,
-                        DIS_CAT_ID,
-                        DIS_NAME,
-                        CAT_NAME,
-                        PURCHASE_PRICE};
-                rowVW_DISHRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowVW_DISHRow);
-                return rowVW_DISHRow;
+                        CAT_ID,
+                        CAT_NAME};
+                rowVW_CATEGORYRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVW_CATEGORYRow);
+                return rowVW_CATEGORYRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                VW_DISHDataTable cln = ((VW_DISHDataTable)(base.Clone()));
+                VW_CATEGORYDataTable cln = ((VW_CATEGORYDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -423,64 +390,52 @@ namespace WindowsFormsApp2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new VW_DISHDataTable();
+                return new VW_CATEGORYDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnDIS_ID = base.Columns["DIS_ID"];
-                this.columnDIS_CAT_ID = base.Columns["DIS_CAT_ID"];
-                this.columnDIS_NAME = base.Columns["DIS_NAME"];
+                this.columnCAT_ID = base.Columns["CAT_ID"];
                 this.columnCAT_NAME = base.Columns["CAT_NAME"];
-                this.columnPURCHASE_PRICE = base.Columns["PURCHASE_PRICE"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnDIS_ID = new global::System.Data.DataColumn("DIS_ID", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDIS_ID);
-                this.columnDIS_CAT_ID = new global::System.Data.DataColumn("DIS_CAT_ID", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDIS_CAT_ID);
-                this.columnDIS_NAME = new global::System.Data.DataColumn("DIS_NAME", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDIS_NAME);
+                this.columnCAT_ID = new global::System.Data.DataColumn("CAT_ID", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCAT_ID);
                 this.columnCAT_NAME = new global::System.Data.DataColumn("CAT_NAME", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCAT_NAME);
-                this.columnPURCHASE_PRICE = new global::System.Data.DataColumn("PURCHASE_PRICE", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPURCHASE_PRICE);
-                this.columnDIS_ID.AllowDBNull = false;
-                this.columnDIS_CAT_ID.AllowDBNull = false;
-                this.columnDIS_NAME.AllowDBNull = false;
-                this.columnDIS_NAME.MaxLength = 128;
+                this.columnCAT_ID.AllowDBNull = false;
                 this.columnCAT_NAME.AllowDBNull = false;
                 this.columnCAT_NAME.MaxLength = 128;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public VW_DISHRow NewVW_DISHRow() {
-                return ((VW_DISHRow)(this.NewRow()));
+            public VW_CATEGORYRow NewVW_CATEGORYRow() {
+                return ((VW_CATEGORYRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new VW_DISHRow(builder);
+                return new VW_CATEGORYRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(VW_DISHRow);
+                return typeof(VW_CATEGORYRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.VW_DISHRowChanged != null)) {
-                    this.VW_DISHRowChanged(this, new VW_DISHRowChangeEvent(((VW_DISHRow)(e.Row)), e.Action));
+                if ((this.VW_CATEGORYRowChanged != null)) {
+                    this.VW_CATEGORYRowChanged(this, new VW_CATEGORYRowChangeEvent(((VW_CATEGORYRow)(e.Row)), e.Action));
                 }
             }
             
@@ -488,8 +443,8 @@ namespace WindowsFormsApp2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.VW_DISHRowChanging != null)) {
-                    this.VW_DISHRowChanging(this, new VW_DISHRowChangeEvent(((VW_DISHRow)(e.Row)), e.Action));
+                if ((this.VW_CATEGORYRowChanging != null)) {
+                    this.VW_CATEGORYRowChanging(this, new VW_CATEGORYRowChangeEvent(((VW_CATEGORYRow)(e.Row)), e.Action));
                 }
             }
             
@@ -497,8 +452,8 @@ namespace WindowsFormsApp2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.VW_DISHRowDeleted != null)) {
-                    this.VW_DISHRowDeleted(this, new VW_DISHRowChangeEvent(((VW_DISHRow)(e.Row)), e.Action));
+                if ((this.VW_CATEGORYRowDeleted != null)) {
+                    this.VW_CATEGORYRowDeleted(this, new VW_CATEGORYRowChangeEvent(((VW_CATEGORYRow)(e.Row)), e.Action));
                 }
             }
             
@@ -506,14 +461,14 @@ namespace WindowsFormsApp2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.VW_DISHRowDeleting != null)) {
-                    this.VW_DISHRowDeleting(this, new VW_DISHRowChangeEvent(((VW_DISHRow)(e.Row)), e.Action));
+                if ((this.VW_CATEGORYRowDeleting != null)) {
+                    this.VW_CATEGORYRowDeleting(this, new VW_CATEGORYRowChangeEvent(((VW_CATEGORYRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveVW_DISHRow(VW_DISHRow row) {
+            public void RemoveVW_CATEGORYRow(VW_CATEGORYRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -522,7 +477,7 @@ namespace WindowsFormsApp2 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet7 ds = new DataSet7();
+                CategorySet ds = new CategorySet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -540,7 +495,7 @@ namespace WindowsFormsApp2 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "VW_DISHDataTable";
+                attribute2.FixedValue = "VW_CATEGORYDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -584,47 +539,25 @@ namespace WindowsFormsApp2 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class VW_DISHRow : global::System.Data.DataRow {
+        public partial class VW_CATEGORYRow : global::System.Data.DataRow {
             
-            private VW_DISHDataTable tableVW_DISH;
+            private VW_CATEGORYDataTable tableVW_CATEGORY;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal VW_DISHRow(global::System.Data.DataRowBuilder rb) : 
+            internal VW_CATEGORYRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableVW_DISH = ((VW_DISHDataTable)(this.Table));
+                this.tableVW_CATEGORY = ((VW_CATEGORYDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal DIS_ID {
+            public decimal CAT_ID {
                 get {
-                    return ((decimal)(this[this.tableVW_DISH.DIS_IDColumn]));
+                    return ((decimal)(this[this.tableVW_CATEGORY.CAT_IDColumn]));
                 }
                 set {
-                    this[this.tableVW_DISH.DIS_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal DIS_CAT_ID {
-                get {
-                    return ((decimal)(this[this.tableVW_DISH.DIS_CAT_IDColumn]));
-                }
-                set {
-                    this[this.tableVW_DISH.DIS_CAT_IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string DIS_NAME {
-                get {
-                    return ((string)(this[this.tableVW_DISH.DIS_NAMEColumn]));
-                }
-                set {
-                    this[this.tableVW_DISH.DIS_NAMEColumn] = value;
+                    this[this.tableVW_CATEGORY.CAT_IDColumn] = value;
                 }
             }
             
@@ -632,39 +565,11 @@ namespace WindowsFormsApp2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string CAT_NAME {
                 get {
-                    return ((string)(this[this.tableVW_DISH.CAT_NAMEColumn]));
+                    return ((string)(this[this.tableVW_CATEGORY.CAT_NAMEColumn]));
                 }
                 set {
-                    this[this.tableVW_DISH.CAT_NAMEColumn] = value;
+                    this[this.tableVW_CATEGORY.CAT_NAMEColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal PURCHASE_PRICE {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableVW_DISH.PURCHASE_PRICEColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PURCHASE_PRICE\' in table \'VW_DISH\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableVW_DISH.PURCHASE_PRICEColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPURCHASE_PRICENull() {
-                return this.IsNull(this.tableVW_DISH.PURCHASE_PRICEColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPURCHASE_PRICENull() {
-                this[this.tableVW_DISH.PURCHASE_PRICEColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -672,22 +577,22 @@ namespace WindowsFormsApp2 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class VW_DISHRowChangeEvent : global::System.EventArgs {
+        public class VW_CATEGORYRowChangeEvent : global::System.EventArgs {
             
-            private VW_DISHRow eventRow;
+            private VW_CATEGORYRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public VW_DISHRowChangeEvent(VW_DISHRow row, global::System.Data.DataRowAction action) {
+            public VW_CATEGORYRowChangeEvent(VW_CATEGORYRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public VW_DISHRow Row {
+            public VW_CATEGORYRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -703,7 +608,7 @@ namespace WindowsFormsApp2 {
         }
     }
 }
-namespace WindowsFormsApp2.DataSet7TableAdapters {
+namespace WindowsFormsApp2.CategorySetTableAdapters {
     
     
     /// <summary>
@@ -715,7 +620,7 @@ namespace WindowsFormsApp2.DataSet7TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class VW_DISHTableAdapter : global::System.ComponentModel.Component {
+    public partial class VW_CATEGORYTableAdapter : global::System.ComponentModel.Component {
         
         private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
         
@@ -729,7 +634,7 @@ namespace WindowsFormsApp2.DataSet7TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public VW_DISHTableAdapter() {
+        public VW_CATEGORYTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -826,12 +731,9 @@ namespace WindowsFormsApp2.DataSet7TableAdapters {
             this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "VW_DISH";
-            tableMapping.ColumnMappings.Add("DIS_ID", "DIS_ID");
-            tableMapping.ColumnMappings.Add("DIS_CAT_ID", "DIS_CAT_ID");
-            tableMapping.ColumnMappings.Add("DIS_NAME", "DIS_NAME");
+            tableMapping.DataSetTable = "VW_CATEGORY";
+            tableMapping.ColumnMappings.Add("CAT_ID", "CAT_ID");
             tableMapping.ColumnMappings.Add("CAT_NAME", "CAT_NAME");
-            tableMapping.ColumnMappings.Add("PURCHASE_PRICE", "PURCHASE_PRICE");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -848,8 +750,7 @@ namespace WindowsFormsApp2.DataSet7TableAdapters {
             this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT DIS_ID, DIS_CAT_ID, DIS_NAME, CAT_NAME, PURCHASE_PRICE FROM FOO_DBA.VW_DIS" +
-                "H";
+            this._commandCollection[0].CommandText = "SELECT CAT_ID, CAT_NAME FROM FOO_DBA.VW_CATEGORY";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -857,7 +758,7 @@ namespace WindowsFormsApp2.DataSet7TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet7.VW_DISHDataTable dataTable) {
+        public virtual int Fill(CategorySet.VW_CATEGORYDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -870,9 +771,9 @@ namespace WindowsFormsApp2.DataSet7TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet7.VW_DISHDataTable GetData() {
+        public virtual CategorySet.VW_CATEGORYDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet7.VW_DISHDataTable dataTable = new DataSet7.VW_DISHDataTable();
+            CategorySet.VW_CATEGORYDataTable dataTable = new CategorySet.VW_CATEGORYDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -946,7 +847,7 @@ namespace WindowsFormsApp2.DataSet7TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(DataSet7 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(CategorySet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -956,7 +857,7 @@ namespace WindowsFormsApp2.DataSet7TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(DataSet7 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(CategorySet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -966,7 +867,7 @@ namespace WindowsFormsApp2.DataSet7TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(DataSet7 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(CategorySet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1000,7 +901,7 @@ namespace WindowsFormsApp2.DataSet7TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(DataSet7 dataSet) {
+        public virtual int UpdateAll(CategorySet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

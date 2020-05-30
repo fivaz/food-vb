@@ -23,32 +23,22 @@ namespace WindowsFormsApp2
 
         private void FormAccounts_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSet3.VW_ACCOUNT' table. You can move, or remove it, as needed.
-            this.vW_ACCOUNTTableAdapter.Fill(this.dataSet3.VW_ACCOUNT);
-            this.dgvAcc.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dgvAcc.Columns[0].HeaderText = "id";
-            this.dgvAcc.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvAcc.Columns[1].HeaderText = "nom";
-            this.dgvAcc.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvAcc.Columns[2].HeaderText = "prénom";
-            this.dgvAcc.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvAcc.Columns[3].HeaderText = "email";
-            this.dgvAcc.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dgvAcc.Columns[4].HeaderText = "type";
-
-            //DataTable a = this.dataSet3.VW_ACCOUNT;
+            dgvAcc.DataSource = new AccountORM().ListAll();
+            dgvAcc.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvAcc.Columns[0].HeaderText = "id";
+            dgvAcc.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvAcc.Columns[1].HeaderText = "nom";
+            dgvAcc.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvAcc.Columns[2].HeaderText = "prénom";
+            dgvAcc.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvAcc.Columns[3].HeaderText = "email";
+            dgvAcc.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvAcc.Columns[4].HeaderText = "type";
         }
 
         internal void refreshData()
         {
-            dgvAcc.DataSource = this.dataSet3.VW_ACCOUNT;
-            this.vW_ACCOUNTTableAdapter.ClearBeforeFill = true;
-            this.vW_ACCOUNTTableAdapter.Fill(this.dataSet3.VW_ACCOUNT);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            new FormAddAccount().Show();
+            dgvAcc.DataSource = new AccountORM().ListAll();
         }
 
         private void dgvAcc_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -87,6 +77,11 @@ namespace WindowsFormsApp2
                 DataTable data = new AccountORM().Search(tbxAccSearchName.Text);
                 dgvAcc.DataSource = data;
             }
+        }
+
+        private void btnAccAdd_Click(object sender, EventArgs e)
+        {
+            new FormAddAccount().Show();
         }
     }
 }

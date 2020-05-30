@@ -23,23 +23,20 @@ namespace WindowsFormsApp2
 
         private void FormDishes_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSet7.VW_DISH' table. You can move, or remove it, as needed.
-            this.vW_DISHTableAdapter3.Fill(this.dataSet7.VW_DISH);
-            this.dgvDis.Columns[0].Visible = false;
-            this.dgvDis.Columns[1].Visible = false;
-            this.dgvDis.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvDis.Columns[2].HeaderText = "nom";
-            this.dgvDis.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dgvDis.Columns[3].HeaderText = "categorie";
-            this.dgvDis.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dgvDis.Columns[4].HeaderText = "coût";
+            RefreshData();
+            dgvDis.Columns[0].Visible = false;
+            dgvDis.Columns[1].Visible = false;
+            dgvDis.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvDis.Columns[2].HeaderText = "nom";
+            dgvDis.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvDis.Columns[3].HeaderText = "categorie";
+            dgvDis.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvDis.Columns[4].HeaderText = "coût";
         }
 
         internal void RefreshData()
         {
-            dgvDis.DataSource = this.dataSet7.VW_DISH;
-            this.vW_DISHTableAdapter3.ClearBeforeFill = true;
-            this.vW_DISHTableAdapter3.Fill(this.dataSet7.VW_DISH);
+            dgvDis.DataSource = new DishORM().ListAll();
         }
 
         private void dgvDis_DoubleClick(object sender, EventArgs e)

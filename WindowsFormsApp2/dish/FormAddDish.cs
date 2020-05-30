@@ -16,11 +16,12 @@ namespace WindowsFormsApp2
         public FormAddDish()
         {
             InitializeComponent();
-            this.vW_CATEGORYTableAdapter.Fill(this.dataSet6.VW_CATEGORY);
         }
 
         private void FormAddDish_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'categorySet.VW_CATEGORY' table. You can move, or remove it, as needed.
+            this.vW_CATEGORYTableAdapter.Fill(this.categorySet.VW_CATEGORY);
             IngredientORM ingredientORM = new IngredientORM();
 
             dgvADiAdded.DataSource = ingredientORM.SearchFromDish(id);
@@ -34,7 +35,7 @@ namespace WindowsFormsApp2
 
         public Dish Build()
         {
-            int categoryId = Int32.Parse(cbbADiCategory.SelectedValue.ToString());
+            int categoryId = Convert.ToInt32(cbbADiCategory.SelectedValue.ToString());
             string name = tbxADiName.Text.ToString();
             return new Dish(id, categoryId, name, 0, 0);
         }
@@ -48,7 +49,6 @@ namespace WindowsFormsApp2
         public void Create()
         {
             DishORM dishORM = new DishORM();
-            //int dishId = 999;
             int dishId = dishORM.Create(Build());
             IngredientORM ingredientORM = new IngredientORM();
             List<Ingredient> addedIgredients = getAddedIngredients(dishId);

@@ -80,44 +80,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategorySet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CategorySet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="category\Category.cs" />
     <Compile Include="account\Account.cs" />
     <Compile Include="category\CategoryORM.cs" />
-    <Compile Include="DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet5.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet6.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet6.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet7.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet7.xsd</DependentUpon>
-    </Compile>
     <Compile Include="menu\Menu.cs" />
     <Compile Include="menu\MenuORM.cs" />
     <Compile Include="dish\DishORM.cs" />
@@ -130,11 +100,6 @@
     <Compile Include="account\AccountORM.cs" />
     <Compile Include="shared\database\OracleConn.cs" />
     <Compile Include="shared\database\OracleConnector.cs" />
-    <Compile Include="DataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet3.xsd</DependentUpon>
-    </Compile>
     <Compile Include="FormAddTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,93 +264,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="DataSet.xsc">
-      <DependentUpon>DataSet.xsd</DependentUpon>
+    <None Include="CategorySet.xsc">
+      <DependentUpon>CategorySet.xsd</DependentUpon>
     </None>
-    <None Include="DataSet.xsd">
+    <None Include="CategorySet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>CategorySet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DataSet.xss">
-      <DependentUpon>DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet2.xsc">
-      <DependentUpon>DataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet2.xss">
-      <DependentUpon>DataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet3.xsc">
-      <DependentUpon>DataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet3.xss">
-      <DependentUpon>DataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet4.xsc">
-      <DependentUpon>DataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet4.xss">
-      <DependentUpon>DataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet5.xsc">
-      <DependentUpon>DataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet5.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet5.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet5.xss">
-      <DependentUpon>DataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet6.xsc">
-      <DependentUpon>DataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet6.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet6.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet6.xss">
-      <DependentUpon>DataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet7.xsc">
-      <DependentUpon>DataSet7.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet7.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet7.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet7.xss">
-      <DependentUpon>DataSet7.xsd</DependentUpon>
+    <None Include="CategorySet.xss">
+      <DependentUpon>CategorySet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

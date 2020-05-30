@@ -28,20 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btnCatAdd = new System.Windows.Forms.Button();
             this.tbxCatSearchName = new System.Windows.Forms.TextBox();
             this.lblCatSearchName = new System.Windows.Forms.Label();
             this.dgvCat = new System.Windows.Forms.DataGridView();
-            this.cATIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cATNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vWCATEGORYBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet = new WindowsFormsApp2.DataSet();
             this.btnCatDel = new System.Windows.Forms.Button();
-            this.vW_CATEGORYTableAdapter = new WindowsFormsApp2.DataSetTableAdapters.VW_CATEGORYTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWCATEGORYBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCatAdd
@@ -79,12 +71,7 @@
             this.dgvCat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvCat.AutoGenerateColumns = false;
             this.dgvCat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cATIDDataGridViewTextBoxColumn,
-            this.cATNAMEDataGridViewTextBoxColumn});
-            this.dgvCat.DataSource = this.vWCATEGORYBindingSource;
             this.dgvCat.Location = new System.Drawing.Point(35, 92);
             this.dgvCat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvCat.Name = "dgvCat";
@@ -93,32 +80,6 @@
             this.dgvCat.Size = new System.Drawing.Size(529, 363);
             this.dgvCat.TabIndex = 5;
             this.dgvCat.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCat_CellDoubleClick);
-            // 
-            // cATIDDataGridViewTextBoxColumn
-            // 
-            this.cATIDDataGridViewTextBoxColumn.DataPropertyName = "CAT_ID";
-            this.cATIDDataGridViewTextBoxColumn.HeaderText = "CAT_ID";
-            this.cATIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cATIDDataGridViewTextBoxColumn.Name = "cATIDDataGridViewTextBoxColumn";
-            this.cATIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // cATNAMEDataGridViewTextBoxColumn
-            // 
-            this.cATNAMEDataGridViewTextBoxColumn.DataPropertyName = "CAT_NAME";
-            this.cATNAMEDataGridViewTextBoxColumn.HeaderText = "CAT_NAME";
-            this.cATNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cATNAMEDataGridViewTextBoxColumn.Name = "cATNAMEDataGridViewTextBoxColumn";
-            this.cATNAMEDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // vWCATEGORYBindingSource
-            // 
-            this.vWCATEGORYBindingSource.DataMember = "VW_CATEGORY";
-            this.vWCATEGORYBindingSource.DataSource = this.dataSet;
-            // 
-            // dataSet
-            // 
-            this.dataSet.DataSetName = "DataSet";
-            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnCatDel
             // 
@@ -131,10 +92,6 @@
             this.btnCatDel.Text = "&Supprimer";
             this.btnCatDel.UseVisualStyleBackColor = true;
             this.btnCatDel.Click += new System.EventHandler(this.btnCatDel_Click);
-            // 
-            // vW_CATEGORYTableAdapter
-            // 
-            this.vW_CATEGORYTableAdapter.ClearBeforeFill = true;
             // 
             // FormCategories
             // 
@@ -152,8 +109,6 @@
             this.Text = "Categories";
             this.Load += new System.EventHandler(this.FormCategories_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWCATEGORYBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,10 +121,5 @@
         private System.Windows.Forms.Label lblCatSearchName;
         private System.Windows.Forms.DataGridView dgvCat;
         private System.Windows.Forms.Button btnCatDel;
-        private DataSet dataSet;
-        private System.Windows.Forms.BindingSource vWCATEGORYBindingSource;
-        private DataSetTableAdapters.VW_CATEGORYTableAdapter vW_CATEGORYTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cATIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cATNAMEDataGridViewTextBoxColumn;
     }
 }

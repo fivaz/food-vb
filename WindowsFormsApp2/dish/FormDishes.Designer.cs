@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btnDisAdd = new System.Windows.Forms.Button();
             this.tbxDisSearchName = new System.Windows.Forms.TextBox();
             this.lblDisSearchName = new System.Windows.Forms.Label();
@@ -41,40 +40,8 @@
             this.tbxDisSearchQuantityTo = new System.Windows.Forms.TextBox();
             this.lblDisSearchQuantityAnd = new System.Windows.Forms.Label();
             this.dgvDis = new System.Windows.Forms.DataGridView();
-            this.vWDISHBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet4 = new WindowsFormsApp2.DataSet4();
             this.btnDisDel = new System.Windows.Forms.Button();
-            this.dataSet1 = new WindowsFormsApp2.DataSet1();
-            this.vWDISHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vW_DISHTableAdapter = new WindowsFormsApp2.DataSet1TableAdapters.VW_DISHTableAdapter();
-            this.dataSet2 = new WindowsFormsApp2.DataSet2();
-            this.vWDISHBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.vW_DISHTableAdapter1 = new WindowsFormsApp2.DataSet2TableAdapters.VW_DISHTableAdapter();
-            this.dataSet3 = new WindowsFormsApp2.DataSet3();
-            this.vWACCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vW_ACCOUNTTableAdapter = new WindowsFormsApp2.DataSet3TableAdapters.VW_ACCOUNTTableAdapter();
-            this.vWDISHBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.vW_DISHTableAdapter2 = new WindowsFormsApp2.DataSet4TableAdapters.VW_DISHTableAdapter();
-            this.dataSet7 = new WindowsFormsApp2.DataSet7();
-            this.vWDISHBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.vW_DISHTableAdapter3 = new WindowsFormsApp2.DataSet7TableAdapters.VW_DISHTableAdapter();
-            this.dISIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dISCATIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dISNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cATNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pURCHASEPRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDis)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWDISHBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWDISHBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWDISHBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWACCOUNTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWDISHBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWDISHBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDisAdd
@@ -177,15 +144,7 @@
             // 
             // dgvDis
             // 
-            this.dgvDis.AutoGenerateColumns = false;
             this.dgvDis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDis.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dISIDDataGridViewTextBoxColumn,
-            this.dISCATIDDataGridViewTextBoxColumn,
-            this.dISNAMEDataGridViewTextBoxColumn,
-            this.cATNAMEDataGridViewTextBoxColumn,
-            this.pURCHASEPRICEDataGridViewTextBoxColumn});
-            this.dgvDis.DataSource = this.vWDISHBindingSource4;
             this.dgvDis.Location = new System.Drawing.Point(36, 92);
             this.dgvDis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDis.Name = "dgvDis";
@@ -194,16 +153,6 @@
             this.dgvDis.Size = new System.Drawing.Size(1113, 383);
             this.dgvDis.TabIndex = 13;
             this.dgvDis.DoubleClick += new System.EventHandler(this.dgvDis_DoubleClick);
-            // 
-            // vWDISHBindingSource3
-            // 
-            this.vWDISHBindingSource3.DataMember = "VW_DISH";
-            this.vWDISHBindingSource3.DataSource = this.dataSet4;
-            // 
-            // dataSet4
-            // 
-            this.dataSet4.DataSetName = "DataSet4";
-            this.dataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnDisDel
             // 
@@ -216,111 +165,6 @@
             this.btnDisDel.Text = "&Supprimer";
             this.btnDisDel.UseVisualStyleBackColor = true;
             this.btnDisDel.Click += new System.EventHandler(this.btnDisDel_Click);
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vWDISHBindingSource
-            // 
-            this.vWDISHBindingSource.DataMember = "VW_DISH";
-            this.vWDISHBindingSource.DataSource = this.dataSet1;
-            // 
-            // vW_DISHTableAdapter
-            // 
-            this.vW_DISHTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataSet2
-            // 
-            this.dataSet2.DataSetName = "DataSet2";
-            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vWDISHBindingSource1
-            // 
-            this.vWDISHBindingSource1.DataMember = "VW_DISH";
-            this.vWDISHBindingSource1.DataSource = this.dataSet2;
-            // 
-            // vW_DISHTableAdapter1
-            // 
-            this.vW_DISHTableAdapter1.ClearBeforeFill = true;
-            // 
-            // dataSet3
-            // 
-            this.dataSet3.DataSetName = "DataSet3";
-            this.dataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vWACCOUNTBindingSource
-            // 
-            this.vWACCOUNTBindingSource.DataMember = "VW_ACCOUNT";
-            this.vWACCOUNTBindingSource.DataSource = this.dataSet3;
-            // 
-            // vW_ACCOUNTTableAdapter
-            // 
-            this.vW_ACCOUNTTableAdapter.ClearBeforeFill = true;
-            // 
-            // vWDISHBindingSource2
-            // 
-            this.vWDISHBindingSource2.DataMember = "VW_DISH";
-            this.vWDISHBindingSource2.DataSource = this.dataSet2;
-            // 
-            // vW_DISHTableAdapter2
-            // 
-            this.vW_DISHTableAdapter2.ClearBeforeFill = true;
-            // 
-            // dataSet7
-            // 
-            this.dataSet7.DataSetName = "DataSet7";
-            this.dataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vWDISHBindingSource4
-            // 
-            this.vWDISHBindingSource4.DataMember = "VW_DISH";
-            this.vWDISHBindingSource4.DataSource = this.dataSet7;
-            // 
-            // vW_DISHTableAdapter3
-            // 
-            this.vW_DISHTableAdapter3.ClearBeforeFill = true;
-            // 
-            // dISIDDataGridViewTextBoxColumn
-            // 
-            this.dISIDDataGridViewTextBoxColumn.DataPropertyName = "DIS_ID";
-            this.dISIDDataGridViewTextBoxColumn.HeaderText = "DIS_ID";
-            this.dISIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dISIDDataGridViewTextBoxColumn.Name = "dISIDDataGridViewTextBoxColumn";
-            this.dISIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dISCATIDDataGridViewTextBoxColumn
-            // 
-            this.dISCATIDDataGridViewTextBoxColumn.DataPropertyName = "DIS_CAT_ID";
-            this.dISCATIDDataGridViewTextBoxColumn.HeaderText = "DIS_CAT_ID";
-            this.dISCATIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dISCATIDDataGridViewTextBoxColumn.Name = "dISCATIDDataGridViewTextBoxColumn";
-            this.dISCATIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dISNAMEDataGridViewTextBoxColumn
-            // 
-            this.dISNAMEDataGridViewTextBoxColumn.DataPropertyName = "DIS_NAME";
-            this.dISNAMEDataGridViewTextBoxColumn.HeaderText = "DIS_NAME";
-            this.dISNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dISNAMEDataGridViewTextBoxColumn.Name = "dISNAMEDataGridViewTextBoxColumn";
-            this.dISNAMEDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // cATNAMEDataGridViewTextBoxColumn
-            // 
-            this.cATNAMEDataGridViewTextBoxColumn.DataPropertyName = "CAT_NAME";
-            this.cATNAMEDataGridViewTextBoxColumn.HeaderText = "CAT_NAME";
-            this.cATNAMEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cATNAMEDataGridViewTextBoxColumn.Name = "cATNAMEDataGridViewTextBoxColumn";
-            this.cATNAMEDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // pURCHASEPRICEDataGridViewTextBoxColumn
-            // 
-            this.pURCHASEPRICEDataGridViewTextBoxColumn.DataPropertyName = "PURCHASE_PRICE";
-            this.pURCHASEPRICEDataGridViewTextBoxColumn.HeaderText = "PURCHASE_PRICE";
-            this.pURCHASEPRICEDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pURCHASEPRICEDataGridViewTextBoxColumn.Name = "pURCHASEPRICEDataGridViewTextBoxColumn";
-            this.pURCHASEPRICEDataGridViewTextBoxColumn.Width = 125;
             // 
             // FormDishes
             // 
@@ -346,17 +190,6 @@
             this.Text = "Plats";
             this.Load += new System.EventHandler(this.FormDishes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDis)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWDISHBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWDISHBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWDISHBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWACCOUNTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWDISHBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vWDISHBindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,26 +210,5 @@
         private System.Windows.Forms.Label lblDisSearchQuantityAnd;
         private System.Windows.Forms.DataGridView dgvDis;
         private System.Windows.Forms.Button btnDisDel;
-        private DataSet1 dataSet1;
-        private System.Windows.Forms.BindingSource vWDISHBindingSource;
-        private DataSet1TableAdapters.VW_DISHTableAdapter vW_DISHTableAdapter;
-        private DataSet2 dataSet2;
-        private System.Windows.Forms.BindingSource vWDISHBindingSource1;
-        private DataSet2TableAdapters.VW_DISHTableAdapter vW_DISHTableAdapter1;
-        private DataSet3 dataSet3;
-        private System.Windows.Forms.BindingSource vWACCOUNTBindingSource;
-        private DataSet3TableAdapters.VW_ACCOUNTTableAdapter vW_ACCOUNTTableAdapter;
-        private System.Windows.Forms.BindingSource vWDISHBindingSource2;
-        private DataSet4 dataSet4;
-        private System.Windows.Forms.BindingSource vWDISHBindingSource3;
-        private DataSet4TableAdapters.VW_DISHTableAdapter vW_DISHTableAdapter2;
-        private DataSet7 dataSet7;
-        private System.Windows.Forms.BindingSource vWDISHBindingSource4;
-        private DataSet7TableAdapters.VW_DISHTableAdapter vW_DISHTableAdapter3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dISIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dISCATIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dISNAMEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cATNAMEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pURCHASEPRICEDataGridViewTextBoxColumn;
     }
 }

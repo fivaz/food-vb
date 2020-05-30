@@ -22,19 +22,16 @@ namespace WindowsFormsApp2
 
         private void FormCategories_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSet.VW_CATEGORY' table. You can move, or remove it, as needed.
-            this.vW_CATEGORYTableAdapter.Fill(this.dataSet.VW_CATEGORY);
-            this.dgvCat.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dgvCat.Columns[0].HeaderText = "id";
-            this.dgvCat.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvCat.Columns[1].HeaderText = "nom";
+            RefreshData();
+            dgvCat.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvCat.Columns[0].HeaderText = "id";
+            dgvCat.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvCat.Columns[1].HeaderText = "nom";
         }
 
         internal void RefreshData()
         {
-            dgvCat.DataSource = this.dataSet.VW_CATEGORY;
-            this.vW_CATEGORYTableAdapter.ClearBeforeFill = true;
-            this.vW_CATEGORYTableAdapter.Fill(this.dataSet.VW_CATEGORY);
+            dgvCat.DataSource = new CategoryORM().ListAll();
         }
 
         private void dgvCat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
