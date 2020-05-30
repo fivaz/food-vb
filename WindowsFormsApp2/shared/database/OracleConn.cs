@@ -58,6 +58,18 @@ namespace WindowsFormsApp2.shared.database
             }
         }
 
+        public int ExecuteNonQuery(OracleCommand currentCommand)
+        {
+            try
+            {
+                return currentCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public OracleDataReader execute(OracleCommand currentCommand)
         {
             try
@@ -89,6 +101,13 @@ namespace WindowsFormsApp2.shared.database
             OracleParameter param = new OracleParameter(":" + column, OracleDbType.Double);
             param.Value = value;
             currentCommand.Parameters.Add(param);
+        }
+
+        public void addReturnId(OracleCommand command)
+        {
+            OracleParameter parameter = new OracleParameter("RETURNED_ID", OracleDbType.Int32);
+            parameter.Direction = ParameterDirection.ReturnValue;
+            command.Parameters.Add(parameter);
         }
 
         public void close()

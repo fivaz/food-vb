@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using WindowsFormsApp2.category;
 using WindowsFormsApp2.shared;
 
@@ -40,7 +41,8 @@ namespace WindowsFormsApp2
         public void Create()
         {
             CategoryORM categoryORM = new CategoryORM();
-            categoryORM.Create(Build());
+            int id = categoryORM.Create(Build());
+            Console.WriteLine("id_ " + id);
         }
 
         public void Edit()

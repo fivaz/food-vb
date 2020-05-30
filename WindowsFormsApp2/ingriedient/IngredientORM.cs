@@ -14,7 +14,7 @@ namespace WindowsFormsApp2.ingredient
             table = "foo_ingredient";
             view = "vw_ingredient";
             columns = new List<string> { "ING_NAME", "ING_IS_COUNTABLE", "ING_UNIT", "ING_PURCHASE_PRICE", "ING_QUANTITY", "ING_MINIMUM_QUANTITY"};
-            ids = new List<string> { "ING_ID" };
+            columnId =  "ING_ID";
             deleteColumn = "ING_IS_DELETED";
         }
 
@@ -32,7 +32,7 @@ namespace WindowsFormsApp2.ingredient
 
         internal void addRelation(Ingredient ingredient)
         {
-            string query = SQLHelper.InsertQuery("FOO_DIS_ING_RELATION", new string []{ "DIR_QUANTITY" }, new string[] { "DIR_ING_ID", "DIR_DIS_ID"});
+            string query = SQLHelper.InsertQuery("FOO_DIS_ING_RELATION", new string []{ "DIR_QUANTITY" , "DIR_ING_ID", "DIR_DIS_ID" });
             Console.WriteLine(query);
             //string query = "INSERT INTO " + table + " (, DIR_QUANTITY) VALUES (:DIR_ING_ID, :DIR_DIS_ID, :DIR_QUANTITY)";
 

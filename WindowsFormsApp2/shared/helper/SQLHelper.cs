@@ -10,7 +10,7 @@ namespace WindowsFormsApp2.shared.helper
             return query.Remove(query.Length - 2, 2);
         }
 
-        public static string InsertQuery(string table, string[] columns, string[] ids)
+        public static string InsertQuery(string table, string[] columns, string columnId = null)
         {
             StringBuilder query = new StringBuilder();
             query
@@ -18,9 +18,9 @@ namespace WindowsFormsApp2.shared.helper
                 .Append(table)
                 .Append(" (");
 
-            foreach(string id in ids)
-                query.Append(id).Append(", ");
-            
+            if(columnId != null)
+                query.Append(columnId).Append(", ");
+                
             foreach (string column in columns)
                 query.Append(column).Append(", ");
 
@@ -28,20 +28,20 @@ namespace WindowsFormsApp2.shared.helper
 
             query.Append(") VALUES (");
 
-            foreach (string id in ids) 
-                query.Append("NULL").Append(", ");
+            query.Append("NULL").Append(", ");
 
             foreach (string column in columns)
                 query.Append(":").Append(column).Append(", ");
 
             RemoveComma(query);
 
-            query.Append(")");
+            //query.Append(")");
+            query.Append(") returning ").Append(columnId).Append(" into ").Append(":RETURNED_ID");
 
             return query.ToString();
         }
 
-        public static string UpdateQuery(string table, string[] columns, string[] ids)
+        public static string UpdateQuery(string table, string[] columns, string columnId)
         {
             StringBuilder query = new StringBuilder();
             query
@@ -56,15 +56,15 @@ namespace WindowsFormsApp2.shared.helper
 
             query.Append(" WHERE ");
 
-            foreach (string id in ids)
-                query.Append(id).Append(" = :").Append(id).Append(", ");
+ 
+            query.Append(columnId).Append(" = :").Append(columnId).Append(", ");
 
             RemoveComma(query);
 
             return query.ToString();
         }
 
-        public static string DeleteQuery(string table, string deleteColumn, string[] ids)
+        public static string DeleteQuery(string table, string deleteColumn, string columnId)
         {
             //string sql = "UPDATE " + table + " SET ACC_IS_DELETED = 1 WHERE ACC_ID = :id";
             StringBuilder query = new StringBuilder();
@@ -75,8 +75,7 @@ namespace WindowsFormsApp2.shared.helper
                 .Append(deleteColumn)
                 .Append(" = 1 WHERE ");
 
-            foreach (string id in ids)
-                query.Append(id).Append(" = :").Append(id).Append(", ");
+            query.Append(columnId).Append(" = :").Append(columnId).Append(", ");
 
             RemoveComma(query);
 

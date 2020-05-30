@@ -13,7 +13,7 @@ namespace WindowsFormsApp2.shared
         protected string table;
         protected string view;
         protected List<string> columns;
-        protected List<string> ids;
+        protected string columnId;
         protected string deleteColumn;
 
         public ORM()
@@ -21,15 +21,16 @@ namespace WindowsFormsApp2.shared
             connection = OracleConnector.getConnection();
         }
 
-        public void Create(T obj)
+        public int Create(T obj)
         {
             try
             {
-                string query = SQLHelper.InsertQuery(table, columns.ToArray(), ids.ToArray());
+                string query = SQLHelper.InsertQuery(table, columns.ToArray(), columnId);
                 Console.WriteLine(query);
                 OracleCommand command = connection.SqlPrepare(query);
                 BindObject(command, obj, false);
-                connection.execute(command);
+                connection.ExecuteNonQuery(command);
+                return Convert.ToInt32(command.Parameters["RETURNED_ID"].Value.ToString());
             }
             catch (Exception ex)
             {
@@ -43,7 +44,7 @@ namespace WindowsFormsApp2.shared
         {
             try
             {
-                string query = SQLHelper.UpdateQuery(table, columns.ToArray(), ids.ToArray());
+                string query = SQLHelper.UpdateQuery(table, columns.ToArray(), columnId);
                 Console.WriteLine(query); 
                 OracleCommand command = connection.SqlPrepare(query);
                 BindObject(command, obj, true);
@@ -57,10 +58,9 @@ namespace WindowsFormsApp2.shared
 
         public void Delete(int id)
         {
-            Console.Write(deleteColumn);
             try
             {
-                string query = SQLHelper.DeleteQuery(table, deleteColumn, ids.ToArray());
+                string query = SQLHelper.DeleteQuery(table, deleteColumn, columnId);
                 Console.WriteLine(query);
                 OracleCommand command = connection.SqlPrepare(query);
                 command.BindByName = false;
