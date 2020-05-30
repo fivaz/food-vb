@@ -10,7 +10,7 @@ namespace WindowsFormsApp2.shared.helper
             return query.Remove(query.Length - 2, 2);
         }
 
-        public static string InsertQuery(string table, string[] columns, string columnId = null)
+        public static string InsertQuery(string table, string[] columns, string columnId = null, bool returnId = true)
         {
             StringBuilder query = new StringBuilder();
             query
@@ -28,15 +28,18 @@ namespace WindowsFormsApp2.shared.helper
 
             query.Append(") VALUES (");
 
-            query.Append("NULL").Append(", ");
+            if (columnId != null)
+                query.Append("NULL").Append(", ");
 
             foreach (string column in columns)
                 query.Append(":").Append(column).Append(", ");
 
             RemoveComma(query);
 
-            //query.Append(")");
-            query.Append(") returning ").Append(columnId).Append(" into ").Append(":RETURNED_ID");
+            query.Append(")");
+
+            if (returnId)
+                query.Append(" returning ").Append(columnId).Append(" into ").Append(":RETURNED_ID");
 
             return query.ToString();
         }

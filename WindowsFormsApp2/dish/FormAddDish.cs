@@ -35,21 +35,28 @@ namespace WindowsFormsApp2
         public void Create()
         {
             DishORM dishORM = new DishORM();
-            //int dishId = dishORM.Create(Build());
+            //int dishId = 999;
+            int dishId = dishORM.Create(Build());
             IngredientORM ingredientORM = new IngredientORM();
-            //List<Ingredient> addedIgredients = getAddedIngredients(dishId);
-            //foreach (Ingredient ingredient in addedIgredients)
-            //    ingredientORM.addRelation(ingredient);
+            List<Ingredient> addedIgredients = getAddedIngredients(dishId);
+            foreach (Ingredient ingredient in addedIgredients)
+                ingredientORM.addRelation(ingredient);
         }
 
         public List<Ingredient> getAddedIngredients(int dishId)
         {
             List<Ingredient> ingredients = new List<Ingredient>();
-            foreach(DataGridViewRow row in dgvADiAdded.Rows)
-            {   
+            foreach (DataGridViewRow row in dgvADiAdded.Rows)
+            {
                 int ingredientId = Convert.ToInt32(row.Cells[0].Value.ToString());
-                double quantity = Convert.ToDouble(row.Cells[6].Value.ToString());
-                
+                double? quantity = null;
+                if(!string.IsNullOrEmpty(row.Cells[6].Value.ToString()))
+                    quantity = Convert.ToDouble(row.Cells[6].Value.ToString());
+
+                Console.WriteLine("ingredientId "+ ingredientId);
+                Console.WriteLine("dishId " + dishId);
+                Console.WriteLine("quantity "+ quantity);
+
                 Ingredient ingredient = new Ingredient(ingredientId, dishId, null, false, null, quantity, 0, 0);
                 ingredients.Add(ingredient);
             }
@@ -96,6 +103,7 @@ namespace WindowsFormsApp2
             dgv.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dgv.Columns[6].HeaderText = "quantité";
             dgv.Columns[7].Visible = false;
+            dgv.AllowUserToAddRows = false;
         }
 
         private void btnADiSubmit_Click(object sender, EventArgs e)
