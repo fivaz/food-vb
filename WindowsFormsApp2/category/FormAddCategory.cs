@@ -57,6 +57,5 @@ namespace WindowsFormsApp2
             btnACaSubmit.Text = "Modifier &category";
             editMode = true;
         }
-
     }
 }

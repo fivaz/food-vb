@@ -30,16 +30,18 @@
         {
             this.lblAInName = new System.Windows.Forms.Label();
             this.lblAInType = new System.Windows.Forms.Label();
-            this.rbtAInStandart = new System.Windows.Forms.RadioButton();
-            this.rbtAInSpice = new System.Windows.Forms.RadioButton();
+            this.rbtAInCountable = new System.Windows.Forms.RadioButton();
+            this.rbtAInUncoutable = new System.Windows.Forms.RadioButton();
             this.tbxAInName = new System.Windows.Forms.TextBox();
             this.lblAInUnity = new System.Windows.Forms.Label();
             this.cbxAInUnity = new System.Windows.Forms.ComboBox();
+            this.tbxAInQuantity = new System.Windows.Forms.TextBox();
+            this.lblAInQuantity = new System.Windows.Forms.Label();
+            this.btnAInSubmit = new System.Windows.Forms.Button();
+            this.tbxAInMQuantity = new System.Windows.Forms.TextBox();
+            this.lblAInMQuantity = new System.Windows.Forms.Label();
             this.tbxAInPrice = new System.Windows.Forms.TextBox();
             this.lblAInPrice = new System.Windows.Forms.Label();
-            this.tbxAInInitialQuantity = new System.Windows.Forms.TextBox();
-            this.lblAInInitialQuantity = new System.Windows.Forms.Label();
-            this.btnAInSubmit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAInName
@@ -54,45 +56,45 @@
             // lblAInType
             // 
             this.lblAInType.AutoSize = true;
-            this.lblAInType.Location = new System.Drawing.Point(35, 36);
+            this.lblAInType.Location = new System.Drawing.Point(34, 22);
             this.lblAInType.Name = "lblAInType";
             this.lblAInType.Size = new System.Drawing.Size(118, 17);
             this.lblAInType.TabIndex = 1;
             this.lblAInType.Text = "&Type d\'ingredient";
             // 
-            // rbtAInStandart
+            // rbtAInCountable
             // 
-            this.rbtAInStandart.AutoSize = true;
-            this.rbtAInStandart.Location = new System.Drawing.Point(184, 34);
-            this.rbtAInStandart.Name = "rbtAInStandart";
-            this.rbtAInStandart.Size = new System.Drawing.Size(83, 21);
-            this.rbtAInStandart.TabIndex = 2;
-            this.rbtAInStandart.TabStop = true;
-            this.rbtAInStandart.Text = "Standart";
-            this.rbtAInStandart.UseVisualStyleBackColor = true;
+            this.rbtAInCountable.AutoSize = true;
+            this.rbtAInCountable.Location = new System.Drawing.Point(37, 41);
+            this.rbtAInCountable.Name = "rbtAInCountable";
+            this.rbtAInCountable.Size = new System.Drawing.Size(96, 21);
+            this.rbtAInCountable.TabIndex = 2;
+            this.rbtAInCountable.TabStop = true;
+            this.rbtAInCountable.Text = "Comptable";
+            this.rbtAInCountable.UseVisualStyleBackColor = true;
             // 
-            // rbtAInSpice
+            // rbtAInUncoutable
             // 
-            this.rbtAInSpice.AutoSize = true;
-            this.rbtAInSpice.Location = new System.Drawing.Point(288, 34);
-            this.rbtAInSpice.Name = "rbtAInSpice";
-            this.rbtAInSpice.Size = new System.Drawing.Size(64, 21);
-            this.rbtAInSpice.TabIndex = 3;
-            this.rbtAInSpice.TabStop = true;
-            this.rbtAInSpice.Text = "Épice";
-            this.rbtAInSpice.UseVisualStyleBackColor = true;
+            this.rbtAInUncoutable.AutoSize = true;
+            this.rbtAInUncoutable.Location = new System.Drawing.Point(194, 41);
+            this.rbtAInUncoutable.Name = "rbtAInUncoutable";
+            this.rbtAInUncoutable.Size = new System.Drawing.Size(124, 21);
+            this.rbtAInUncoutable.TabIndex = 3;
+            this.rbtAInUncoutable.TabStop = true;
+            this.rbtAInUncoutable.Text = "Non comptable";
+            this.rbtAInUncoutable.UseVisualStyleBackColor = true;
             // 
             // tbxAInName
             // 
             this.tbxAInName.Location = new System.Drawing.Point(37, 101);
             this.tbxAInName.Name = "tbxAInName";
-            this.tbxAInName.Size = new System.Drawing.Size(100, 22);
+            this.tbxAInName.Size = new System.Drawing.Size(281, 22);
             this.tbxAInName.TabIndex = 5;
             // 
             // lblAInUnity
             // 
             this.lblAInUnity.AutoSize = true;
-            this.lblAInUnity.Location = new System.Drawing.Point(247, 82);
+            this.lblAInUnity.Location = new System.Drawing.Point(35, 148);
             this.lblAInUnity.Name = "lblAInUnity";
             this.lblAInUnity.Size = new System.Drawing.Size(41, 17);
             this.lblAInUnity.TabIndex = 6;
@@ -106,74 +108,89 @@
             "g",
             "ml",
             "L"});
-            this.cbxAInUnity.Location = new System.Drawing.Point(250, 100);
+            this.cbxAInUnity.Location = new System.Drawing.Point(38, 166);
             this.cbxAInUnity.Name = "cbxAInUnity";
             this.cbxAInUnity.Size = new System.Drawing.Size(100, 24);
             this.cbxAInUnity.TabIndex = 7;
-            this.cbxAInUnity.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // tbxAInPrice
+            // tbxAInQuantity
             // 
-            this.tbxAInPrice.Location = new System.Drawing.Point(37, 168);
-            this.tbxAInPrice.Name = "tbxAInPrice";
-            this.tbxAInPrice.Size = new System.Drawing.Size(100, 22);
-            this.tbxAInPrice.TabIndex = 9;
+            this.tbxAInQuantity.Location = new System.Drawing.Point(38, 232);
+            this.tbxAInQuantity.Name = "tbxAInQuantity";
+            this.tbxAInQuantity.Size = new System.Drawing.Size(100, 22);
+            this.tbxAInQuantity.TabIndex = 11;
             // 
-            // lblAInPrice
+            // lblAInQuantity
             // 
-            this.lblAInPrice.AutoSize = true;
-            this.lblAInPrice.Location = new System.Drawing.Point(34, 148);
-            this.lblAInPrice.Name = "lblAInPrice";
-            this.lblAInPrice.Size = new System.Drawing.Size(31, 17);
-            this.lblAInPrice.TabIndex = 8;
-            this.lblAInPrice.Text = "&Prix";
-            // 
-            // tbxAInInitialQuantity
-            // 
-            this.tbxAInInitialQuantity.Location = new System.Drawing.Point(250, 168);
-            this.tbxAInInitialQuantity.Name = "tbxAInInitialQuantity";
-            this.tbxAInInitialQuantity.Size = new System.Drawing.Size(100, 22);
-            this.tbxAInInitialQuantity.TabIndex = 11;
-            // 
-            // lblAInInitialQuantity
-            // 
-            this.lblAInInitialQuantity.AutoSize = true;
-            this.lblAInInitialQuantity.Location = new System.Drawing.Point(247, 148);
-            this.lblAInInitialQuantity.Name = "lblAInInitialQuantity";
-            this.lblAInInitialQuantity.Size = new System.Drawing.Size(106, 17);
-            this.lblAInInitialQuantity.TabIndex = 10;
-            this.lblAInInitialQuantity.Text = "&Quantité initiale";
+            this.lblAInQuantity.AutoSize = true;
+            this.lblAInQuantity.Location = new System.Drawing.Point(35, 212);
+            this.lblAInQuantity.Name = "lblAInQuantity";
+            this.lblAInQuantity.Size = new System.Drawing.Size(62, 17);
+            this.lblAInQuantity.TabIndex = 10;
+            this.lblAInQuantity.Text = "&Quantité";
             // 
             // btnAInSubmit
             // 
-            this.btnAInSubmit.Location = new System.Drawing.Point(153, 224);
+            this.btnAInSubmit.Location = new System.Drawing.Point(137, 282);
             this.btnAInSubmit.Name = "btnAInSubmit";
             this.btnAInSubmit.Size = new System.Drawing.Size(80, 30);
             this.btnAInSubmit.TabIndex = 12;
             this.btnAInSubmit.Text = "&Créer";
             this.btnAInSubmit.UseVisualStyleBackColor = true;
+            this.btnAInSubmit.Click += new System.EventHandler(this.btnAInSubmit_Click);
+            // 
+            // tbxAInMQuantity
+            // 
+            this.tbxAInMQuantity.Location = new System.Drawing.Point(215, 232);
+            this.tbxAInMQuantity.Name = "tbxAInMQuantity";
+            this.tbxAInMQuantity.Size = new System.Drawing.Size(100, 22);
+            this.tbxAInMQuantity.TabIndex = 16;
+            // 
+            // lblAInMQuantity
+            // 
+            this.lblAInMQuantity.AutoSize = true;
+            this.lblAInMQuantity.Location = new System.Drawing.Point(212, 212);
+            this.lblAInMQuantity.Name = "lblAInMQuantity";
+            this.lblAInMQuantity.Size = new System.Drawing.Size(121, 17);
+            this.lblAInMQuantity.TabIndex = 15;
+            this.lblAInMQuantity.Text = "Quantité &minimum";
+            // 
+            // tbxAInPrice
+            // 
+            this.tbxAInPrice.Location = new System.Drawing.Point(215, 168);
+            this.tbxAInPrice.Name = "tbxAInPrice";
+            this.tbxAInPrice.Size = new System.Drawing.Size(100, 22);
+            this.tbxAInPrice.TabIndex = 14;
+            // 
+            // lblAInPrice
+            // 
+            this.lblAInPrice.AutoSize = true;
+            this.lblAInPrice.Location = new System.Drawing.Point(212, 148);
+            this.lblAInPrice.Name = "lblAInPrice";
+            this.lblAInPrice.Size = new System.Drawing.Size(31, 17);
+            this.lblAInPrice.TabIndex = 13;
+            this.lblAInPrice.Text = "&Prix";
             // 
             // FormAddIngredient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 278);
-            this.Controls.Add(this.btnAInSubmit);
-            this.Controls.Add(this.tbxAInInitialQuantity);
-            this.Controls.Add(this.lblAInInitialQuantity);
+            this.ClientSize = new System.Drawing.Size(360, 334);
+            this.Controls.Add(this.tbxAInMQuantity);
+            this.Controls.Add(this.lblAInMQuantity);
             this.Controls.Add(this.tbxAInPrice);
             this.Controls.Add(this.lblAInPrice);
+            this.Controls.Add(this.btnAInSubmit);
+            this.Controls.Add(this.tbxAInQuantity);
+            this.Controls.Add(this.lblAInQuantity);
             this.Controls.Add(this.cbxAInUnity);
             this.Controls.Add(this.lblAInUnity);
             this.Controls.Add(this.tbxAInName);
-            this.Controls.Add(this.rbtAInSpice);
-            this.Controls.Add(this.rbtAInStandart);
+            this.Controls.Add(this.rbtAInUncoutable);
+            this.Controls.Add(this.rbtAInCountable);
             this.Controls.Add(this.lblAInType);
             this.Controls.Add(this.lblAInName);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(405, 325);
-            this.MinimumSize = new System.Drawing.Size(405, 325);
             this.Name = "FormAddIngredient";
             this.Text = "Nouvel Ingrédient";
             this.ResumeLayout(false);
@@ -184,15 +201,17 @@
         #endregion
         private System.Windows.Forms.Label lblAInName;
         private System.Windows.Forms.Label lblAInType;
-        private System.Windows.Forms.RadioButton rbtAInStandart;
-        private System.Windows.Forms.RadioButton rbtAInSpice;
+        private System.Windows.Forms.RadioButton rbtAInCountable;
+        private System.Windows.Forms.RadioButton rbtAInUncoutable;
         private System.Windows.Forms.TextBox tbxAInName;
         private System.Windows.Forms.Label lblAInUnity;
         private System.Windows.Forms.ComboBox cbxAInUnity;
+        private System.Windows.Forms.TextBox tbxAInQuantity;
+        private System.Windows.Forms.Label lblAInQuantity;
+        private System.Windows.Forms.Button btnAInSubmit;
+        private System.Windows.Forms.TextBox tbxAInMQuantity;
+        private System.Windows.Forms.Label lblAInMQuantity;
         private System.Windows.Forms.TextBox tbxAInPrice;
         private System.Windows.Forms.Label lblAInPrice;
-        private System.Windows.Forms.TextBox tbxAInInitialQuantity;
-        private System.Windows.Forms.Label lblAInInitialQuantity;
-        private System.Windows.Forms.Button btnAInSubmit;
     }
 }

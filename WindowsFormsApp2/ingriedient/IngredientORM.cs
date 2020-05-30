@@ -28,6 +28,8 @@ namespace WindowsFormsApp2.ingredient
             connection.AddDouble(command, "ING_MINIMUM_QUANTITY", ingredient.minimumQuantity);
             if (withId)
                 connection.AddInt(command, "ING_ID", ingredient.id);
+            else
+                connection.addReturnId(command);
         }
 
         internal void addRelation(Ingredient ingredient)
