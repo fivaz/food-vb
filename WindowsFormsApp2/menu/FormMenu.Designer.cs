@@ -32,7 +32,7 @@
             this.tbxMenSearch = new System.Windows.Forms.TextBox();
             this.lblMenSearch = new System.Windows.Forms.Label();
             this.dgvMen = new System.Windows.Forms.DataGridView();
-            this.btnMenDelAll = new System.Windows.Forms.Button();
+            this.btnMenDel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +46,7 @@
             this.btnMenAdd.TabIndex = 3;
             this.btnMenAdd.Text = "&Nouveau menu";
             this.btnMenAdd.UseVisualStyleBackColor = true;
-            this.btnMenAdd.Click += new System.EventHandler(this.button2_Click);
+            this.btnMenAdd.Click += new System.EventHandler(this.btnMenAdd_Click);
             // 
             // tbxMenSearch
             // 
@@ -78,17 +78,19 @@
             this.dgvMen.RowTemplate.Height = 24;
             this.dgvMen.Size = new System.Drawing.Size(787, 339);
             this.dgvMen.TabIndex = 5;
+            this.dgvMen.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMen_CellDoubleClick);
             // 
-            // btnMenDelAll
+            // btnMenDel
             // 
-            this.btnMenDelAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMenDelAll.Location = new System.Drawing.Point(716, 39);
-            this.btnMenDelAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnMenDelAll.Name = "btnMenDelAll";
-            this.btnMenDelAll.Size = new System.Drawing.Size(107, 30);
-            this.btnMenDelAll.TabIndex = 4;
-            this.btnMenDelAll.Text = "&Supprimer";
-            this.btnMenDelAll.UseVisualStyleBackColor = true;
+            this.btnMenDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMenDel.Location = new System.Drawing.Point(716, 39);
+            this.btnMenDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMenDel.Name = "btnMenDel";
+            this.btnMenDel.Size = new System.Drawing.Size(107, 30);
+            this.btnMenDel.TabIndex = 4;
+            this.btnMenDel.Text = "&Supprimer";
+            this.btnMenDel.UseVisualStyleBackColor = true;
+            this.btnMenDel.Click += new System.EventHandler(this.btnMenDel_Click);
             // 
             // FormMenus
             // 
@@ -99,7 +101,7 @@
             this.Controls.Add(this.lblMenSearch);
             this.Controls.Add(this.tbxMenSearch);
             this.Controls.Add(this.dgvMen);
-            this.Controls.Add(this.btnMenDelAll);
+            this.Controls.Add(this.btnMenDel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(602, 220);
             this.Name = "FormMenus";
@@ -117,6 +119,6 @@
         private System.Windows.Forms.TextBox tbxMenSearch;
         private System.Windows.Forms.Label lblMenSearch;
         private System.Windows.Forms.DataGridView dgvMen;
-        private System.Windows.Forms.Button btnMenDelAll;
+        private System.Windows.Forms.Button btnMenDel;
     }
 }

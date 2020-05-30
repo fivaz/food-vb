@@ -13,6 +13,7 @@ namespace WindowsFormsApp2
             InitializeComponent();
             instance = this;
         }
+
         public static FormDishes getInstance()
         {
             if (instance == null)
@@ -62,7 +63,7 @@ namespace WindowsFormsApp2
 
         private void tbxDisSearchName_TextChanged(object sender, EventArgs e)
         {
-            
+
             if (tbxDisSearchName.Text.Equals(""))
                 RefreshData();
             else

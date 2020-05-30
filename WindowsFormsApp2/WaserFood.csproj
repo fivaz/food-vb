@@ -118,6 +118,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="menu\Menu.cs" />
+    <Compile Include="menu\MenuORM.cs" />
     <Compile Include="dish\DishORM.cs" />
     <Compile Include="dish\Dish.cs" />
     <Compile Include="ingriedient\Ingredient.cs" />
@@ -151,10 +153,10 @@
     <Compile Include="dish\FormAddDish.Designer.cs">
       <DependentUpon>FormAddDish.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddMenu.cs">
+    <Compile Include="menu\FormAddMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddMenu.Designer.cs">
+    <Compile Include="menu\FormAddMenu.Designer.cs">
       <DependentUpon>FormAddMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="dish\FormDishes.cs">
@@ -181,10 +183,10 @@
     <Compile Include="FormTables.Designer.cs">
       <DependentUpon>FormTables.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMenu.cs">
+    <Compile Include="menu\FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMenu.Designer.cs">
+    <Compile Include="menu\FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="FormManagerHome.cs">
@@ -246,7 +248,7 @@
     <EmbeddedResource Include="dish\FormAddDish.resx">
       <DependentUpon>FormAddDish.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddMenu.resx">
+    <EmbeddedResource Include="menu\FormAddMenu.resx">
       <DependentUpon>FormAddMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dish\FormDishes.resx">
@@ -261,7 +263,7 @@
     <EmbeddedResource Include="FormTables.resx">
       <DependentUpon>FormTables.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu.resx">
+    <EmbeddedResource Include="menu\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormManagerHome.resx">

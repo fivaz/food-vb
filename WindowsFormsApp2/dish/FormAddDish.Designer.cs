@@ -109,12 +109,11 @@
             // 
             // btnADiSubmit
             // 
-            this.btnADiSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnADiSubmit.Location = new System.Drawing.Point(327, 476);
+            this.btnADiSubmit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnADiSubmit.Location = new System.Drawing.Point(447, 476);
             this.btnADiSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnADiSubmit.Name = "btnADiSubmit";
-            this.btnADiSubmit.Size = new System.Drawing.Size(337, 28);
+            this.btnADiSubmit.Size = new System.Drawing.Size(100, 28);
             this.btnADiSubmit.TabIndex = 14;
             this.btnADiSubmit.Text = "&Créer";
             this.btnADiSubmit.UseVisualStyleBackColor = true;

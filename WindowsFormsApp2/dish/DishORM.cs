@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using WindowsFormsApp2.shared;
+using WindowsFormsApp2.shared.helper;
 
 namespace WindowsFormsApp2.dish
 {
@@ -31,6 +32,43 @@ namespace WindowsFormsApp2.dish
         {
             string[] searchable = columns.Where(val => !val.Equals("DIS_CAT_ID")).ToArray();
             return base.Search(text, searchable);
+        }
+
+        public DataTable SearchFromMenu(int menuId)
+        {
+            string query = "SELECT * FROM vw_menu_dish WHERE MDR_MEN_ID = :MDR_MEN_ID";
+
+            OracleCommand command = connection.SqlPrepare(query);
+
+            OracleParameter param = new OracleParameter(":MDR_MEN_ID", OracleDbType.Int32);
+            param.Value = menuId;
+            command.Parameters.Add(param);
+
+            OracleDataReader odr = connection.execute(command);
+            DataTable data = new DataTable();
+            data.Load(odr);
+            return data;
+        }
+
+        public DataTable SearchExceptFromMenu(int menuId)
+        {
+            DataTable addedDishes = SearchFromMenu(menuId);
+
+            string query = SQLHelper.SelectQuery(view);
+
+            OracleCommand command = connection.SqlPrepare(query);
+
+            OracleDataReader odr = connection.execute(command);
+
+            DataTable data = new DataTable();
+            data.Load(odr);
+
+            foreach (DataRow row in addedDishes.Rows)
+            {
+                DataRow[] dataRow = data.Select("DIS_ID = " + row["DIS_ID"]);
+                data.Rows.Remove(dataRow[0]);
+            }
+            return data;
         }
     }
 }
