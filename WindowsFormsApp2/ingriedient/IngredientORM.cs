@@ -82,5 +82,21 @@ namespace WindowsFormsApp2.ingredient
             data.Load(odr);
             return data;
         }
+
+        public void DeleteAllRelations(int id)
+        {
+            try
+            {
+                string query = "DELETE FROM FOO_DIS_ING_RELATION WHERE DIR_DIS_ID = :DIR_DIS_ID";
+                OracleCommand command = connection.SqlPrepare(query);
+                command.BindByName = false;
+                connection.AddInt(command, "", id);
+                connection.execute(command);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

@@ -67,6 +67,11 @@ namespace WindowsFormsApp2
         {
             DishORM dishORM = new DishORM();
             dishORM.Edit(Build());
+            IngredientORM ingredientORM = new IngredientORM();
+            ingredientORM.DeleteAllRelations(id);
+            List<Ingredient> addedIgredients = getAddedIngredients(id);
+            foreach (Ingredient ingredient in addedIgredients)
+                ingredientORM.addRelation(ingredient);
         }
 
         public void SetEditMode()
