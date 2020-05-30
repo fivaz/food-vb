@@ -12,7 +12,6 @@ namespace WindowsFormsApp2
     {
         public int id;
         public bool editMode = false;
-        public List<Ingredient> addedIgredients;
 
         public FormAddDish()
         {
@@ -36,7 +35,25 @@ namespace WindowsFormsApp2
         public void Create()
         {
             DishORM dishORM = new DishORM();
-            dishORM.Create(Build());
+            //int dishId = dishORM.Create(Build());
+            IngredientORM ingredientORM = new IngredientORM();
+            //List<Ingredient> addedIgredients = getAddedIngredients(dishId);
+            //foreach (Ingredient ingredient in addedIgredients)
+            //    ingredientORM.addRelation(ingredient);
+        }
+
+        public List<Ingredient> getAddedIngredients(int dishId)
+        {
+            List<Ingredient> ingredients = new List<Ingredient>();
+            foreach(DataGridViewRow row in dgvADiAdded.Rows)
+            {   
+                int ingredientId = Convert.ToInt32(row.Cells[0].Value.ToString());
+                double quantity = Convert.ToDouble(row.Cells[6].Value.ToString());
+                
+                Ingredient ingredient = new Ingredient(ingredientId, dishId, null, false, null, quantity, 0, 0);
+                ingredients.Add(ingredient);
+            }
+            return ingredients;
         }
 
         public void Edit()
@@ -53,22 +70,21 @@ namespace WindowsFormsApp2
 
         private void FormAddDish_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSet6.VW_CATEGORY' table. You can move, or remove it, as needed.
             IngredientORM ingredientORM = new IngredientORM();
-            
+
             dgvADiAdded.DataSource = ingredientORM.SearchFromDish(id);
             dgvADiAvailable.DataSource = ingredientORM.SearchExceptFromDish(id);
 
             formatDgv(dgvADiAdded);
             formatDgv(dgvADiAvailable);
-            
+
             resizeGrids();
         }
 
         private void formatDgv(DataGridView dgv)
         {
-            //dgv.Columns[0].Visible = false;
-            //dgv.Columns[1].Visible = false;
+            dgv.Columns[0].Visible = false;
+            dgv.Columns[1].Visible = false;
             dgv.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dgv.Columns[2].HeaderText = "nom";
             dgv.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -126,11 +142,10 @@ namespace WindowsFormsApp2
         private void dgvADiAvailable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow currentRow = dgvADiAvailable.CurrentRow;
-            Console.WriteLine(Int32.Parse(currentRow.Cells[0].Value.ToString()));
 
-            DataTable addedIngredients  = (DataTable) dgvADiAdded.DataSource;
+            DataTable ingredients = (DataTable)dgvADiAdded.DataSource;
 
-            DataRow dataRow = addedIngredients.NewRow();
+            DataRow dataRow = ingredients.NewRow();
             dataRow["ING_ID"] = currentRow.Cells[0].Value;
             dataRow["DIR_DIS_ID"] = id;
             dataRow["ING_NAME"] = currentRow.Cells[2].Value;
@@ -139,20 +154,19 @@ namespace WindowsFormsApp2
             dataRow["ING_PURCHASE_PRICE"] = currentRow.Cells[5].Value;
             dataRow["ING_QUANTITY"] = currentRow.Cells[6].Value;
             dataRow["ING_MINIMUM_QUANTITY"] = currentRow.Cells[7].Value;
-            
-            addedIngredients.Rows.Add(dataRow);
-            
+
+            ingredients.Rows.Add(dataRow);
+
             dgvADiAvailable.Rows.Remove(currentRow);
         }
 
         private void dgvADiAdded_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow currentRow = dgvADiAdded.CurrentRow;
-            Console.WriteLine(Int32.Parse(currentRow.Cells[0].Value.ToString()));
 
-            DataTable availableIngredients = (DataTable)dgvADiAvailable.DataSource;
+            DataTable ingredients = (DataTable)dgvADiAvailable.DataSource;
 
-            DataRow dataRow = availableIngredients.NewRow();
+            DataRow dataRow = ingredients.NewRow();
             dataRow["ING_ID"] = currentRow.Cells[0].Value;
             dataRow["DIR_DIS_ID"] = id;
             dataRow["ING_NAME"] = currentRow.Cells[2].Value;
@@ -162,7 +176,7 @@ namespace WindowsFormsApp2
             dataRow["ING_QUANTITY"] = currentRow.Cells[6].Value;
             dataRow["ING_MINIMUM_QUANTITY"] = currentRow.Cells[7].Value;
 
-            availableIngredients.Rows.Add(dataRow);
+            ingredients.Rows.Add(dataRow);
 
             dgvADiAdded.Rows.Remove(currentRow);
         }

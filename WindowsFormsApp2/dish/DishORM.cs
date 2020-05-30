@@ -1,8 +1,10 @@
 ﻿using Oracle.DataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using WindowsFormsApp2.shared;
+using WindowsFormsApp2.shared.helper;
 
 namespace WindowsFormsApp2.dish
 {
@@ -30,6 +32,5 @@ namespace WindowsFormsApp2.dish
             string[] searchable = columns.Where(val => !val.Equals("DIS_CAT_ID")).ToArray();
             return base.Search(text, searchable);
         }
-
     }
 }

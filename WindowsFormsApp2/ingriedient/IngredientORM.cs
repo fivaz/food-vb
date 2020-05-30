@@ -30,6 +30,21 @@ namespace WindowsFormsApp2.ingredient
                 connection.AddInt(command, "ING_ID", ingredient.id);
         }
 
+        internal void addRelation(Ingredient ingredient)
+        {
+            string query = SQLHelper.InsertQuery("FOO_DIS_ING_RELATION", new string []{ "DIR_QUANTITY" }, new string[] { "DIR_ING_ID", "DIR_DIS_ID"});
+            Console.WriteLine(query);
+            //string query = "INSERT INTO " + table + " (, DIR_QUANTITY) VALUES (:DIR_ING_ID, :DIR_DIS_ID, :DIR_QUANTITY)";
+
+            OracleCommand command = connection.SqlPrepare(query);
+
+            connection.AddDouble(command, "DIR_QUANTITY", ingredient.quantity);
+            connection.AddInt(command, "DIR_ING_ID", ingredient.id);
+            connection.AddInt(command, "DIR_DIS_ID", ingredient.dishId);
+
+            connection.execute(command);
+        }
+
         public DataTable Search(string text)
         {
             string[] searchable = { "ING_NAME" };
