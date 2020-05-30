@@ -84,6 +84,7 @@
             this.dgvAMeAvailable.RowHeadersWidth = 51;
             this.dgvAMeAvailable.Size = new System.Drawing.Size(315, 218);
             this.dgvAMeAvailable.TabIndex = 11;
+            this.dgvAMeAvailable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAMeAvailable_CellDoubleClick);
             // 
             // lblAMeAvailable
             // 
@@ -122,6 +123,7 @@
             this.dgvAMeAdded.RowHeadersWidth = 51;
             this.dgvAMeAdded.Size = new System.Drawing.Size(315, 218);
             this.dgvAMeAdded.TabIndex = 7;
+            this.dgvAMeAdded.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAMeAdded_CellDoubleClick);
             // 
             // lblAMeAdded
             // 
@@ -195,6 +197,7 @@
             this.MaximizeBox = false;
             this.Name = "FormAddMenu";
             this.Text = "Nouveau menu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAddMenu_FormClosing);
             this.Load += new System.EventHandler(this.FormAddMenu_Load);
             this.Resize += new System.EventHandler(this.FormAddMenu_Resize);
             this.gbxAMenuItem.ResumeLayout(false);

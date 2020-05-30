@@ -36,7 +36,7 @@ namespace WindowsFormsApp2
         {
             int categoryId = Int32.Parse(cbbADiCategory.SelectedValue.ToString());
             string name = tbxADiName.Text.ToString();
-            return new Dish(id, categoryId, name);
+            return new Dish(id, categoryId, name, 0, 0);
         }
 
         public void ClearForm()

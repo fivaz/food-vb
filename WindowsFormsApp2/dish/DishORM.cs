@@ -1,4 +1,5 @@
 ﻿using Oracle.DataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace WindowsFormsApp2.dish
         {
             table = "foo_dish";
             view = "vw_dish";
-            columns = new List<string> { "DIS_CAT_ID", "DIS_NAME"};
+            columns = new List<string> { "DIS_CAT_ID", "DIS_NAME" };
             columnId = "DIS_ID";
             deleteColumn = "DIS_IS_DELETED";
         }
@@ -69,6 +70,35 @@ namespace WindowsFormsApp2.dish
                 data.Rows.Remove(dataRow[0]);
             }
             return data;
+        }
+
+        internal void addRelation(Dish dish)
+        {
+            string query = SQLHelper.InsertQuery("FOO_MEN_DIS_RELATION", new string[] { "MDR_DIS_ID", "MDR_MEN_ID", "MDR_QUANTITY" }, null, false);
+
+            OracleCommand command = connection.SqlPrepare(query);
+
+            connection.AddInt(command, "MDR_DIS_ID", dish.id);
+            connection.AddInt(command, "MDR_MEN_ID", dish.menuId);
+            connection.AddDouble(command, "MDR_QUANTITY", dish.quantity);
+
+            connection.ExecuteNonQuery(command);
+        }
+
+        public void DeleteAllRelations(int id)
+        {
+            try
+            {
+                string query = "DELETE FROM FOO_MEN_DIS_RELATION WHERE MDR_MEN_ID = :MDR_MEN_ID";
+                OracleCommand command = connection.SqlPrepare(query);
+                command.BindByName = false;
+                connection.AddInt(command, "", id);
+                connection.execute(command);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

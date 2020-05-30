@@ -42,8 +42,7 @@ namespace WindowsFormsApp2.ingredient
             connection.AddDouble(command, "DIR_QUANTITY", ingredient.quantity ?? default);
             connection.AddInt(command, "DIR_ING_ID", ingredient.id);
             connection.AddInt(command, "DIR_DIS_ID", ingredient.dishId);
-            connection.AddInt(command, "DIR_DIS_ID", ingredient.dishId);
-
+            
             connection.ExecuteNonQuery(command);
         }
 
