@@ -62,5 +62,10 @@ namespace WindowsFormsApp2
             editMode = true;
         }
 
+        private void FormAddIngredient_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FormIngredients form = FormIngredients.getInstance();
+            form.RefreshData();
+        }
     }
 }

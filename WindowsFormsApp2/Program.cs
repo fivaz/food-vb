@@ -19,8 +19,8 @@ namespace WindowsFormsApp2
             //Application.Run(new FormCategories());
             //Application.Run(new FormDishes());
             //Application.Run(new FormAddDish());
-            //Application.Run(new FormIngredients());
-            Application.Run(new FormAddIngredient());
+            Application.Run(new FormIngredients());
+            //Application.Run(new FormAddIngredient());
         }
     }
 }

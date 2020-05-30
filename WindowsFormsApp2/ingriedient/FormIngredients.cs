@@ -57,6 +57,27 @@ namespace WindowsFormsApp2
             RefreshData();
         }
 
+        private void dgvIng_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            FormAddIngredient fa = new FormAddIngredient();
+
+            fa.SetEditMode();
+            fa.id = Int32.Parse(dgvIng.CurrentRow.Cells[0].Value.ToString());
+
+            bool isCountable = dgvIng.CurrentRow.Cells["ING_IS_COUNTABLE"].Value.ToString().Equals("1");
+            if (isCountable)
+                fa.rbtAInCountable.Checked = true;
+            else
+                fa.rbtAInUncoutable.Checked = true;
+            fa.tbxAInName.Text = dgvIng.CurrentRow.Cells["ING_NAME"].Value.ToString();
+            fa.cbxAInUnity.Text = dgvIng.CurrentRow.Cells["ING_UNIT"].Value.ToString();
+            fa.tbxAInPrice.Text = dgvIng.CurrentRow.Cells["ING_PURCHASE_PRICE"].Value.ToString();
+            fa.tbxAInQuantity.Text = dgvIng.CurrentRow.Cells["ING_QUANTITY"].Value.ToString();
+            fa.tbxAInMQuantity.Text = dgvIng.CurrentRow.Cells["ING_MINIMUM_QUANTITY"].Value.ToString();
+
+            fa.ShowDialog();
+        }
+
         //TODO filters
     }
 }

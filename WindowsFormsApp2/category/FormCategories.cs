@@ -44,7 +44,7 @@ namespace WindowsFormsApp2
             fa.SetEditMode();
             fa.id = Int32.Parse(dgvCat.CurrentRow.Cells[0].Value.ToString());
             fa.tbxACaName.Text = this.dgvCat.CurrentRow.Cells[1].Value.ToString();
-
+           
             fa.ShowDialog();
         }
 

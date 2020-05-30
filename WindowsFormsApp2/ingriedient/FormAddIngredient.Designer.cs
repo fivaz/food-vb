@@ -193,6 +193,7 @@
             this.MaximizeBox = false;
             this.Name = "FormAddIngredient";
             this.Text = "Nouvel Ingrédient";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAddIngredient_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,17 +202,17 @@
         #endregion
         private System.Windows.Forms.Label lblAInName;
         private System.Windows.Forms.Label lblAInType;
-        private System.Windows.Forms.RadioButton rbtAInCountable;
-        private System.Windows.Forms.RadioButton rbtAInUncoutable;
-        private System.Windows.Forms.TextBox tbxAInName;
         private System.Windows.Forms.Label lblAInUnity;
-        private System.Windows.Forms.ComboBox cbxAInUnity;
-        private System.Windows.Forms.TextBox tbxAInQuantity;
         private System.Windows.Forms.Label lblAInQuantity;
         private System.Windows.Forms.Button btnAInSubmit;
-        private System.Windows.Forms.TextBox tbxAInMQuantity;
         private System.Windows.Forms.Label lblAInMQuantity;
-        private System.Windows.Forms.TextBox tbxAInPrice;
         private System.Windows.Forms.Label lblAInPrice;
+        public System.Windows.Forms.RadioButton rbtAInCountable;
+        public System.Windows.Forms.RadioButton rbtAInUncoutable;
+        public System.Windows.Forms.TextBox tbxAInName;
+        public System.Windows.Forms.ComboBox cbxAInUnity;
+        public System.Windows.Forms.TextBox tbxAInQuantity;
+        public System.Windows.Forms.TextBox tbxAInMQuantity;
+        public System.Windows.Forms.TextBox tbxAInPrice;
     }
 }
