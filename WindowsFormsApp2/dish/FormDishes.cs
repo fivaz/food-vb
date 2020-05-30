@@ -36,9 +36,9 @@ namespace WindowsFormsApp2
 
         internal void RefreshData()
         {
-            dgvDis.DataSource = this.dataSet4.VW_DISH;
-            this.vW_DISHTableAdapter2.ClearBeforeFill = true;
-            this.vW_DISHTableAdapter2.Fill(this.dataSet4.VW_DISH);
+            dgvDis.DataSource = this.dataSet7.VW_DISH;
+            this.vW_DISHTableAdapter3.ClearBeforeFill = true;
+            this.vW_DISHTableAdapter3.Fill(this.dataSet7.VW_DISH);
         }
 
         private void dgvDis_DoubleClick(object sender, EventArgs e)
@@ -62,6 +62,7 @@ namespace WindowsFormsApp2
 
         private void tbxDisSearchName_TextChanged(object sender, EventArgs e)
         {
+            
             if (tbxDisSearchName.Text.Equals(""))
                 RefreshData();
             else
@@ -69,6 +70,8 @@ namespace WindowsFormsApp2
                 DataTable data = new DishORM().Search(tbxDisSearchName.Text);
                 dgvDis.DataSource = data;
             }
+            /*
+            */
         }
         private void btnDisAdd_Click(object sender, EventArgs e)
         {

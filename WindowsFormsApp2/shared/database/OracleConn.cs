@@ -27,14 +27,17 @@ namespace WindowsFormsApp2.shared.database
 
         #region methods
 
-        public void SqlCommand(string sql)
+        public DataTable SqlCommand(string sql)
         {
             try
             {
                 OracleCommand command = new OracleCommand(sql, connection);
                 command.CommandType = CommandType.Text;
                 command.CommandTimeout = 0;
-                IDataReader reader = command.ExecuteReader();
+                OracleDataReader odr = command.ExecuteReader();
+                DataTable data = new DataTable();
+                data.Load(odr);
+                return data;
             }
             catch (Exception ex)
             {

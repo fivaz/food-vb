@@ -205,16 +205,16 @@
     <Compile Include="FormSignIn.Designer.cs">
       <DependentUpon>FormSignIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddIngredient.cs">
+    <Compile Include="ingriedient\FormAddIngredient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddIngredient.Designer.cs">
+    <Compile Include="ingriedient\FormAddIngredient.Designer.cs">
       <DependentUpon>FormAddIngredient.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormIngredients.cs">
+    <Compile Include="ingriedient\FormIngredients.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormIngredients.Designer.cs">
+    <Compile Include="ingriedient\FormIngredients.Designer.cs">
       <DependentUpon>FormIngredients.cs</DependentUpon>
     </Compile>
     <Compile Include="account\FormAddAccount.cs">
@@ -273,7 +273,7 @@
     <EmbeddedResource Include="FormSignIn.resx">
       <DependentUpon>FormSignIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddIngredient.resx">
+    <EmbeddedResource Include="ingriedient\FormAddIngredient.resx">
       <DependentUpon>FormAddIngredient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="account\FormAddAccount.resx">
@@ -285,7 +285,7 @@
     <EmbeddedResource Include="FormWaiterHome.resx">
       <DependentUpon>FormWaiterHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormIngredients.resx">
+    <EmbeddedResource Include="ingriedient\FormIngredients.resx">
       <DependentUpon>FormIngredients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

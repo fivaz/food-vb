@@ -21,6 +21,19 @@ namespace WindowsFormsApp2.shared
             connection = OracleConnector.getConnection();
         }
 
+        public DataTable ListAll()
+        {
+            try
+            {
+                string query = SQLHelper.SelectQuery(view);
+                return connection.SqlCommand(query);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public int Create(T obj)
         {
             try
@@ -45,7 +58,7 @@ namespace WindowsFormsApp2.shared
             try
             {
                 string query = SQLHelper.UpdateQuery(table, columns.ToArray(), columnId);
-                Console.WriteLine(query); 
+                Console.WriteLine(query);
                 OracleCommand command = connection.SqlPrepare(query);
                 BindObject(command, obj, true);
                 connection.execute(command);
@@ -80,10 +93,10 @@ namespace WindowsFormsApp2.shared
                 query = SQLHelper.SearchQuery(view, usedColumns);
             else
                 query = SQLHelper.SearchQuery(view, columns.ToArray());
-            
+
             Console.WriteLine(query);
             OracleCommand command = connection.SqlPrepare(query);
-            
+
             OracleParameter param = new OracleParameter(":query", OracleDbType.NVarchar2);
             param.Value = text + "%";
             command.Parameters.Add(param);

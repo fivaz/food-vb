@@ -10,6 +10,11 @@ namespace WindowsFormsApp2.shared.helper
             return query.Remove(query.Length - 2, 2);
         }
 
+        public static string SelectQuery(string view)
+        {
+            return "SELECT * FROM " + view;
+        }
+
         public static string InsertQuery(string table, string[] columns, string columnId = null, bool returnId = true)
         {
             StringBuilder query = new StringBuilder();
