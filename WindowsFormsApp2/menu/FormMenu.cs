@@ -55,5 +55,12 @@ namespace WindowsFormsApp2
             
             fa.ShowDialog();
         }
+
+        private void btnMenUsed_Click(object sender, EventArgs e)
+        {
+            int menuId = Convert.ToInt32(dgvMen.CurrentRow.Cells["MEN_ID"].Value.ToString());
+            Console.WriteLine(menuId);
+            new MenuORM().UseMenu(menuId);
+        }
     }
 }

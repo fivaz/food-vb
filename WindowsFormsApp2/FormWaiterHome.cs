@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp2.dish;
 
 namespace WindowsFormsApp2
 {
@@ -16,55 +10,39 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
-
-        private void label2_Click(object sender, EventArgs e)
+        private void FormWaiterHome_Load(object sender, EventArgs e)
         {
-
+            dgvWHoCategory1.DataSource = new DishORM().ListFromMenu("Entrée"); 
+            dgvWHoCategory2.DataSource = new DishORM().ListFromMenu("Plat principal");
+            //
+            dgvWHoCategory4.DataSource = new DishORM().ListFromMenu("Dessert");
+            formatDvg(dgvWHoCategory1);
+            formatDvg(dgvWHoCategory2);
+            formatDvg(dgvWHoCategory4);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void formatDvg(DataGridView dvg)
         {
-
+            dvg.Columns["DIS_ID"].Visible= false;
+            dvg.Columns["DIS_CAT_ID"].Visible= false;
+            dvg.Columns["DIS_NAME"].HeaderText = "nom";
+            dvg.Columns["DIS_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dvg.Columns["CAT_NAME"].HeaderText = "catégorie";
+            dvg.Columns["CAT_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dvg.Columns["PURCHASE_PRICE"].HeaderText = "prix";
+            dvg.Columns["PURCHASE_PRICE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dvg.Columns["MDR_DIS_ID"].Visible = false;
+            dvg.Columns["MDR_MEN_ID"].Visible = false;
+            dvg.Columns["MDR_QUANTITY"].HeaderText = "quantité";
+            dvg.Columns["MDR_QUANTITY"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dvg.Columns["USE_MEN_ID"].Visible = false;
+            dvg.AllowUserToAddRows = false;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void FormWaiterMenu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void btnWHoHistory_Click(object sender, EventArgs e)
         {
             new FormOrdersHistory().Show();
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

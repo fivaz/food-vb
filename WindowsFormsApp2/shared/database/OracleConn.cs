@@ -27,17 +27,31 @@ namespace WindowsFormsApp2.shared.database
 
         #region methods
 
-        public DataTable SqlCommand(string sql)
+        public void executeQuery(string sql)
         {
             try
             {
                 OracleCommand command = new OracleCommand(sql, connection);
                 command.CommandType = CommandType.Text;
                 command.CommandTimeout = 0;
-                OracleDataReader odr = command.ExecuteReader();
+                command.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public DataTable SelectQuery(string sql)
+        {
+            try
+            {
+                OracleCommand command = new OracleCommand(sql, connection);
+                command.CommandType = CommandType.Text;
+                command.CommandTimeout = 0;
+                OracleDataReader oracleDataReader = command.ExecuteReader();
                 DataTable data = new DataTable();
-                data.Load(odr);
-                close();
+                data.Load(oracleDataReader);
                 return data;
             }
             catch (Exception ex)
@@ -115,7 +129,7 @@ namespace WindowsFormsApp2.shared.database
             command.Parameters.Add(parameter);
         }
 
-        public void close()
+        public void Close()
         {
             connection.Close();
         }

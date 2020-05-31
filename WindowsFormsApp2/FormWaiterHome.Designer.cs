@@ -95,7 +95,6 @@
             this.button4.TabIndex = 37;
             this.button4.Text = "&Historique des commandes";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -106,7 +105,6 @@
             this.button3.TabIndex = 36;
             this.button3.Text = "Se &déconnecter";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label4
             // 
@@ -127,7 +125,6 @@
             this.label3.Size = new System.Drawing.Size(65, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "Boissons";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dataGridView4
             // 
@@ -247,7 +244,6 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "&Nouvelle commande";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
@@ -289,7 +285,6 @@
             this.dataGridView5.RowHeadersWidth = 51;
             this.dataGridView5.Size = new System.Drawing.Size(909, 194);
             this.dataGridView5.TabIndex = 19;
-            this.dataGridView5.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
             // 
             // label5
             // 
@@ -332,7 +327,6 @@
             this.btnWHoNew.TabIndex = 3;
             this.btnWHoNew.Text = "&Nouvelle commande";
             this.btnWHoNew.UseVisualStyleBackColor = true;
-            this.btnWHoNew.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // tbxWHoTable
             // 
@@ -503,7 +497,6 @@
             this.lblWHoCategory3.Size = new System.Drawing.Size(65, 17);
             this.lblWHoCategory3.TabIndex = 7;
             this.lblWHoCategory3.Text = "Boissons";
-            this.lblWHoCategory3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblWHoCategory4
             // 
@@ -526,7 +519,6 @@
             this.dgvWHoOrdTable.RowHeadersWidth = 51;
             this.dgvWHoOrdTable.Size = new System.Drawing.Size(909, 194);
             this.dgvWHoOrdTable.TabIndex = 19;
-            this.dgvWHoOrdTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
             // 
             // btnWHoLogout
             // 
@@ -537,7 +529,6 @@
             this.btnWHoLogout.TabIndex = 36;
             this.btnWHoLogout.Text = "Se &déconnecter";
             this.btnWHoLogout.UseVisualStyleBackColor = true;
-            this.btnWHoLogout.Click += new System.EventHandler(this.button3_Click);
             // 
             // lblWHoOrdTable
             // 
@@ -558,7 +549,7 @@
             this.btnWHoHistory.TabIndex = 37;
             this.btnWHoHistory.Text = "&Historique des commandes";
             this.btnWHoHistory.UseVisualStyleBackColor = true;
-            this.btnWHoHistory.Click += new System.EventHandler(this.button4_Click);
+            this.btnWHoHistory.Click += new System.EventHandler(this.btnWHoHistory_Click);
             // 
             // FormWaiterHome
             // 
@@ -592,7 +583,7 @@
             this.MinimumSize = new System.Drawing.Size(799, 364);
             this.Name = "FormWaiterHome";
             this.Text = "Page d\'accueil";
-            this.Load += new System.EventHandler(this.FormWaiterMenu_Load);
+            this.Load += new System.EventHandler(this.FormWaiterHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);

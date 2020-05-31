@@ -18,10 +18,15 @@ namespace WindowsFormsApp2
         private void btnAAcSubmit_Click(object sender, EventArgs e)
         {
             if (editMode)
+            {
                 Edit();
+                Close();
+            }
             else
+            {
                 Create();
-            ClearForm();
+                ClearForm();
+            }
         }
 
         private void FormAddAccount_FormClosing(object sender, FormClosingEventArgs e)

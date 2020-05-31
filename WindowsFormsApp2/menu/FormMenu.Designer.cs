@@ -33,13 +33,14 @@
             this.lblMenSearch = new System.Windows.Forms.Label();
             this.dgvMen = new System.Windows.Forms.DataGridView();
             this.btnMenDel = new System.Windows.Forms.Button();
+            this.btnMenUsed = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMen)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMenAdd
             // 
             this.btnMenAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMenAdd.Location = new System.Drawing.Point(562, 39);
+            this.btnMenAdd.Location = new System.Drawing.Point(560, 39);
             this.btnMenAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenAdd.Name = "btnMenAdd";
             this.btnMenAdd.Size = new System.Drawing.Size(129, 30);
@@ -83,7 +84,7 @@
             // btnMenDel
             // 
             this.btnMenDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMenDel.Location = new System.Drawing.Point(716, 39);
+            this.btnMenDel.Location = new System.Drawing.Point(715, 39);
             this.btnMenDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenDel.Name = "btnMenDel";
             this.btnMenDel.Size = new System.Drawing.Size(107, 30);
@@ -92,11 +93,24 @@
             this.btnMenDel.UseVisualStyleBackColor = true;
             this.btnMenDel.Click += new System.EventHandler(this.btnMenDel_Click);
             // 
+            // btnMenUsed
+            // 
+            this.btnMenUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMenUsed.Location = new System.Drawing.Point(405, 39);
+            this.btnMenUsed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMenUsed.Name = "btnMenUsed";
+            this.btnMenUsed.Size = new System.Drawing.Size(129, 30);
+            this.btnMenUsed.TabIndex = 6;
+            this.btnMenUsed.Text = "&Utiliser menu";
+            this.btnMenUsed.UseVisualStyleBackColor = true;
+            this.btnMenUsed.Click += new System.EventHandler(this.btnMenUsed_Click);
+            // 
             // FormMenus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 454);
+            this.Controls.Add(this.btnMenUsed);
             this.Controls.Add(this.btnMenAdd);
             this.Controls.Add(this.lblMenSearch);
             this.Controls.Add(this.tbxMenSearch);
@@ -120,5 +134,6 @@
         private System.Windows.Forms.Label lblMenSearch;
         private System.Windows.Forms.DataGridView dgvMen;
         private System.Windows.Forms.Button btnMenDel;
+        private System.Windows.Forms.Button btnMenUsed;
     }
 }

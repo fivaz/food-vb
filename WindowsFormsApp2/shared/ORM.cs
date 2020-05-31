@@ -26,7 +26,7 @@ namespace WindowsFormsApp2.shared
             try
             {
                 string query = SQLHelper.SelectQuery(view);
-                return connection.SqlCommand(query);
+                return connection.SelectQuery(query);
             }
             catch (Exception ex)
             {

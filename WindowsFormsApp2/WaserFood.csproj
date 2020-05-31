@@ -88,6 +88,11 @@
     <Compile Include="category\Category.cs" />
     <Compile Include="account\Account.cs" />
     <Compile Include="category\CategoryORM.cs" />
+    <Compile Include="FoodWaser.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodWaser.xsd</DependentUpon>
+    </Compile>
     <Compile Include="menu\Menu.cs" />
     <Compile Include="menu\MenuORM.cs" />
     <Compile Include="dish\DishORM.cs" />
@@ -274,6 +279,17 @@
     </None>
     <None Include="CategorySet.xss">
       <DependentUpon>CategorySet.xsd</DependentUpon>
+    </None>
+    <None Include="FoodWaser.xsc">
+      <DependentUpon>FoodWaser.xsd</DependentUpon>
+    </None>
+    <None Include="FoodWaser.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FoodWaser.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FoodWaser.xss">
+      <DependentUpon>FoodWaser.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

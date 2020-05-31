@@ -19,6 +19,19 @@ namespace WindowsFormsApp2.dish
             deleteColumn = "DIS_IS_DELETED";
         }
 
+        internal DataTable ListFromMenu(string categoryName)
+        {
+            string query = "SELECT * FROM vw_used_dishes WHERE CAT_NAME = :CAT_NAME";
+
+            OracleCommand command = connection.SqlPrepare(query);
+            connection.AddString(command, "CAT_NAME", categoryName);
+            OracleDataReader oracleDataReader = connection.execute(command);
+            DataTable dataTable = new DataTable();
+            dataTable.Load(oracleDataReader);
+            connection.Close();
+            return dataTable;
+        }
+
         public override void BindObject(OracleCommand command, Dish dish, bool withId)
         {
             connection.AddInt(command, "DIS_CAT_ID", dish.categoryId);
