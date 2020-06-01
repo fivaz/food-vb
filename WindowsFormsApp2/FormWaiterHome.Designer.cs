@@ -502,6 +502,7 @@
             this.dgvWHoDish.RowHeadersWidth = 51;
             this.dgvWHoDish.Size = new System.Drawing.Size(909, 194);
             this.dgvWHoDish.TabIndex = 19;
+            this.dgvWHoDish.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWHoDish_CellDoubleClick);
             // 
             // btnWHoLogout
             // 

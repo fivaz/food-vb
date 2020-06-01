@@ -90,10 +90,10 @@ namespace WindowsFormsApp2
 
         private void dgvWHoCategory1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgvTransition(dgvWHoCategory1);
+            addDisheToOrder(dgvWHoCategory1);
         }
 
-        private void dgvTransition(DataGridView dgv)
+        private void addDisheToOrder(DataGridView dgv)
         {
             DataGridViewRow currentRow = dgv.CurrentRow;
 
@@ -114,7 +114,7 @@ namespace WindowsFormsApp2
 
         private void dgvWHoCategory2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgvTransition(dgvWHoCategory2);
+            addDisheToOrder(dgvWHoCategory2);
         }
 
         private void dgvWHoCategory3_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -123,7 +123,55 @@ namespace WindowsFormsApp2
         }
         private void dgvWHoCategory4_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgvTransition(dgvWHoCategory4);
+            addDisheToOrder(dgvWHoCategory4);
+        }
+
+        private void dgvWHoDish_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            removeDishFromOrder();
+        }
+        //Category can only have 4 possible values it should be an ENUM
+        private void removeDishFromOrder()
+        {
+            DataGridViewRow currentRow = dgvWHoDish.CurrentRow;
+
+            string categoryName = currentRow.Cells["CAT_NAME"].Value.ToString();
+            DataGridView dgv = null;
+            switch (categoryName)
+            {
+                case "Entrée":
+                    dgv = this.dgvWHoCategory1;
+                    Console.WriteLine("Entrée");
+                    break;
+                case "Plat principal":
+                    dgv = this.dgvWHoCategory2;
+                    Console.WriteLine("Plat");
+                    break;
+                case "Boisson":
+                    dgv = this.dgvWHoCategory3;
+                    Console.WriteLine("Boisson");
+                    break;
+                case "Dessert":
+                    dgv = this.dgvWHoCategory4;
+                    Console.WriteLine("Dessert");
+                    break;
+            }
+            DataTable dataTable = (DataTable) dgv.DataSource;
+
+            DataRow dataRow = dataTable.NewRow();
+            dataRow["DIS_ID"] = currentRow.Cells["DIS_ID"].Value;
+            dataRow["DIS_CAT_ID"] = currentRow.Cells["DIS_CAT_ID"].Value;
+            dataRow["DIS_NAME"] = currentRow.Cells["DIS_NAME"].Value;
+            dataRow["CAT_NAME"] = currentRow.Cells["CAT_NAME"].Value;
+            dataRow["PURCHASE_PRICE"] = currentRow.Cells["PURCHASE_PRICE"].Value;
+            dataRow["MDR_DIS_ID"] = currentRow.Cells["MDR_DIS_ID"].Value;
+            dataRow["MDR_MEN_ID"] = currentRow.Cells["MDR_MEN_ID"].Value;
+            dataRow["MDR_QUANTITY"] = currentRow.Cells["MDR_QUANTITY"].Value;
+            dataRow["USE_MEN_ID"] = currentRow.Cells["USE_MEN_ID"].Value;
+
+            dataTable.Rows.Add(dataRow);
+
+            dgvWHoDish.Rows.Remove(currentRow);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
