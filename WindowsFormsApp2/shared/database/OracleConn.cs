@@ -122,6 +122,13 @@ namespace WindowsFormsApp2.shared.database
             currentCommand.Parameters.Add(param);
         }
 
+        public void AddDate(OracleCommand currentCommand, string column, DateTime value)
+        {
+            OracleParameter param = new OracleParameter(":" + column, OracleDbType.Date);
+            param.Value = value;
+            currentCommand.Parameters.Add(param);
+        }
+
         public void addReturnId(OracleCommand command)
         {
             OracleParameter parameter = new OracleParameter("RETURNED_ID", OracleDbType.Int32);

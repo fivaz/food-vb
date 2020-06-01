@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Windows.Forms;
 using WindowsFormsApp2.dish;
+using WindowsFormsApp2.order;
 
 namespace WindowsFormsApp2
 {
@@ -12,31 +15,74 @@ namespace WindowsFormsApp2
         }
         private void FormWaiterHome_Load(object sender, EventArgs e)
         {
-            dgvWHoCategory1.DataSource = new DishORM().ListFromMenu("Entrée"); 
+            // TODO: This line of code loads data into the 'dataSet1.VW_TABLE' table. You can move, or remove it, as needed.
+            this.vW_TABLETableAdapter.Fill(this.dataSet1.VW_TABLE);
+            dgvWHoCategory1.DataSource = new DishORM().ListFromMenu("Entrée");
             dgvWHoCategory2.DataSource = new DishORM().ListFromMenu("Plat principal");
             //
             dgvWHoCategory4.DataSource = new DishORM().ListFromMenu("Dessert");
-            formatDvg(dgvWHoCategory1);
-            formatDvg(dgvWHoCategory2);
-            formatDvg(dgvWHoCategory4);
+            formatDgv(dgvWHoCategory1);
+            formatDgv(dgvWHoCategory2);
+            formatDgv(dgvWHoCategory4);
+            initializeDgvDishes();
+            formatDgv(dgvWHoDish);
+
+
         }
 
-        private void formatDvg(DataGridView dvg)
+        private void formatDgv(DataGridView dgv)
         {
-            dvg.Columns["DIS_ID"].Visible= false;
-            dvg.Columns["DIS_CAT_ID"].Visible= false;
-            dvg.Columns["DIS_NAME"].HeaderText = "nom";
-            dvg.Columns["DIS_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dvg.Columns["CAT_NAME"].HeaderText = "catégorie";
-            dvg.Columns["CAT_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dvg.Columns["PURCHASE_PRICE"].HeaderText = "prix";
-            dvg.Columns["PURCHASE_PRICE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dvg.Columns["MDR_DIS_ID"].Visible = false;
-            dvg.Columns["MDR_MEN_ID"].Visible = false;
-            dvg.Columns["MDR_QUANTITY"].HeaderText = "quantité";
-            dvg.Columns["MDR_QUANTITY"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dvg.Columns["USE_MEN_ID"].Visible = false;
-            dvg.AllowUserToAddRows = false;
+            dgv.Columns["DIS_ID"].Visible = false;
+            dgv.Columns["DIS_CAT_ID"].Visible = false;
+            dgv.Columns["DIS_NAME"].HeaderText = "nom";
+            dgv.Columns["DIS_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgv.Columns["CAT_NAME"].HeaderText = "catégorie";
+            dgv.Columns["CAT_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgv.Columns["PURCHASE_PRICE"].HeaderText = "prix";
+            dgv.Columns["PURCHASE_PRICE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgv.Columns["MDR_DIS_ID"].Visible = false;
+            dgv.Columns["MDR_MEN_ID"].Visible = false;
+            dgv.Columns["MDR_QUANTITY"].HeaderText = "quantité";
+            dgv.Columns["MDR_QUANTITY"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgv.Columns["USE_MEN_ID"].Visible = false;
+            dgv.AllowUserToAddRows = false;
+        }
+
+        private void initializeDgvDishes()
+        {
+            DataGridViewColumn colId = new DataGridViewTextBoxColumn();
+            DataGridViewColumn colCatId = new DataGridViewTextBoxColumn();
+            DataGridViewColumn colName = new DataGridViewTextBoxColumn();
+            DataGridViewColumn colCatName = new DataGridViewTextBoxColumn();
+            DataGridViewColumn colPrice = new DataGridViewTextBoxColumn();
+            DataGridViewColumn colQuantity = new DataGridViewTextBoxColumn();
+            DataGridViewColumn colId2 = new DataGridViewTextBoxColumn();
+            DataGridViewColumn colMenId = new DataGridViewTextBoxColumn();
+            DataGridViewColumn colMenId2 = new DataGridViewTextBoxColumn();
+
+            colId.Name = "DIS_ID";
+            colCatId.Name = "DIS_CAT_ID";
+            colName.Name = "DIS_NAME";
+            colCatName.Name = "CAT_NAME";
+            colPrice.Name = "PURCHASE_PRICE";
+            colId2.Name = "MDR_DIS_ID";
+            colMenId.Name = "MDR_MEN_ID";
+            colQuantity.Name = "MDR_QUANTITY";
+            colMenId2.Name = "USE_MEN_ID";
+
+            DataGridViewColumn[] columns = {
+                colId,
+                colCatId,
+                colName,
+                colCatName,
+                colPrice,
+                colId2,
+                colMenId,
+                colQuantity,
+                colMenId2
+            };
+
+            dgvWHoDish.Columns.AddRange(columns);
         }
 
         private void btnWHoHistory_Click(object sender, EventArgs e)
@@ -44,5 +90,91 @@ namespace WindowsFormsApp2
             new FormOrdersHistory().Show();
         }
 
+        private void dgvWHoCategory1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvTransition(dgvWHoCategory1);
+        }
+
+        private void dgvTransition(DataGridView dgv)
+        {
+            DataGridViewRow currentRow = dgv.CurrentRow;
+
+            int index = dgvWHoDish.Rows.Add();
+            DataGridViewRow dataGridViewRow = dgvWHoDish.Rows[index];
+            dataGridViewRow.Cells["DIS_ID"].Value = currentRow.Cells["DIS_ID"].Value;
+            dataGridViewRow.Cells["DIS_CAT_ID"].Value = currentRow.Cells["DIS_CAT_ID"].Value;
+            dataGridViewRow.Cells["DIS_NAME"].Value = currentRow.Cells["DIS_NAME"].Value;
+            dataGridViewRow.Cells["CAT_NAME"].Value = currentRow.Cells["CAT_NAME"].Value;
+            dataGridViewRow.Cells["PURCHASE_PRICE"].Value = currentRow.Cells["PURCHASE_PRICE"].Value;
+            dataGridViewRow.Cells["MDR_DIS_ID"].Value = currentRow.Cells["MDR_DIS_ID"].Value;
+            dataGridViewRow.Cells["MDR_MEN_ID"].Value = currentRow.Cells["MDR_MEN_ID"].Value;
+            dataGridViewRow.Cells["MDR_QUANTITY"].Value = currentRow.Cells["MDR_QUANTITY"].Value;
+            dataGridViewRow.Cells["USE_MEN_ID"].Value = currentRow.Cells["USE_MEN_ID"].Value;
+
+            //ORD_ID
+            //ORD_ACC_ID
+            //ORD_TAB_ID
+            //ORD_DATE
+
+            //ODR_DIS_ID
+            //ODR_ORD_ID
+            //ODR_QUANTITY
+
+            dgv.Rows.Remove(currentRow);
+        }
+
+        private void dgvWHoCategory2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvTransition(dgvWHoCategory2);
+        }
+
+        private void dgvWHoCategory3_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnWHoSubmit_Click(object sender, EventArgs e)
+        {
+            Create();
+        }
+        public void Create()
+        {
+            OrderORM orderORM = new OrderORM();
+            int orderId = orderORM.Create(Build());
+            List<Dish> addedDishes = getAddedDishes();
+            foreach (Dish dish in addedDishes)
+                orderORM.addRelation(orderId, dish);
+        }
+
+        public Order Build()
+        {
+            int accountId = 1;
+            int tableId = Convert.ToInt32(cbxWHoTable.SelectedValue.ToString());
+            return new Order(0, accountId, tableId, DateTime.Now);
+        }
+
+        public List<Dish> getAddedDishes()
+        {
+            List<Dish> dishes = new List<Dish>();
+            foreach (DataGridViewRow row in dgvWHoDish.Rows)
+            {
+                int dishId = Convert.ToInt32(row.Cells["DIS_ID"].Value.ToString());
+                double quantity = Convert.ToDouble(row.Cells["MDR_QUANTITY"].Value.ToString());
+
+                Dish dish = new Dish(dishId, 0, null, 0, quantity);
+                dishes.Add(dish);
+            }
+            return dishes;
+        }
+
+        private void dgvWHoCategory4_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvTransition(dgvWHoCategory4);
+        }
     }
 }

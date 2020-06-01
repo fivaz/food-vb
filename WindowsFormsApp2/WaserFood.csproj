@@ -88,6 +88,13 @@
     <Compile Include="category\Category.cs" />
     <Compile Include="account\Account.cs" />
     <Compile Include="category\CategoryORM.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="order\Order.cs" />
+    <Compile Include="order\OrderORM.cs" />
     <Compile Include="FoodWaser.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -279,6 +286,17 @@
     </None>
     <None Include="CategorySet.xss">
       <DependentUpon>CategorySet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="FoodWaser.xsc">
       <DependentUpon>FoodWaser.xsd</DependentUpon>

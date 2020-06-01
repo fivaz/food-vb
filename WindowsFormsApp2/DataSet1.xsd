@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="newConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="newConnectionString (Settings)" ParameterPrefix=":" PropertyReference="ApplicationSettings.WindowsFormsApp2.Properties.Settings.GlobalReference.Default.newConnectionString" Provider="Oracle.ManagedDataAccess.Client" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VW_TABLETableAdapter" GeneratorDataComponentClassName="VW_TABLETableAdapter" Name="VW_TABLE" UserDataComponentName="VW_TABLETableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="newConnectionString (Settings)" DbObjectName="FOO_DBA.VW_TABLE" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TAB_ID, TAB_NAME, TAB_IS_DELETED FROM FOO_DBA.VW_TABLE</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TAB_ID" DataSetColumn="TAB_ID" />
+              <Mapping SourceColumn="TAB_NAME" DataSetColumn="TAB_NAME" />
+              <Mapping SourceColumn="TAB_IS_DELETED" DataSetColumn="TAB_IS_DELETED" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VW_TABLE" msprop:Generator_TableClassName="VW_TABLEDataTable" msprop:Generator_TableVarName="tableVW_TABLE" msprop:Generator_TablePropName="VW_TABLE" msprop:Generator_RowDeletingName="VW_TABLERowDeleting" msprop:Generator_RowChangingName="VW_TABLERowChanging" msprop:Generator_RowEvHandlerName="VW_TABLERowChangeEventHandler" msprop:Generator_RowDeletedName="VW_TABLERowDeleted" msprop:Generator_UserTableName="VW_TABLE" msprop:Generator_RowChangedName="VW_TABLERowChanged" msprop:Generator_RowEvArgName="VW_TABLERowChangeEvent" msprop:Generator_RowClassName="VW_TABLERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TAB_ID" msprop:Generator_ColumnVarNameInTable="columnTAB_ID" msprop:Generator_ColumnPropNameInRow="TAB_ID" msprop:Generator_ColumnPropNameInTable="TAB_IDColumn" msprop:Generator_UserColumnName="TAB_ID" type="xs:decimal" />
+              <xs:element name="TAB_NAME" msprop:Generator_ColumnVarNameInTable="columnTAB_NAME" msprop:Generator_ColumnPropNameInRow="TAB_NAME" msprop:Generator_ColumnPropNameInTable="TAB_NAMEColumn" msprop:Generator_UserColumnName="TAB_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TAB_IS_DELETED" msprop:Generator_ColumnVarNameInTable="columnTAB_IS_DELETED" msprop:Generator_ColumnPropNameInRow="TAB_IS_DELETED" msprop:Generator_ColumnPropNameInTable="TAB_IS_DELETEDColumn" msprop:Generator_UserColumnName="TAB_IS_DELETED" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

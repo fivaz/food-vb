@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,14 +43,11 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.lblTableNumber = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnWHoNew = new System.Windows.Forms.Button();
-            this.tbxWHoTable = new System.Windows.Forms.TextBox();
             this.lblWHoTable = new System.Windows.Forms.Label();
             this.btnWHoSubmit = new System.Windows.Forms.Button();
             this.gpbWHoOrders = new System.Windows.Forms.GroupBox();
@@ -64,10 +62,14 @@
             this.dgvWHoCategory4 = new System.Windows.Forms.DataGridView();
             this.lblWHoCategory3 = new System.Windows.Forms.Label();
             this.lblWHoCategory4 = new System.Windows.Forms.Label();
-            this.dgvWHoOrdTable = new System.Windows.Forms.DataGridView();
+            this.dgvWHoDish = new System.Windows.Forms.DataGridView();
             this.btnWHoLogout = new System.Windows.Forms.Button();
             this.lblWHoOrdTable = new System.Windows.Forms.Label();
             this.btnWHoHistory = new System.Windows.Forms.Button();
+            this.cbxWHoTable = new System.Windows.Forms.ComboBox();
+            this.vWTABLEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new WindowsFormsApp2.DataSet1();
+            this.vW_TABLETableAdapter = new WindowsFormsApp2.DataSet1TableAdapters.VW_TABLETableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -83,7 +85,9 @@
             this.tlpWHo2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWHoCategory3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWHoCategory4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvWHoOrdTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWHoDish)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWTABLEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
@@ -256,24 +260,6 @@
             this.button2.Text = "&Confirmer";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // lblTableNumber
-            // 
-            this.lblTableNumber.AutoSize = true;
-            this.lblTableNumber.Location = new System.Drawing.Point(33, 30);
-            this.lblTableNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTableNumber.Name = "lblTableNumber";
-            this.lblTableNumber.Size = new System.Drawing.Size(44, 17);
-            this.lblTableNumber.TabIndex = 5;
-            this.lblTableNumber.Text = "&Table";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(34, 49);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 22);
-            this.textBox1.TabIndex = 4;
-            // 
             // dataGridView5
             // 
             this.dataGridView5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -328,18 +314,10 @@
             this.btnWHoNew.Text = "&Nouvelle commande";
             this.btnWHoNew.UseVisualStyleBackColor = true;
             // 
-            // tbxWHoTable
-            // 
-            this.tbxWHoTable.Location = new System.Drawing.Point(34, 49);
-            this.tbxWHoTable.Margin = new System.Windows.Forms.Padding(4);
-            this.tbxWHoTable.Name = "tbxWHoTable";
-            this.tbxWHoTable.Size = new System.Drawing.Size(154, 22);
-            this.tbxWHoTable.TabIndex = 4;
-            // 
             // lblWHoTable
             // 
             this.lblWHoTable.AutoSize = true;
-            this.lblWHoTable.Location = new System.Drawing.Point(33, 30);
+            this.lblWHoTable.Location = new System.Drawing.Point(31, 23);
             this.lblWHoTable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWHoTable.Name = "lblWHoTable";
             this.lblWHoTable.Size = new System.Drawing.Size(44, 17);
@@ -356,6 +334,7 @@
             this.btnWHoSubmit.TabIndex = 14;
             this.btnWHoSubmit.Text = "&Confirmer";
             this.btnWHoSubmit.UseVisualStyleBackColor = true;
+            this.btnWHoSubmit.Click += new System.EventHandler(this.btnWHoSubmit_Click);
             // 
             // gpbWHoOrders
             // 
@@ -411,6 +390,7 @@
             this.dgvWHoCategory1.RowHeadersWidth = 51;
             this.dgvWHoCategory1.Size = new System.Drawing.Size(454, 181);
             this.dgvWHoCategory1.TabIndex = 10;
+            this.dgvWHoCategory1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWHoCategory1_CellDoubleClick);
             // 
             // dgvWHoCategory2
             // 
@@ -423,6 +403,7 @@
             this.dgvWHoCategory2.RowHeadersWidth = 51;
             this.dgvWHoCategory2.Size = new System.Drawing.Size(455, 181);
             this.dgvWHoCategory2.TabIndex = 8;
+            this.dgvWHoCategory2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWHoCategory2_CellDoubleClick);
             // 
             // lblWHoCategory1
             // 
@@ -475,6 +456,7 @@
             this.dgvWHoCategory3.RowHeadersWidth = 51;
             this.dgvWHoCategory3.Size = new System.Drawing.Size(454, 181);
             this.dgvWHoCategory3.TabIndex = 10;
+            this.dgvWHoCategory3.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWHoCategory3_CellDoubleClick);
             // 
             // dgvWHoCategory4
             // 
@@ -487,6 +469,7 @@
             this.dgvWHoCategory4.RowHeadersWidth = 51;
             this.dgvWHoCategory4.Size = new System.Drawing.Size(455, 181);
             this.dgvWHoCategory4.TabIndex = 8;
+            this.dgvWHoCategory4.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWHoCategory4_CellDoubleClick);
             // 
             // lblWHoCategory3
             // 
@@ -508,17 +491,17 @@
             this.lblWHoCategory4.TabIndex = 9;
             this.lblWHoCategory4.Text = "Desserts";
             // 
-            // dgvWHoOrdTable
+            // dgvWHoDish
             // 
-            this.dgvWHoOrdTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvWHoDish.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvWHoOrdTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvWHoOrdTable.Location = new System.Drawing.Point(42, 687);
-            this.dgvWHoOrdTable.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvWHoOrdTable.Name = "dgvWHoOrdTable";
-            this.dgvWHoOrdTable.RowHeadersWidth = 51;
-            this.dgvWHoOrdTable.Size = new System.Drawing.Size(909, 194);
-            this.dgvWHoOrdTable.TabIndex = 19;
+            this.dgvWHoDish.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWHoDish.Location = new System.Drawing.Point(42, 687);
+            this.dgvWHoDish.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvWHoDish.Name = "dgvWHoDish";
+            this.dgvWHoDish.RowHeadersWidth = 51;
+            this.dgvWHoDish.Size = new System.Drawing.Size(909, 194);
+            this.dgvWHoDish.TabIndex = 19;
             // 
             // btnWHoLogout
             // 
@@ -551,19 +534,46 @@
             this.btnWHoHistory.UseVisualStyleBackColor = true;
             this.btnWHoHistory.Click += new System.EventHandler(this.btnWHoHistory_Click);
             // 
+            // cbxWHoTable
+            // 
+            this.cbxWHoTable.DataSource = this.vWTABLEBindingSource;
+            this.cbxWHoTable.DisplayMember = "TAB_NAME";
+            this.cbxWHoTable.FormattingEnabled = true;
+            this.cbxWHoTable.Location = new System.Drawing.Point(34, 45);
+            this.cbxWHoTable.Name = "cbxWHoTable";
+            this.cbxWHoTable.Size = new System.Drawing.Size(121, 24);
+            this.cbxWHoTable.TabIndex = 38;
+            this.cbxWHoTable.ValueMember = "TAB_ID";
+            this.cbxWHoTable.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // vWTABLEBindingSource
+            // 
+            this.vWTABLEBindingSource.DataMember = "VW_TABLE";
+            this.vWTABLEBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vW_TABLETableAdapter
+            // 
+            this.vW_TABLETableAdapter.ClearBeforeFill = true;
+            // 
             // FormWaiterHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(993, 925);
+            this.Controls.Add(this.cbxWHoTable);
             this.Controls.Add(this.btnWHoHistory);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.lblWHoOrdTable);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnWHoLogout);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.dgvWHoOrdTable);
+            this.Controls.Add(this.dgvWHoDish);
             this.Controls.Add(this.dataGridView5);
             this.Controls.Add(this.tlpWHo2);
             this.Controls.Add(this.tableLayoutPanel2);
@@ -574,10 +584,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblWHoTable);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.tbxWHoTable);
-            this.Controls.Add(this.lblTableNumber);
             this.Controls.Add(this.btnWHoNew);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(799, 364);
@@ -603,7 +610,9 @@
             this.tlpWHo2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWHoCategory3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWHoCategory4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvWHoOrdTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWHoDish)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vWTABLEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -625,14 +634,11 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label lblTableNumber;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnWHoNew;
-        private System.Windows.Forms.TextBox tbxWHoTable;
         private System.Windows.Forms.Label lblWHoTable;
         private System.Windows.Forms.Button btnWHoSubmit;
         private System.Windows.Forms.GroupBox gpbWHoOrders;
@@ -647,10 +653,14 @@
         private System.Windows.Forms.DataGridView dgvWHoCategory4;
         private System.Windows.Forms.Label lblWHoCategory3;
         private System.Windows.Forms.Label lblWHoCategory4;
-        private System.Windows.Forms.DataGridView dgvWHoOrdTable;
+        private System.Windows.Forms.DataGridView dgvWHoDish;
         private System.Windows.Forms.Button btnWHoLogout;
         private System.Windows.Forms.Label lblWHoOrdTable;
         private System.Windows.Forms.Button btnWHoHistory;
+        private System.Windows.Forms.ComboBox cbxWHoTable;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource vWTABLEBindingSource;
+        private DataSet1TableAdapters.VW_TABLETableAdapter vW_TABLETableAdapter;
     }
 }
 
