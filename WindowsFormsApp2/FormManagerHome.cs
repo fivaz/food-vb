@@ -181,5 +181,23 @@ namespace WindowsFormsApp2
         {
             LayoutMdi(MdiLayout.TileVertical);
         }
+
+        private void btnMHoLogout_Click(object sender, EventArgs e)
+        {
+            FormSignIn form = FormSignIn.getInstance();
+            form.Show();
+            this.Hide();
+        }
+
+        private void FormManagerHome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FormFrame form = FormFrame.getInstance();
+            form.Close();
+        }
+
+        private void FormManagerHome_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -40,8 +40,8 @@
             this.msiMHoStats = new System.Windows.Forms.ToolStripMenuItem();
             this.msiMHoWindows = new System.Windows.Forms.ToolStripMenuItem();
             this.msiMHoHorizontalAlign = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnMHoLogout = new System.Windows.Forms.Button();
             this.msiMHoverticalAlign = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMHoLogout = new System.Windows.Forms.Button();
             this.mstManager.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,21 +97,21 @@
             // msiMHoTables
             // 
             this.msiMHoTables.Name = "msiMHoTables";
-            this.msiMHoTables.Size = new System.Drawing.Size(224, 26);
+            this.msiMHoTables.Size = new System.Drawing.Size(201, 26);
             this.msiMHoTables.Text = "Gérer &tables";
             this.msiMHoTables.Click += new System.EventHandler(this.gérerTablesToolStripMenuItem_Click);
             // 
             // msiMHoAccounts
             // 
             this.msiMHoAccounts.Name = "msiMHoAccounts";
-            this.msiMHoAccounts.Size = new System.Drawing.Size(224, 26);
+            this.msiMHoAccounts.Size = new System.Drawing.Size(201, 26);
             this.msiMHoAccounts.Text = "Gérer &comptes";
             this.msiMHoAccounts.Click += new System.EventHandler(this.gérerToolStripMenuItem_Click);
             // 
             // msiMHoCategory
             // 
             this.msiMHoCategory.Name = "msiMHoCategory";
-            this.msiMHoCategory.Size = new System.Drawing.Size(224, 26);
+            this.msiMHoCategory.Size = new System.Drawing.Size(201, 26);
             this.msiMHoCategory.Text = "&Gérer catégories";
             this.msiMHoCategory.Click += new System.EventHandler(this.gérerToolStripMenuItem1_Click);
             // 
@@ -139,6 +139,13 @@
             this.msiMHoHorizontalAlign.Text = "Aligner horizontalement";
             this.msiMHoHorizontalAlign.Click += new System.EventHandler(this.alignerToolStripMenuItem_Click);
             // 
+            // msiMHoverticalAlign
+            // 
+            this.msiMHoverticalAlign.Name = "msiMHoverticalAlign";
+            this.msiMHoverticalAlign.Size = new System.Drawing.Size(253, 26);
+            this.msiMHoverticalAlign.Text = "Aligner verticalement";
+            this.msiMHoverticalAlign.Click += new System.EventHandler(this.alignerVerticalementToolStripMenuItem_Click);
+            // 
             // btnMHoLogout
             // 
             this.btnMHoLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -148,13 +155,7 @@
             this.btnMHoLogout.TabIndex = 6;
             this.btnMHoLogout.Text = "Se &déconnecter";
             this.btnMHoLogout.UseVisualStyleBackColor = true;
-            // 
-            // msiMHoverticalAlign
-            // 
-            this.msiMHoverticalAlign.Name = "msiMHoverticalAlign";
-            this.msiMHoverticalAlign.Size = new System.Drawing.Size(253, 26);
-            this.msiMHoverticalAlign.Text = "Aligner verticalement";
-            this.msiMHoverticalAlign.Click += new System.EventHandler(this.alignerVerticalementToolStripMenuItem_Click);
+            this.btnMHoLogout.Click += new System.EventHandler(this.btnMHoLogout_Click);
             // 
             // FormManagerHome
             // 
@@ -170,6 +171,8 @@
             this.Name = "FormManagerHome";
             this.ShowIcon = false;
             this.Text = "Page d\'accueil";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormManagerHome_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormManagerHome_FormClosed);
             this.mstManager.ResumeLayout(false);
             this.mstManager.PerformLayout();
             this.ResumeLayout(false);

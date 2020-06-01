@@ -95,6 +95,7 @@
             this.MaximizeBox = false;
             this.Name = "FormSignIn";
             this.Text = "Connexion";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSignIn_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

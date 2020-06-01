@@ -219,5 +219,17 @@ namespace WindowsFormsApp2
             while(dgvWHoDish.Rows.Count > 0)
                 removeDishFromOrder(dgvWHoDish.Rows[0]);
         }
+
+        private void btnWHoLogout_Click(object sender, EventArgs e)
+        {
+            FormSignIn form = FormSignIn.getInstance();
+            form.Show();
+            this.Hide();
+        }
+
+        private void FormWaiterHome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

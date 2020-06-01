@@ -6,12 +6,27 @@ namespace WindowsFormsApp2
 {
     public partial class FormSignIn : Form
     {
+        static FormSignIn instance;
+
         public FormSignIn()
         {
             InitializeComponent();
+            instance = this;
+        }
+
+        public static FormSignIn getInstance()
+        {
+            if (instance == null)
+                new FormSignIn();
+            return instance;
         }
 
         private void btnSInSubmit_Click(object sender, EventArgs e)
+        {
+            Submit();
+        }
+
+        private void Submit()
         {
             string email = txbSInEmail.Text;
             string password = txbSInPassword.Text;
@@ -26,11 +41,18 @@ namespace WindowsFormsApp2
                 else
                     mainForm = new FormWaiterHome(account.id);
                 mainForm.Show();
-                mainForm.FormClosed += new FormClosedEventHandler(mainForm_FormClosed);
-                this.Hide();
+                ClearForm();
+                Hide();
             }
         }
-        void mainForm_FormClosed(object sender, FormClosedEventArgs e)
+
+        public void ClearForm()
+        {
+            txbSInEmail.Text = "";
+            txbSInPassword.Text = "";
+        }
+
+        private void FormSignIn_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }

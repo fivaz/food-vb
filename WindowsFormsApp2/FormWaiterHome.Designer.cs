@@ -514,6 +514,7 @@
             this.btnWHoLogout.TabIndex = 36;
             this.btnWHoLogout.Text = "Se &déconnecter";
             this.btnWHoLogout.UseVisualStyleBackColor = true;
+            this.btnWHoLogout.Click += new System.EventHandler(this.btnWHoLogout_Click);
             // 
             // lblWHoOrdTable
             // 
@@ -592,6 +593,7 @@
             this.MinimumSize = new System.Drawing.Size(799, 364);
             this.Name = "FormWaiterHome";
             this.Text = "Page d\'accueil";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormWaiterHome_FormClosing);
             this.Load += new System.EventHandler(this.FormWaiterHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();

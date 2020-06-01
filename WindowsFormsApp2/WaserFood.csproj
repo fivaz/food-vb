@@ -93,6 +93,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FormFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFrame.Designer.cs">
+      <DependentUpon>FormFrame.cs</DependentUpon>
+    </Compile>
     <Compile Include="order\Order.cs" />
     <Compile Include="order\OrderORM.cs" />
     <Compile Include="FoodWaser.Designer.cs">
