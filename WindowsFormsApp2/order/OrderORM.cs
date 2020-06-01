@@ -62,5 +62,18 @@ namespace WindowsFormsApp2.order
                 throw new Exception(ex.Message);
             }
         }
+
+        public DataTable listAllWithDishes()
+        {
+            try
+            {
+                string query = SQLHelper.SelectQuery("vw_order_with_dishes");
+                return connection.SelectQuery(query);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

@@ -195,10 +195,7 @@ namespace WindowsFormsApp2
 
         public Order Build()
         {
-            //ORD_ID
-            //ORD_ACC_ID
-            //ORD_TAB_ID
-            //ORD_DATE
+            //TODO
             int accountId = 1;
             int tableId = Convert.ToInt32(cbxWHoTable.SelectedValue.ToString());
             return new Order(0, accountId, tableId, DateTime.Now);

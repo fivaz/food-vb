@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp2.order;
 
 namespace WindowsFormsApp2
 {
@@ -17,19 +11,23 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void FormOrdersHistory_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Dispose();
+            dgvHis.DataSource = new OrderORM().listAllWithDishes();
+            dgvHis.Columns["ORD_ID"].HeaderText = "id";
+            dgvHis.Columns["ORD_ID"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvHis.Columns["ORD_DATE"].HeaderText = "date";
+            dgvHis.Columns["ORD_DATE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvHis.Columns["ODR_QUANTITY"].HeaderText = "quantité";
+            dgvHis.Columns["ODR_QUANTITY"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvHis.Columns["DIS_NAME"].HeaderText = "nom";
+            dgvHis.Columns["DIS_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvHis.Columns["ACC_FIRST_NAME"].HeaderText = "servi par prénom";
+            dgvHis.Columns["ACC_FIRST_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvHis.Columns["ACC_LAST_NAME"].HeaderText = "nom";
+            dgvHis.Columns["ACC_LAST_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dgvHis.Columns["TAB_NAME"].HeaderText = "table";
+            dgvHis.Columns["TAB_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
         }
     }
 }
