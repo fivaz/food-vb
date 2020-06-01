@@ -26,8 +26,6 @@ namespace WindowsFormsApp2
             formatDgv(dgvWHoCategory4);
             initializeDgvDishes();
             formatDgv(dgvWHoDish);
-
-
         }
 
         private void formatDgv(DataGridView dgv)
@@ -111,15 +109,6 @@ namespace WindowsFormsApp2
             dataGridViewRow.Cells["MDR_QUANTITY"].Value = currentRow.Cells["MDR_QUANTITY"].Value;
             dataGridViewRow.Cells["USE_MEN_ID"].Value = currentRow.Cells["USE_MEN_ID"].Value;
 
-            //ORD_ID
-            //ORD_ACC_ID
-            //ORD_TAB_ID
-            //ORD_DATE
-
-            //ODR_DIS_ID
-            //ODR_ORD_ID
-            //ODR_QUANTITY
-
             dgv.Rows.Remove(currentRow);
         }
 
@@ -131,6 +120,10 @@ namespace WindowsFormsApp2
         private void dgvWHoCategory3_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        private void dgvWHoCategory4_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvTransition(dgvWHoCategory4);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -147,12 +140,17 @@ namespace WindowsFormsApp2
             OrderORM orderORM = new OrderORM();
             int orderId = orderORM.Create(Build());
             List<Dish> addedDishes = getAddedDishes();
+            Console.WriteLine(addedDishes.Count);
             foreach (Dish dish in addedDishes)
                 orderORM.addRelation(orderId, dish);
         }
 
         public Order Build()
         {
+            //ORD_ID
+            //ORD_ACC_ID
+            //ORD_TAB_ID
+            //ORD_DATE
             int accountId = 1;
             int tableId = Convert.ToInt32(cbxWHoTable.SelectedValue.ToString());
             return new Order(0, accountId, tableId, DateTime.Now);
@@ -170,11 +168,6 @@ namespace WindowsFormsApp2
                 dishes.Add(dish);
             }
             return dishes;
-        }
-
-        private void dgvWHoCategory4_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            dgvTransition(dgvWHoCategory4);
         }
     }
 }

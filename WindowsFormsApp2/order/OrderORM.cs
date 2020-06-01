@@ -31,8 +31,11 @@ namespace WindowsFormsApp2.order
                 connection.addReturnId(command);
         }
 
-        internal void addRelation(int orderId, Dish dish)
+        public void addRelation(int orderId, Dish dish)
         {
+            //ODR_DIS_ID
+            //ODR_ORD_ID
+            //ODR_QUANTITY
             string query = SQLHelper.InsertQuery("FOO_ORD_DIS_RELATION", new string[] { "ODR_DIS_ID", "ODR_ORD_ID", "ODR_QUANTITY" }, null, false);
 
             OracleCommand command = connection.SqlPrepare(query);
