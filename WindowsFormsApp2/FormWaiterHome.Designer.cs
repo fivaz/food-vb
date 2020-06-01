@@ -313,6 +313,7 @@
             this.btnWHoNew.TabIndex = 3;
             this.btnWHoNew.Text = "&Nouvelle commande";
             this.btnWHoNew.UseVisualStyleBackColor = true;
+            this.btnWHoNew.Click += new System.EventHandler(this.btnWHoNew_Click);
             // 
             // lblWHoTable
             // 

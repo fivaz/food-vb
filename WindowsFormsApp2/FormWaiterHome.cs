@@ -130,32 +130,27 @@ namespace WindowsFormsApp2
 
         private void dgvWHoDish_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            removeDishFromOrder();
+            DataGridViewRow currentRow = dgvWHoDish.CurrentRow;
+            removeDishFromOrder(currentRow);
         }
         //Category can only have 4 possible values it should be an ENUM
-        private void removeDishFromOrder()
+        private void removeDishFromOrder(DataGridViewRow currentRow)
         {
-            DataGridViewRow currentRow = dgvWHoDish.CurrentRow;
-
             string categoryName = currentRow.Cells["CAT_NAME"].Value.ToString();
             DataGridView dgv = null;
             switch (categoryName)
             {
                 case "Entrée":
                     dgv = this.dgvWHoCategory1;
-                    Console.WriteLine("Entrée");
                     break;
                 case "Plat principal":
                     dgv = this.dgvWHoCategory2;
-                    Console.WriteLine("Plat");
                     break;
                 case "Boisson":
                     dgv = this.dgvWHoCategory3;
-                    Console.WriteLine("Boisson");
                     break;
                 case "Dessert":
                     dgv = this.dgvWHoCategory4;
-                    Console.WriteLine("Dessert");
                     break;
             }
             DataTable dataTable = (DataTable) dgv.DataSource;
@@ -190,7 +185,6 @@ namespace WindowsFormsApp2
             OrderORM orderORM = new OrderORM();
             int orderId = orderORM.Create(Build());
             List<Dish> addedDishes = getAddedDishes();
-            Console.WriteLine(addedDishes.Count);
             foreach (Dish dish in addedDishes)
                 orderORM.addRelation(orderId, dish);
         }
@@ -213,6 +207,17 @@ namespace WindowsFormsApp2
                 dishes.Add(dish);
             }
             return dishes;
+        }
+
+        private void btnWHoNew_Click(object sender, EventArgs e)
+        {
+            clearOrder();
+        }
+
+        private void clearOrder()
+        {
+            while(dgvWHoDish.Rows.Count > 0)
+                removeDishFromOrder(dgvWHoDish.Rows[0]);
         }
     }
 }
