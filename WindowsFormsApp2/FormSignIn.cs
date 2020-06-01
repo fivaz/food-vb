@@ -24,7 +24,7 @@ namespace WindowsFormsApp2
                 if (account.type == "Manager")
                     mainForm = new FormManagerHome();
                 else
-                    mainForm = new FormWaiterHome();
+                    mainForm = new FormWaiterHome(account.id);
                 mainForm.Show();
                 mainForm.FormClosed += new FormClosedEventHandler(mainForm_FormClosed);
                 this.Hide();

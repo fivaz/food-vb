@@ -9,8 +9,10 @@ namespace WindowsFormsApp2
 {
     public partial class FormWaiterHome : Form
     {
-        public FormWaiterHome()
+        int accountId;
+        public FormWaiterHome(int accountId)
         {
+            this.accountId = accountId;
             InitializeComponent();
         }
         private void FormWaiterHome_Load(object sender, EventArgs e)
@@ -195,8 +197,6 @@ namespace WindowsFormsApp2
 
         public Order Build()
         {
-            //TODO
-            int accountId = 1;
             int tableId = Convert.ToInt32(cbxWHoTable.SelectedValue.ToString());
             return new Order(0, accountId, tableId, DateTime.Now);
         }
