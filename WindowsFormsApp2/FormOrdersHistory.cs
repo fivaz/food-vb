@@ -22,9 +22,9 @@ namespace WindowsFormsApp2
             dgvHis.Columns["ODR_QUANTITY"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dgvHis.Columns["DIS_NAME"].HeaderText = "nom";
             dgvHis.Columns["DIS_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dgvHis.Columns["ACC_FIRST_NAME"].HeaderText = "servi par prénom";
+            dgvHis.Columns["ACC_FIRST_NAME"].HeaderText = "prénom (serveur)";
             dgvHis.Columns["ACC_FIRST_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dgvHis.Columns["ACC_LAST_NAME"].HeaderText = "nom";
+            dgvHis.Columns["ACC_LAST_NAME"].HeaderText = "nom (serveur)";
             dgvHis.Columns["ACC_LAST_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dgvHis.Columns["TAB_NAME"].HeaderText = "table";
             dgvHis.Columns["TAB_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;

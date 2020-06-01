@@ -42,7 +42,6 @@
             this.txbSInEmail.Name = "txbSInEmail";
             this.txbSInEmail.Size = new System.Drawing.Size(230, 22);
             this.txbSInEmail.TabIndex = 0;
-            this.txbSInEmail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblSInEmail
             // 

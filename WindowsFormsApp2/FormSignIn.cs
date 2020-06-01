@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp2.account;
 
 namespace WindowsFormsApp2
 {
@@ -17,23 +11,28 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSInSubmit_Click(object sender, EventArgs e)
         {
-            if(txbSInEmail.Text == "admin")
-            {
-                //check if I should use ShowDialog instead
-                new FormManagerHome().Show();
-            }
+            string email = txbSInEmail.Text;
+            string password = txbSInPassword.Text;
+            Account account = new AccountORM().Find(email, password);
+            if (account == null)
+                MessageBox.Show("email ou mot de passe incorrectes");
             else
             {
-                new FormWaiterHome().Show();
+                Form mainForm;
+                if (account.type == "Manager")
+                    mainForm = new FormManagerHome();
+                else
+                    mainForm = new FormWaiterHome();
+                mainForm.Show();
+                mainForm.FormClosed += new FormClosedEventHandler(mainForm_FormClosed);
+                this.Hide();
             }
-            this.Hide();
+        }
+        void mainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
