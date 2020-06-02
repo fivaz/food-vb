@@ -14,11 +14,13 @@ namespace WindowsFormsApp2
             Application.EnableVisualStyles();
 
             Application.SetCompatibleTextRenderingDefault(false);
-
+            /*
             FormFrame formFrame = new FormFrame();
             formFrame.Hide();
 
             Application.Run();
+            */
+
             //Application.Run(new FormSignIn());
             //Application.Run(new FormManagerHome()); 
             //Application.Run(new FormWaiterHome(1)); 
@@ -27,7 +29,7 @@ namespace WindowsFormsApp2
             //Application.Run(new FormCategories());
             //Application.Run(new FormDishes());
             //Application.Run(new FormAddDish());
-            //Application.Run(new FormIngredients());
+            Application.Run(new FormIngredients());
             //Application.Run(new FormAddIngredient());
             //Application.Run(new FormMenus());
             //Application.Run(new FormAddMenu());

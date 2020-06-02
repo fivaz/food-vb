@@ -62,13 +62,9 @@ namespace WindowsFormsApp2
             foreach (DataGridViewRow row in dgvADiAdded.Rows)
             {
                 int ingredientId = Convert.ToInt32(row.Cells[0].Value.ToString());
-                double? quantity = null;
+                double quantity = 0;
                 if (!string.IsNullOrEmpty(row.Cells[6].Value.ToString()))
                     quantity = Convert.ToDouble(row.Cells[6].Value.ToString());
-
-                Console.WriteLine("ingredientId " + ingredientId);
-                Console.WriteLine("dishId " + dishId);
-                Console.WriteLine("quantity " + quantity);
 
                 Ingredient ingredient = new Ingredient(ingredientId, dishId, null, false, null, quantity, 0, 0);
                 ingredients.Add(ingredient);
@@ -107,8 +103,8 @@ namespace WindowsFormsApp2
             dgv.Columns["ING_PURCHASE_PRICE"].HeaderText = "prix";
             dgv.Columns["DIR_QUANTITY"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dgv.Columns["DIR_QUANTITY"].HeaderText = "quantité";
-            dgv.Columns["ING_QUANTITY"].Visible= false;
-            dgv.Columns["ING_MINIMUM_QUANTITY"].Visible= false;
+            dgv.Columns["ING_QUANTITY"].Visible = false;
+            dgv.Columns["ING_MINIMUM_QUANTITY"].Visible = false;
             dgv.AllowUserToAddRows = false;
         }
 

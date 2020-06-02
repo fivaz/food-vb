@@ -9,11 +9,11 @@ namespace WindowsFormsApp2.ingredient
         public string name;
         public bool isCountable;
         public string unit;
-        public double? quantity;
+        public double quantity;
         public double price;
         public double minimumQuantity;
 
-        public Ingredient(int id, int dishId, string name, bool isCountable, string unit, double? quantity, double price, double minimumQuantity)
+        public Ingredient(int id, int dishId, string name, bool isCountable, string unit, double quantity, double price, double minimumQuantity)
         {
             this.id = id;
             this.dishId = dishId;

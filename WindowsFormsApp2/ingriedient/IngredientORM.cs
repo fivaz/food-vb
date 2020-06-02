@@ -24,7 +24,7 @@ namespace WindowsFormsApp2.ingredient
             connection.AddInt(command, "ING_IS_COUNTABLE", Convert.ToInt32(ingredient.isCountable));
             connection.AddString(command, "ING_UNIT", ingredient.unit);
             connection.AddDouble(command, "ING_PURCHASE_PRICE", ingredient.price);
-            connection.AddDouble(command, "ING_QUANTITY", ingredient.quantity ?? default);
+            connection.AddDouble(command, "ING_QUANTITY", ingredient.quantity);
             connection.AddDouble(command, "ING_MINIMUM_QUANTITY", ingredient.minimumQuantity);
             if (withId)
                 connection.AddInt(command, "ING_ID", ingredient.id);
@@ -39,7 +39,7 @@ namespace WindowsFormsApp2.ingredient
 
             OracleCommand command = connection.SqlPrepare(query);
 
-            connection.AddDouble(command, "DIR_QUANTITY", ingredient.quantity ?? default);
+            connection.AddDouble(command, "DIR_QUANTITY", ingredient.quantity);
             connection.AddInt(command, "DIR_ING_ID", ingredient.id);
             connection.AddInt(command, "DIR_DIS_ID", ingredient.dishId);
             

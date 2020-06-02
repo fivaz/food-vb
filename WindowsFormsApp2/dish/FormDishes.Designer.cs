@@ -47,7 +47,7 @@
             // btnDisAdd
             // 
             this.btnDisAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDisAdd.Location = new System.Drawing.Point(888, 38);
+            this.btnDisAdd.Location = new System.Drawing.Point(667, 38);
             this.btnDisAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDisAdd.Name = "btnDisAdd";
             this.btnDisAdd.Size = new System.Drawing.Size(129, 30);
@@ -144,20 +144,23 @@
             // 
             // dgvDis
             // 
+            this.dgvDis.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDis.Location = new System.Drawing.Point(36, 92);
             this.dgvDis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDis.Name = "dgvDis";
             this.dgvDis.RowHeadersWidth = 51;
             this.dgvDis.RowTemplate.Height = 24;
-            this.dgvDis.Size = new System.Drawing.Size(1113, 383);
+            this.dgvDis.Size = new System.Drawing.Size(892, 383);
             this.dgvDis.TabIndex = 13;
             this.dgvDis.DoubleClick += new System.EventHandler(this.dgvDis_DoubleClick);
             // 
             // btnDisDel
             // 
             this.btnDisDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDisDel.Location = new System.Drawing.Point(1042, 38);
+            this.btnDisDel.Location = new System.Drawing.Point(821, 38);
             this.btnDisDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDisDel.Name = "btnDisDel";
             this.btnDisDel.Size = new System.Drawing.Size(107, 30);
@@ -170,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1183, 498);
+            this.ClientSize = new System.Drawing.Size(962, 505);
             this.Controls.Add(this.btnDisAdd);
             this.Controls.Add(this.lblDisSearchQuantityAnd);
             this.Controls.Add(this.tbxDisSearchQuantityTo);

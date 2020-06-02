@@ -187,6 +187,7 @@
             this.Controls.Add(this.dgvIng);
             this.Controls.Add(this.btnIngDelAll);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(980, 530);
             this.Name = "FormIngredients";
             this.Text = "Ingrédients";
             this.Load += new System.EventHandler(this.FormIngredients_Load);

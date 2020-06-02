@@ -29,8 +29,8 @@ namespace WindowsFormsApp2
             string name = tbxAInName.Text.ToString();
             string unity = cbxAInUnity.Text.ToString();
             double price = Convert.ToDouble(tbxAInPrice.Text.ToString());
-            double? quantity = Convert.ToDouble(tbxAInQuantity.Text.ToString());
-            double miminumQuantity = Convert.ToDouble(tbxAInMQuantity.Text.ToString());
+            double quantity = Double.TryParse(tbxAInQuantity.Text, out quantity) ? quantity : 0.0;
+            double miminumQuantity = Double.TryParse(tbxAInMQuantity.Text, out miminumQuantity) ? miminumQuantity : 0.0;
 
             return new Ingredient(id, 0, name, isCountable, unity, quantity, price, miminumQuantity);
         }
