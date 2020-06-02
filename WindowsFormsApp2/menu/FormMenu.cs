@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using WindowsFormsApp2.menu;
 
@@ -22,17 +24,22 @@ namespace WindowsFormsApp2
 
         private void FormMenus_Load(object sender, EventArgs e)
         {
-            //mark used menu
-            dgvMen.DataSource = new MenuORM().ListAll();
-            dgvMen.Columns["MEN_ID"].Visible = false;
-            dgvMen.Columns["MEN_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dgvMen.Columns["MEN_NAME"].HeaderText = "nom";
-            dgvMen.AllowUserToAddRows = false;
+            RefreshData();
         }
 
         internal void RefreshData()
         {
             dgvMen.DataSource = new MenuORM().ListAll();
+            dgvMen.Columns["MEN_ID"].Visible = false;
+            dgvMen.Columns["MEN_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvMen.Columns["MEN_NAME"].HeaderText = "nom";
+            dgvMen.AllowUserToAddRows = false;
+
+            dgvMen.Rows
+                .OfType<DataGridViewRow>()
+                 .Where(x => Convert.ToInt32(x.Cells["MEN_ID"].Value) == new MenuORM().getUsed())
+                 .ToArray<DataGridViewRow>()[0]
+                 .DefaultCellStyle.BackColor = Color.Gray;
         }
 
         private void btnMenAdd_Click(object sender, EventArgs e)
@@ -62,6 +69,7 @@ namespace WindowsFormsApp2
         {
             int menuId = Convert.ToInt32(dgvMen.CurrentRow.Cells["MEN_ID"].Value.ToString());
             new MenuORM().UseMenu(menuId);
+            RefreshData();
         }
     }
 }

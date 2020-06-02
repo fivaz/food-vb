@@ -23,7 +23,7 @@ namespace WindowsFormsApp2
 
             //Application.Run(new FormSignIn());
             //Application.Run(new FormManagerHome()); 
-            Application.Run(new FormWaiterHome(1)); 
+            //Application.Run(new FormWaiterHome(1)); 
             //Application.Run(new FormOrdersHistory());
             //Application.Run(new FormAccounts());
             //Application.Run(new FormCategories());

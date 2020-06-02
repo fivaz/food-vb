@@ -1,6 +1,7 @@
 ﻿using Oracle.DataAccess.Client;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using WindowsFormsApp2.shared;
 
 namespace WindowsFormsApp2.menu
@@ -34,6 +35,16 @@ namespace WindowsFormsApp2.menu
             OracleCommand command = connection.SqlPrepare(insertQuery);
             connection.AddInt(command, "USE_MEN_ID", menuId);
             connection.Execute(command);
+        }
+
+        public int getUsed()
+        {
+            string query = "SELECT USE_MEN_ID FROM foo_used_menu";
+            OracleCommand command = connection.SqlPrepare(query);
+            OracleDataReader oracleDataReader = connection.Execute(command);
+            DataTable dataTable = new DataTable();
+            dataTable.Load(oracleDataReader);
+            return Convert.ToInt32(dataTable.Rows[0]["USE_MEN_ID"].ToString());
         }
     }
 }
