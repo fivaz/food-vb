@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using WindowsFormsApp2.ingredient;
 
@@ -38,6 +40,13 @@ namespace WindowsFormsApp2
             dgvIng.Columns["ING_QUANTITY"].HeaderText = "quantité";
             dgvIng.Columns["ING_MINIMUM_QUANTITY"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dgvIng.Columns["ING_MINIMUM_QUANTITY"].HeaderText = "quantité minimum";
+            
+            dgvIng.Rows
+                .OfType<DataGridViewRow>()
+                 .Where(x => Convert.ToInt32(x.Cells["ING_QUANTITY"].Value) <= Convert.ToInt32(x.Cells["ING_MINIMUM_QUANTITY"].Value))
+                 .ToArray<DataGridViewRow>()[0]
+                 .DefaultCellStyle.BackColor = Color.Red;
+
         }
 
         internal void RefreshData()

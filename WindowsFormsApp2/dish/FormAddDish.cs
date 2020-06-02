@@ -8,6 +8,7 @@ using WindowsFormsApp2.shared;
 
 namespace WindowsFormsApp2
 {
+    //TODO save the right category during edit
     public partial class FormAddDish : Form, FormAdd<Dish>
     {
         public int id;

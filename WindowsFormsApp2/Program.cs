@@ -11,15 +11,15 @@ namespace WindowsFormsApp2
         [STAThread]
         static void Main()
         {
+            
             Application.EnableVisualStyles();
 
             Application.SetCompatibleTextRenderingDefault(false);
-            /*
+            
             FormFrame formFrame = new FormFrame();
             formFrame.Hide();
 
             Application.Run();
-            */
 
             //Application.Run(new FormSignIn());
             //Application.Run(new FormManagerHome()); 
@@ -31,7 +31,7 @@ namespace WindowsFormsApp2
             //Application.Run(new FormAddDish());
             //Application.Run(new FormIngredients());
             //Application.Run(new FormAddIngredient());
-            Application.Run(new FormMenus());
+            //Application.Run(new FormMenus());
             //Application.Run(new FormAddMenu());
         }
     }

@@ -56,5 +56,10 @@ namespace WindowsFormsApp2
         {
             Application.Exit();
         }
+
+        private void FormSignIn_Load(object sender, EventArgs e)
+        {
+            txbSInPassword.PasswordChar = '*';
+        }
     }
 }

@@ -96,6 +96,7 @@
             this.Name = "FormSignIn";
             this.Text = "Connexion";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSignIn_FormClosing);
+            this.Load += new System.EventHandler(this.FormSignIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
