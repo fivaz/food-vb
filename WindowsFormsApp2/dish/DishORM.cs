@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using WindowsFormsApp2.ingredient;
 using WindowsFormsApp2.shared;
 using WindowsFormsApp2.shared.helper;
 
@@ -25,7 +26,7 @@ namespace WindowsFormsApp2.dish
 
             OracleCommand command = connection.SqlPrepare(query);
             connection.AddString(command, "CAT_NAME", categoryName);
-            OracleDataReader oracleDataReader = connection.execute(command);
+            OracleDataReader oracleDataReader = connection.Execute(command);
             DataTable dataTable = new DataTable();
             dataTable.Load(oracleDataReader);
             connection.Close();
@@ -48,6 +49,23 @@ namespace WindowsFormsApp2.dish
             return base.Search(text, searchable);
         }
 
+        public void Buy(Dish dish)
+        {
+            string query = "SELECT * FROM FOO_DIS_ING_RELATION WHERE DIR_DIS_ID = :DIR_DIS_ID";
+            OracleCommand command = connection.SqlPrepare(query);
+            connection.AddInt(command, "DIR_DIS_ID", dish.id);
+            OracleDataReader oracleDataReader = connection.Execute(command);
+            DataTable ingredients = new DataTable();
+            ingredients.Load(oracleDataReader);
+            foreach (DataRow dataRow in ingredients.Rows)
+            {
+                IngredientORM ingredientORM = new IngredientORM();
+                int ingredientId = Convert.ToInt32(dataRow["DIR_ING_ID"].ToString());
+                double quantityUsed = Convert.ToDouble(dataRow["DIR_QUANTITY"].ToString());
+                ingredientORM.Buy(ingredientId, quantityUsed * dish.quantity);
+            }
+        }
+
         public DataTable SearchFromMenu(int menuId)
         {
             string query = "SELECT * FROM vw_menu_dish WHERE MDR_MEN_ID = :MDR_MEN_ID";
@@ -58,7 +76,7 @@ namespace WindowsFormsApp2.dish
             param.Value = menuId;
             command.Parameters.Add(param);
 
-            OracleDataReader odr = connection.execute(command);
+            OracleDataReader odr = connection.Execute(command);
             DataTable data = new DataTable();
             data.Load(odr);
             return data;
@@ -72,7 +90,7 @@ namespace WindowsFormsApp2.dish
 
             OracleCommand command = connection.SqlPrepare(query);
 
-            OracleDataReader odr = connection.execute(command);
+            OracleDataReader odr = connection.Execute(command);
 
             DataTable data = new DataTable();
             data.Load(odr);
@@ -106,7 +124,7 @@ namespace WindowsFormsApp2.dish
                 OracleCommand command = connection.SqlPrepare(query);
                 command.BindByName = false;
                 connection.AddInt(command, "", id);
-                connection.execute(command);
+                connection.Execute(command);
             }
             catch (Exception ex)
             {

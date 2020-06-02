@@ -40,7 +40,7 @@
             // btnMenAdd
             // 
             this.btnMenAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMenAdd.Location = new System.Drawing.Point(560, 39);
+            this.btnMenAdd.Location = new System.Drawing.Point(451, 39);
             this.btnMenAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenAdd.Name = "btnMenAdd";
             this.btnMenAdd.Size = new System.Drawing.Size(129, 30);
@@ -77,14 +77,14 @@
             this.dgvMen.Name = "dgvMen";
             this.dgvMen.RowHeadersWidth = 51;
             this.dgvMen.RowTemplate.Height = 24;
-            this.dgvMen.Size = new System.Drawing.Size(787, 339);
+            this.dgvMen.Size = new System.Drawing.Size(678, 339);
             this.dgvMen.TabIndex = 5;
             this.dgvMen.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMen_CellDoubleClick);
             // 
             // btnMenDel
             // 
             this.btnMenDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMenDel.Location = new System.Drawing.Point(715, 39);
+            this.btnMenDel.Location = new System.Drawing.Point(606, 39);
             this.btnMenDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenDel.Name = "btnMenDel";
             this.btnMenDel.Size = new System.Drawing.Size(107, 30);
@@ -96,7 +96,7 @@
             // btnMenUsed
             // 
             this.btnMenUsed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMenUsed.Location = new System.Drawing.Point(405, 39);
+            this.btnMenUsed.Location = new System.Drawing.Point(296, 39);
             this.btnMenUsed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenUsed.Name = "btnMenUsed";
             this.btnMenUsed.Size = new System.Drawing.Size(129, 30);
@@ -109,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 454);
+            this.ClientSize = new System.Drawing.Size(748, 454);
             this.Controls.Add(this.btnMenUsed);
             this.Controls.Add(this.btnMenAdd);
             this.Controls.Add(this.lblMenSearch);
@@ -117,7 +117,7 @@
             this.Controls.Add(this.dgvMen);
             this.Controls.Add(this.btnMenDel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(602, 220);
+            this.MinimumSize = new System.Drawing.Size(766, 501);
             this.Name = "FormMenus";
             this.Text = "Menus";
             this.Load += new System.EventHandler(this.FormMenus_Load);

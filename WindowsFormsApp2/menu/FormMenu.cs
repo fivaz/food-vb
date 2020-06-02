@@ -22,10 +22,12 @@ namespace WindowsFormsApp2
 
         private void FormMenus_Load(object sender, EventArgs e)
         {
+            //mark used menu
             dgvMen.DataSource = new MenuORM().ListAll();
             dgvMen.Columns["MEN_ID"].Visible = false;
             dgvMen.Columns["MEN_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvMen.Columns["MEN_NAME"].HeaderText = "nom";
+            dgvMen.AllowUserToAddRows = false;
         }
 
         internal void RefreshData()
@@ -59,7 +61,6 @@ namespace WindowsFormsApp2
         private void btnMenUsed_Click(object sender, EventArgs e)
         {
             int menuId = Convert.ToInt32(dgvMen.CurrentRow.Cells["MEN_ID"].Value.ToString());
-            Console.WriteLine(menuId);
             new MenuORM().UseMenu(menuId);
         }
     }

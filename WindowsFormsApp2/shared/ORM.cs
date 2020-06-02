@@ -61,7 +61,7 @@ namespace WindowsFormsApp2.shared
                 Console.WriteLine(query);
                 OracleCommand command = connection.SqlPrepare(query);
                 BindObject(command, obj, true);
-                connection.execute(command);
+                connection.Execute(command);
             }
             catch (Exception ex)
             {
@@ -78,7 +78,7 @@ namespace WindowsFormsApp2.shared
                 OracleCommand command = connection.SqlPrepare(query);
                 command.BindByName = false;
                 connection.AddInt(command, "", id);
-                connection.execute(command);
+                connection.Execute(command);
             }
             catch (Exception ex)
             {
@@ -101,7 +101,7 @@ namespace WindowsFormsApp2.shared
             param.Value = text + "%";
             command.Parameters.Add(param);
 
-            OracleDataReader odr = connection.execute(command);
+            OracleDataReader odr = connection.Execute(command);
             DataTable data = new DataTable();
             data.Load(odr);
             return data;

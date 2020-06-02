@@ -23,15 +23,15 @@ namespace WindowsFormsApp2
 
             //Application.Run(new FormSignIn());
             //Application.Run(new FormManagerHome()); 
-            //Application.Run(new FormWaiterHome(1)); 
+            Application.Run(new FormWaiterHome(1)); 
             //Application.Run(new FormOrdersHistory());
             //Application.Run(new FormAccounts());
             //Application.Run(new FormCategories());
             //Application.Run(new FormDishes());
             //Application.Run(new FormAddDish());
-            Application.Run(new FormIngredients());
+            //Application.Run(new FormIngredients());
             //Application.Run(new FormAddIngredient());
-            //Application.Run(new FormMenus());
+            Application.Run(new FormMenus());
             //Application.Run(new FormAddMenu());
         }
     }

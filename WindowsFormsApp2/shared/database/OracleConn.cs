@@ -27,7 +27,7 @@ namespace WindowsFormsApp2.shared.database
 
         #region methods
 
-        public void executeQuery(string sql)
+        public void ExecuteQuery(string sql)
         {
             try
             {
@@ -60,11 +60,12 @@ namespace WindowsFormsApp2.shared.database
             }
         }
 
-        public OracleCommand SqlPrepare(string sql)
+        public OracleCommand SqlPrepare(string query)
         {
             try
             {
-                OracleCommand command = new OracleCommand(sql, connection);
+                Console.WriteLine(query);
+                OracleCommand command = new OracleCommand(query, connection);
                 command.CommandType = CommandType.Text;
                 command.CommandTimeout = 0;
                 command.BindByName = true;
@@ -88,7 +89,7 @@ namespace WindowsFormsApp2.shared.database
             }
         }
 
-        public OracleDataReader execute(OracleCommand currentCommand)
+        public OracleDataReader Execute(OracleCommand currentCommand)
         {
             try
             {

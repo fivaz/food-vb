@@ -35,14 +35,13 @@ namespace WindowsFormsApp2.ingredient
         internal void addRelation(Ingredient ingredient)
         {
             string query = SQLHelper.InsertQuery("FOO_DIS_ING_RELATION", new string[] { "DIR_QUANTITY", "DIR_ING_ID", "DIR_DIS_ID" }, null, false);
-            Console.WriteLine(query);
 
             OracleCommand command = connection.SqlPrepare(query);
 
             connection.AddDouble(command, "DIR_QUANTITY", ingredient.quantity);
             connection.AddInt(command, "DIR_ING_ID", ingredient.id);
             connection.AddInt(command, "DIR_DIS_ID", ingredient.dishId);
-            
+
             connection.ExecuteNonQuery(command);
         }
 
@@ -62,10 +61,20 @@ namespace WindowsFormsApp2.ingredient
             param.Value = dishId;
             command.Parameters.Add(param);
 
-            OracleDataReader odr = connection.execute(command);
+            OracleDataReader odr = connection.Execute(command);
             DataTable data = new DataTable();
             data.Load(odr);
             return data;
+        }
+
+        public void Buy(int ingredientId, double quantityUsed)
+        {
+            string query = "UPDATE " + table + " SET ING_QUANTITY = ING_QUANTITY - :quantity WHERE ING_ID = :ING_ID";
+            OracleCommand command = connection.SqlPrepare(query);
+            connection.AddDouble(command, "quantity", quantityUsed);
+            connection.AddInt(command, "ING_ID", ingredientId);
+            int value = connection.ExecuteNonQuery(command);
+            Console.WriteLine(value);
         }
 
         public DataTable SearchExceptFromDish(int dishId)
@@ -76,7 +85,7 @@ namespace WindowsFormsApp2.ingredient
 
             OracleCommand command = connection.SqlPrepare(query);
 
-            OracleDataReader odr = connection.execute(command);
+            OracleDataReader odr = connection.Execute(command);
 
             DataTable data = new DataTable();
             data.Load(odr);
@@ -97,7 +106,7 @@ namespace WindowsFormsApp2.ingredient
                 OracleCommand command = connection.SqlPrepare(query);
                 command.BindByName = false;
                 connection.AddInt(command, "", id);
-                connection.execute(command);
+                connection.Execute(command);
             }
             catch (Exception ex)
             {

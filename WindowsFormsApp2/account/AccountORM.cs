@@ -25,7 +25,7 @@ namespace WindowsFormsApp2.account
             OracleCommand command = connection.SqlPrepare(query);
             connection.AddString(command, "ACC_EMAIL", email);
             connection.AddString(command, "ACC_PASSWORD", password);
-            OracleDataReader oracleDataReader = connection.execute(command);
+            OracleDataReader oracleDataReader = connection.Execute(command);
             DataTable dataTable = new DataTable();
             dataTable.Load(oracleDataReader);
             if (dataTable.Rows.Count > 0)
@@ -52,7 +52,7 @@ namespace WindowsFormsApp2.account
                 connection.AddString(command, "ACC_EMAIL", account.email);
                 connection.AddString(command, "ACC_TYPE", account.type);
                 connection.AddInt(command, "ACC_ID", account.id);
-                connection.execute(command);
+                connection.Execute(command);
             }
             catch (Exception ex)
             {

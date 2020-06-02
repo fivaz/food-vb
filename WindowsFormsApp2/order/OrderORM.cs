@@ -33,18 +33,16 @@ namespace WindowsFormsApp2.order
 
         public void addRelation(int orderId, Dish dish)
         {
-            //ODR_DIS_ID
-            //ODR_ORD_ID
-            //ODR_QUANTITY
             string query = SQLHelper.InsertQuery("FOO_ORD_DIS_RELATION", new string[] { "ODR_DIS_ID", "ODR_ORD_ID", "ODR_QUANTITY" }, null, false);
 
             OracleCommand command = connection.SqlPrepare(query);
-
             connection.AddInt(command, "ODR_DIS_ID", dish.id);
             connection.AddInt(command, "ODR_ORD_ID", orderId);
             connection.AddDouble(command, "ODR_QUANTITY", dish.quantity);
 
             connection.ExecuteNonQuery(command);
+
+            new DishORM().Buy(dish);
         }
 
         public void DeleteAllRelations(int id)
@@ -55,7 +53,7 @@ namespace WindowsFormsApp2.order
                 OracleCommand command = connection.SqlPrepare(query);
                 command.BindByName = false;
                 connection.AddInt(command, "", id);
-                connection.execute(command);
+                connection.Execute(command);
             }
             catch (Exception ex)
             {

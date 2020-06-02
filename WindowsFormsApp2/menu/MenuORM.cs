@@ -28,12 +28,12 @@ namespace WindowsFormsApp2.menu
         public void UseMenu(int menuId)
         {
             string deleteAllQuery = "DELETE FROM foo_used_menu";
-            connection.executeQuery(deleteAllQuery);
+            connection.ExecuteQuery(deleteAllQuery);
 
             string insertQuery = "INSERT INTO foo_used_menu (USE_MEN_ID) VALUES (:USE_MEN_ID)";
             OracleCommand command = connection.SqlPrepare(insertQuery);
             connection.AddInt(command, "USE_MEN_ID", menuId);
-            connection.execute(command);
+            connection.Execute(command);
         }
     }
 }
