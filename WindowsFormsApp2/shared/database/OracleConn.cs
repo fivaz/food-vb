@@ -18,7 +18,6 @@ namespace WindowsFormsApp2.shared.database
         public OracleConn(string server, string user, string password)
         {
             stringConn = "DATA SOURCE=" + server + ";USER ID=" + user + ";PASSWORD=" + password;
-
             connection = new OracleConnection(stringConn);
             connection.Open();
         }

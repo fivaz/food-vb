@@ -37,7 +37,6 @@
             this.dgvAMeAdded = new System.Windows.Forms.DataGridView();
             this.lblAMeAdded = new System.Windows.Forms.Label();
             this.tbxAMeAddSearch = new System.Windows.Forms.TextBox();
-            this.lblAMePrice = new System.Windows.Forms.Label();
             this.btnAMeSubmit = new System.Windows.Forms.Button();
             this.lblAMeName = new System.Windows.Forms.Label();
             this.tbxAMeName = new System.Windows.Forms.TextBox();
@@ -143,17 +142,6 @@
             this.tbxAMeAddSearch.Size = new System.Drawing.Size(150, 22);
             this.tbxAMeAddSearch.TabIndex = 6;
             // 
-            // lblAMePrice
-            // 
-            this.lblAMePrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblAMePrice.AutoSize = true;
-            this.lblAMePrice.Location = new System.Drawing.Point(591, 467);
-            this.lblAMePrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAMePrice.Name = "lblAMePrice";
-            this.lblAMePrice.Size = new System.Drawing.Size(123, 17);
-            this.lblAMePrice.TabIndex = 15;
-            this.lblAMePrice.Text = "Prix calculé: 29.43";
-            // 
             // btnAMeSubmit
             // 
             this.btnAMeSubmit.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -190,7 +178,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 529);
             this.Controls.Add(this.gbxAMenuItem);
-            this.Controls.Add(this.lblAMePrice);
             this.Controls.Add(this.btnAMeSubmit);
             this.Controls.Add(this.lblAMeName);
             this.Controls.Add(this.tbxAMeName);
@@ -220,7 +207,6 @@
         private System.Windows.Forms.DataGridView dgvAMeAdded;
         private System.Windows.Forms.Label lblAMeAdded;
         private System.Windows.Forms.TextBox tbxAMeAddSearch;
-        private System.Windows.Forms.Label lblAMePrice;
         private System.Windows.Forms.Button btnAMeSubmit;
         private System.Windows.Forms.Label lblAMeName;
         public System.Windows.Forms.TextBox tbxAMeName;

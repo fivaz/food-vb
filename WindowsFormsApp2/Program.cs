@@ -11,7 +11,7 @@ namespace WindowsFormsApp2
         [STAThread]
         static void Main()
         {
-            
+            /**/
             Application.EnableVisualStyles();
 
             Application.SetCompatibleTextRenderingDefault(false);
@@ -20,6 +20,7 @@ namespace WindowsFormsApp2
             formFrame.Hide();
 
             Application.Run();
+            
 
             //Application.Run(new FormSignIn());
             //Application.Run(new FormManagerHome()); 

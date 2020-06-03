@@ -8,11 +8,13 @@ namespace WindowsFormsApp2
 {
     public partial class FormMenus : Form
     {
+        int menuUsed = 0;
         static FormMenus instance;
         public FormMenus()
         {
             InitializeComponent();
             instance = this;
+            menuUsed = new MenuORM().getUsed();
         }
 
         public static FormMenus getInstance()
@@ -34,12 +36,6 @@ namespace WindowsFormsApp2
             dgvMen.Columns["MEN_NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvMen.Columns["MEN_NAME"].HeaderText = "nom";
             dgvMen.AllowUserToAddRows = false;
-
-            dgvMen.Rows
-                .OfType<DataGridViewRow>()
-                 .Where(x => Convert.ToInt32(x.Cells["MEN_ID"].Value) == new MenuORM().getUsed())
-                 .ToArray<DataGridViewRow>()[0]
-                 .DefaultCellStyle.BackColor = Color.Gray;
         }
 
         private void btnMenAdd_Click(object sender, EventArgs e)
@@ -61,15 +57,31 @@ namespace WindowsFormsApp2
             fa.SetEditMode();
             fa.id = Int32.Parse(dgvMen.CurrentRow.Cells[0].Value.ToString());
             fa.tbxAMeName.Text = dgvMen.CurrentRow.Cells["MEN_NAME"].Value.ToString();
-            
+
             fa.ShowDialog();
         }
 
         private void btnMenUsed_Click(object sender, EventArgs e)
         {
             int menuId = Convert.ToInt32(dgvMen.CurrentRow.Cells["MEN_ID"].Value.ToString());
-            new MenuORM().UseMenu(menuId);
+            MenuORM orm = new MenuORM();
+            orm.UseMenu(menuId);
+            menuUsed = menuId;
             RefreshData();
+        }
+
+        private void dgvMen_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (menuUsed != 0)
+            {
+                foreach (DataGridViewRow Myrow in dgvMen.Rows)
+                {
+                    if (Convert.ToInt32(Myrow.Cells["MEN_ID"].Value) == menuUsed)
+                        Myrow.DefaultCellStyle.BackColor = Color.Gray;
+                    else
+                        Myrow.DefaultCellStyle.BackColor = Color.White;
+                }
+            }
         }
     }
 }

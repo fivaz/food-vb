@@ -40,18 +40,22 @@ namespace WindowsFormsApp2
             dgvIng.Columns["ING_QUANTITY"].HeaderText = "quantité";
             dgvIng.Columns["ING_MINIMUM_QUANTITY"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dgvIng.Columns["ING_MINIMUM_QUANTITY"].HeaderText = "quantité minimum";
-            
-            dgvIng.Rows
-                .OfType<DataGridViewRow>()
-                 .Where(x => Convert.ToInt32(x.Cells["ING_QUANTITY"].Value) <= Convert.ToInt32(x.Cells["ING_MINIMUM_QUANTITY"].Value))
-                 .ToArray<DataGridViewRow>()[0]
-                 .DefaultCellStyle.BackColor = Color.Red;
 
+            dgvIng.AllowUserToAddRows = false;
+            /*
+            foreach (DataGridViewRow Myrow in dgvIng.Rows)
+            {
+                if (Convert.ToInt32(Myrow.Cells["ING_QUANTITY"].Value) <= Convert.ToInt32(Myrow.Cells["ING_MINIMUM_QUANTITY"].Value))
+                    Myrow.DefaultCellStyle.BackColor = Color.Red;
+            }
+            */
         }
 
         internal void RefreshData()
         {
             dgvIng.DataSource = new IngredientORM().ListAll();
+
+            
         }
 
         private void btnIngAdd_Click(object sender, EventArgs e)
@@ -85,6 +89,21 @@ namespace WindowsFormsApp2
             fa.tbxAInMQuantity.Text = dgvIng.CurrentRow.Cells["ING_MINIMUM_QUANTITY"].Value.ToString();
 
             fa.ShowDialog();
+        }
+
+        private void dgvIng_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            foreach (DataGridViewRow Myrow in dgvIng.Rows)
+            {            //Here 2 cell is target value and 1 cell is Volume
+                if (Convert.ToInt32(Myrow.Cells["ING_QUANTITY"].Value) <= Convert.ToInt32(Myrow.Cells["ING_MINIMUM_QUANTITY"].Value))// Or your condition 
+                {
+                    Myrow.DefaultCellStyle.BackColor = Color.Red;
+                }
+                else
+                {
+                    Myrow.DefaultCellStyle.BackColor = Color.White;
+                }
+            }
         }
 
         //TODO filters

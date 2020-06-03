@@ -80,6 +80,7 @@
             this.dgvMen.Size = new System.Drawing.Size(678, 339);
             this.dgvMen.TabIndex = 5;
             this.dgvMen.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMen_CellDoubleClick);
+            this.dgvMen.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMen_CellFormatting);
             // 
             // btnMenDel
             // 

@@ -44,7 +44,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnWHoNew = new System.Windows.Forms.Button();
@@ -64,7 +63,6 @@
             this.lblWHoCategory4 = new System.Windows.Forms.Label();
             this.dgvWHoDish = new System.Windows.Forms.DataGridView();
             this.btnWHoLogout = new System.Windows.Forms.Button();
-            this.lblWHoOrdTable = new System.Windows.Forms.Label();
             this.btnWHoHistory = new System.Windows.Forms.Button();
             this.cbxWHoTable = new System.Windows.Forms.ComboBox();
             this.vWTABLEBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -271,16 +269,6 @@
             this.dataGridView5.RowHeadersWidth = 51;
             this.dataGridView5.Size = new System.Drawing.Size(909, 194);
             this.dataGridView5.TabIndex = 19;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(42, 667);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 17);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Table 32";
             // 
             // groupBox1
             // 
@@ -516,16 +504,6 @@
             this.btnWHoLogout.UseVisualStyleBackColor = true;
             this.btnWHoLogout.Click += new System.EventHandler(this.btnWHoLogout_Click);
             // 
-            // lblWHoOrdTable
-            // 
-            this.lblWHoOrdTable.AutoSize = true;
-            this.lblWHoOrdTable.Location = new System.Drawing.Point(42, 667);
-            this.lblWHoOrdTable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblWHoOrdTable.Name = "lblWHoOrdTable";
-            this.lblWHoOrdTable.Size = new System.Drawing.Size(64, 17);
-            this.lblWHoOrdTable.TabIndex = 19;
-            this.lblWHoOrdTable.Text = "Table 32";
-            // 
             // btnWHoHistory
             // 
             this.btnWHoHistory.Location = new System.Drawing.Point(226, 41);
@@ -572,8 +550,6 @@
             this.Controls.Add(this.cbxWHoTable);
             this.Controls.Add(this.btnWHoHistory);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.lblWHoOrdTable);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnWHoLogout);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dgvWHoDish);
@@ -639,7 +615,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnWHoNew;
@@ -659,7 +634,6 @@
         private System.Windows.Forms.Label lblWHoCategory4;
         private System.Windows.Forms.DataGridView dgvWHoDish;
         private System.Windows.Forms.Button btnWHoLogout;
-        private System.Windows.Forms.Label lblWHoOrdTable;
         private System.Windows.Forms.Button btnWHoHistory;
         private System.Windows.Forms.ComboBox cbxWHoTable;
         private DataSet1 dataSet1;

@@ -155,6 +155,7 @@
             this.dgvIng.Size = new System.Drawing.Size(892, 359);
             this.dgvIng.TabIndex = 13;
             this.dgvIng.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIng_CellDoubleClick);
+            this.dgvIng.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvIng_CellFormatting);
             // 
             // btnIngDelAll
             // 

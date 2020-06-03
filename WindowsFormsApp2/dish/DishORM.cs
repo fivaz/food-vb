@@ -62,6 +62,7 @@ namespace WindowsFormsApp2.dish
                 IngredientORM ingredientORM = new IngredientORM();
                 int ingredientId = Convert.ToInt32(dataRow["DIR_ING_ID"].ToString());
                 double quantityUsed = Convert.ToDouble(dataRow["DIR_QUANTITY"].ToString());
+                Console.WriteLine("quantityUsed "+quantityUsed);
                 ingredientORM.Buy(ingredientId, quantityUsed * dish.quantity);
             }
         }

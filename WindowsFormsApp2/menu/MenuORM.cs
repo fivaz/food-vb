@@ -44,7 +44,14 @@ namespace WindowsFormsApp2.menu
             OracleDataReader oracleDataReader = connection.Execute(command);
             DataTable dataTable = new DataTable();
             dataTable.Load(oracleDataReader);
-            return Convert.ToInt32(dataTable.Rows[0]["USE_MEN_ID"].ToString());
+            try
+            {
+                return Convert.ToInt32(dataTable.Rows[0]["USE_MEN_ID"].ToString());
+            }
+            catch
+            {
+                return 0;
+            }
         }
     }
 }

@@ -9,7 +9,7 @@ namespace WindowsFormsApp2.shared
 {
     public abstract class ORM<T>
     {
-        protected OracleConn connection;
+        public OracleConn connection;
         protected string table;
         protected string view;
         protected List<string> columns;
